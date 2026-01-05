@@ -1,0 +1,13 @@
+# Core dependencies for awesome-collaborative-perception tools
+
+# BibTeX parsing
+bibtexparser>=1.4.0
+
+# HTTP requests for APIs
+requests>=2.31.0
+
+# Optional: Progress bars
+tqdm>=4.66.0
+
+# Optional: Pretty printing
+rich>=13.7.0
