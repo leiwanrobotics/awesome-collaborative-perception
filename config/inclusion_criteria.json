@@ -1,0 +1,126 @@
+{
+  "inclusion_criteria": {
+    "IC1": {
+      "description": "Primary study with explicit research character",
+      "details": "The work must be original research, not a survey, review, editorial, or opinion piece"
+    },
+    "IC2": {
+      "description": "Published between 2019-2024",
+      "details": "Publication year must fall within the defined time range"
+    },
+    "IC3": {
+      "description": "Academic article from conference or journal",
+      "details": "Must be peer-reviewed publication from recognized academic venue"
+    },
+    "IC4": {
+      "description": "Addresses cooperative perception between different entities",
+      "details": "Must involve V2V or V2I collaborative perception, not single-vehicle perception"
+    }
+  },
+  "exclusion_criteria": {
+    "EC1": {
+      "description": "Not written in English",
+      "details": "Papers in languages other than English are excluded"
+    },
+    "EC2": {
+      "description": "Grey literature",
+      "details": "Technical reports, dissertations, theses, white papers, preprints are excluded"
+    },
+    "EC3": {
+      "description": "Duplicate or extended version",
+      "details": "If multiple versions exist, keep only the most comprehensive/recent"
+    },
+    "EC4": {
+      "description": "Single-entity perception only",
+      "details": "Papers addressing only single-vehicle perception without collaboration"
+    },
+    "EC5": {
+      "description": "No evaluation details",
+      "details": "Papers that don't provide sufficient details on evaluation methodology"
+    },
+    "EC6": {
+      "description": "Communication protocol design only",
+      "details": "Papers focusing solely on communication without perception components"
+    }
+  },
+  "taxonomy": {
+    "modality": {
+      "LiDAR": {
+        "description": "Methods using 3D point cloud data from LiDAR sensors",
+        "keywords": ["CP-LiDAR", "point cloud", "3D"]
+      },
+      "Camera": {
+        "description": "Methods using 2D RGB images from cameras",
+        "keywords": ["CP-Camera", "image", "2D", "RGB"]
+      },
+      "Fusion": {
+        "description": "Methods combining LiDAR and Camera modalities",
+        "keywords": ["CP-Fusion", "CP-LiDAR-Camera", "multi-modal"]
+      }
+    },
+    "collaboration_type": {
+      "Early": {
+        "description": "Sharing raw sensor data (point clouds, images)",
+        "keywords": ["CP-Early", "raw data", "early fusion"]
+      },
+      "Intermediate": {
+        "description": "Sharing intermediate feature representations",
+        "keywords": ["CP-Intermediate", "feature", "intermediate fusion"]
+      },
+      "Late": {
+        "description": "Sharing detection/prediction results",
+        "keywords": ["CP-Late", "late fusion", "result sharing"]
+      },
+      "Hybrid": {
+        "description": "Combining multiple collaboration strategies",
+        "keywords": ["CP-Hybrid", "multi-stage", "adaptive"]
+      }
+    },
+    "perception_task": {
+      "Object Detection": {
+        "description": "3D bounding box detection",
+        "keywords": ["CP-Object Detection", "detection", "3D bbox"]
+      },
+      "Object Tracking": {
+        "description": "Multi-object tracking over time",
+        "keywords": ["CP-Object Tracking", "tracking", "MOT"]
+      },
+      "Motion Prediction": {
+        "description": "Future trajectory forecasting",
+        "keywords": ["CP-Motion Prediction", "trajectory", "prediction"]
+      },
+      "Semantic Segmentation": {
+        "description": "Point-wise or pixel-wise classification",
+        "keywords": ["CP-Semantic Segmentation", "segmentation", "semantic"]
+      },
+      "Lane Detection": {
+        "description": "Road structure understanding",
+        "keywords": ["CP-Lane Detection", "lane", "road"]
+      },
+      "Multi-task": {
+        "description": "Multiple perception tasks simultaneously",
+        "keywords": ["CP-Multi-task", "CP-Task-agnostic", "multi-task"]
+      }
+    }
+  },
+  "data_sources": {
+    "primary": [
+      "IEEE Xplore",
+      "ACM Digital Library",
+      "arXiv",
+      "Scopus"
+    ],
+    "citation_apis": [
+      {
+        "name": "Semantic Scholar",
+        "url": "https://api.semanticscholar.org/graph/v1",
+        "features": ["citations", "references", "metadata"]
+      },
+      {
+        "name": "OpenCitations",
+        "url": "https://opencitations.net/index/api/v1",
+        "features": ["citations", "references"]
+      }
+    ]
+  }
+}
