@@ -20,12 +20,20 @@ class ReadmeGenerator:
         with open(self.data_path, "r", encoding="utf-8") as f:
             self.data = json.load(f)
 
-        all_papers = self.data["papers"]
-        # Papers tagged CP-Snowball come from the forward-snowballing extension
-        # (2024–2026, beyond the survey's March-2024 cutoff). They are kept in a
-        # separate section so the surveyed 106 stay faithful to the paper.
-        self.snowball_papers = [p for p in all_papers if "CP-Snowball" in p.get("keywords", [])]
-        self.papers = [p for p in all_papers if "CP-Snowball" not in p.get("keywords", [])]
+        # All papers share the taxonomy tables. Papers tagged CP-Snowball come from
+        # the forward-snowballing extension (2024–2026, beyond the survey's March-2024
+        # cutoff); they are marked in a "Source" column so the surveyed 106 stay
+        # identifiable, while the Publication Statistics still mirror the survey's
+        # Table VIII (106 studies only).
+        self.papers = self.data["papers"]
+        self.snowball_papers = [p for p in self.papers if "CP-Snowball" in p.get("keywords", [])]
+        self.survey_papers = [p for p in self.papers if "CP-Snowball" not in p.get("keywords", [])]
+
+    def is_snowball(self, paper: Dict[str, Any]) -> bool:
+        return "CP-Snowball" in paper.get("keywords", [])
+
+    def source_label(self, paper: Dict[str, Any]) -> str:
+        return "Snowball" if self.is_snowball(paper) else "Survey"
 
     def clean_text(self, value: str) -> str:
         if not value:
@@ -189,6 +197,7 @@ class ReadmeGenerator:
                 "Task": self.infer_task(paper),
                 "Paper Link": self.format_link(self.paper_link(paper), "Paper"),
                 "Repo Link": self.format_link(self.repo_link(paper), "Repo"),
+                "Source": self.source_label(paper),
             }
             rows.append("| " + " | ".join(data[c] for c in columns) + " |")
         return header + sep + "\n".join(rows) + "\n"
@@ -205,6 +214,8 @@ class ReadmeGenerator:
 
     def generate_header(self) -> str:
         total = len(self.papers)
+        n_survey = len(self.survey_papers)
+        n_snow = len(self.snowball_papers)
         today = date.today().isoformat()
         return f"""# Awesome Collaborative Perception [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
@@ -218,7 +229,8 @@ class ReadmeGenerator:
 This repository is organized directly around our survey paper, **"A Systematic Literature Review on Vehicular Collaborative Perception: A Computer Vision Perspective"** (*IEEE T-ITS, 2026*). Instead of a loose awesome-list, the README follows the survey taxonomy and presents each major classification as a structured Markdown table with paper metadata, paper links, and repository links when available.
 
 - Survey scope: vehicular collaborative perception from a computer vision perspective
-- Current collection: **{total} papers**
+- Current collection: **{total} papers** = {n_survey} surveyed (SLR, ≤ March 2024) + {n_snow} forward-snowballing extension (2024–2026)
+- Tables list both; the **Source** column marks each row as `Survey` or `Snowball`. Publication Statistics below reflect the **surveyed {n_survey}** only (survey Table VIII).
 - Source of truth: `collaborative-perception.bib`
 - Generated from: `tools/data_extraction/readme_generator.py`
 - Last generated: `{today}`
@@ -250,7 +262,6 @@ This repository is organized directly around our survey paper, **"A Systematic L
   - [Collaborative Lane Detection](#collaborative-lane-detection)
   - [Multi-Task and Task-Agnostic](#multi-task-and-task-agnostic)
 - [Datasets](#datasets)
-- [Forward-Snowballing Extension (2024–2026)](#forward-snowballing-extension-20242026)
 - [Citation](#citation)
 - [License](#license)
 
@@ -293,7 +304,7 @@ Our survey emphasizes a PRISMA-style SLR process, a structured taxonomy, and a c
             "| **Region** | Asia (54), North America (38), Europe (13), Africa (1) |",
             "| **Top venues** | ICRA (16), CVPR (8), IEEE T-IV (8), NeurIPS (8), ICCV (5), IEEE RA-L (5), IEEE ITSC (5), IEEE T-ITS (4), IEEE IoTJ (4), IEEE IV (4) |",
             "",
-            "> The per-section tables below enumerate the same studies from the survey's per-method Tables IX–XXIX. Minor per-axis count differences versus Table VIII arise from the survey's unique-study aggregation and an *Agnostic* modality not separated in Table VIII.",
+            "> These counts cover the **106 surveyed studies only**. The taxonomy tables below additionally include the forward-snowballing extension (2024–2026), with each row marked `Survey` or `Snowball` in the **Source** column. Per-section counts therefore exceed these figures; minor differences between the surveyed sections and Table VIII arise from the survey's unique-study aggregation and an *Agnostic* modality bucket not separated in Table VIII.",
             "\n---\n",
         ]
         return "\n".join(lines)
@@ -377,16 +388,17 @@ timeline
 """
 
     def generate_modality_sections(self) -> str:
-        columns = ["Paper", "Venue", "Year", "Collaboration", "Task", "Paper Link", "Repo Link"]
+        columns = ["Paper", "Venue", "Year", "Collaboration", "Task", "Paper Link", "Repo Link", "Source"]
         body = "## Modality Type\n\n"
         body += self.section("LiDAR", self.filter_by(modality="LiDAR"), columns)
         body += self.section("Camera", self.filter_by(modality="Camera"), columns)
         body += self.section("LiDAR-Camera", self.filter_by(modality="LiDAR-Camera"), columns)
+        body += self.section("Modality-Agnostic / Other", self.filter_by(modality="Agnostic"), columns)
         body += "---\n\n"
         return body
 
     def generate_collaboration_sections(self) -> str:
-        columns = ["Paper", "Venue", "Year", "Modality", "Task", "Paper Link", "Repo Link"]
+        columns = ["Paper", "Venue", "Year", "Modality", "Task", "Paper Link", "Repo Link", "Source"]
         body = "## Collaboration Type\n\n"
         body += self.section("Early Collaboration", self.filter_by(collaboration="Early"), columns)
         body += self.section("Intermediate Collaboration", self.filter_by(collaboration="Intermediate"), columns)
@@ -396,7 +408,7 @@ timeline
         return body
 
     def generate_task_sections(self) -> str:
-        columns = ["Paper", "Venue", "Year", "Modality", "Collaboration", "Paper Link", "Repo Link"]
+        columns = ["Paper", "Venue", "Year", "Modality", "Collaboration", "Paper Link", "Repo Link", "Source"]
         body = "## Perception Tasks\n\n"
         body += self.section("Collaborative Object Detection", self.filter_by(task="Object Detection"), columns)
         body += self.section("Collaborative Semantic Segmentation", self.filter_by(task="Semantic Segmentation"), columns)
@@ -408,57 +420,9 @@ timeline
         return body
 
     def generate_dataset_section(self) -> str:
-        columns = ["Paper", "Venue", "Year", "Modality", "Task", "Paper Link", "Repo Link"]
+        columns = ["Paper", "Venue", "Year", "Modality", "Collaboration", "Paper Link", "Repo Link", "Source"]
         body = "## Datasets\n\n"
         body += self.section("Dataset / Benchmark Papers", self.filter_by(dataset_only=True), columns)
-        body += "---\n\n"
-        return body
-
-    def snowball_table(self, papers: List[Dict[str, Any]]) -> str:
-        columns = ["Paper", "Venue", "Year", "Modality", "Collaboration", "Task", "Paper Link"]
-        header = "| " + " | ".join(columns) + " |\n"
-        sep = "| " + " | ".join(["---"] * len(columns)) + " |\n"
-        rows = []
-        for paper in self.sort_papers(papers):
-            data = {
-                "Paper": self.paper_title(paper),
-                "Venue": self.paper_venue(paper),
-                "Year": self.paper_year(paper),
-                "Modality": self.infer_modality(paper),
-                "Collaboration": self.infer_collaboration(paper),
-                "Task": self.infer_task(paper),
-                "Paper Link": self.format_link(self.paper_link(paper), "Paper"),
-            }
-            rows.append("| " + " | ".join(data[c] for c in columns) + " |")
-        return header + sep + "\n".join(rows) + "\n"
-
-    def generate_snowball_section(self) -> str:
-        if not self.snowball_papers:
-            return ""
-        n = len(self.snowball_papers)
-        body = "## Forward-Snowballing Extension (2024–2026)\n\n"
-        body += (
-            f"The survey's literature collection was finalized in **March 2024**. Following the survey's own "
-            f"recommendation to *\"apply forward snowballing to update the review with cutting-edge research beyond "
-            f"the collection period,\"* the **{n} papers** below were discovered by forward snowballing (Semantic "
-            f"Scholar / OpenCitations citation graph of the 106 surveyed papers) and screened with the same "
-            f"inclusion/exclusion criteria (IC1–IC4, EC1–EC6). They are listed separately and are **not** counted in "
-            f"the survey statistics above.\n\n"
-        )
-        tasks = [
-            ("Object Detection", "Object Detection"),
-            ("Semantic Segmentation", "Semantic Segmentation"),
-            ("Object Tracking", "Object Tracking"),
-            ("Motion Prediction", "Motion Prediction"),
-            ("Lane Detection", "Lane Detection"),
-            ("Multi-Task & Task-Agnostic", "Multi-Task and Task-Agnostic"),
-            ("Dataset / Benchmark", "Datasets and Benchmarks"),
-        ]
-        for key, title in tasks:
-            papers = [p for p in self.snowball_papers if key in self.infer_tasks(p)]
-            if papers:
-                body += f"### {title} ({len(papers)} papers)\n\n"
-                body += self.snowball_table(papers) + "\n"
         body += "---\n\n"
         return body
 
@@ -496,7 +460,6 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
         readme += self.generate_collaboration_sections()
         readme += self.generate_task_sections()
         readme += self.generate_dataset_section()
-        readme += self.generate_snowball_section()
         readme += self.generate_footer()
 
         with open(output_path, "w", encoding="utf-8") as f:
