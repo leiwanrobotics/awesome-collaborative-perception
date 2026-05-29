@@ -22,9 +22,10 @@ sys.path.insert(0, str(ROOT / "tools" / "data_extraction"))
 from readme_generator import ReadmeGenerator  # noqa: E402
 
 OUTDIR = ROOT / "figure" / "timeline"
-XMIN, XMAX = 2018.6, 2026.7          # axis spans 2019 .. May 2026
-PER_YEAR = 2                          # max representative works marked per year
-SURVEY_C, SNOW_C = "#4C72B0", "#DD8452"
+YEARS = list(range(2019, 2027))       # 2019 .. May 2026
+CAP = 18                              # max works listed per year before "+N more"
+MAXLAB = 26                           # label truncation length
+SURVEY_C, SNOW_C = "#1f5fa6", "#d2691e"
 
 
 def year_of(p):
@@ -53,66 +54,64 @@ def score(gen, p) -> int:
     return s
 
 
+def truncate(s):
+    return s if len(s) <= MAXLAB else s[:MAXLAB - 1].rstrip() + "…"
+
+
 def select(gen, papers):
-    by_year = defaultdict(list)
+    """Per-year lists of (label, is_survey), survey landmarks first; cap with overflow."""
+    by_year = {y: [] for y in YEARS}
     for p in papers:
         y = year_of(p)
-        if 2019 <= y <= 2026:
+        if y in by_year:
             by_year[y].append(p)
-    chosen = []
-    for y in sorted(by_year):
-        ranked = sorted(by_year[y], key=lambda p: (-score(gen, p), short_label(p["fields"].get("title", "")).lower()))
-        chosen.extend((y, p) for p in ranked[:PER_YEAR])
-    return chosen
+    cols = {}
+    for y in YEARS:
+        ranked = sorted(by_year[y], key=lambda p: (-score(gen, p),
+                                                    short_label(p["fields"].get("title", "")).lower()))
+        rows = [(truncate(short_label(p["fields"]["title"])), not gen.is_snowball(p)) for p in ranked[:CAP]]
+        extra = len(ranked) - CAP
+        if extra > 0:
+            rows[-1] = (f"+{extra + 1} more", None)
+        cols[y] = (rows, len(by_year[y]))
+    return cols
 
 
-def render(title, chosen, gen, out: Path):
-    # x within a year: spread multiple items across [-0.32, 0.32]
-    by_year = defaultdict(list)
-    for y, p in chosen:
-        by_year[y].append(p)
-    items = []  # (x, label, is_survey)
-    for y in sorted(by_year):
-        ps = by_year[y]
-        offs = [0.0] if len(ps) == 1 else list(__import__("numpy").linspace(-0.3, 0.3, len(ps)))
-        for off, p in zip(offs, ps):
-            items.append((y + off, short_label(p["fields"]["title"]), not gen.is_snowball(p)))
-    items.sort(key=lambda x: x[0])
+def render(title, cols, out: Path):
+    maxrows = max((len(r) for r, _ in cols.values()), default=1)
+    fig_w = 15.5
+    fig_h = max(2.4, 1.15 + maxrows * 0.235)
+    fig, ax = plt.subplots(figsize=(fig_w, fig_h))
 
-    n = max(1, len(items))
-    fig_w = max(8.0, min(20.0, 1.7 + n * 0.95))
-    fig, ax = plt.subplots(figsize=(fig_w, 3.2))
-    ax.axhline(0, color="#444444", lw=1.6, zorder=1)
-    # year ticks
-    for yr in range(2019, 2027):
-        ax.plot([yr, yr], [-0.12, 0.12], color="#888888", lw=1, zorder=1)
-        ax.text(yr, -0.42, "May 2026" if yr == 2026 else str(yr),
-                ha="center", va="top", fontsize=9, color="#333333")
+    x = {y: i for i, y in enumerate(YEARS)}
+    top = maxrows + 0.3
+    ax.axhline(0, color="#444444", lw=1.4, zorder=2)
+    for y in YEARS:
+        xi = x[y]
+        ax.axvline(xi, ymin=0.06, ymax=0.97, color="#e6e6e6", lw=0.8, zorder=0)
+        ax.plot([xi, xi], [-0.18, 0.18], color="#888888", lw=1.2, zorder=2)
+        ax.text(xi, -0.55, "May 2026" if y == 2026 else str(y),
+                ha="center", va="top", fontsize=10, fontweight="bold", color="#333333")
+        rows, total = cols[y]
+        for r, (label, surv) in enumerate(rows):
+            c = "#999999" if surv is None else (SURVEY_C if surv else SNOW_C)
+            ax.text(xi, 0.55 + r * 1.0, label, ha="center", va="bottom",
+                    fontsize=7.4, color=c,
+                    style="italic" if surv is None else "normal", zorder=3)
 
-    levels = [1.0, -1.0, 1.7, -1.7]
-    for i, (x, label, surv) in enumerate(items):
-        lv = levels[i % len(levels)]
-        c = SURVEY_C if surv else SNOW_C
-        ax.plot([x, x], [0, lv], color=c, lw=0.9, alpha=0.7, zorder=1)
-        ax.plot(x, 0, "o", color=c, ms=6, zorder=3)
-        ax.text(x, lv + (0.12 if lv > 0 else -0.12), label, ha="center",
-                va="bottom" if lv > 0 else "top", fontsize=8.5, color="#222222",
-                rotation=0, zorder=4)
-
-    ax.set_xlim(XMIN, XMAX)
-    ax.set_ylim(-2.5, 2.5)
+    ax.set_xlim(-0.6, len(YEARS) - 0.4)
+    ax.set_ylim(-1.2, top + 0.6)
     ax.axis("off")
-    ax.set_title(title, fontsize=12, fontweight="bold", pad=6)
-    # legend
-    ax.plot([], [], "o", color=SURVEY_C, label="Survey (SLR)")
-    ax.plot([], [], "o", color=SNOW_C, label="Snowballing (2024–26)")
-    ax.legend(loc="lower right", fontsize=8, frameon=False, ncol=2,
-              bbox_to_anchor=(1.0, -0.02))
+    ax.set_title(title, fontsize=13, fontweight="bold", pad=8)
+    ax.plot([], [], "s", color=SURVEY_C, label="Survey (SLR, ≤ Mar 2024)")
+    ax.plot([], [], "s", color=SNOW_C, label="Snowballing (2024–26)")
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.0), fontsize=8.5,
+              frameon=False, ncol=2)
     fig.tight_layout()
     out.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out, dpi=170, bbox_inches="tight")
+    fig.savefig(out, dpi=160, bbox_inches="tight")
     plt.close(fig)
-    return len(items)
+    return sum(len(r) for r, _ in cols.values())
 
 
 def main():
@@ -136,9 +135,9 @@ def main():
     ]
     for title, flt, key in specs:
         papers = g.filter_by(**flt)
-        chosen = select(g, papers)
-        n = render(f"{title} — development timeline (2019 – May 2026)", chosen, g, OUTDIR / f"{key}.png")
-        print(f"{key}: {len(papers)} papers, {n} representative works marked")
+        cols = select(g, papers)
+        n = render(f"{title} — development timeline (2019 – May 2026)", cols, OUTDIR / f"{key}.png")
+        print(f"{key}: {len(papers)} papers, {n} works shown")
 
 
 if __name__ == "__main__":

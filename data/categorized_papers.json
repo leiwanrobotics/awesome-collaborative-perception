@@ -87,6 +87,7 @@
         "langid": "english",
         "keywords": "CP-Dataset,CP-Dataset-IRV2V,CP-Intermeidate,CP-LiDAR,CP-Object Detection,No DOI found",
         "file": "/home/lei-wan/Zotero/storage/7LAK97P9/Wei et al_Asynchrony-Robust Collaborative Perception via Bird’s Eye View Flow.pdf",
+        "code": "https://github.com/MediaBrain-SJTU/CoBEVFlow",
         "booktitle": "Adv. Neural Inf. Process. Syst. (NeurIPS)",
         "author": "Wei, Sizhe and Wei, Yuxi and Hu, Yue and Lu, Yifan and Zhong, Yiqi and Chen, Siheng and Zhang, Ya",
         "abstract": "Collaborative perception can substantially boost each agent's perception ability by facilitating communication among multiple agents. However, temporal asynchrony among agents is inevitable in the real world due to communication delays, interruptions, and clock misalignments. This issue causes information mismatch during multi-agent fusion, seriously shaking the foundation of collaboration. To address this issue, we propose CoBEVFlow, an asynchrony-robust collaborative perception system based on bird's eye view (BEV) flow. The key intuition of CoBEVFlow is to compensate motions to align asynchronous collaboration messages sent by multiple agents. To model the motion in a scene, we propose BEV flow, which is a collection of the motion vector corresponding to each spatial location. Based on BEV flow, asynchronous perceptual features can be reassigned to appropriate positions, mitigating the impact of asynchrony. CoBEVFlow has two advantages: (i) CoBEVFlow can handle asynchronous collaboration messages sent at irregular, continuous time stamps without discretization; and (ii) with BEV flow, CoBEVFlow only transports the original perceptual features, instead of generating new perceptual features, avoiding additional noises. To validate CoBEVFlow's efficacy, we create IRregular V2V(IRV2V), the first synthetic collaborative perception dataset with various temporal asynchronies that simulate different real-world scenarios. Extensive experiments conducted on both IRV2V and the real-world dataset DAIR-V2X show that CoBEVFlow consistently outperforms other baselines and is robust in extremely asynchronous settings. The code is available at https://github.com/MediaBrain-SJTU/CoBEVFlow."
@@ -197,6 +198,7 @@
         "keywords": "Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,CP-Domain Gap,CP-Federated Learning,CP-Intermeidate,CP-LiDAR,CP-Object Detection",
         "file": "/home/lei-wan/Zotero/storage/V3NL27Z8/Li et al_2024_Breaking Data Silos.pdf",
         "doi": "10.1109/ICRA57147.2024.10610591",
+        "code": "https://github.com/jinlong17/BDS-V2V",
         "booktitle": "Proc. IEEE Int. Conf. Robot. Autom. (ICRA)",
         "author": "Li, Jinlong and Li, Baolu and Liu, Xinyu and Xu, Runsheng and Ma, Jiaqi and Yu, Hongkai",
         "abstract": "The diverse agents in multi-agent perception systems may be from different companies. Each company might use the identical classic neural network architecture based encoder for feature extraction. However, the data source to train the various agents is independent and private in each company, leading to the Distribution Gap of different private data for training distinct agents in multi-agent perception system. The data silos by the above Distribution Gap could result in a significant performance decline in multi-agent perception. In this paper, we thoroughly examine the impact of the distribution gap on existing multi-agent perception systems. To break the data silos, we introduce the Feature Distribution-aware Aggregation (FDA) framework for cross-domain learning to mitigate the above Distribution Gap in multi-agent perception. FDA comprises two key components: Learnable Feature Compensation Module and Distribution-aware Statistical Consistency Module, both aimed at enhancing intermediate features to minimize the distribution gap among multi-agent features. Intensive experiments on the public OPV2V and V2XSet datasets underscore FDA's effectiveness in point cloud-based 3D object detection, presenting it as an invaluable augmentation to existing multi-agent perception systems. The code is available at https://github.com/jinlong17/BDS-V2V."
@@ -280,6 +282,7 @@
         "keywords": "CP-Camera,CP-Intermeidate,CP-Semantic Segmentation",
         "issn": "2640-3498",
         "file": "/home/lei-wan/Zotero/storage/DMAKT65A/Xu et al. - 2023 - CoBEVT Cooperative Bird’s Eye View Semantic Segme.pdf;/home/lei-wan/Zotero/storage/P9UH52JW/Xu et al_2023_CoBEVT.pdf",
+        "code": "https://github.com/DerrickXuNu/CoBEVT",
         "booktitle": "Proceedings of {{The}} 6th {{Conference}} on {{Robot Learning}}",
         "author": "Xu, Runsheng and Tu, Zhengzhong and Xiang, Hao and Shao, Wei and Zhou, Bolei and Ma, Jiaqi",
         "abstract": "Bird's eye view (BEV) semantic segmentation plays a crucial role in spatial sensing for autonomous driving. Although recent literature has made significant progress on BEV map understanding, they are all based on single-agent camera-based systems. These solutions sometimes have difficulty handling occlusions or detecting distant objects in complex traffic scenes. Vehicle-to-Vehicle (V2V) communication technologies have enabled autonomous vehicles to share sensing information, dramatically improving the perception performance and range compared to single-agent systems. In this paper, we propose CoBEVT, the first generic multi-agent multi-camera perception framework that can cooperatively generate BEV map predictions. To efficiently fuse camera features from multi-view and multi-agent data in an underlying Transformer architecture, we design a fused axial attention module (FAX), which captures sparsely local and global spatial interactions across views and agents. The extensive experiments on the V2V perception dataset, OPV2V, demonstrate that CoBEVT achieves state-of-the-art performance for cooperative BEV semantic segmentation. Moreover, CoBEVT is shown to be generalizable to other tasks, including 1) BEV segmentation with single-agent multi-camera and 2) 3D object detection with multi-agent LiDAR systems, achieving state-of-the-art performance with real-time inference speed. The code is available at https://github.com/DerrickXuNu/CoBEVT."
@@ -462,6 +465,7 @@
         "isbn": "979-8-3503-9946-2",
         "file": "/home/lei-wan/Zotero/storage/FWBNSKBZ/Teufel et al_2023_Collective PV-RCNN.pdf",
         "doi": "10.1109/ITSC57777.2023.10422079",
+        "code": "https://github.com/ekut-es",
         "booktitle": "2023 {{IEEE}} 26th {{International Conference}} on {{Intelligent Transportation Systems}} ({{ITSC}})",
         "author": "Teufel, Sven and Gamerdinger, J{\\\"o}rg and Volk, Georg and Bringmann, Oliver",
         "address": "Bilbao, Spain"
@@ -671,6 +675,7 @@
         "isbn": "978-1-6654-6946-3",
         "file": "/home/lei-wan/Zotero/storage/Q22BUSFY/Yu et al_2022_DAIR-V2X.pdf",
         "doi": "10.1109/CVPR52688.2022.02067",
+        "code": "https://github.com/AIR-THU/DAIR-V2X",
         "booktitle": "2022 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}})",
         "author": "Yu, Haibao and Luo, Yizhen and Shu, Mao and Huo, Yiyi and Yang, Zebang and Shi, Yifeng and Guo, Zhenglong and Li, Hanyu and Hu, Xing and Yuan, Jirui and Nie, Zaiqing",
         "address": "New Orleans, LA, USA",
@@ -778,6 +783,7 @@
         "keywords": "Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,CP-Domain Gap,CP-Intermeidate,CP-LiDAR,CP-Object Detection",
         "file": "/home/lei-wan/Zotero/storage/3YW4QKM6/Xiang et al_2023_DI-V2X.pdf",
         "doi": "10.1609/aaai.v38i4.28105",
+        "code": "https://github.com/Serenos/DI-V2X",
         "booktitle": "Proc. AAAI Conf. Artif. Intell. (AAAI)",
         "author": "Xiang, Li and Yin, Junbo and Li, Wei and Xu, Cheng-Zhong and Yang, Ruigang and Shen, Jianbing",
         "abstract": "Vehicle-to-Everything (V2X) collaborative perception has recently gained significant attention due to its capability to enhance scene understanding by integrating information from various agents, e.g., vehicles, and infrastructure. However, current works often treat the information from each agent equally, ignoring the inherent domain gap caused by the utilization of different LiDAR sensors of each agent, thus leading to suboptimal performance. In this paper, we propose DI-V2X, that aims to learn Domain-Invariant representations through a new distillation framework to mitigate the domain discrepancy in the context of V2X 3D object detection. DI-V2X comprises three essential components: a domainmixing instance augmentation (DMA) module, a progressive domain-invariant distillation (PDD) module, and a domainadaptive fusion (DAF) module. Specifically, DMA builds a domain-mixing 3D instance bank for the teacher and student models during training, resulting in aligned data representation. Next, PDD encourages the student models from different domains to gradually learn a domain-invariant feature representation towards the teacher, where the overlapping regions between agents are employed as guidance to facilitate the distillation process. Furthermore, DAF closes the domain gap between the students by incorporating calibrationaware domain-adaptive attention. Extensive experiments on the challenging DAIR-V2X and V2XSet benchmark datasets demonstrate DI-V2X achieves remarkable performance, outperforming all the previous V2X models. Code is available at https://github.com/Serenos/DI-V2X."
@@ -1070,6 +1076,7 @@
         "isbn": "979-8-4007-0108-5",
         "file": "/home/lei-wan/Zotero/storage/ZJDFRSEA/Gu et al_2023_FeaCo.pdf",
         "doi": "10.1145/3581783.3611880",
+        "code": "https://github.com/jmgu0212/FeaCo.git",
         "booktitle": "Proceedings of the 31st {{ACM International Conference}} on {{Multimedia}}",
         "author": "Gu, Jiaming and Zhang, Jingyu and Zhang, Muyang and Meng, Weiliang and Xu, Shibiao and Zhang, Jiguang and Zhang, Xiaopeng",
         "address": "Ottawa ON Canada"
@@ -1092,6 +1099,7 @@
         "langid": "english",
         "keywords": "Computer Science - Computer Vision and Pattern Recognition,CP-Intermeidate,CP-LiDAR,CP-Object Detection",
         "file": "/home/lei-wan/Zotero/storage/ZBXVR5SR/Yu et al_2023_Flow-Based Feature Fusion for Vehicle-Infrastructure Cooperative 3D Object.pdf",
+        "code": "https://github.com/haibao-yu/FFNet-VIC3D",
         "booktitle": "Adv. Neural Inf. Process. Syst. (NeurIPS)",
         "author": "Yu, Haibao and Tang, Yingjuan and Xie, Enze and Mao, Jilei and Luo, Ping and Nie, Zaiqing",
         "abstract": "Cooperatively utilizing both ego-vehicle and infrastructure sensor data can significantly enhance autonomous driving perception abilities. However, the uncertain temporal asynchrony and limited communication conditions can lead to fusion misalignment and constrain the exploitation of infrastructure data. To address these issues in vehicle-infrastructure cooperative 3D (VIC3D) object detection, we propose the Feature Flow Net (FFNet), a novel cooperative detection framework. FFNet is a flow-based feature fusion framework that uses a feature flow prediction module to predict future features and compensate for asynchrony. Instead of transmitting feature maps extracted from still-images, FFNet transmits feature flow, leveraging the temporal coherence of sequential infrastructure frames. Furthermore, we introduce a self-supervised training approach that enables FFNet to generate feature flow with feature prediction ability from raw infrastructure sequences. Experimental results demonstrate that our proposed method outperforms existing cooperative detection methods while only requiring about 1/100 of the transmission cost of raw data and covers all latency in one model on the DAIR-V2X dataset. The code is available at https://github.com/haibao-yu/FFNet-VIC3D."
@@ -1174,6 +1182,7 @@
         "isbn": "979-8-3503-0718-4",
         "file": "/home/lei-wan/Zotero/storage/84GT2CX8/Xiang et al_2023_HM-ViT.pdf",
         "doi": "10.1109/ICCV51070.2023.00033",
+        "code": "https://github.com/XHwind/HM-ViT",
         "booktitle": "2023 {{IEEE}}/{{CVF International Conference}} on {{Computer Vision}} ({{ICCV}})",
         "author": "Xiang, Hao and Xu, Runsheng and Ma, Jiaqi",
         "address": "Paris, France",
@@ -1220,6 +1229,7 @@
         "langid": "english",
         "keywords": "CP-Intermeidate,CP-LiDAR,CP-Object Detection,No DOI found",
         "file": "/home/lei-wan/Zotero/storage/7RM6MDVD/Yang et al_How2comm.pdf",
+        "code": "https://github.com/ydk122024/How2comm",
         "booktitle": "Adv. Neural Inf. Process. Syst. (NeurIPS)",
         "author": "Yang, Dingkang and Yang, Kun and Wang, Yuzheng and Liu, Jing and Xu, Zhi and Yin, Rongbin and Zhai, Peng and Zhang, Lihua",
         "abstract": "Multi-agent collaborative perception has recently received widespread attention as an emerging application in driving scenarios. Despite the advancements in previous efforts, challenges remain due to various dilemmas in the perception procedure, including communication redundancy, transmission delay, and collaboration heterogeneity. To tackle these issues, we propose How2comm, a collaborative perception framework that seeks a trade-off between perception performance and communication bandwidth. Our novelties lie in three aspects. First, we devise a mutual information-aware communication mechanism to maximally sustain the informative features shared by collaborators. The spatial-channel filtering is adopted to perform effective feature sparsification for efficient communication. Second, we present a flow-guided delay compensation strategy to predict future characteristics from collaborators and eliminate feature misalignment due to temporal asynchrony. Ultimately, a pragmatic collaboration transformer is introduced to integrate holistic spatial semantics and temporal context clues among agents. Our framework is thoroughly evaluated on several LiDAR-based collaborative detection datasets in real-world and simulated scenarios. Comprehensive experiments demonstrate the superiority of How2comm and the effectiveness of all its vital components. The code will be released at https://github.com/ydk122024/How2comm."
@@ -1421,6 +1431,7 @@
         "pages": "29541--29552",
         "keywords": "CP-Intermeidate,CP-LiDAR,CP-Object Detection,No DOI found",
         "file": "/home/lei-wan/Zotero/storage/IIMD73TG/Li et al_2021_Learning Distilled Collaboration Graph for Multi-Agent Perception.pdf",
+        "code": "https://github.com/ai4ce/DiscoNet",
         "booktitle": "Advances in {{Neural Information Processing Systems}}",
         "author": "Li, Yiming and Ren, Shunli and Wu, Pengxiang and Chen, Siheng and Feng, Chen and Zhang, Wenjun",
         "abstract": "To promote better performance-bandwidth trade-off for multi-agent perception, we propose a novel distilled collaboration graph (DiscoGraph) to model trainable, pose-aware, and adaptive collaboration among agents. Our key novelties lie in two aspects. First, we propose a teacher-student framework to train DiscoGraph via knowledge distillation. The teacher model employs an early collaboration with holistic-view inputs; the student model is based on intermediate collaboration with single-view inputs. Our framework trains DiscoGraph by constraining post-collaboration feature maps in the student model to match the correspondences in the teacher model. Second, we propose a matrix-valued edge weight in DiscoGraph. In such a matrix, each element reflects the inter-agent attention at a specific spatial region, allowing an agent to adaptively highlight the informative regions. During inference, we only need to use the student model named as the distilled collaboration network (DiscoNet). Attributed to the teacher-student framework, multiple agents with the shared DiscoNet could collaboratively approach the performance of a hypothetical teacher model with a holistic view. Our approach is validated on V2X-Sim 1.0, a large-scale multi-agent perception dataset that we synthesized using CARLA and SUMO co-simulation. Our quantitative and qualitative experiments in multi-agent 3D object detection show that DiscoNet could not only achieve a better performance-bandwidth trade-off than the state-of-the-art collaborative perception methods, but also bring more straightforward design rationale. Our code is available on https://github.com/ai4ce/DiscoNet."
@@ -1527,6 +1538,7 @@
         "isbn": "979-8-3503-1892-0",
         "file": "/home/lei-wan/Zotero/storage/KQLU6F3X/Ma et al_2024_MACP.pdf",
         "doi": "10.1109/WACV57701.2024.00334",
+        "code": "https://github.com/PurdueDigitalTwin/MACP",
         "booktitle": "2024 {{IEEE}}/{{CVF Winter Conference}} on {{Applications}} of {{Computer Vision}} ({{WACV}})",
         "author": "Ma, Yunsheng and Lu, Juanwu and Cui, Can and Zhao, Sicheng and Cao, Xu and Ye, Wenqian and Wang, Ziran",
         "address": "Waikoloa, HI, USA",
@@ -1948,6 +1960,7 @@
         "issn": "1524-9050, 1558-0016",
         "file": "/home/lei-wan/Zotero/storage/RS25N24X/Dao et al_2024_Practical Collaborative Perception.pdf",
         "doi": "10.1109/TITS.2024.3371177",
+        "code": "https://github.com/quan-dao/practical-collab-perception",
         "author": "Dao, Minh-Quan and Berrio, Julie Stephany and Fr{\\'e}mont, Vincent and Shan, Mao and H{\\'e}ry, Elwan and Worrall, Stewart"
       },
       "keywords": [
@@ -2046,6 +2059,7 @@
         "isbn": "979-8-3503-2365-8",
         "file": "/home/lei-wan/Zotero/storage/9P7SF49E/Lu et al_2023_Robust Collaborative 3D Object Detection in Presence of Pose Errors.pdf",
         "doi": "10.1109/ICRA48891.2023.10160546",
+        "code": "https://github.com/yifanlu0227/CoAlign",
         "booktitle": "2023 {{IEEE International Conference}} on {{Robotics}} and {{Automation}} ({{ICRA}})",
         "author": "Lu, Yifan and Li, Quanhao and Liu, Baoan and Dianati, Mehrdad and Feng, Chen and Chen, Siheng and Wang, Yanfeng",
         "address": "London, United Kingdom",
@@ -2560,6 +2574,7 @@
         "isbn": "979-8-3503-0129-8",
         "file": "/home/lei-wan/Zotero/storage/YMRXFFX7/Yu et al_2023_V2X-Seq.pdf",
         "doi": "10.1109/CVPR52729.2023.00531",
+        "code": "https://github.com/AIR-THU/DAIR-V2X-Seq",
         "booktitle": "2023 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}})",
         "author": "Yu, Haibao and Yang, Wenxian and Ruan, Hongzhi and Yang, Zhenwei and Tang, Yingjuan and Gao, Xu and Hao, Xin and Shi, Yifeng and Pan, Yifeng and Sun, Ning and Song, Juan and Yuan, Jirui and Luo, Ping and Nie, Zaiqing",
         "address": "Vancouver, BC, Canada",
@@ -2618,6 +2633,7 @@
         "file": "/home/lei-wan/Zotero/storage/7THW2HUD/Xu et al_2022_V2X-ViT.pdf;/home/lei-wan/Zotero/storage/JX34N3ZN/136990106-supp.pdf",
         "editor": "Avidan, Shai and Brostow, Gabriel and Ciss{\\'e}, Moustapha and Farinella, Giovanni Maria and Hassner, Tal",
         "doi": "10.1007/978-3-031-19842-7_7",
+        "code": "https://github.com/DerrickXuNu/v2x-vit",
         "booktitle": "Computer {{Vision}} -- {{ECCV}} 2022",
         "author": "Xu, Runsheng and Xiang, Hao and Tu, Zhengzhong and Xia, Xin and Yang, Ming-Hsuan and Ma, Jiaqi",
         "address": "Cham",
@@ -2750,6 +2766,7 @@
         "langid": "english",
         "keywords": "Computer Science - Computer Vision and Pattern Recognition,CP-Camera,CP-Intermeidate,CP-LiDAR,CP-Object Detection",
         "file": "/home/lei-wan/Zotero/storage/GC2NVPY7/Hu et al_2022_Where2comm.pdf",
+        "code": "https://github.com/MediaBrain-SJTU/where2comm",
         "booktitle": "Adv. Neural Inf. Process. Syst. (NeurIPS)",
         "author": "Hu, Yue and Fang, Shaoheng and Lei, Zixing and Zhong, Yiqi and Chen, Siheng",
         "abstract": "Multi-agent collaborative perception could significantly upgrade the perception performance by enabling agents to share complementary information with each other through communication. It inevitably results in a fundamental trade-off between perception performance and communication bandwidth. To tackle this bottleneck issue, we propose a spatial confidence map, which reflects the spatial heterogeneity of perceptual information. It empowers agents to only share spatially sparse, yet perceptually critical information, contributing to where to communicate. Based on this novel spatial confidence map, we propose Where2comm, a communication-efficient collaborative perception framework. Where2comm has two distinct advantages: i) it considers pragmatic compression and uses less communication to achieve higher perception performance by focusing on perceptually critical areas; and ii) it can handle varying communication bandwidth by dynamically adjusting spatial areas involved in communication. To evaluate Where2comm, we consider 3D object detection in both real-world and simulation scenarios with two modalities (camera/LiDAR) and two agent types (cars/drones) on four datasets: OPV2V, V2X-Sim, DAIR-V2X, and our original CoPerception-UAVs. Where2comm consistently outperforms previous methods; for example, it achieves more than 100, 000{\\texttimes} lower communication volume and still outperforms DiscoNet and V2X-ViT on OPV2V. Our code is available at https://github.com/MediaBrain-SJTU/where2comm."
@@ -2799,6 +2816,7 @@
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Tracking, CP-Object Detection",
         "journal": "IEEE International Conference on Computer Vision",
         "doi": "10.1109/iccv51701.2025.02502",
+        "code": "https://github.com/zhongjiaru/CoopTrack",
         "author": "Jiaru Zhong and Jiahao Wang and Jiahui Xu and Xiaofan Li and Zaiqing Nie and Haibao Yu"
       },
       "keywords": [
@@ -2993,6 +3011,7 @@
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE International Conference on Computer Vision",
         "doi": "10.1109/iccv51701.2025.02660",
+        "code": "https://github.com/ChengchangTian/DATA",
         "author": "Cheng Tian and Jianwei Ma and Yan Huang and Zhanye Chen and Honghao Wei and Hui Zhang and Wei Hong"
       },
       "keywords": [
@@ -3101,6 +3120,7 @@
         "title": "CoCMT: Communication-Efficient Cross-Modal Transformer for Collaborative Perception",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Camera, CP-Intermediate, CP-Object Detection",
         "doi": "10.1109/iros60139.2025.11247637",
+        "code": "https://github.com/taco-group/COCMT",
         "booktitle": "IEEE/RJS International Conference on Intelligent RObots and Systems",
         "author": "Rujia Wang and Xiangbo Gao and Hao Xiang and Runsheng Xu and Zhengzhong Tu"
       },
@@ -3138,6 +3158,7 @@
         "url": "https://www.semanticscholar.org/search?q=STAMP%3A%20Scalable%20Task%20And%20Model-agnostic%20Collaborative%20Perception&sort=relevance",
         "title": "STAMP: Scalable Task And Model-agnostic Collaborative Perception",
         "keywords": "CP-Snowball, CP-Intermediate, CP-Task-agnostic, CP-Object Detection",
+        "code": "https://github.com/taco-group/STAMP",
         "booktitle": "International Conference on Learning Representations",
         "author": "Xiangbo Gao and Runsheng Xu and Jiachen Li and Ziran Wang and Zhiwen Fan and Zhengzhong Tu"
       },
@@ -3193,6 +3214,7 @@
         "title": "Multi-Agent Collaborative Perception via Motion-Aware Robust Communication Network",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "doi": "10.1109/cvpr52733.2024.01449",
+        "code": "https://github.com/IndigoChildren/collaborative-perception-MRCNet",
         "booktitle": "Computer Vision and Pattern Recognition",
         "author": "Shixin Hong and Yu Liu and Zhi Li and Shaohui Li and You He"
       },
@@ -3250,6 +3272,7 @@
         "title": "RCooper: A Real-world Large-scale Dataset for Roadside Cooperative Perception",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Camera, CP-Intermediate, CP-Dataset, CP-Object Detection, CP-Object Tracking",
         "doi": "10.1109/cvpr52733.2024.02109",
+        "code": "https://github.com/AIR-THU/DAIR-RCooper",
         "booktitle": "Computer Vision and Pattern Recognition",
         "author": "Ruiyang Hao and Siqi Fan and Yingru Dai and Zhenlin Zhang and Chenxi Li and Yuntian Wang and Haibao Yu and Wenxian Yang and Jirui Yuan and Zaiqing Nie"
       },
@@ -3511,6 +3534,7 @@
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection, CP-Dataset",
         "journal": "IEEE International Conference on Robotics and Automation",
         "doi": "10.1109/icra55743.2025.11127945",
+        "code": "https://github.com/Baolu1998/V2X-DGW",
         "author": "Baolu Li and Jinlong Li and Xinyu Liu and Runsheng Xu and Zhengzhong Tu and Jiacheng Guo and Xiaopeng Li and Hongkai Yu"
       },
       "keywords": [
@@ -3564,6 +3588,7 @@
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
         "doi": "10.1109/wacv61042.2026.00607",
+        "code": "https://github.com/scdrand23/FocalComm",
         "author": "Dereje Shenkut and Vijayakumar Bhagavatula"
       },
       "keywords": [
@@ -3635,6 +3660,7 @@
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE International Conference on Computer Vision",
         "doi": "10.1109/iccv51701.2025.00112",
+        "code": "https://github.com/tzhhhh123/CoST",
         "author": "Zongheng Tang and Yi Liu and Yifan Sun and Yulu Gao and Jinyu Chen and Runsheng Xu and Si Liu"
       },
       "keywords": [
@@ -3651,6 +3677,7 @@
         "title": "RCP-Bench: Benchmarking Robustness for Collaborative Perception Under Diverse Corruptions",
         "keywords": "CP-Snowball, CP-Camera, CP-Intermediate, CP-Dataset, CP-Object Detection",
         "doi": "10.1109/cvpr52734.2025.01112",
+        "code": "https://github.com/LuckyDush/RCP-Bench",
         "booktitle": "Computer Vision and Pattern Recognition",
         "author": "Shihang Du and Sanqing Qu and Tianhang Wang and Xudong Zhang and Yunwei Zhu and Jian Mao and Fan Lu and Qiao Lin and Guang Chen"
       },
@@ -3690,6 +3717,7 @@
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "journal": "2025 IEEE Intelligent Vehicles Symposium (IV)",
         "doi": "10.1109/iv64158.2025.11097385",
+        "code": "https://github.com/wangsch10/V2X-DGPE",
         "author": "Sichao Wang and Ming Yuan and Chuang Zhang and Qing Xu and Lei He and Jianqiang Wang"
       },
       "keywords": [
@@ -3706,6 +3734,7 @@
         "url": "https://www.semanticscholar.org/search?q=One%20is%20Plenty%3A%20A%20Polymorphic%20Feature%20Interpreter%20for%20Immutable%20Heterogeneous%20Collaborative%20Perception&sort=relevance",
         "title": "One is Plenty: A Polymorphic Feature Interpreter for Immutable Heterogeneous Collaborative Perception",
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
+        "code": "https://github.com/yuchen-xia/PolyInter",
         "booktitle": "Computer Vision and Pattern Recognition",
         "author": "Yuchen Xia and Quan Yuan and Guiyang Luo and Xiaoyuan Fu and Yang Li and Xuanhan Zhu and Tianyou Luo and Siheng Chen and Jinglin Li"
       },
@@ -3761,6 +3790,7 @@
         "title": "Communication-Efficient Collaborative Perception via Information Filling with Codebook",
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "doi": "10.1109/cvpr52733.2024.01466",
+        "code": "https://github.com/PhyllisH/CodeFilling",
         "booktitle": "Computer Vision and Pattern Recognition",
         "author": "Yue Hu and Juntong Peng and Si Liu and Junhao Ge and Si Liu and Siheng Chen"
       },
@@ -3778,6 +3808,7 @@
         "title": "What Makes Good Collaborative Views? Contrastive Mutual Information Maximization for Multi-Agent Perception",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "doi": "10.1609/aaai.v38i16.29705",
+        "code": "https://github.com/77SWF/CMiMC",
         "booktitle": "AAAI Conference on Artificial Intelligence",
         "author": "Wan Su and Lixing Chen and Yang Bai and Xi Lin and Gaolei Li and Zhe Qu and Pan Zhou"
       },
@@ -3797,6 +3828,7 @@
         "keywords": "CP-Snowball, CP-Camera, CP-Intermediate, CP-Object Detection, CP-Dataset",
         "journal": "IEEE Transactions on Geoscience and Remote Sensing",
         "doi": "10.1109/TGRS.2025.3546669",
+        "code": "https://github.com/wyccoo/uvcp",
         "author": "Yuchao Wang and Zhirui Wang and Peirui Cheng and Pengju Tian and Ziyang Yuan and Jing Tian and Wensheng Wang and Liangjin Zhao"
       },
       "keywords": [
@@ -3920,6 +3952,7 @@
         "title": "CoSDH: Communication-Efficient Collaborative Perception via Supply-Demand Awareness and Intermediate-Late Hybridization",
         "keywords": "CP-Snowball, CP-Hybrid, CP-Object Detection",
         "doi": "10.1109/cvpr52734.2025.00641",
+        "code": "https://github.com/Xu2729/CoSDH",
         "booktitle": "Computer Vision and Pattern Recognition",
         "author": "Junhao Xu and Yanan Zhang and Zhi Cai and Di Huang"
       },
@@ -4186,6 +4219,7 @@
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE transactions on intelligent transportation systems (Print)",
         "doi": "10.1109/tits.2025.3587766",
+        "code": "https://github.com/HIT-K/ER-CoPe",
         "author": "Wei Li and Lin Ma and Haoze Chang and Xiangyun He and Longteng Huang"
       },
       "keywords": [
@@ -4220,6 +4254,7 @@
         "title": "CRUISE: Cooperative Reconstruction and Editing in V2X Scenarios using Gaussian Splatting",
         "keywords": "CP-Snowball, CP-Camera, CP-Intermediate, CP-Object Detection, CP-Object Tracking, CP-Dataset",
         "doi": "10.1109/iros60139.2025.11246201",
+        "code": "https://github.com/SainingZhang/CRUISE",
         "booktitle": "IEEE/RJS International Conference on Intelligent RObots and Systems",
         "author": "Haoran Xu and Saining Zhang and Peishuo Li and Baijun Ye and Xiaoxue Chen and Huan-ang Gao and Jv Zheng and Xiaowei Song and Ziqiao Peng and Run Miao and Jinrang Jia and Yifeng Shi and Guangqi Yi and Hang Zhao and Hao Tang and Hongyang Li and Kaicheng Yu and Hao Zhao"
       },
@@ -4241,6 +4276,7 @@
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE International Joint Conference on Neural Network",
         "doi": "10.1109/ijcnn64981.2025.11229412",
+        "code": "https://github.com/JesseWong333/IMCP",
         "author": "Junjie Wang and Tomas Nordström"
       },
       "keywords": [
@@ -4383,6 +4419,7 @@
         "title": "WHALES: A Multi-Agent Scheduling Dataset for Enhanced Cooperation in Autonomous Driving",
         "keywords": "CP-Snowball, CP-Intermediate, CP-Dataset, CP-Object Detection",
         "doi": "10.1109/iros60139.2025.11247472",
+        "code": "https://github.com/chensiweiTHU/WHALES",
         "booktitle": "IEEE/RJS International Conference on Intelligent RObots and Systems",
         "author": "Siwei Chen and Yinsong Wang and Ziyi Song and Sheng Zhou"
       },
@@ -4457,6 +4494,7 @@
         "title": "FeaKM: Robust Collaborative Perception under Noisy Pose Conditions",
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "doi": "10.1145/3696474.3696686",
+        "code": "https://github.com/uestchjw/FeaKM",
         "booktitle": "Proceedings of the 2024 4th International Joint Conference on Robotics and Artificial Intelligence",
         "author": "Jiuwu Hao and Liguo Sun and Ti Xiang and Yuting Wan and Haolin Song and Pin Lv"
       },
@@ -4600,6 +4638,7 @@
         "keywords": "CP-Snowball, CP-Camera, CP-Intermediate, CP-Semantic Segmentation",
         "journal": "2024 IEEE Intelligent Vehicles Symposium (IV)",
         "doi": "10.1109/iv55156.2024.10588608",
+        "code": "https://github.com/cvims/TempCoBEV",
         "author": "Dominik Rößle and Jeremias Gerner and K. Bogenberger and Daniel Cremers and Stefanie Schmidtner and Torsten Schön"
       },
       "keywords": [
@@ -4739,6 +4778,7 @@
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE International Conference on Robotics and Automation",
         "doi": "10.1109/icra55743.2025.11128776",
+        "code": "https://github.com/sidiangongyuan/ACCO",
         "author": "Kang Yang and Tianci Bu and L. Li and Chunxu Li and Yongcai Wang and Deying Li"
       },
       "keywords": [
@@ -4757,6 +4797,7 @@
         "journal": "IEEE International Conference on Computer Vision",
         "eprint": "2503.10410",
         "doi": "10.1109/ICCV51701.2025.02504",
+        "code": "https://github.com/duyuwen-duen/RoCo-Sim",
         "author": "Yuwen Du and Anning Hu and Zichen Chao and Yifan Lu and Junhao Ge and Genjia Liu and Weitao Wu and Lanjun Wang and Siheng Chen"
       },
       "keywords": [
@@ -4775,6 +4816,7 @@
         "title": "Learning to Detect Objects from Multi-Agent LiDAR Scans without Manual Labels",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Early, CP-Object Detection",
         "doi": "10.1109/cvpr52734.2025.00140",
+        "code": "https://github.com/xmuqimingxia/DOtA",
         "booktitle": "Computer Vision and Pattern Recognition",
         "author": "Qiming Xia and Wenkai Lin and Haoen Xiang and Xun Huang and Siheng Chen and Z. Dong and Cheng Wang and Chenglu Wen"
       },
@@ -4830,6 +4872,7 @@
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
         "doi": "10.1109/wacv61041.2025.00476",
+        "code": "https://github.com/JesseWong333/LRCP",
         "author": "Junjie Wang and Tomas Nordström"
       },
       "keywords": [
@@ -4917,6 +4960,7 @@
         "title": "CoDynTrust: Robust Asynchronous Collaborative Perception via Dynamic Feature Trust Modulus",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE International Conference on Robotics and Automation",
+        "code": "https://github.com/CrazyShout/CoDynTrust",
         "author": "Yunjiang Xu and Lingzhi Li and Jin Wang and Benyuan Yang and Zhiwen Wu and Xinhong Chen and Jianping Wang"
       },
       "keywords": [
@@ -5086,6 +5130,7 @@
         "title": "StreamLTS: Query-based Temporal-Spatial LiDAR Fusion for Cooperative Object Detection",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "doi": "10.1007/978-3-031-91813-1_3",
+        "code": "https://github.com/YuanYunshuang/CoSense3D",
         "booktitle": "ECCV Workshops",
         "author": "Yunshuang Yuan and Monika Sester"
       },
@@ -5194,6 +5239,7 @@
         "keywords": "CP-Snowball, CP-Late, CP-Object Detection",
         "journal": "IEEE Transactions on Intelligent Transportation Systems",
         "doi": "10.1109/tits.2025.3625597",
+        "code": "https://github.com/ZhiguoZhao/BELT-Fusion",
         "author": "Zhiguo Zhao and Cong Zhao and Kun Chen and Yuxiong Ji and Yuchuan Du"
       },
       "keywords": [
@@ -5228,6 +5274,7 @@
         "title": "TraF-Align: Trajectory-aware Feature Alignment for Asynchronous Multi-agent Perception",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "doi": "10.1109/cvpr52734.2025.01125",
+        "code": "https://github.com/zhyingS/TraF-Align",
         "booktitle": "Computer Vision and Pattern Recognition",
         "author": "Zhiying Song and Lei Yang and Fuxi Wen and Jun Li"
       },
@@ -5247,6 +5294,7 @@
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE Sensors Journal",
         "doi": "10.1109/jsen.2026.3682367",
+        "code": "https://github.com/npunancy/coopmamba",
         "author": "Peng Zhang and Xinjun Chen and Yunji Liang and Xiaokai Yan and Zhiwen Yu"
       },
       "keywords": [
@@ -5426,6 +5474,7 @@
         "title": "CooPre: Cooperative Pretraining for V2X Cooperative Perception",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "doi": "10.1109/iros60139.2025.11246787",
+        "code": "https://github.com/ucla-mobility/CooPre",
         "booktitle": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
         "author": "Seth Z. Zhao and Hao Xiang and Chenfeng Xu and Xin Xia and Bolei Zhou and Jiaqi Ma"
       },
@@ -5736,6 +5785,7 @@
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE International Conference on Computer Vision",
         "doi": "10.1109/iccv51701.2025.02362",
+        "code": "https://github.com/CrazyShout/INSTINCT",
         "author": "Yunjiang Xu and Lingzhi Li and Jin Wang and Y. Ouyang and Benyuan Yang"
       },
       "keywords": [
@@ -5843,6 +5893,7 @@
         "title": "HeCoFuse: Cross-Modal Complementary V2X Cooperative Perception with Heterogeneous Sensors",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Camera, CP-Intermediate, CP-Object Detection",
         "doi": "10.1109/itsc60802.2025.11423237",
+        "code": "https://github.com/ChuhengWei/HeCoFuse",
         "booktitle": "2025 IEEE 28th International Conference on Intelligent Transportation Systems (ITSC)",
         "author": "Chuheng Wei and Ziye Qin and Walter Zimmer and Guoyuan Wu and Matthew J. Barth"
       },
@@ -5863,6 +5914,7 @@
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE Sensors Journal",
         "doi": "10.1109/jsen.2025.3572449",
+        "code": "https://github.com/feeling0414-lab/V2X-MGHD",
         "author": "Caizhen He and Hai Wang and Tong Luo and Long Chen and Yingfeng Cai"
       },
       "keywords": [
@@ -5902,6 +5954,7 @@
         "keywords": "CP-Snowball, CP-LiDAR, CP-Early, CP-Object Detection",
         "journal": "IEEE Transactions on Image Processing",
         "doi": "10.1109/tip.2025.3648203",
+        "code": "https://github.com/HaoJing-SX/RPKD",
         "author": "Hao Jing and Anhong Wang and Yifan Zhang and Donghan Bu and Junhui Hou"
       },
       "keywords": [
@@ -6066,6 +6119,7 @@
         "title": "V2X-R: Cooperative LiDAR-4D Radar Fusion with Denoising Diffusion for 3D Object Detection",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection, CP-Dataset",
         "doi": "10.1109/cvpr52734.2025.02551",
+        "code": "https://github.com/ylwhxht/V2X-R",
         "booktitle": "Computer Vision and Pattern Recognition",
         "author": "Xun Huang and Jinlong Wang and Qiming Xia and Siheng Chen and Bisheng Yang and Cheng Wang and Chenglu Wen"
       },
@@ -6309,6 +6363,7 @@
         "title": "IFTR: An Instance-Level Fusion Transformer for Visual Collaborative Perception",
         "keywords": "CP-Snowball, CP-Camera, CP-Intermediate, CP-Object Detection",
         "doi": "10.1007/978-3-031-73021-4_8",
+        "code": "https://github.com/wangsh0111/IFTR",
         "booktitle": "European Conference on Computer Vision",
         "author": "Shaohong Wang and Lu Bin and Xinyu Xiao and Zhiyu Xiang and Hangguan Shan and Eryun Liu"
       },
@@ -6458,6 +6513,7 @@
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE Access",
         "doi": "10.1109/access.2025.3616145",
+        "code": "https://github.com/usergxx/MSDSAM",
         "author": "Yong Li and Xuerui Dai and Bailin Ge and Yali Song and Jiajun Wang"
       },
       "keywords": [
@@ -6529,6 +6585,7 @@
         "title": "RoCo: Robust Cooperative Perception By Iterative Object Matching and Pose Adjustment",
         "keywords": "CP-Snowball, CP-Intermediate, CP-Object Detection",
         "doi": "10.1145/3664647.3680559",
+        "code": "https://github.com/HuangZhe885/RoCo",
         "booktitle": "ACM Multimedia",
         "author": "Zhe Huang and Shuo Wang and Yongcai Wang and Wanting Li and Deying Li and Lei Wang"
       },
@@ -6971,6 +7028,7 @@
         "title": "UniSense: Spatial-Uncertainty-Aware Collaborative Sensing for Autonomous Driving",
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "doi": "10.1145/3711875.3729130",
+        "code": "https://github.com/LetStarFly/UniSense",
         "booktitle": "ACM SIGMOBILE International Conference on Mobile Systems, Applications, and Services",
         "author": "Haojie Ren and Wuyang Zhang and Shuyao Shi and Xinran Zhang and Lu Zhang and Yanyong Zhang"
       },
@@ -7242,6 +7300,7 @@
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE International Conference on Robotics and Automation",
         "doi": "10.1109/icra57147.2024.10611481",
+        "code": "https://github.com/hexunjie/Ro-temd",
         "author": "Xunjie He and Yiming Li and Te Cui and Meiling Wang and Tong Liu and Yufeng Yue"
       },
       "keywords": [
@@ -7260,6 +7319,7 @@
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "journal": "2024 IEEE Intelligent Vehicles Symposium (IV)",
         "doi": "10.1109/iv55156.2024.10588865",
+        "code": "https://github.com/YuanYunshuang/CoSense3D",
         "author": "Yunshuang Yuan and Monika Sester"
       },
       "keywords": [
@@ -7837,6 +7897,7 @@
         "keywords": "CP-Snowball, CP-LiDAR, CP-Intermediate, CP-Object Detection",
         "journal": "IEEE Transactions on Dependable and Secure Computing",
         "doi": "10.1109/tdsc.2026.3693684",
+        "code": "https://github.com/yihangtao/GCP.git",
         "author": "Yihang Tao and Senkang Hu and Yue Hu and Haonan An and Hangcheng Cao and Yuguang Fang"
       },
       "keywords": [
@@ -7996,6 +8057,7 @@
         "title": "MSMA: Multi-agent Trajectory Prediction in Connected and Autonomous Vehicle Environment with Multi-source Data Integration",
         "keywords": "CP-Snowball, CP-Late, CP-Motion Prediction",
         "doi": "10.1061/9780784485484.026",
+        "code": "https://github.com/xichennn/MSMA",
         "booktitle": "CICTP 2024",
         "author": "Xi Chen and Rahul Bhadani and Zhanbo Sun and Larry Head"
       },

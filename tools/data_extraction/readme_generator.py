@@ -147,6 +147,9 @@ class ReadmeGenerator:
         return ""
 
     def repo_link(self, paper: Dict[str, Any]) -> str:
+        code = self.clean_text(paper["fields"].get("code", ""))
+        if code:
+            return code.rstrip(".,);]")
         abstract = (paper["fields"].get("abstract") or "").replace(" ", "")
         match = re.search(r"https?://github\.com/[^\s,;\)\]]+", abstract)
         return match.group(0).rstrip(".,);]") if match else ""
