@@ -325,63 +325,35 @@ Every section below is rendered as a table so the repository can be used as a pr
 """
 
     def generate_timeline(self) -> str:
-        """Per-axis development-trajectory diagrams (Mermaid timelines).
+        """Development-trajectory figure + milestone narrative.
 
-        Milestone methods are drawn from the survey's per-method Tables IX–XXIX;
-        per-year counts are computed from the 106-paper collection.
+        The figure (figure/development_timeline.png) is rendered by
+        tools/data_extraction/make_timeline_figure.py from this collection; milestone
+        methods are drawn from the survey's per-method Tables IX–XXIX.
         """
         return """## Development Timeline
 
-Development trajectory of vehicular collaborative perception along the three taxonomy axes
-(milestone methods from the survey's Tables IX–XXIX; per-year counts from this collection).
+Development trajectory of vehicular collaborative perception across all **402** collected
+papers (106 surveyed + 296 forward-snowballing). The figure shows publications per year by
+source, modality, collaboration scheme, and perception task.
 
-### Modality trajectory
+<p align="center">
+<img src="figure/development_timeline.png" width="90%" height="auto"/>
+</p>
 
-LiDAR anchored the field from the start; camera-only CP emerged around 2021–2023 and
-LiDAR–camera fusion from 2022, but LiDAR still dominates (63 vs 13 vs 12 in the survey).
+<sub>Regenerate with <code>python tools/data_extraction/make_timeline_figure.py</code>. Survey collection ≤ March 2024; 2024–2026 extended via forward snowballing; 2026 is partial.</sub>
 
-```mermaid
-timeline
-    title Modality evolution in Collaborative Perception
-    2019 : LiDAR debut — F-cooper
-    2020 : LiDAR scales — V2VNet, When2com / Who2com
-    2021 : LiDAR matures : first camera CP — Distilled Co-Graph
-    2022 : LiDAR–camera fusion arrives — V2X-ViT, HGAN, Where2comm : datasets OPV2V, V2X-Sim
-    2023 : Peak LiDAR (29) : camera CP grows — CoCa3D, HM-ViT : fusion V2VFusion
-    2024 : LiDAR sustained (19) : fusion HEAL, EMIFF, ActFormer, ViT-FuseNet
-```
+**Milestones (landmark methods per year, from the survey's Tables IX–XXIX):**
 
-### Collaboration trajectory
-
-Intermediate (feature-level) fusion became and stayed dominant (71); early, late and hybrid
-schemes remain comparatively rare.
-
-```mermaid
-timeline
-    title Collaboration-type evolution
-    2019 : Intermediate begins — F-cooper, F-Transformer
-    2020 : Intermediate grows — V2VNet : first late fusion
-    2021 : Late fusion — FL-Dynamic
-    2022 : Early collaboration — JointPerception : first hybrid — Pillar-based CP
-    2023 : Intermediate peaks (30) : late fusion grows — Among Us, Collective PV-RCNN
-    2024 : Intermediate sustained (20) : hybrid — FreeAlign, Hybrid-CP, ML-Cooper
-```
-
-### Perception-task trajectory
-
-Object detection dominated from the outset (78); segmentation, tracking, motion prediction,
-lane detection and multi-task / task-agnostic settings emerged and broadened later.
-
-```mermaid
-timeline
-    title Perception-task evolution
-    2019 : Object detection — F-cooper
-    2020 : Detection scales : lane detection — Co-mapping
-    2021 : Semantic segmentation — Who2com / When2com (CSS)
-    2022 : Detection dominant : task-agnostic scene completion — STAR
-    2023 : Tracking — HYDRO-3D : motion prediction : task-agnostic — Core
-    2024 : Multi-modal occupancy — CoHFF : cooperative tracking — Probabilistic 3D-MOT
-```
+| Year | Modality / Collaboration | Perception tasks |
+| ---: | --- | --- |
+| 2019 | LiDAR debut, intermediate fusion — *F-cooper*, *F-Transformer* | Object detection |
+| 2020 | LiDAR scales — *V2VNet*, *When2com / Who2com*; first late fusion | + Lane detection (*Co-mapping*), segmentation |
+| 2021 | First camera CP — *Distilled Co-Graph*; late fusion *FL-Dynamic* | Detection, segmentation |
+| 2022 | LiDAR–camera fusion — *V2X-ViT*, *HGAN*; early (*JointPerception*) & hybrid (*Pillar-based CP*); datasets *OPV2V*, *V2X-Sim* | + Task-agnostic scene completion (*STAR*) |
+| 2023 | Peak LiDAR; camera CP grows — *CoCa3D*, *HM-ViT*; late fusion *Among Us*, *Collective PV-RCNN* | + Tracking (*HYDRO-3D*), motion prediction, task-agnostic (*Core*) |
+| 2024 | Heterogeneous & fusion — *HEAL*, *EMIFF*, *ActFormer*; hybrid *FreeAlign* | Multi-modal occupancy (*CoHFF*), cooperative tracking (*Probabilistic 3D-MOT*) |
+| 2025–26 | Snowballing surge — state-space (*CoMamba*), VLM-driven (*V2X-VLM*), domain-generalization (*V2X-DG*), new datasets (*RCooper*, *TruckV2X*) | Broadening across all tasks |
 
 ---
 
