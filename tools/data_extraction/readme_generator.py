@@ -202,8 +202,15 @@ class ReadmeGenerator:
             rows.append("| " + " | ".join(data[c] for c in columns) + " |")
         return header + sep + "\n".join(rows) + "\n"
 
-    def section(self, title: str, papers: List[Dict[str, Any]], columns: List[str], intro: str = "") -> str:
+    def section(self, title: str, papers: List[Dict[str, Any]], columns: List[str],
+                intro: str = "", timeline_key: str = "") -> str:
         body = f"### {title} ({len(papers)} papers)\n\n"
+        if timeline_key:
+            img = self.data_path.parent.parent / "figure" / "timeline" / f"{timeline_key}.png"
+            if img.exists():
+                body += (f'<p align="center">\n'
+                         f'<img src="figure/timeline/{timeline_key}.png" width="95%" height="auto" '
+                         f'alt="{title} development timeline"/>\n</p>\n\n')
         if intro:
             body += intro + "\n\n"
         if papers:
@@ -244,7 +251,6 @@ This repository is organized directly around our survey paper, **"A Systematic L
 - [Related Reviews](#related-reviews)
 - [Publication Statistics](#publication-statistics)
 - [Structured Taxonomy](#structured-taxonomy)
-- [Development Timeline](#development-timeline)
 - [Modality Type](#modality-type)
   - [LiDAR](#lidar)
   - [Camera](#camera)
@@ -305,6 +311,14 @@ Our survey emphasizes a PRISMA-style SLR process, a structured taxonomy, and a c
             "| **Top venues** | ICRA (16), CVPR (8), IEEE T-IV (8), NeurIPS (8), ICCV (5), IEEE RA-L (5), IEEE ITSC (5), IEEE T-ITS (4), IEEE IoTJ (4), IEEE IV (4) |",
             "",
             "> These counts cover the **106 surveyed studies only**. The taxonomy tables below additionally include the forward-snowballing extension (2024–2026), with each row marked `Survey` or `Snowball` in the **Source** column. Per-section counts therefore exceed these figures; minor differences between the surveyed sections and Table VIII arise from the survey's unique-study aggregation and an *Agnostic* modality bucket not separated in Table VIII.",
+            "",
+            "Publications over time across all 402 collected papers (survey vs forward-snowballing, by modality, collaboration, and task):",
+            "",
+            '<p align="center">',
+            '<img src="figure/development_timeline.png" width="92%" height="auto" alt="Publication statistics over time"/>',
+            "</p>",
+            "",
+            "<sub>Regenerate with <code>python tools/data_extraction/make_timeline_figure.py</code>. Survey collection ≤ March 2024; 2024–2026 extended via forward snowballing; 2026 is partial.</sub>",
             "\n---\n",
         ]
         return "\n".join(lines)
@@ -324,77 +338,42 @@ Every section below is rendered as a table so the repository can be used as a pr
 
 """
 
-    def generate_timeline(self) -> str:
-        """Development-trajectory figure + milestone narrative.
-
-        The figure (figure/development_timeline.png) is rendered by
-        tools/data_extraction/make_timeline_figure.py from this collection; milestone
-        methods are drawn from the survey's per-method Tables IX–XXIX.
-        """
-        return """## Development Timeline
-
-Development trajectory of vehicular collaborative perception across all **402** collected
-papers (106 surveyed + 296 forward-snowballing). The figure shows publications per year by
-source, modality, collaboration scheme, and perception task.
-
-<p align="center">
-<img src="figure/development_timeline.png" width="90%" height="auto"/>
-</p>
-
-<sub>Regenerate with <code>python tools/data_extraction/make_timeline_figure.py</code>. Survey collection ≤ March 2024; 2024–2026 extended via forward snowballing; 2026 is partial.</sub>
-
-**Milestones (landmark methods per year, from the survey's Tables IX–XXIX):**
-
-| Year | Modality / Collaboration | Perception tasks |
-| ---: | --- | --- |
-| 2019 | LiDAR debut, intermediate fusion — *F-cooper*, *F-Transformer* | Object detection |
-| 2020 | LiDAR scales — *V2VNet*, *When2com / Who2com*; first late fusion | + Lane detection (*Co-mapping*), segmentation |
-| 2021 | First camera CP — *Distilled Co-Graph*; late fusion *FL-Dynamic* | Detection, segmentation |
-| 2022 | LiDAR–camera fusion — *V2X-ViT*, *HGAN*; early (*JointPerception*) & hybrid (*Pillar-based CP*); datasets *OPV2V*, *V2X-Sim* | + Task-agnostic scene completion (*STAR*) |
-| 2023 | Peak LiDAR; camera CP grows — *CoCa3D*, *HM-ViT*; late fusion *Among Us*, *Collective PV-RCNN* | + Tracking (*HYDRO-3D*), motion prediction, task-agnostic (*Core*) |
-| 2024 | Heterogeneous & fusion — *HEAL*, *EMIFF*, *ActFormer*; hybrid *FreeAlign* | Multi-modal occupancy (*CoHFF*), cooperative tracking (*Probabilistic 3D-MOT*) |
-| 2025–26 | Snowballing surge — state-space (*CoMamba*), VLM-driven (*V2X-VLM*), domain-generalization (*V2X-DG*), new datasets (*RCooper*, *TruckV2X*) | Broadening across all tasks |
-
----
-
-"""
-
     def generate_modality_sections(self) -> str:
         columns = ["Paper", "Venue", "Year", "Collaboration", "Task", "Paper Link", "Repo Link", "Source"]
         body = "## Modality Type\n\n"
-        body += self.section("LiDAR", self.filter_by(modality="LiDAR"), columns)
-        body += self.section("Camera", self.filter_by(modality="Camera"), columns)
-        body += self.section("LiDAR-Camera", self.filter_by(modality="LiDAR-Camera"), columns)
-        body += self.section("Modality-Agnostic / Other", self.filter_by(modality="Agnostic"), columns)
+        body += self.section("LiDAR", self.filter_by(modality="LiDAR"), columns, timeline_key="mod_lidar")
+        body += self.section("Camera", self.filter_by(modality="Camera"), columns, timeline_key="mod_camera")
+        body += self.section("LiDAR-Camera", self.filter_by(modality="LiDAR-Camera"), columns, timeline_key="mod_lidar-camera")
+        body += self.section("Modality-Agnostic / Other", self.filter_by(modality="Agnostic"), columns, timeline_key="mod_agnostic")
         body += "---\n\n"
         return body
 
     def generate_collaboration_sections(self) -> str:
         columns = ["Paper", "Venue", "Year", "Modality", "Task", "Paper Link", "Repo Link", "Source"]
         body = "## Collaboration Type\n\n"
-        body += self.section("Early Collaboration", self.filter_by(collaboration="Early"), columns)
-        body += self.section("Intermediate Collaboration", self.filter_by(collaboration="Intermediate"), columns)
-        body += self.section("Late Collaboration", self.filter_by(collaboration="Late"), columns)
-        body += self.section("Hybrid Collaboration", self.filter_by(collaboration="Hybrid"), columns)
+        body += self.section("Early Collaboration", self.filter_by(collaboration="Early"), columns, timeline_key="collab_early")
+        body += self.section("Intermediate Collaboration", self.filter_by(collaboration="Intermediate"), columns, timeline_key="collab_intermediate")
+        body += self.section("Late Collaboration", self.filter_by(collaboration="Late"), columns, timeline_key="collab_late")
+        body += self.section("Hybrid Collaboration", self.filter_by(collaboration="Hybrid"), columns, timeline_key="collab_hybrid")
         body += "---\n\n"
         return body
 
     def generate_task_sections(self) -> str:
         columns = ["Paper", "Venue", "Year", "Modality", "Collaboration", "Paper Link", "Repo Link", "Source"]
         body = "## Perception Tasks\n\n"
-        body += self.section("Collaborative Object Detection", self.filter_by(task="Object Detection"), columns)
-        body += self.section("Collaborative Semantic Segmentation", self.filter_by(task="Semantic Segmentation"), columns)
-        body += self.section("Collaborative Object Tracking", self.filter_by(task="Object Tracking"), columns)
-        body += self.section("Collaborative Motion Prediction", self.filter_by(task="Motion Prediction"), columns)
-        body += self.section("Collaborative Lane Detection", self.filter_by(task="Lane Detection"), columns)
-        body += self.section("Multi-Task and Task-Agnostic", self.filter_by(task="Multi-Task & Task-Agnostic"), columns)
+        body += self.section("Collaborative Object Detection", self.filter_by(task="Object Detection"), columns, timeline_key="task_object-detection")
+        body += self.section("Collaborative Semantic Segmentation", self.filter_by(task="Semantic Segmentation"), columns, timeline_key="task_semantic-segmentation")
+        body += self.section("Collaborative Object Tracking", self.filter_by(task="Object Tracking"), columns, timeline_key="task_object-tracking")
+        body += self.section("Collaborative Motion Prediction", self.filter_by(task="Motion Prediction"), columns, timeline_key="task_motion-prediction")
+        body += self.section("Collaborative Lane Detection", self.filter_by(task="Lane Detection"), columns, timeline_key="task_lane-detection")
+        body += self.section("Multi-Task and Task-Agnostic", self.filter_by(task="Multi-Task & Task-Agnostic"), columns, timeline_key="task_multi-task")
         body += "---\n\n"
         return body
 
     def generate_dataset_section(self) -> str:
         columns = ["Paper", "Venue", "Year", "Modality", "Collaboration", "Paper Link", "Repo Link", "Source"]
         body = "## Datasets\n\n"
-        body += self.section("Dataset / Benchmark Papers", self.filter_by(dataset_only=True), columns)
+        body += self.section("Dataset / Benchmark Papers", self.filter_by(dataset_only=True), columns, timeline_key="dataset")
         body += "---\n\n"
         return body
 
@@ -427,7 +406,6 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
         readme += self.generate_header()
         readme += self.generate_statistics()
         readme += self.generate_taxonomy()
-        readme += self.generate_timeline()
         readme += self.generate_modality_sections()
         readme += self.generate_collaboration_sections()
         readme += self.generate_task_sections()
