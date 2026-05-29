@@ -484,7 +484,7 @@
         "pages": "255--263",
         "month": "June",
         "langid": "english",
-        "keywords": "CP-Dataset",
+        "keywords": "CP-LiDAR, CP-Camera, CP-Dataset, CP-V2V",
         "journal": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
         "issn": "2194-9034",
         "file": "/home/lei-wan/Zotero/storage/BX6BE7J9/Yuan_Sester_2021_COMAP.pdf",
@@ -493,7 +493,10 @@
         "abstract": "Collective perception of connected vehicles can sufficiently increase the safety and reliability of autonomous driving by sharing perception information. However, collecting real experimental data for such scenarios is extremely expensive. Therefore, we built a computational efficient co-simulation synthetic data generator through CARLA and SUMO simulators. The simulated data contain image and point cloud data as well as ground truth for object detection and semantic segmentation tasks. To verify the superior performance gain of collective perception over single-vehicle perception, we conducted experiments of vehicle detection, which is one of the most important perception tasks for autonomous driving, on this data set. A 3D object detector and a Bird's Eye View (BEV) detector are trained and then test with different configurations of the number of cooperative vehicles and vehicle communication ranges. The experiment results showed that collective perception can not only dramatically increase the overall mean detection accuracy but also the localization accuracy of detected bounding boxes. Besides, a vehicle detection comparison experiment showed that the detection performance drop caused by sensor observation noise can be canceled out by redundant information collected by multiple vehicles."
       },
       "keywords": [
-        "CP-Dataset"
+        "CP-LiDAR",
+        "CP-Camera",
+        "CP-Dataset",
+        "CP-V2V"
       ]
     },
     {
@@ -1193,7 +1196,7 @@
         "publisher": "CVPR2024",
         "month": "March",
         "langid": "english",
-        "keywords": "Computer Science - Computer Vision and Pattern Recognition,CP-Dataset",
+        "keywords": "CP-LiDAR, CP-Camera, CP-Dataset, CP-V2I",
         "file": "/home/lei-wan/Zotero/storage/M2RUSP6M/Ma et al_2024_HoloVIC.pdf",
         "doi": "10.1109/CVPR52733.2024.02089",
         "booktitle": "Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. (CVPR)",
@@ -1201,8 +1204,10 @@
         "abstract": "Vehicle-to-everything (V2X) is a popular topic in the field of Autonomous Driving in recent years. Vehicleinfrastructure cooperation (VIC) becomes one of the important research area. Due to the complexity of traffic conditions such as blind spots and occlusion, it greatly limits the perception capabilities of single-view roadside sensing systems. To further enhance the accuracy of roadside perception and provide better information to the vehicle side, in this paper, we constructed holographic intersections with various layouts to build a large-scale multi-sensor holographic vehicle-infrastructure cooperation dataset, called HoloVIC. Our dataset includes 3 different types of sensors (Camera, Lidar, Fisheye) and employs 4 sensor-layouts based on the different intersections. Each intersection is equipped with 6-18 sensors to capture synchronous data. While autonomous vehicles pass through these intersections for collecting VIC data. HoloVIC contains in total on 100k+ synchronous frames from different sensors. Additionally, we annotated 3D bounding boxes based on Camera, Fisheye, and Lidar. We also associate the IDs of the same objects across different devices and consecutive frames in sequence. Based on HoloVIC, we formulated four tasks to facilitate the development of related research. We also provide benchmarks for these tasks."
       },
       "keywords": [
-        "Computer Science - Computer Vision and Pattern Recognition",
-        "CP-Dataset"
+        "CP-LiDAR",
+        "CP-Camera",
+        "CP-Dataset",
+        "CP-V2I"
       ]
     },
     {
@@ -1491,7 +1496,7 @@
         "pages": "1--8",
         "month": "June",
         "langid": "english",
-        "keywords": "CP-Dataset",
+        "keywords": "CP-LiDAR, CP-Dataset, CP-V2V",
         "isbn": "979-8-3503-4691-6",
         "file": "/home/lei-wan/Zotero/storage/TQDQZFGP/Axmann et al_2023_LUCOOP.pdf",
         "doi": "10.1109/IV55152.2023.10186693",
@@ -1501,7 +1506,9 @@
         "abstract": "Recently published datasets have been increasingly comprehensive with respect to their variety of simultaneously used sensors, traffic scenarios, environmental conditions, and provided annotations. However, these datasets typically only consider data collected by one independent vehicle. Hence, there is currently a lack of comprehensive, real-world, multi-vehicle datasets fostering research on cooperative applications such as object detection, urban navigation, or multi-agent SLAM. In this paper, we aim to fill this gap by introducing the novel LUCOOP dataset, which provides time-synchronized multi-modal data collected by three interacting measurement vehicles. The driving scenario corresponds to a follow-up setup of multiple rounds in an inner city triangular trajectory. Each vehicle was equipped with a broad sensor suite including at least one LiDAR sensor, one GNSS antenna, and up to three IMUs. Additionally, Ultra-Wide-Band (UWB) sensors were mounted on each vehicle, as well as statically placed along the trajectory enabling both V2V and V2X range measurements. Furthermore, a part of the trajectory was monitored by a total station resulting in a highly accurate reference trajectory. The LUCOOP dataset also includes a precise, dense 3D map point cloud, acquired simultaneously by a mobile mapping system, as well as an LOD2 city model of the measurement area. We provide sensor measurements in a multi-vehicle setup for a trajectory of more than 4 km and a time interval of more than 26 minutes, respectively. Overall, our dataset includes more than 54,000 LiDAR frames, approximately 700,000 IMU measurements, and more than 2.5 hours of 10 Hz GNSS raw measurements along with 1 Hz data from a reference station. Furthermore, we provide more than 6,000 total station measurements over a trajectory of more than 1 km and 1,874 V2V and 267 V2X UWB measurements. Additionally, we offer 3D bounding box annotations for evaluating object detection approaches, as well as highly accurate ground truth poses for each vehicle throughout the measurement campaign."
       },
       "keywords": [
-        "CP-Dataset"
+        "CP-LiDAR",
+        "CP-Dataset",
+        "CP-V2V"
       ]
     },
     {
@@ -1755,7 +1762,7 @@
         "pages": "506--527",
         "month": "December",
         "langid": "english",
-        "keywords": "???,CP-Dataset",
+        "keywords": "CP-Camera, CP-Dataset, CP-V2I",
         "journal": "Future Generation Computer Systems",
         "issn": "0167739X",
         "file": "/home/lei-wan/Zotero/storage/9RANQX57/Ben Khalifa et al_2020_A novel multi-view pedestrian detection database for collaborative Intelligent.pdf",
@@ -1764,8 +1771,9 @@
         "abstract": "Recent advances in machine-learning, especially in deep neural networks have significantly accelerated the development and deployment of transport-oriented intelligent designs with increasingly high efficiency. While these technologies are exceptionally promising toward revolutionizing our current mobility and reducing the number of road accidents, the way to safe Intelligent Transportation Systems (ITS) remains long. Since pedestrians are the most vulnerable road users, designing accurate pedestrian detection methods is a priority task. However, traditional monocular pedestrian detection methods are limited, especially in occlusion handling. Hence, a collaborative perception scheme in which vehicles no longer restrict their input data to their immediate embedded sensors and rather exploit data from remote sensors is necessary to achieve a more comprehensive environment perception. In this work, we propose a novel public dataset: Infrastructure to Vehicle Multi-View Pedestrian Detection Database (I2V-MVPD) that combines synchronized images from both a mobile camera embedded in a car and a static camera in the road infrastructure. We also propose a new multi-view pedestrian detection framework based on collaborative intelligence between vehicles and infrastructure. Our results show a significant improvement in detection performance over monocular detection."
       },
       "keywords": [
-        "???",
-        "CP-Dataset"
+        "CP-Camera",
+        "CP-Dataset",
+        "CP-V2I"
       ]
     },
     {
@@ -2406,7 +2414,7 @@
         "pages": "13712--13722",
         "month": "June",
         "langid": "english",
-        "keywords": "CP-Dataset",
+        "keywords": "CP-LiDAR, CP-Camera, CP-Dataset, CP-V2V",
         "isbn": "979-8-3503-0129-8",
         "file": "/home/lei-wan/Zotero/storage/4ZW8NHPF/Xu et al_2023_V2V4Real.pdf",
         "doi": "10.1109/CVPR52729.2023.01318",
@@ -2416,7 +2424,10 @@
         "abstract": "Modern perception systems of autonomous vehicles are known to be sensitive to occlusions and lack the capability of long perceiving range. It has been one of the key bottlenecks that prevents Level 5 autonomy. Recent research has demonstrated that the Vehicle-to-Vehicle (V2V) cooperative perception system has great potential to revolutionize the autonomous driving industry. However, the lack of a real-world dataset hinders the progress of this field. To facilitate the development of cooperative perception, we present V2V4Real, the first large-scale realworld multi-modal dataset for V2V perception. The data is collected by two vehicles equipped with multi-modal sensors driving together through diverse scenarios. Our V2V4Real dataset covers a driving area of 410 km, comprising 20K LiDAR frames, 40K RGB frames, 240K annotated 3D bounding boxes for 5 classes, and HDMaps that cover all the driving routes. V2V4Real introduces three perception tasks, including cooperative 3D object detection, cooperative 3D object tracking, and Sim2Real domain adaptation for cooperative perception. We provide comprehensive benchmarks of recent cooperative perception algorithms on three tasks. The V2V4Real dataset can be found at research.seas.ucla.edu/mobility-lab/v2v4real/."
       },
       "keywords": [
-        "CP-Dataset"
+        "CP-LiDAR",
+        "CP-Camera",
+        "CP-Dataset",
+        "CP-V2V"
       ]
     },
     {
@@ -2574,7 +2585,7 @@
         "number": "4",
         "month": "October",
         "langid": "english",
-        "keywords": "CP-Dataset",
+        "keywords": "CP-LiDAR, CP-Camera, CP-Dataset, CP-V2V, CP-V2I",
         "journal": "IEEE Robotics and Automation Letters",
         "issn": "2377-3766, 2377-3774",
         "file": "/home/lei-wan/Zotero/storage/ZZMBHSLY/Li et al_2022_V2X-Sim.pdf",
@@ -2583,7 +2594,11 @@
         "abstract": "Vehicle-to-everything (V2X) communication techniques enable the collaboration between vehicles and many other entities in the neighboring environment, which could fundamentally improve the perception system for autonomous driving. However, the lack of a public dataset significantly restricts the research progress of collaborative perception. To fill this gap, we present V2X-Sim, a comprehensive simulated multi-agent perception dataset for V2X-aided autonomous driving. V2X-Sim provides: (1) multi-agent sensor recordings from the road-side unit (RSU) and multiple vehicles that enable collaborative perception, (2) multi-modality sensor streams that facilitate multi-modality perception, and (3) diverse ground truths that support various perception tasks. Meanwhile, we build an open-source testbed and provide a benchmark for the state-of-the-art collaborative perception algorithms on three tasks, including detection, tracking and segmentation. V2X-Sim seeks to stimulate collaborative perception research for autonomous driving before realistic datasets become widely available."
       },
       "keywords": [
-        "CP-Dataset"
+        "CP-LiDAR",
+        "CP-Camera",
+        "CP-Dataset",
+        "CP-V2V",
+        "CP-V2I"
       ]
     },
     {
@@ -8158,6 +8173,7 @@
         "LearningDistilledCollaboration-2021-lib",
         "LearningVehicletoVehicleCooperative-2023-lia",
         "LiDARSemanticSegmentation-2023-liua",
+        "LUCOOPLeibnizUniversity-2023-axmanna",
         "MACPEfficientModel-2024-maa",
         "MKDCooperCooperative3D-2024-lia",
         "ModelAgnosticMultiAgentPerception-2023-xub",
@@ -8320,6 +8336,7 @@
         "EMIFFEnhancedMultiscale-2024-wangc",
         "EnhancingLaneDetection-2024-jahna",
         "MoRFFMultiViewObject-2023-maoa",
+        "NovelMultiviewPedestrian-2020-benkhalifaa",
         "OvercomingObstructionsBandwidthLimited-2021-glasera",
         "QUESTQueryStream-2023-fand",
         "When2comMultiAgentPerception-2020-liua",
@@ -8361,17 +8378,21 @@
         "Snowball2026PrivacyConcealingCooperativePerception"
       ],
       "LiDAR-Camera": [
+        "COMAPSYNTHETICDATASET-2021-yuanc",
         "DAIRV2XLargeScaleDataset-2022-yua",
         "DeepAccidentMotionAccident-2024-wanga",
         "DOLPHINSDatasetCollaborative-2023-maob",
+        "HoloVICLargescaleDataset-2024-mac",
         "MCoTMultiModalVehicletoVehicle-2023-shia",
         "MultimodalCooperative3D-2023-chia",
         "MultistageFusionApproach-2022-yua",
         "OPV2VOpenBenchmark-2022-xub",
         "TUMTrafV2XCooperative-2024-zimmerc",
+        "V2V4RealRealWorldLargeScale-2023-xua",
         "V2VFormerMultiModalVehicletoVehicle-2024-yina",
         "V2VFusionMultimodalFusion-2023-zhanga",
         "V2XSeqLargeScaleSequential-2023-yub",
+        "V2XSimMultiAgentCollaborative-2022-lie",
         "ViTFuseNetMultimodalFusion-2024-zhoua",
         "Where2commCommunicationEfficientCollaborative-2022-huc",
         "Snowball2025AdvancedMultiModalSensor",
@@ -9217,9 +9238,9 @@
   "statistics": {
     "total_papers": 402,
     "by_modality": {
-      "LiDAR": 190,
-      "Camera": 48,
-      "LiDAR-Camera": 51
+      "LiDAR": 191,
+      "Camera": 49,
+      "LiDAR-Camera": 55
     },
     "by_collaboration": {
       "Late": 57,
