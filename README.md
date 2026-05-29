@@ -25,7 +25,6 @@ This repository is organized directly around our survey paper, **"A Systematic L
 - [Related Reviews](#related-reviews)
 - [Publication Statistics](#publication-statistics)
 - [Structured Taxonomy](#structured-taxonomy)
-- [Development Timeline](#development-timeline)
 - [Modality Type](#modality-type)
   - [LiDAR](#lidar)
   - [Camera](#camera)
@@ -76,6 +75,14 @@ These figures mirror **Table VIII** of the survey (aggregate, unique-study count
 
 > These counts cover the **106 surveyed studies only**. The taxonomy tables below additionally include the forward-snowballing extension (2024–2026), with each row marked `Survey` or `Snowball` in the **Source** column. Per-section counts therefore exceed these figures; minor differences between the surveyed sections and Table VIII arise from the survey's unique-study aggregation and an *Agnostic* modality bucket not separated in Table VIII.
 
+Publications over time across all 402 collected papers (survey vs forward-snowballing, by modality, collaboration, and task):
+
+<p align="center">
+<img src="figure/development_timeline.png" width="92%" height="auto" alt="Publication statistics over time"/>
+</p>
+
+<sub>Regenerate with <code>python tools/data_extraction/make_timeline_figure.py</code>. Survey collection ≤ March 2024; 2024–2026 extended via forward snowballing; 2026 is partial.</sub>
+
 ---
 ## Structured Taxonomy
 
@@ -89,35 +96,13 @@ Every section below is rendered as a table so the repository can be used as a pr
 
 ---
 
-## Development Timeline
-
-Development trajectory of vehicular collaborative perception across all **402** collected
-papers (106 surveyed + 296 forward-snowballing). The figure shows publications per year by
-source, modality, collaboration scheme, and perception task.
-
-<p align="center">
-<img src="figure/development_timeline.png" width="90%" height="auto"/>
-</p>
-
-<sub>Regenerate with <code>python tools/data_extraction/make_timeline_figure.py</code>. Survey collection ≤ March 2024; 2024–2026 extended via forward snowballing; 2026 is partial.</sub>
-
-**Milestones (landmark methods per year, from the survey's Tables IX–XXIX):**
-
-| Year | Modality / Collaboration | Perception tasks |
-| ---: | --- | --- |
-| 2019 | LiDAR debut, intermediate fusion — *F-cooper*, *F-Transformer* | Object detection |
-| 2020 | LiDAR scales — *V2VNet*, *When2com / Who2com*; first late fusion | + Lane detection (*Co-mapping*), segmentation |
-| 2021 | First camera CP — *Distilled Co-Graph*; late fusion *FL-Dynamic* | Detection, segmentation |
-| 2022 | LiDAR–camera fusion — *V2X-ViT*, *HGAN*; early (*JointPerception*) & hybrid (*Pillar-based CP*); datasets *OPV2V*, *V2X-Sim* | + Task-agnostic scene completion (*STAR*) |
-| 2023 | Peak LiDAR; camera CP grows — *CoCa3D*, *HM-ViT*; late fusion *Among Us*, *Collective PV-RCNN* | + Tracking (*HYDRO-3D*), motion prediction, task-agnostic (*Core*) |
-| 2024 | Heterogeneous & fusion — *HEAL*, *EMIFF*, *ActFormer*; hybrid *FreeAlign* | Multi-modal occupancy (*CoHFF*), cooperative tracking (*Probabilistic 3D-MOT*) |
-| 2025–26 | Snowballing surge — state-space (*CoMamba*), VLM-driven (*V2X-VLM*), domain-generalization (*V2X-DG*), new datasets (*RCooper*, *TruckV2X*) | Broadening across all tasks |
-
----
-
 ## Modality Type
 
 ### LiDAR (191 papers)
+
+<p align="center">
+<img src="figure/timeline/mod_lidar.png" width="95%" height="auto" alt="LiDAR development timeline"/>
+</p>
 
 | Paper | Venue | Year | Collaboration | Task | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -315,6 +300,10 @@ source, modality, collaboration scheme, and perception task.
 
 ### Camera (49 papers)
 
+<p align="center">
+<img src="figure/timeline/mod_camera.png" width="95%" height="auto" alt="Camera development timeline"/>
+</p>
+
 | Paper | Venue | Year | Collaboration | Task | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Enhancing BEV Perception Through Vehicle-Road Cooperative Systems: An Attention-Based Cross-View Fusion Approach | IEEE Transactions on Vehicular Technology | 2026 | Intermediate | Object Detection | [Paper](https://doi.org/10.1109/tvt.2025.3626427) | — | Snowball |
@@ -368,6 +357,10 @@ source, modality, collaboration scheme, and perception task.
 | Who2com: Collaborative Perception via Learnable Handshake Communication | 2020 IEEE International Conference on Robotics and Automation (ICRA) | 2020 | Intermediate | Semantic Segmentation | [Paper](https://doi.org/10.1109/ICRA40945.2020.9197364) | — | Survey |
 
 ### LiDAR-Camera (55 papers)
+
+<p align="center">
+<img src="figure/timeline/mod_lidar-camera.png" width="95%" height="auto" alt="LiDAR-Camera development timeline"/>
+</p>
 
 | Paper | Venue | Year | Collaboration | Task | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -428,6 +421,10 @@ source, modality, collaboration scheme, and perception task.
 | COMAP: A SYNTHETIC DATASET FOR COLLECTIVE MULTI-AGENT PERCEPTION OF AUTONOMOUS DRIVING | The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences | 2021 | V2V | Dataset / Benchmark | [Paper](https://doi.org/10.5194/isprs-archives-XLIII-B2-2021-255-2021) | — | Survey |
 
 ### Modality-Agnostic / Other (107 papers)
+
+<p align="center">
+<img src="figure/timeline/mod_agnostic.png" width="95%" height="auto" alt="Modality-Agnostic / Other development timeline"/>
+</p>
 
 | Paper | Venue | Year | Collaboration | Task | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -545,6 +542,10 @@ source, modality, collaboration scheme, and perception task.
 
 ### Early Collaboration (25 papers)
 
+<p align="center">
+<img src="figure/timeline/collab_early.png" width="95%" height="auto" alt="Early Collaboration development timeline"/>
+</p>
+
 | Paper | Venue | Year | Modality | Task | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | BRIDGE: Task-Aware LiDAR Point Cloud Compression with Optimal Detection-Critical Subset Learning | Most | 2026 | LiDAR | Object Detection | [Paper](https://www.semanticscholar.org/search?q=BRIDGE%3A%20Task-Aware%20LiDAR%20Point%20Cloud%20Compression%20with%20Optimal%20Detection-Critical%20Subset%20Learning&sort=relevance) | — | Snowball |
@@ -574,6 +575,10 @@ source, modality, collaboration scheme, and perception task.
 | Pillar-Based Cooperative Perception from Point Clouds for 6G-Enabled Cooperative Autonomous Vehicles | Wireless Communications and Mobile Computing | 2022 | LiDAR | Object Detection | [Paper](https://doi.org/10.1155/2022/3646272) | — | Survey |
 
 ### Intermediate Collaboration (291 papers)
+
+<p align="center">
+<img src="figure/timeline/collab_intermediate.png" width="95%" height="auto" alt="Intermediate Collaboration development timeline"/>
+</p>
 
 | Paper | Venue | Year | Modality | Task | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -871,6 +876,10 @@ source, modality, collaboration scheme, and perception task.
 
 ### Late Collaboration (57 papers)
 
+<p align="center">
+<img src="figure/timeline/collab_late.png" width="95%" height="auto" alt="Late Collaboration development timeline"/>
+</p>
+
 | Paper | Venue | Year | Modality | Task | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | BELT-Fusion: Bayesian Evidential Late Fusion for Trustworthy V2X Perception | IEEE Transactions on Intelligent Transportation Systems | 2026 | Agnostic | Object Detection | [Paper](https://doi.org/10.1109/tits.2025.3625597) | — | Snowball |
@@ -933,6 +942,10 @@ source, modality, collaboration scheme, and perception task.
 
 ### Hybrid Collaboration (17 papers)
 
+<p align="center">
+<img src="figure/timeline/collab_hybrid.png" width="95%" height="auto" alt="Hybrid Collaboration development timeline"/>
+</p>
+
 | Paper | Venue | Year | Modality | Task | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Bringing Different Views Together: A Hybrid Cooperative Perception Framework for Connected Autonomous Vehicles | IEEE Network | 2026 | Agnostic | Object Detection | [Paper](https://doi.org/10.1109/mnet.2025.3546821) | — | Snowball |
@@ -958,6 +971,10 @@ source, modality, collaboration scheme, and perception task.
 ## Perception Tasks
 
 ### Collaborative Object Detection (337 papers)
+
+<p align="center">
+<img src="figure/timeline/task_object-detection.png" width="95%" height="auto" alt="Collaborative Object Detection development timeline"/>
+</p>
 
 | Paper | Venue | Year | Modality | Collaboration | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1301,6 +1318,10 @@ source, modality, collaboration scheme, and perception task.
 
 ### Collaborative Semantic Segmentation (17 papers)
 
+<p align="center">
+<img src="figure/timeline/task_semantic-segmentation.png" width="95%" height="auto" alt="Collaborative Semantic Segmentation development timeline"/>
+</p>
+
 | Paper | Venue | Year | Modality | Collaboration | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Privacy-Concealing Cooperative Perception for BEV Scene Segmentation | IEEE International Conference on Acoustics, Speech, and Signal Processing | 2026 | Camera | Intermediate | [Paper](https://doi.org/10.1109/icassp55912.2026.11464941) | — | Snowball |
@@ -1322,6 +1343,10 @@ source, modality, collaboration scheme, and perception task.
 | Who2com: Collaborative Perception via Learnable Handshake Communication | 2020 IEEE International Conference on Robotics and Automation (ICRA) | 2020 | Camera | Intermediate | [Paper](https://doi.org/10.1109/ICRA40945.2020.9197364) | — | Survey |
 
 ### Collaborative Object Tracking (26 papers)
+
+<p align="center">
+<img src="figure/timeline/task_object-tracking.png" width="95%" height="auto" alt="Collaborative Object Tracking development timeline"/>
+</p>
 
 | Paper | Venue | Year | Modality | Collaboration | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1354,6 +1379,10 @@ source, modality, collaboration scheme, and perception task.
 
 ### Collaborative Motion Prediction (26 papers)
 
+<p align="center">
+<img src="figure/timeline/task_motion-prediction.png" width="95%" height="auto" alt="Collaborative Motion Prediction development timeline"/>
+</p>
+
 | Paper | Venue | Year | Modality | Collaboration | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Bridging Infrastructures and Vehicles: A Cooperative Framework for Fusing Heterogeneous Future Trajectory Prediction | IEEE Internet of Things Journal | 2026 | Agnostic | Late | [Paper](https://doi.org/10.1109/jiot.2026.3671814) | — | Snowball |
@@ -1385,6 +1414,10 @@ source, modality, collaboration scheme, and perception task.
 
 ### Collaborative Lane Detection (4 papers)
 
+<p align="center">
+<img src="figure/timeline/task_lane-detection.png" width="95%" height="auto" alt="Collaborative Lane Detection development timeline"/>
+</p>
+
 | Paper | Venue | Year | Modality | Collaboration | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Vehicle-to-Infrastructure Multi-Sensor Fusion (V2I-MSF) With Reinforcement Learning Framework for Enhancing Autonomous Vehicle Perception | IEEE Access | 2025 | LiDAR-Camera | Intermediate | [Paper](https://doi.org/10.1109/access.2025.3551367) | — | Snowball |
@@ -1393,6 +1426,10 @@ source, modality, collaboration scheme, and perception task.
 | Cooperative Road Geometry Estimation via Sharing Processed Camera Data | 2020 IEEE 3rd Connected and Automated Vehicles Symposium (CAVS) | 2020 | Agnostic | Late | [Paper](https://doi.org/10.1109/CAVS51000.2020.9334579) | — | Survey |
 
 ### Multi-Task and Task-Agnostic (19 papers)
+
+<p align="center">
+<img src="figure/timeline/task_multi-task.png" width="95%" height="auto" alt="Multi-Task and Task-Agnostic development timeline"/>
+</p>
 
 | Paper | Venue | Year | Modality | Collaboration | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1421,6 +1458,10 @@ source, modality, collaboration scheme, and perception task.
 ## Datasets
 
 ### Dataset / Benchmark Papers (47 papers)
+
+<p align="center">
+<img src="figure/timeline/dataset.png" width="95%" height="auto" alt="Dataset / Benchmark Papers development timeline"/>
+</p>
 
 | Paper | Venue | Year | Modality | Collaboration | Paper Link | Repo Link | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- |

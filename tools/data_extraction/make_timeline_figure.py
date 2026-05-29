@@ -79,7 +79,7 @@ def main():
     tsk_c = {t: C[i] for i, t in enumerate(tsk_order)}
 
     fig, axes = plt.subplots(2, 2, figsize=(12, 8.2))
-    fig.suptitle("Development Timeline of Vehicular Collaborative Perception (2019–2026)",
+    fig.suptitle("Publication Statistics over Time — Vehicular Collaborative Perception (2019–2026)",
                  fontsize=14, fontweight="bold", y=0.98)
 
     stack(axes[0, 0], ["Survey (SLR)", "Snowball (2024–26)"], src, src_c,
