@@ -99,7 +99,7 @@ Papers are organized along the three axes of the survey, so the repository works
 2. **Collaboration scheme** — *Early* (raw-data sharing), *Intermediate* (feature sharing), *Late* (result sharing), and *Hybrid*.
 3. **Perception task** — *Object Detection*, *Semantic Segmentation*, *Object Tracking*, *Motion Prediction*, *Lane Detection*, and *Multi-Task / Task-Agnostic*.
 
-The same study appears under each axis it belongs to, and a per-table **development timeline** precedes every table to trace how that category evolved.
+The same study appears under each axis it belongs to, and a per-table **development timeline** precedes every table to trace how that category evolved. To keep the timelines legible, only works published at top venues (CVPR, ICCV, ECCV, TPAMI, NeurIPS, ICLR, AAAI, ICRA, IROS, T-ITS, …) are marked, each prefixed with its venue.
 
 **Table key.** &nbsp; **Year** — publication year. &nbsp; **Modality / Collaboration / Task** — taxonomy labels above (datasets show their V2X mode, *V2V* / *V2I*, in the Collaboration column). &nbsp; **Paper** / **Repo** — links to the publication and official code. &nbsp; **Source** — `Survey` (in the SLR, ≤ Mar 2024) or `Snowball` (forward-snowballing extension, 2024–2026).
 

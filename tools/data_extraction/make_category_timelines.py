@@ -3,8 +3,9 @@
 
 For every category table in the README (modality, collaboration, task, datasets) this
 draws a 2019 → May-2026 timeline with that category's representative works marked on it.
-Representative works are selected from the collection (survey landmarks first, then
-named-acronym snowballing papers), capped per year for readability.
+To keep the timelines legible and high-signal, only works published at **top venues**
+(CVPR, ICCV, ECCV, TPAMI, IJCV, NeurIPS, ICLR, ICML, AAAI, IJCAI, ICRA, IROS, RA-L, CoRL,
+T-RO, T-ITS, T-IV, T-IP, ACM MM) are marked; each label is prefixed with its venue.
 
 Outputs: figure/timeline/<key>.png
 """
@@ -23,9 +24,46 @@ from readme_generator import ReadmeGenerator  # noqa: E402
 
 OUTDIR = ROOT / "figure" / "timeline"
 YEARS = list(range(2019, 2027))       # 2019 .. May 2026
-CAP = 18                              # max works listed per year before "+N more"
-MAXLAB = 26                           # label truncation length
+CAP = 12                              # max works listed per year before "+N more"
+MAXLAB = 30                           # label truncation length
 SURVEY_C, SNOW_C = "#1f5fa6", "#d2691e"
+
+# Top venues only (flagship CV / ML / robotics / ITS). Ordered: first match wins.
+# Workshops are excluded explicitly in venue_acronym().
+TOP_VENUES = [
+    (r"pattern analysis and machine intelligence", "TPAMI"),
+    (r"international journal of computer vision", "IJCV"),
+    (r"computer vision and pattern recognition|\bCVPR\b", "CVPR"),
+    (r"international conference on computer vision|\bICCV\b", "ICCV"),
+    (r"european conference on computer vision|\bECCV\b", "ECCV"),
+    (r"neural information processing|neurips|\bnips\b|adv\. neural", "NeurIPS"),
+    (r"learning representations|\bICLR\b", "ICLR"),
+    (r"international conference on machine learning|\bICML\b", "ICML"),
+    (r"\baaai\b", "AAAI"),
+    (r"ijcai|international joint conference on artificial", "IJCAI"),
+    (r"robot learning|\bCoRL\b", "CoRL"),
+    (r"transactions on robotics", "T-RO"),
+    (r"robotics and automation letters", "RA-L"),
+    (r"robotics and automation|\bICRA\b", "ICRA"),
+    (r"intelligent robots and systems|\bIROS\b", "IROS"),
+    (r"transactions on intelligent transportation", "T-ITS"),
+    (r"transactions on intelligent vehicles", "T-IV"),
+    (r"transactions on image processing", "T-IP"),
+    (r"acm.*multimedia|\bACM MM\b", "ACM MM"),
+]
+
+
+def venue_acronym(paper):
+    """Return the flagship-venue acronym for a paper, or None if not a top venue."""
+    v = paper["fields"].get("booktitle") or paper["fields"].get("journal") or ""
+    v = re.sub(r"[{}]", " ", v)
+    v = re.sub(r"\s+", " ", v).strip()
+    if "workshop" in v.lower():
+        return None
+    for pat, acro in TOP_VENUES:
+        if re.search(pat, v, re.I):
+            return acro
+    return None
 
 
 def year_of(p):
@@ -35,15 +73,39 @@ def year_of(p):
         return 0
 
 
+_GENERIC = {
+    "a", "an", "the", "towards", "toward", "learning", "enhancing", "enhanced",
+    "robust", "efficient", "cooperative", "collaborative", "improving", "improved",
+    "rethinking", "boosting", "exploring", "bridging", "is", "on", "multi", "multi-modal",
+    "deep", "real-time", "real", "from", "what", "when", "how", "vehicle-to-infrastructure",
+    "vehicle-to-vehicle", "vehicle-road", "scalable", "generative", "practical", "advanced",
+    "unified", "context-aware", "adaptive", "distance-aware", "uncertainty",
+}
+
+
 def short_label(title: str) -> str:
+    """Pick a compact, distinctive method name from a paper title.
+
+    Prefers an explicit method name before a colon (e.g. "V2VNet: ..."); otherwise the
+    first distinctive token (acronym/CamelCase) skipping generic adjectives.
+    """
     t = re.sub(r"\s+", " ", title.replace("{", "").replace("}", "")).strip()
     if ":" in t:
         pre = t.split(":")[0].strip()
-        if 1 <= len(pre) <= 22:
+        if 1 <= len(pre) <= 24:
             return pre
-    toks = t.split()
-    if toks and re.search(r"[A-Z0-9]", toks[0]) and len(toks[0]) <= 16:
-        return toks[0].strip(".,")
+    toks = [w.strip(".,") for w in t.split()]
+    # prefer an acronym / CamelCase token (e.g. CoBEVT, V2X-ViT, BEV-V2X)
+    for w in toks[:6]:
+        core = w.replace("-", "")
+        if len(w) <= 16 and core.isalnum() and (
+            sum(c.isupper() for c in w) >= 2 or any(ch.isdigit() for ch in w)
+        ) and w.lower() not in _GENERIC:
+            return w
+    # else first non-generic token
+    for w in toks:
+        if w.lower() not in _GENERIC and len(w) >= 3:
+            return w if len(w) <= 16 else w[:15] + "…"
     return " ".join(toks[:2])
 
 
@@ -59,17 +121,28 @@ def truncate(s):
 
 
 def select(gen, papers):
-    """Per-year lists of (label, is_survey), survey landmarks first; cap with overflow."""
+    """Per-year lists of (label, is_survey) for TOP-VENUE works only.
+
+    Label = "<VENUE> <ShortName>"; survey landmarks are ranked first, then capped with
+    a "+N more" overflow marker per year.
+    """
+    top = [(p, venue_acronym(p)) for p in papers if venue_acronym(p)]
+    fallback = len(top) < 3   # too few flagship works: show all, no venue prefix
     by_year = {y: [] for y in YEARS}
-    for p in papers:
+    pool = papers if fallback else [p for p, _ in top]
+    for p in pool:
         y = year_of(p)
         if y in by_year:
-            by_year[y].append(p)
+            by_year[y].append((p, None if fallback else venue_acronym(p)))
     cols = {}
     for y in YEARS:
-        ranked = sorted(by_year[y], key=lambda p: (-score(gen, p),
-                                                    short_label(p["fields"].get("title", "")).lower()))
-        rows = [(truncate(short_label(p["fields"]["title"])), not gen.is_snowball(p)) for p in ranked[:CAP]]
+        ranked = sorted(by_year[y], key=lambda pa: (-score(gen, pa[0]),
+                                                    short_label(pa[0]["fields"].get("title", "")).lower()))
+        rows = []
+        for p, acro in ranked[:CAP]:
+            name = short_label(p["fields"]["title"])
+            label = truncate(f"{acro} {name}" if acro else name)
+            rows.append((label, not gen.is_snowball(p)))
         extra = len(ranked) - CAP
         if extra > 0:
             rows[-1] = (f"+{extra + 1} more", None)
@@ -136,8 +209,9 @@ def main():
     for title, flt, key in specs:
         papers = g.filter_by(**flt)
         cols = select(g, papers)
-        n = render(f"{title} — development timeline (2019 – May 2026)", cols, OUTDIR / f"{key}.png")
-        print(f"{key}: {len(papers)} papers, {n} works shown")
+        n = render(f"{title} — development timeline (2019 – May 2026, top-venue works)",
+                   cols, OUTDIR / f"{key}.png")
+        print(f"{key}: {len(papers)} papers, {n} top-venue works shown")
 
 
 if __name__ == "__main__":
