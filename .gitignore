@@ -61,3 +61,6 @@ temp/
 data/snowballing/forward_snowballing_*.json
 data/snowballing/batches/
 data/snowballing/pass2/in_*.json
+
+# Claude session logs
+.claude/

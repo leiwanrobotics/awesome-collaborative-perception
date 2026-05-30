@@ -1,370 +1,109 @@
-# Automated Tools for Systematic Literature Review
+# Maintenance Tooling
 
-This directory contains automated tools for managing and extending the collaborative perception paper collection.
+This directory contains the scripts that turn [`collaborative-perception.bib`](../collaborative-perception.bib)
+(the single source of truth) into the repository's `README.md` and figures, and that extend the
+collection via reproducible forward snowballing.
 
-## Overview
+> `README.md` is **generated** — never edit it by hand. Edit the `.bib` file, then re-run the
+> generators below (or `bash ../run_workflow.sh`).
 
-The toolset includes three main components:
-
-1. **BibTeX Parser** - Categorize papers from BibTeX files
-2. **Forward Snowballing** - Discover new papers citing existing works
-3. **LLM-based Study Selection** - Automated paper classification and filtering
-
-## Directory Structure
+## Layout
 
 ```
 tools/
 ├── data_extraction/
-│   ├── bib_parser.py          # Parse and categorize BibTeX entries
-│   └── readme_generator.py    # Generate README from categorized papers
+│   ├── bib_parser.py              # .bib  -> data/categorized_papers.json (uses bibtexparser)
+│   ├── readme_generator.py        # categorized_papers.json -> README.md
+│   ├── make_timeline_figure.py    # -> figure/development_timeline.png (publication statistics)
+│   └── make_category_timelines.py # -> figure/timeline/*.png (per-table timelines)
 ├── snowballing/
-│   └── forward_snowballing.py # Find citing papers via APIs
+│   ├── forward_snowballing.py     # citing papers via Semantic Scholar / OpenCitations
+│   ├── consolidate.py             # merge + dedup screened candidates
+│   ├── enrich_links.py            # recover DOIs via Semantic Scholar title search
+│   ├── crossref_enrich.py         # recover remaining DOIs via Crossref
+│   └── append_snowball.py         # write accepted papers into the .bib (tagged CP-Snowball)
 ├── study_selection/
-│   └── llm_classifier.py      # LLM-based inclusion/exclusion screening
-└── README.md                  # This file
+│   └── llm_classifier.py          # optional LLM screening (legacy, SiliconFlow); see note below
+└── add_paper.py                   # interactive single-paper helper
 ```
 
----
+Install dependencies once: `pip install -r ../requirements.txt`.
 
-## 1. BibTeX Parser
+## Keyword convention
 
-Parses BibTeX files and categorizes papers based on keywords following the taxonomy from the systematic review.
+Each BibTeX entry is classified by `keywords`. The generator reads these to place a paper in the
+right tables.
 
-### Usage
+| Axis | Keywords |
+| --- | --- |
+| Modality | `CP-LiDAR`, `CP-Camera` (use both for LiDAR-Camera); none ⇒ *Agnostic* |
+| Collaboration | `CP-Early`, `CP-Intermediate`, `CP-Late`, `CP-Hybrid` |
+| Task | `CP-Object Detection`, `CP-Semantic Segmentation`, `CP-Object Tracking`, `CP-Motion Prediction`, `CP-Lane Detection`, `CP-Task-agnostic` |
+| Dataset | `CP-Dataset` (+ `CP-V2V` / `CP-V2I` for its V2X mode) |
+| Source | `CP-Snowball` for papers beyond the survey's March-2024 cutoff |
 
-```bash
-# Basic usage
-python tools/data_extraction/bib_parser.py
+A paper may carry several task keywords (e.g. `CP-Object Detection, CP-Motion Prediction`); it then
+appears in each corresponding table. The optional `code = {https://github.com/...}` field renders the
+**Repo** link.
 
-# Output: data/categorized_papers.json
-```
-
-### Keyword Convention
-
-Papers are categorized using these keywords in BibTeX entries:
-
-**Modality:**
-- `CP-LiDAR` - LiDAR-based methods
-- `CP-Camera` - Camera-based methods
-- `CP-Fusion` or `CP-LiDAR-Camera` - Multi-modal fusion
-
-**Collaboration Type:**
-- `CP-Early` - Early collaboration (raw data sharing)
-- `CP-Intermediate` - Intermediate collaboration (feature sharing)
-- `CP-Late` - Late collaboration (result sharing)
-- `CP-Hybrid` - Hybrid collaboration
-
-**Perception Task:**
-- `CP-Object Detection` - 3D object detection
-- `CP-Object Tracking` - Multi-object tracking
-- `CP-Semantic Segmentation` - Point/pixel-wise segmentation
-- `CP-Motion Prediction` - Trajectory forecasting
-- `CP-Lane Detection` - Lane/road detection
-- `CP-Multi-task` - Multiple tasks
-
-### Example BibTeX Entry
+Example:
 
 ```bibtex
 @inproceedings{example2024,
-  title = {Example Paper on Collaborative Perception},
-  author = {Smith, John and Doe, Jane},
-  booktitle = {IEEE Intelligent Vehicles Symposium (IV)},
-  year = {2024},
-  doi = {10.1109/example.2024.12345},
+  title    = {Example: A Cooperative Detector},
+  author   = {Doe, Jane and Smith, John},
+  booktitle = {Proc. IEEE/CVF CVPR},
+  year     = {2024},
+  doi      = {10.1109/CVPR.2024.00000},
+  code     = {https://github.com/example/repo},
   keywords = {CP-LiDAR, CP-Intermediate, CP-Object Detection},
 }
 ```
 
----
-
-## 2. README Generator
-
-Automatically generates the repository README from categorized papers.
-
-### Usage
+## Regenerate the repository
 
 ```bash
-python tools/data_extraction/readme_generator.py
-
-# Output: README.md
+bash ../run_workflow.sh
+# equivalently:
+python data_extraction/bib_parser.py
+python data_extraction/make_timeline_figure.py
+python data_extraction/make_category_timelines.py
+python data_extraction/readme_generator.py
 ```
 
-The generator creates:
-- Statistics table
-- Taxonomy overview
-- Categorized paper listings with formatted citations
-- Contribution guidelines
+## Extend via forward snowballing
 
----
-
-## 3. Forward Snowballing Tool
-
-Discovers new papers that cite existing works using academic APIs.
-
-### Features
-
-- **Semantic Scholar API**: Comprehensive citation data with abstracts
-- **OpenCitations API**: Citation index from multiple sources
-- **Deduplication**: Removes duplicate papers across sources
-- **Checkpoint saving**: Saves progress every 10 papers
-
-### Setup
-
-No API keys required for basic usage (uses public APIs with rate limiting).
-
-### Usage
+The collection beyond March 2024 is built by snowballing the citation graph of the surveyed papers
+and screening candidates against the survey's inclusion/exclusion criteria (IC1–IC4, EC1–EC6).
 
 ```bash
-# Process all papers
-python tools/snowballing/forward_snowballing.py
+# 1. discover citing papers (Semantic Scholar + OpenCitations, public APIs, rate-limited)
+python snowballing/forward_snowballing.py            # -> data/snowballing/new_candidates.json
 
-# Process limited number (for testing)
-python tools/snowballing/forward_snowballing.py --max-papers 10
+# 2. screen candidates against IC/EC (see repo history for the two-pass screening that
+#    produced the accepted set)
 
-# Custom output directory
-python tools/snowballing/forward_snowballing.py --output-dir my_results/
+# 3. consolidate + recover identifiers
+python snowballing/consolidate.py
+python snowballing/enrich_links.py
+python snowballing/crossref_enrich.py                # Crossref is the reliable title->DOI source
 
-# Output: data/snowballing/new_candidates.json
+# 4. append accepted papers to the .bib (tagged CP-Snowball) and regenerate
+python snowballing/append_snowball.py
+bash ../run_workflow.sh
 ```
 
-### Output Format
+### Note on `study_selection/llm_classifier.py`
 
-```json
-{
-  "total_unique_candidates": 150,
-  "candidates": [
-    {
-      "title": "Paper Title",
-      "authors": ["Author 1", "Author 2"],
-      "year": 2024,
-      "venue": "Conference/Journal Name",
-      "abstract": "Paper abstract...",
-      "source": "Semantic Scholar"
-    }
-  ],
-  "generation_date": "2026-01-05T10:30:00"
-}
-```
+This is an **optional, legacy** helper that applies IC/EC via the SiliconFlow API and requires
+`SILICONFLOW_API_KEY`. The screening used to build the current extension was performed against the
+same criteria without it, so this script is provided only as a convenience for fully automated runs
+and is not required to reproduce the repository.
 
----
+## API notes
 
-## 4. LLM-based Study Selection
-
-Uses SiliconFlow LLM API to automatically apply inclusion/exclusion criteria and classify papers by taxonomy.
-
-### Features
-
-- **Inclusion Criteria Checking** (IC1-IC4)
-- **Exclusion Criteria Checking** (EC1-EC6)
-- **Taxonomy Classification** (Modality, Collaboration Type, Tasks)
-- **Confidence Scoring**
-- **Detailed Reasoning**
-
-### Setup
-
-Set your SiliconFlow API key:
-
-```bash
-export SILICONFLOW_API_KEY="your-api-key-here"
-```
-
-Or pass it as an argument:
-
-```bash
-python tools/study_selection/llm_classifier.py --api-key "your-api-key"
-```
-
-### Usage
-
-```bash
-# Process candidates from snowballing
-python tools/study_selection/llm_classifier.py \
-  --candidates data/snowballing/new_candidates.json
-
-# Use different model
-python tools/study_selection/llm_classifier.py \
-  --model "Qwen/Qwen2.5-72B-Instruct"
-
-# Adjust API rate limiting
-python tools/study_selection/llm_classifier.py --delay 2.0
-
-# Output: data/study_selection/study_selection_final.json
-#         data/study_selection/selection_summary.md
-```
-
-### Inclusion Criteria (from Table III)
-
-- **IC1**: Primary study with explicit research character
-- **IC2**: Published 2019-2024
-- **IC3**: Academic article (conference/journal)
-- **IC4**: Addresses cooperative perception between entities
-
-### Exclusion Criteria (from Table III)
-
-- **EC1**: Not written in English
-- **EC2**: Grey literature
-- **EC3**: Duplicate/extended version
-- **EC4**: Single-entity perception only
-- **EC5**: No evaluation details
-- **EC6**: Communication protocol design only
-
-### Output Format
-
-```json
-{
-  "total_processed": 100,
-  "included": [
-    {
-      "paper": { ... },
-      "inclusion_analysis": {
-        "ic1": {"decision": "PASS", "reasoning": "..."},
-        "ic2": {"decision": "PASS", "reasoning": "..."},
-        "overall": "INCLUDE"
-      },
-      "exclusion_analysis": {
-        "ec1": {"decision": "NOT_TRIGGERED", "reasoning": "..."},
-        "overall": "KEEP"
-      },
-      "taxonomy": {
-        "modality": ["LiDAR"],
-        "collaboration_type": "Intermediate",
-        "perception_tasks": ["Object Detection"]
-      }
-    }
-  ],
-  "excluded": [ ... ]
-}
-```
-
----
-
-## Complete Workflow
-
-### 1. Initial Setup
-
-```bash
-# Parse existing BibTeX file
-python tools/data_extraction/bib_parser.py
-
-# Generate initial README
-python tools/data_extraction/readme_generator.py
-```
-
-### 2. Discover New Papers
-
-```bash
-# Run forward snowballing
-python tools/snowballing/forward_snowballing.py
-
-# Output: data/snowballing/new_candidates.json
-```
-
-### 3. Filter and Classify
-
-```bash
-# Apply inclusion/exclusion criteria
-export SILICONFLOW_API_KEY="your-key"
-python tools/study_selection/llm_classifier.py
-
-# Review results: data/study_selection/selection_summary.md
-```
-
-### 4. Add to Repository
-
-For papers that pass screening:
-
-1. Add BibTeX entry to `collaborative-perception.bib`
-2. Include appropriate keywords (CP-LiDAR, CP-Intermediate, etc.)
-3. Re-run parser and generator:
-
-```bash
-python tools/data_extraction/bib_parser.py
-python tools/data_extraction/readme_generator.py
-```
-
----
-
-## API Rate Limits
-
-### Semantic Scholar API
-- **Rate Limit**: 100 requests/5 minutes (public API)
-- **Recommendation**: Use `--delay 1.0` or higher
-- **Documentation**: https://api.semanticscholar.org/
-
-### OpenCitations API
-- **Rate Limit**: Generally lenient for reasonable use
-- **Documentation**: https://opencitations.net/
-
-### SiliconFlow API
-- **Rate Limit**: Depends on your plan
-- **Recommendation**: Use `--delay 1.0` to avoid issues
-- **Documentation**: https://cloud.siliconflow.cn/
-
----
-
-## Troubleshooting
-
-### Issue: API rate limit exceeded
-
-**Solution**: Increase delay between requests:
-```bash
-python tools/snowballing/forward_snowballing.py --delay 2.0
-```
-
-### Issue: LLM parsing errors
-
-**Solution**: Check API key and model availability:
-```bash
-# Verify API key is set
-echo $SILICONFLOW_API_KEY
-
-# Try different model
-python tools/study_selection/llm_classifier.py --model "another-model"
-```
-
-### Issue: BibTeX parsing errors
-
-**Solution**: Check BibTeX file syntax:
-```bash
-# Validate BibTeX file
-bibtex -terse collaborative-perception.bib
-```
-
----
-
-## Contributing
-
-When adding new tools or features:
-
-1. Follow existing code structure
-2. Include docstrings and type hints
-3. Add error handling and logging
-4. Update this README
-5. Test with sample data before full run
-
----
-
-## Dependencies
-
-```bash
-# Required Python packages
-pip install requests bibtexparser
-
-# Optional (for BibTeX validation)
-sudo apt-get install bibtex2html
-```
-
----
-
-## Citation
-
-If you use these tools in your research, please cite our survey paper:
-
-```bibtex
-@article{wan2026systematic,
-  title={A Systematic Literature Review on Vehicular Collaborative Perception: A Computer Vision Perspective},
-  author={Wan, Lei and others},
-  journal={IEEE Transactions on Intelligent Transportation Systems},
-  year={2026}
-}
-```
+- **Semantic Scholar** graph API — no key required, but the keyless tier is heavily rate-limited;
+  expect partial results on large runs (use the Crossref fallback for DOIs).
+- **OpenCitations** / **Crossref** — lenient; Crossref prefers a `mailto` in the User-Agent.
+- **Papers with Code** — its public API is discontinued (returns HTML), so repo links are taken only
+  from author-stated GitHub URLs in abstracts.

@@ -227,27 +227,36 @@ class ReadmeGenerator:
         n_survey = len(self.survey_papers)
         n_snow = len(self.snowball_papers)
         today = date.today().isoformat()
+        repo = "leiwanrobotics/awesome-collaborative-perception"
+        pdf = "A_Systematic_Literature_Review_on_Vehicular_Collaborative_PerceptionA_Computer_Vision_Perspective.pdf"
+        updated_badge = today.replace("-", "--")
         return f"""# Awesome Collaborative Perception [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+> A curated, continuously maintained index of **vehicular collaborative perception** research, organized by the taxonomy of our survey *"A Systematic Literature Review on Vehicular Collaborative Perception: A Computer Vision Perspective"* (IEEE T-ITS, 2026).
+
 <div align="center">
-<a href="A_Systematic_Literature_Review_on_Vehicular_Collaborative_PerceptionA_Computer_Vision_Perspective.pdf"><img src="https://img.shields.io/badge/Paper-PDF-red.svg" alt="Paper Badge"/></a>
-<a href="https://github.com/lei-wan/awesome-collaborative-perception/stargazers"><img src="https://img.shields.io/github/stars/lei-wan/awesome-collaborative-perception" alt="Stars Badge"/></a>
-<a href="https://github.com/lei-wan/awesome-collaborative-perception/network/members"><img src="https://img.shields.io/github/forks/lei-wan/awesome-collaborative-perception" alt="Forks Badge"/></a>
-<a href="https://github.com/lei-wan/awesome-collaborative-perception/issues"><img src="https://img.shields.io/github/issues/lei-wan/awesome-collaborative-perception" alt="Issues Badge"/></a>
+
+[![Survey](https://img.shields.io/badge/Survey-PDF-b31b1b.svg)]({pdf})
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+![Papers](https://img.shields.io/badge/papers-{total}-1f6feb.svg)
+![Updated](https://img.shields.io/badge/updated-{updated_badge}-2ea44f.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
+[![Stars](https://img.shields.io/github/stars/{repo}?style=social)](https://github.com/{repo}/stargazers)
+
 </div>
 
-This repository is organized directly around our survey paper, **"A Systematic Literature Review on Vehicular Collaborative Perception: A Computer Vision Perspective"** (*IEEE T-ITS, 2026*). Instead of a loose awesome-list, the README follows the survey taxonomy and presents each major classification as a structured Markdown table with paper metadata, paper links, and repository links when available.
-
-- Survey scope: vehicular collaborative perception from a computer vision perspective
-- Current collection: **{total} papers** = {n_survey} surveyed (SLR, ≤ March 2024) + {n_snow} forward-snowballing extension (2024–2026)
-- Tables list both; the **Source** column marks each row as `Survey` or `Snowball`. Publication Statistics below reflect the **surveyed {n_survey}** only (survey Table VIII).
-- Source of truth: `collaborative-perception.bib`
-- Generated from: `tools/data_extraction/readme_generator.py`
-- Last generated: `{today}`
-
 <p align="center">
-<img src="figure/CP.png" width="50%" height="auto"/>
+<img src="figure/CP.png" width="55%" height="auto"/>
 </p>
+
+**Vehicular collaborative perception** — also called cooperative or collective perception — lets connected vehicles and roadside infrastructure exchange sensor information over V2V / V2I / V2X links to see through occlusions and beyond line of sight, overcoming the fundamental limits of single-vehicle perception. This repository is a continuously maintained index of **{total} peer-reviewed papers (2019–2026)**, each classified along three axes — **modality**, **collaboration scheme**, and **perception task** — with direct links to the paper and to official code when available.
+
+The collection is built in two reproducible stages:
+
+- **Systematic review** — {n_survey} studies (≤ March 2024) selected with a PRISMA-style protocol (Tables I–XXIX of the survey).
+- **Forward-snowballing extension** — {n_snow} studies (2024–2026) discovered from the citation graph of the surveyed papers and screened with the same inclusion / exclusion criteria.
+
+Every row is tagged **`Survey`** or **`Snowball`** in the *Source* column. The [Publication Statistics](#publication-statistics) mirror the survey's Table VIII (the {n_survey} surveyed studies); the per-section tables additionally include the snowballing extension. All artifacts are regenerated from [`collaborative-perception.bib`](collaborative-perception.bib) by the scripts in [`tools/`](tools/README.md) — contributions welcome (see [Contributing](#contributing)).
 
 ## Table of Contents
 
@@ -271,6 +280,7 @@ This repository is organized directly around our survey paper, **"A Systematic L
   - [Collaborative Lane Detection](#collaborative-lane-detection)
   - [Multi-Task and Task-Agnostic](#multi-task-and-task-agnostic)
 - [Datasets](#datasets)
+- [Contributing](#contributing)
 - [Citation](#citation)
 - [License](#license)
 
@@ -286,7 +296,7 @@ This repository is organized directly around our survey paper, **"A Systematic L
 | Liu et al. | 2023 | arXiv | Introduction to CP issues |
 | Huang et al. | 2024 | arXiv | Framework proposal for CP |
 
-Our survey emphasizes a PRISMA-style SLR process, a structured taxonomy, and a computer-vision-centric analysis of collaborative perception.
+Relative to these, our survey adds a transparent PRISMA-style selection protocol, a unified modality / collaboration / task taxonomy, and a computer-vision-centric comparative analysis — which this repository operationalizes as a living, reproducible index.
 
 ---
 
@@ -329,13 +339,15 @@ Our survey emphasizes a PRISMA-style SLR process, a structured taxonomy, and a c
     def generate_taxonomy(self) -> str:
         return """## Structured Taxonomy
 
-The README follows the same three major axes used in the survey:
+Papers are organized along the three axes of the survey, so the repository works as a practical lookup index rather than a flat list:
 
-1. **Modality Type**: LiDAR, Camera, and LiDAR-Camera.
-2. **Collaboration Type**: Early, Intermediate, Late, and Hybrid collaboration.
-3. **Perception Tasks**: Object Detection, Semantic Segmentation, Object Tracking, Motion Prediction, Lane Detection, and Multi-Task / Task-Agnostic settings.
+1. **Modality** — *LiDAR*, *Camera*, *LiDAR-Camera*, and *Modality-Agnostic* (e.g. object-level late fusion).
+2. **Collaboration scheme** — *Early* (raw-data sharing), *Intermediate* (feature sharing), *Late* (result sharing), and *Hybrid*.
+3. **Perception task** — *Object Detection*, *Semantic Segmentation*, *Object Tracking*, *Motion Prediction*, *Lane Detection*, and *Multi-Task / Task-Agnostic*.
 
-Every section below is rendered as a table so the repository can be used as a practical lookup index rather than only a narrative overview.
+The same study appears under each axis it belongs to, and a per-table **development timeline** precedes every table to trace how that category evolved.
+
+**Table key.** &nbsp; **Year** — publication year. &nbsp; **Modality / Collaboration / Task** — taxonomy labels above (datasets show their V2X mode, *V2V* / *V2I*, in the Collaboration column). &nbsp; **Paper** / **Repo** — links to the publication and official code. &nbsp; **Source** — `Survey` (in the SLR, ≤ Mar 2024) or `Snowball` (forward-snowballing extension, 2024–2026).
 
 ---
 
@@ -381,16 +393,39 @@ Every section below is rendered as a table so the repository can be used as a pr
         return body
 
     def generate_footer(self) -> str:
-        return """## Citation
+        return r"""## Contributing
 
-If you find this repository useful, please cite our survey paper:
+Contributions are welcome — to add a missing paper, correct a classification, or fix a link:
+
+1. Add a BibTeX entry to [`collaborative-perception.bib`](collaborative-perception.bib) with the
+   taxonomy keywords described in [`tools/README.md`](tools/README.md) — e.g.
+   `keywords = {CP-LiDAR, CP-Intermediate, CP-Object Detection}`. Tag papers found beyond the
+   survey's March-2024 cutoff with `CP-Snowball`, and add `code = {https://github.com/...}` when
+   official code exists.
+2. Regenerate the tables and figures, then open a pull request:
+
+```bash
+pip install -r requirements.txt
+bash run_workflow.sh   # parses the .bib, rebuilds the figures and README.md
+```
+
+Do not edit `README.md` by hand — it is generated. The source of truth is the `.bib` file.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+## Citation
+
+If this index or the underlying survey is useful in your research, please cite:
 
 ```bibtex
-@article{wan2026systematic,
-  title={A Systematic Literature Review on Vehicular Collaborative Perception: A Computer Vision Perspective},
-  author={Wan, Lei and others},
-  journal={IEEE Transactions on Intelligent Transportation Systems},
-  year={2026}
+@article{wan2026slr,
+  title   = {A Systematic Literature Review on Vehicular Collaborative Perception:
+             A Computer Vision Perspective},
+  author  = {Wan, Lei and Zhao, Jianxin and Wiedholz, Andreas and Bied, Manuel and
+             Martinez de Lucena, Mateus and Jagtap, Abhishek Dinkar and Festag, Andreas and
+             Fr{\"o}hlich, Ant{\^o}nio Augusto and Keen, Hannan Ejaz and Vinel, Alexey},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  year    = {2026},
+  doi     = {10.1109/TITS.2025.3631141}
 }
 ```
 

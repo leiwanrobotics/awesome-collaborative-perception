@@ -1,13 +1,7 @@
-# Core dependencies for awesome-collaborative-perception tools
+# Runtime dependencies for the maintenance tooling in tools/
+# Install with:  pip install -r requirements.txt   (or: uv pip install -r requirements.txt)
 
-# BibTeX parsing
-bibtexparser>=1.4.0
-
-# HTTP requests for APIs
-requests>=2.31.0
-
-# Optional: Progress bars
-tqdm>=4.66.0
-
-# Optional: Pretty printing
-rich>=13.7.0
+requests>=2.31        # Semantic Scholar / OpenCitations / Crossref / DOI checks
+bibtexparser>=1.4,<2  # robust BibTeX parsing (nested braces, all fields)
+matplotlib>=3.7       # publication-statistics and per-table timeline figures
+numpy>=1.24           # figure layout helpers
