@@ -1,0 +1,167 @@
+{
+ "accepted": [
+  {
+   "title": "Adversarial Collaborative Perception in Autonomous Driving",
+   "authors": ["Jafarbek Ulmasov", "Peng Sun", "A. Boukerche"],
+   "year": 2025,
+   "venue": "IEEE International Symposium on Distributed Simulation and Real-Time Applications",
+   "modality": "Agnostic",
+   "collaboration": "Hybrid",
+   "tasks": ["Object Detection"],
+   "reason": "Studies adversarial robustness of multi-agent collaborative perception (MACP) across early/intermediate fusion with evaluation."
+  },
+  {
+   "title": "CoVeRaP: Cooperative Vehicular Perception through mmWave FMCW Radars",
+   "authors": ["Jinyue Song", "Hansol Ku", "J. van", "N. Lee", "Ahmad Kamari", "Prasant Mohapalra", "Parth Palhak"],
+   "year": 2025,
+   "venue": "International Conference on Computer Communications and Networks",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": ["Object Detection", "Dataset / Benchmark"],
+   "reason": "Multi-vehicle cooperative radar perception dataset and middle/late-fusion framework for 3D detection."
+  },
+  {
+   "title": "Robustifying 3D Perception via Least-Squares Graphs for Multi-Agent Object Tracking",
+   "authors": ["Maria Damanaki", "Ioulia Kapsali", "Nikos Piperigkos", "A. Gkillas", "Aris S. Lalos"],
+   "year": 2025,
+   "venue": "Annual Conference of the IEEE Industrial Electronics Society",
+   "modality": "LiDAR",
+   "collaboration": "Late",
+   "tasks": ["Object Tracking"],
+   "reason": "Multi-vehicle detection fusion and tracking evaluated on V2V4Real for adversarial robustness."
+  },
+  {
+   "title": "Knowledge-Informed Multi-Agent Trajectory Prediction at Signalized Intersections for Infrastructure-to-Everything",
+   "authors": ["Huilin Yin", "Yang Xu", "Jiaxiang Li", "Hao Zhang", "Gerhard Rigoll"],
+   "year": 2025,
+   "venue": "IEEE Transactions on Intelligent Transportation Systems",
+   "modality": "Agnostic",
+   "collaboration": "Late",
+   "tasks": ["Motion Prediction"],
+   "reason": "Infrastructure-to-Everything (I2X) collaborative trajectory prediction where RSUs forecast and transmit to vehicles, evaluated on V2X-Seq."
+  },
+  {
+   "title": "U2AD: A UAV-Assisted Autonomous Driving Framework for Enhancing Vehicle Risk Perception and Decision-Making Capabilities",
+   "authors": ["Chuangxin Li", "Yongqiang Gao", "Rao Fu", "Jia Chen"],
+   "year": 2025,
+   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+   "modality": "Agnostic",
+   "collaboration": "Late",
+   "tasks": ["Multi-Task & Task-Agnostic"],
+   "reason": "UAV-to-vehicle cooperative framework extending ego-vehicle perception range and risk perception, evaluated vs V2V/V2I."
+  },
+  {
+   "title": "TrajAgents: A Multi-Agent Framework for Interpretable and Semantically Consistent V2I Trajectory Prediction",
+   "authors": ["Yue Liu", "Xingyuan Dai", "Yonglin Tian", "Rui Tian", "Xinjie Dong", "Yisheng Lv"],
+   "year": 2025,
+   "venue": "IEEE/ASME International Conference on Mechatronic and Embedded Systems and Applications",
+   "modality": "Agnostic",
+   "collaboration": "Late",
+   "tasks": ["Motion Prediction"],
+   "reason": "V2I cooperative trajectory prediction leveraging roadside sensing context, evaluated on V2X-Seq-TFD."
+  },
+  {
+   "title": "ViTraj: Learning Dual-Side Representations for Vehicle-Infrastructure Cooperative Trajectory Prediction",
+   "authors": ["Shengzhe You", "Libo Weng", "Fei Gao"],
+   "year": 2025,
+   "venue": "ACM Multimedia",
+   "modality": "Agnostic",
+   "collaboration": "Late",
+   "tasks": ["Motion Prediction"],
+   "reason": "Vehicle-infrastructure cooperative trajectory prediction fusing infrastructure-side and vehicle-side trajectories."
+  },
+  {
+   "title": "MSMA: Multi-agent Trajectory Prediction in Connected and Autonomous Vehicle Environment with Multi-source Data Integration",
+   "authors": ["Xi Chen", "Rahul Bhadani", "Zhanbo Sun", "Larry Head"],
+   "year": 2024,
+   "venue": "CICTP 2024",
+   "modality": "Agnostic",
+   "collaboration": "Late",
+   "tasks": ["Motion Prediction"],
+   "reason": "CAV fuses own sensors with communicated data from connected vehicles for multi-agent trajectory prediction."
+  },
+  {
+   "title": "TEA-IHPCR: Temporal Augmented-Invariant Vehicle-Infrastructure Cooperative Heterogeneous Point Cloud Registration",
+   "authors": ["Shiyan Zhang", "Xu Zhang", "Xinyu Zhang", "Yuxi Chen", "Dongwei Zhu", "Fan Wu", "Dafeng Jin", "Jun Li"],
+   "year": 2025,
+   "venue": "IEEE Transactions on Instrumentation and Measurement",
+   "modality": "LiDAR",
+   "collaboration": "Early",
+   "tasks": ["Multi-Task & Task-Agnostic"],
+   "reason": "Vehicle-infrastructure cooperative heterogeneous LiDAR point cloud registration enabling cooperative perception."
+  },
+  {
+   "title": "Mobility-Aware Sensing Data Orchestration for Communication-Efficient Cooperative Perception",
+   "authors": ["Peng Hou", "Yida Ding", "Mushu Li", "Yu Cheng"],
+   "year": 2026,
+   "venue": "International Conference on Computing, Networking and Communications",
+   "modality": "Agnostic",
+   "collaboration": "Early",
+   "tasks": ["Object Detection"],
+   "reason": "Sensing-data sharing/selection framework for CAV cooperative perception, evaluated on real driving datasets for perception quality."
+  },
+  {
+   "title": "PosiFusion: A Vehicle-to-Everything Cooperative Perception Framework with Positional Prior Fusion",
+   "authors": ["Huan Qiu", "Youchen Tang", "Jian Zhou", "Chen Xiong", "Kai Liu", "Fuxin Xie", "Bijun Li"],
+   "year": 2025,
+   "venue": "ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": ["Object Detection"],
+   "reason": "V2X collaborative perception with positional prior fusion, evaluated on OPV2V and V2XSet."
+  },
+  {
+   "title": "V2X Fusion Communication Framework Based on VANETS Collaborative Autonomous Driving",
+   "authors": ["Jinhua Yu", "Guang Mei"],
+   "year": 2025,
+   "venue": "Transactions on Emerging Telecommunications Technologies",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Intermediate",
+   "tasks": ["Object Detection"],
+   "reason": "Communication-interruption-aware cooperative perception model fusing multi-agent LiDAR/radar/camera data with knowledge distillation."
+  },
+  {
+   "title": "Vehicle-to-Infrastructure Multi-Sensor Fusion (V2I-MSF) With Reinforcement Learning Framework for Enhancing Autonomous Vehicle Perception",
+   "authors": ["Daud Khan", "Sawera Aslam", "Kyunghi Chang"],
+   "year": 2025,
+   "venue": "IEEE Access",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Intermediate",
+   "tasks": ["Object Detection", "Lane Detection"],
+   "reason": "V2I framework fusing vehicle OBU LiDAR/camera with roadside sensor data to enhance perception, evaluated in simulation."
+  },
+  {
+   "title": "Spatio-Temporal Interaction Aware Cooperative Perception for Networked Vehicles",
+   "authors": ["Wentao Wang", "Haoran Xu", "Guang Tan"],
+   "year": 2026,
+   "venue": "IEEE Transactions on Mobile Computing",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": ["Object Detection"],
+   "reason": "V2V cooperative perception with interaction-aware selective sensor fusion among connected vehicles, evaluated on CARLA."
+  },
+  {
+   "title": "Supply-Demand-Driven Information Selection Algorithm for Efficient V2X Perception",
+   "authors": ["Yueheng Yang", "Zhen Wang", "Xiaohuan Li"],
+   "year": 2025,
+   "venue": "2025 4th International Conference on Artificial Intelligence, Internet of Things and Cloud Computing Technology (AIoTC)",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": ["Object Detection"],
+   "reason": "Multi-agent V2X collaborative perception with supply-demand feature selection, evaluated on DAIR-V2X vs Where2comm."
+  },
+  {
+   "title": "InterCoop: Spatio-Temporal Interaction Aware Cooperative Perception for Networked Vehicles",
+   "authors": ["Wentao Wang", "Haoran Xu", "Guang Tan"],
+   "year": 2024,
+   "venue": "IEEE International Conference on Robotics and Automation",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": ["Object Detection"],
+   "reason": "V2V cooperative perception with interaction-score-based selective fusion across connected vehicles, evaluated on CARLA."
+  }
+ ],
+ "n_input": 93,
+ "n_accepted": 16,
+ "n_rejected": 77
+}

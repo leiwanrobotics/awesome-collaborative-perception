@@ -37,9 +37,19 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Data files (except categorized output)
+# Publisher PDFs (do not redistribute the version-of-record; link the DOI instead)
+*.pdf
+
+# Data files: ignore bulky/raw snowballing dumps, but KEEP the human-decision
+# provenance (screening verdicts + finalized keep set) so the 2024–2026 extension
+# is auditable and reproducible from a clean clone.
 data/snowballing/*
 !data/snowballing/.gitkeep
+!data/snowballing/kept_final.json
+!data/snowballing/kept_enriched.json
+!data/snowballing/screened/
+data/snowballing/screened/*
+!data/snowballing/screened/accepted_*.json
 data/study_selection/*
 !data/study_selection/.gitkeep
 

@@ -1,0 +1,1157 @@
+{
+ "accepted": [
+  {
+   "title": "Cooptrack: Exploring End-to-End Learning for Efficient Cooperative Sequential Perception",
+   "authors": [
+    "Jiaru Zhong",
+    "Jiahao Wang",
+    "Jiahui Xu",
+    "Xiaofan Li",
+    "Zaiqing Nie",
+    "Haibao Yu"
+   ],
+   "year": 2025,
+   "venue": "IEEE International Conference on Computer Vision",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Tracking",
+    "Object Detection"
+   ],
+   "reason": "End-to-end cooperative multi-object tracking sharing instance-level features across agents, evaluated on V2X-Seq."
+  },
+  {
+   "title": "mmCooper: A Multi-Agent Multi-Stage Communication-Efficient and Collaboration-Robust Cooperative Perception Framework",
+   "authors": [
+    "Bingyi Liu",
+    "Jian Teng",
+    "Hongfei Xue",
+    "Enshu Wang",
+    "Chuanhui Zhu",
+    "Pu Wang",
+    "Libing Wu"
+   ],
+   "year": 2025,
+   "venue": "IEEE International Conference on Computer Vision",
+   "modality": "Agnostic",
+   "collaboration": "Hybrid",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent cooperative perception balancing intermediate- and late-stage info sharing, evaluated on real and simulated datasets."
+  },
+  {
+   "title": "STCo: A Communication-Efficient Spatiotemporal Context-Aware Framework for V2V Collaborative Perception",
+   "authors": [
+    "Youhuizi Li",
+    "Zilong Zhao",
+    "W. Heng",
+    "Yuyu Yin",
+    "Baofu Wu",
+    "Honghao Gao"
+   ],
+   "year": 2026,
+   "venue": "IEEE Internet of Things Journal",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "V2V multi-vehicle collaborative perception with spatiotemporal feature fusion, evaluated on V2V4Real and OPV2V."
+  },
+  {
+   "title": "CEST: Enhancing Multi-Agent Perception via Communication-Efficient Spatial–Temporal Fusion",
+   "authors": [
+    "Jinchao Chen",
+    "Qiuhao Shu",
+    "Yantao Lu",
+    "Ying Zhang",
+    "Yang Wang"
+   ],
+   "year": 2026,
+   "venue": "IEEE transactions on intelligent transportation systems (Print)",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent collaborative 3D detection with spatial-temporal feature fusion, evaluated on simulated and real-world datasets."
+  },
+  {
+   "title": "IoT-Enabled Cooperative Autonomous Driving: A Hierarchical Spatial–Temporal Transformer Framework for Trajectory Prediction",
+   "authors": [
+    "Lei Zhao",
+    "Wei Zhou",
+    "Sixuan Xu",
+    "Chen Wang"
+   ],
+   "year": 2026,
+   "venue": "IEEE Internet of Things Journal",
+   "modality": "Agnostic",
+   "collaboration": "Late",
+   "tasks": [
+    "Motion Prediction"
+   ],
+   "reason": "Vehicle-infrastructure cooperative trajectory prediction fusing cross-view trajectories, evaluated on real-world VIC datasets."
+  },
+  {
+   "title": "Multiview BEV Fusion From Vehicle-on-Board and Roadside Cameras for 3-D Object Detection",
+   "authors": [
+    "Tianxuan Fu",
+    "Guoqiang Mao",
+    "Xiaojiang Ren",
+    "Keyin Wang",
+    "Wei Xiang",
+    "Xiaohu Ge"
+   ],
+   "year": 2026,
+   "venue": "IEEE Sensors Journal",
+   "modality": "Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "V2I cooperative 3D detection fusing vehicle and roadside camera BEV features, evaluated on DAIR-V2X."
+  },
+  {
+   "title": "An Online-Training-Free Adaptor for Open Heterogeneous Collaborative Perception via Diffusion Model",
+   "authors": [
+    "Tianhang Wang",
+    "Fan Lu",
+    "Sanqing Qu",
+    "Bin Li",
+    "Ya Wu",
+    "Hu Cao",
+    "Alois C. Knoll",
+    "Guang Chen"
+   ],
+   "year": 2026,
+   "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Heterogeneous collaborative perception with BEV feature alignment across connected vehicles, evaluated on OPV2V and V2V4Real."
+  },
+  {
+   "title": "Overcoming Communication Time Delay in V2V Collaborative Perception",
+   "authors": [
+    "Wenfeng Leng",
+    "Yakang Wang",
+    "Yonghui Huang",
+    "Chuan Hu",
+    "Xi Zhang"
+   ],
+   "year": 2025,
+   "venue": "2025 IEEE 28th International Conference on Intelligent Transportation Systems (ITSC)",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "V2V collaborative perception with feature flow prediction to handle time delay, evaluated on V2XSet."
+  },
+  {
+   "title": "QCTF: A Quantized Communication and Transferable Fusion Framework for Multi-Agent Collaborative Perception",
+   "authors": [
+    "Jinchao Chen",
+    "Qiuhao Shu",
+    "Yantao Lu",
+    "Ying Zhang",
+    "Yang Wang"
+   ],
+   "year": 2025,
+   "venue": "IEEE transactions on intelligent transportation systems (Print)",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent collaborative perception with quantized feature communication and transferable fusion, evaluated on sim and real datasets."
+  },
+  {
+   "title": "SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient Cooperative 3-D Perception",
+   "authors": [
+    "Melih Yazgan",
+    "Qiyuan Wu",
+    "Iramm Hamdard",
+    "Shiqi Li",
+    "J. M. Zoellner"
+   ],
+   "year": 2025,
+   "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection",
+    "Dataset / Benchmark"
+   ],
+   "reason": "CAV cooperative perception sharing query-specific BEV features, releases OPV2V-R and Adver-City-R datasets."
+  },
+  {
+   "title": "CoRange: Collaborative Range-Aware Adaptive Fusion for Multi-Agent Perception",
+   "authors": [
+    "Qiuhao Shu",
+    "Jinchao Chen",
+    "Yantao Lu",
+    "Ying Zhang",
+    "Yang Wang"
+   ],
+   "year": 2025,
+   "venue": "IEEE Transactions on Intelligent Vehicles",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent collaborative perception with range-aware feature sharing, evaluated on simulated and real-world datasets."
+  },
+  {
+   "title": "DATA: Domain-And-Time Alignment for High-Quality Feature Fusion in Collaborative Perception",
+   "authors": [
+    "Cheng Tian",
+    "Jianwei Ma",
+    "Yan Huang",
+    "Zhanye Chen",
+    "Honghao Wei",
+    "Hui Zhang",
+    "Wei Hong"
+   ],
+   "year": 2025,
+   "venue": "IEEE International Conference on Computer Vision",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Feature-level collaborative perception with domain and time alignment, evaluated on three CP datasets."
+  },
+  {
+   "title": "Adaptive Fusion of LiDAR Features for 3D Object Detection in Autonomous Driving",
+   "authors": [
+    "Mingrui Wang",
+    "Dongjie Li",
+    "J. R. Casas",
+    "Javier Ruiz-Hidalgo"
+   ],
+   "year": 2025,
+   "venue": "Italian National Conference on Sensors",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "V2V cooperative perception via two-stage intermediate feature fusion, evaluated on simulated and real-world datasets."
+  },
+  {
+   "title": "Robust Multi-Agent Collaborative Perception via Spatio-Temporal Awareness",
+   "authors": [
+    "Kun Yang",
+    "Zhi Xu",
+    "Dingkang Yang",
+    "Qiang Fu",
+    "Rui Tang",
+    "Liang Song",
+    "Lihua Zhang"
+   ],
+   "year": 2025,
+   "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent collaborative detection (SCOPE++) aggregating spatio-temporal cross-agent features, evaluated on multiple LiDAR CP datasets."
+  },
+  {
+   "title": "Advanced Multi-Modal Sensor Fusion Architectures for Robust Autonomous Driving Systems",
+   "authors": [
+    "Qian Zuo",
+    "Chenzihan Li",
+    "Yulong Fan",
+    "Wenshan Kang",
+    "Tao Yang",
+    "Nana Feng",
+    "Zhen Tian",
+    "Mingyu Yu"
+   ],
+   "year": 2025,
+   "venue": "2025 IEEE 5th International Conference on Electronic Technology, Communication and Information (ICETCI)",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-vehicle cooperative perception fusing LiDAR and camera, evaluated on OPV2V."
+  },
+  {
+   "title": "Multi-Modal Vehicle-Infrastructure Collaborative Perception via Deformable Attention Mechanism",
+   "authors": [
+    "Zhenyu Zhang",
+    "Junyi Shi",
+    "Haobing Pang",
+    "Mingqian Wang",
+    "Jianshan Zhou",
+    "Daxin Tian",
+    "C. Zheng",
+    "Zhiyu Liu"
+   ],
+   "year": 2025,
+   "venue": "2025 IEEE International Annual Conference on Complex Systems and Intelligent Science (CSIS-IAC)",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Vehicle-infrastructure collaborative perception with deformable-attention multimodal feature fusion, experimentally validated."
+  },
+  {
+   "title": "Extended Visibility of Autonomous Vehicles via Optimized Cooperative Perception under Imperfect Communication",
+   "authors": [
+    "Ahmad Sarlak",
+    "Rahul Amin",
+    "Abolfazl Razi"
+   ],
+   "year": 2025,
+   "venue": "Transportation Research Part C: Emerging Technologies",
+   "modality": "Camera",
+   "collaboration": "Early",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-vehicle cooperative perception sharing camera feeds/sensor readings with helper-vehicle selection, evaluated on CARLA pedestrian detection."
+  },
+  {
+   "title": "CoCMT: Communication-Efficient Cross-Modal Transformer for Collaborative Perception",
+   "authors": [
+    "Rujia Wang",
+    "Xiangbo Gao",
+    "Hao Xiang",
+    "Runsheng Xu",
+    "Zhengzhong Tu"
+   ],
+   "year": 2025,
+   "venue": "IEEE/RJS International Conference on Intelligent RObots and Systems",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent collaborative perception sharing object queries, evaluated on OPV2V and V2V4Real."
+  },
+  {
+   "title": "A Lightweight Two-Stage Multivehicle Feature Fusion Method Guided by Global Feature",
+   "authors": [
+    "Yakang Wang",
+    "Baixuan Zhao",
+    "Siheng Chen",
+    "Daxin Tian",
+    "Chuanping Hu",
+    "Xi Zhang"
+   ],
+   "year": 2025,
+   "venue": "IEEE Sensors Journal",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-vehicle collaborative perception with two-stage feature fusion, evaluated on simulated and real-world datasets."
+  },
+  {
+   "title": "STAMP: Scalable Task And Model-agnostic Collaborative Perception",
+   "authors": [
+    "Xiangbo Gao",
+    "Runsheng Xu",
+    "Jiachen Li",
+    "Ziran Wang",
+    "Zhiwen Fan",
+    "Zhengzhong Tu"
+   ],
+   "year": 2025,
+   "venue": "International Conference on Learning Representations",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Multi-Task & Task-Agnostic",
+    "Object Detection"
+   ],
+   "reason": "Task- and model-agnostic collaborative perception sharing BEV features among heterogeneous agents, evaluated on sim and real datasets."
+  },
+  {
+   "title": "Collaborative Multimodal Fusion Network for Multiagent Perception",
+   "authors": [
+    "Lei Zhang",
+    "Binglu Wang",
+    "Yongqiang Zhao",
+    "Yuan Yuan",
+    "Tianfei Zhou",
+    "Zhijun Li"
+   ],
+   "year": 2024,
+   "venue": "IEEE Transactions on Cybernetics",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent collaborative perception fusing LiDAR and camera across agents, evaluated on OPV2V and V2XSet."
+  },
+  {
+   "title": "Perception for Connected Autonomous Vehicles under Adverse Weather Conditions",
+   "authors": [
+    "Dimitra Tsakmakopoulou",
+    "Konstantinos Moustakas"
+   ],
+   "year": 2024,
+   "venue": "IEEE/RJS International Conference on Intelligent RObots and Systems",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "V2V cooperative perception with spatial-wise feature fusion under foggy weather, evaluated on OPV2V."
+  },
+  {
+   "title": "Multi-Agent Collaborative Perception via Motion-Aware Robust Communication Network",
+   "authors": [
+    "Shixin Hong",
+    "Yu Liu",
+    "Zhi Li",
+    "Shaohui Li",
+    "You He"
+   ],
+   "year": 2024,
+   "venue": "Computer Vision and Pattern Recognition",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent collaborative 3D detection robust to pose/motion noise (MRCNet), evaluated on collaborative detection datasets."
+  },
+  {
+   "title": "CMP: Cooperative Motion Prediction With Multi-Agent Communication",
+   "authors": [
+    "Zhuoyuan Wu",
+    "Yuping Wang",
+    "Hengbo Ma",
+    "Zhaowei Li",
+    "Hang Qiu",
+    "Jiachen Li"
+   ],
+   "year": 2024,
+   "venue": "IEEE Robotics and Automation Letters",
+   "modality": "LiDAR",
+   "collaboration": "Hybrid",
+   "tasks": [
+    "Motion Prediction",
+    "Object Detection",
+    "Object Tracking"
+   ],
+   "reason": "CAVs share perception features and predictions for cooperative perception, tracking and motion prediction, evaluated on OPV2V and V2V4Real."
+  },
+  {
+   "title": "Infrastructure-Assisted Collaborative Perception in Automated Valet Parking: A Safety Perspective",
+   "authors": [
+    "Yukuan Jia",
+    "Jiawen Zhang",
+    "Shimeng Lu",
+    "Baokang Fan",
+    "Ruiqing Mao",
+    "Sheng Zhou",
+    "Z. Niu"
+   ],
+   "year": 2024,
+   "venue": "IEEE Vehicular Technology Conference",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Infrastructure-assisted BEV-feature collaborative perception fusing roadside and onboard sensors, evaluated on synthetic AVP dataset."
+  },
+  {
+   "title": "RCooper: A Real-world Large-scale Dataset for Roadside Cooperative Perception",
+   "authors": [
+    "Ruiyang Hao",
+    "Siqi Fan",
+    "Yingru Dai",
+    "Zhenlin Zhang",
+    "Chenxi Li",
+    "Yuntian Wang",
+    "Haibao Yu",
+    "Wenxian Yang",
+    "Jirui Yuan",
+    "Zaiqing Nie"
+   ],
+   "year": 2024,
+   "venue": "Computer Vision and Pattern Recognition",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Dataset / Benchmark",
+    "Object Detection",
+    "Object Tracking"
+   ],
+   "reason": "First real-world large-scale roadside cooperative perception dataset with detection/tracking benchmarks across multiple infrastructure sensors."
+  },
+  {
+   "title": "Multitask Collaborative Perception for Vehicle-to-Everything Considering Impaired Communication",
+   "authors": [
+    "Fuwu Yan",
+    "Bo Tao",
+    "Ningyu Zheng",
+    "Linzhen Nie",
+    "Qian Li",
+    "Zhishuai Yin"
+   ],
+   "year": 2025,
+   "venue": "IEEE Transactions on Instrumentation and Measurement",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection",
+    "Semantic Segmentation",
+    "Multi-Task & Task-Agnostic"
+   ],
+   "reason": "V2X multitask collaborative perception (detection and BEV map segmentation) under impaired communication, evaluated on OPV2V and V2XSet."
+  },
+  {
+   "title": "Self‐Optimized Computational Resource Allocation for Enhanced Perception in Intersection Blind Spots",
+   "authors": [
+    "Zechang Ye",
+    "Hongbo Li",
+    "Siqi Chen",
+    "Haiyang Yu"
+   ],
+   "year": 2026,
+   "venue": "Journal of Advanced Transportation",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Vehicle-infrastructure collaboration for intersection blind-spot perception with feature transmission, evaluated on DAIR-V2X."
+  },
+  {
+   "title": "An Autonomous Vehicle Collaborative Perception Method Based on Holographic Counterpart Construction From Consumer Electronics Sensors",
+   "authors": [
+    "Faming Lu",
+    "Kaihui Shen",
+    "Guiyuan Yuan",
+    "Sibo Qiao",
+    "Chengwei Hu",
+    "Zhihan Lyu"
+   ],
+   "year": 2025,
+   "venue": "IEEE transactions on consumer electronics",
+   "modality": "Camera",
+   "collaboration": "Late",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Vehicles share and fuse perception results with neighbors for collaborative perception, evaluated on OPV2V and others."
+  },
+  {
+   "title": "Collaborate for Real-Time Gain: Semantic-Based Robotic Communication in 3D Object Tracking",
+   "authors": [
+    "Junming Shao",
+    "Xiaoqi Qin",
+    "Jian Gao",
+    "Yanlin Li",
+    "Liang Xin",
+    "Ping Zhang"
+   ],
+   "year": 2025,
+   "venue": "IEEE Transactions on Mobile Computing",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Tracking",
+    "Object Detection"
+   ],
+   "reason": "V2X multi-agent collaborative perception with spatial-temporal feature fusion for detection and tracking, evaluated on OPV2V and DAIR-V2X."
+  },
+  {
+   "title": "The Components of Collaborative Joint Perception and Prediction - A Conceptual Framework",
+   "authors": [
+    "Lei Wan",
+    "Hannan Ejaz Keen",
+    "Alexey Vinel"
+   ],
+   "year": 2025,
+   "venue": "International Conference on Vehicle Technology and Intelligent Transport Systems",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Multi-Task & Task-Agnostic",
+    "Motion Prediction"
+   ],
+   "reason": "Defines V2X collaborative joint perception and prediction task with scene completion and joint P&P modules for CAVs."
+  },
+  {
+   "title": "MTRCP: Multimodal Two-Level Fusion Architecture for Roadside Cooperative Perception",
+   "authors": [
+    "Chao Xiang",
+    "Jinze Liu",
+    "Yubo Chang",
+    "Hao Xu",
+    "Zhendong Niu",
+    "Mingchuan Yang"
+   ],
+   "year": 2025,
+   "venue": "IEEE Intelligent Transportation Systems Magazine",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Hybrid",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Roadside cooperative perception fusing point clouds/images then fusing local results across RSUs, evaluated on DAIR-V2X-seq."
+  },
+  {
+   "title": "A Sparse BEV Feature Transmission Algorithm with Delay Compensation for Vehicle-Infrastructure Cooperative Perception",
+   "authors": [
+    "Yongpeng Xu",
+    "Yuchuan Fu",
+    "Xiaojian Niu",
+    "Nan Cheng",
+    "Changle Li"
+   ],
+   "year": 2025,
+   "venue": "2025 IEEE 102nd Vehicular Technology Conference (VTC2025-Fall)",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Vehicle-infrastructure cooperative perception sharing sparse BEV features with delay compensation, evaluated by simulation."
+  },
+  {
+   "title": "Research Challenges and Progress in the End-to-End V2X Cooperative Autonomous Driving Competition",
+   "authors": [
+    "Ruiyang Hao",
+    "Haibao Yu",
+    "Jiaru Zhong",
+    "Chuanye Wang",
+    "Jiahao Wang",
+    "Yiming Kan",
+    "Wenxian Yang",
+    "Siqi Fan",
+    "Huilin Yin",
+    "Jianing Qiu",
+    "Yao Mu",
+    "Jiankai Sun",
+    "Li Chen",
+    "Walter Zimmer",
+    "Dandan Zhang",
+    "Shanghang Zhang",
+    "Mac Schwager",
+    "Wei Huang",
+    "Xiaobo Zhang",
+    "Ping Luo",
+    "Zaiqing Nie"
+   ],
+   "year": 2025,
+   "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Dataset / Benchmark",
+    "Multi-Task & Task-Agnostic"
+   ],
+   "reason": "V2X cooperative perception/planning challenge establishing a unified benchmark on V2X-Seq-SPD with cooperative temporal perception track."
+  },
+  {
+   "title": "Heterogeneous Multiscale Cooperative Perception for Connected Autonomous Vehicles via V2X Interaction",
+   "authors": [
+    "Yuanyuan Zha",
+    "Shangguan Wei",
+    "Junjie Chen",
+    "Linguo Chai",
+    "Weizhi Qiu",
+    "Antonio M. López"
+   ],
+   "year": 2025,
+   "venue": "IEEE Internet of Things Journal",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "V2X heterogeneous multiscale cooperative perception fusing LiDAR/camera BEV features, evaluated on OPV2V and DAIR-V2X."
+  },
+  {
+   "title": "A Surrogate Metric-Based Framework for Placing Infrastructure Sensing Units to Enhance Cooperative Vehicle-Infrastructure Perception",
+   "authors": [
+    "Yubing Zheng",
+    "Yang Ma",
+    "Shuyi Wang",
+    "Zhongxiang Feng",
+    "Y. D. Wong",
+    "Said M. Easa"
+   ],
+   "year": 2025,
+   "venue": "IEEE Internet of Things Journal",
+   "modality": "Agnostic",
+   "collaboration": "Late",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Optimizes infrastructure sensor placement to enhance cooperative vehicle-infrastructure perception, evaluated via co-simulation with occupancy metrics."
+  },
+  {
+   "title": "MM-VSM: Multi-Modal Vehicle Semantic Mesh and Trajectory Reconstruction for Image-Based Cooperative Perception",
+   "authors": [
+    "Márton Cserni",
+    "A. Rövid",
+    "Z. Szalay"
+   ],
+   "year": 2025,
+   "venue": "Applied Sciences",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Cooperative image-based perception integrating roadside infrastructure data with LiDAR shape references, evaluated on Argoverse and real-world tests."
+  },
+  {
+   "title": "Edge Assisted Low-Latency Cooperative BEV Perception With Progressive State Estimation",
+   "authors": [
+    "Yuhan Lin",
+    "Haoran Xu",
+    "Zhimeng Yin",
+    "Guang Tan"
+   ],
+   "year": 2025,
+   "venue": "IEEE Transactions on Mobile Computing",
+   "modality": "Camera",
+   "collaboration": "Late",
+   "tasks": [
+    "Object Detection",
+    "Motion Prediction"
+   ],
+   "reason": "Multi-vehicle cooperative BEV perception sending camera data to edge server fusing local views, with motion prediction; experimentally evaluated."
+  },
+  {
+   "title": "Efficient Collaborative Multi-Agent Driving via Cross-Attention and Concise Communication",
+   "authors": [
+    "Qingyi Liang",
+    "Zhengmin Jiang",
+    "Jianwen Yin",
+    "Lei Peng",
+    "Jia Liu",
+    "Huiyun Li"
+   ],
+   "year": 2024,
+   "venue": "2024 IEEE Intelligent Vehicles Symposium (IV)",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Multi-Task & Task-Agnostic"
+   ],
+   "reason": "Multi-agent collaborative driving sharing concise state info via cross-attention communication, evaluated on a driving simulator."
+  },
+  {
+   "title": "V2X-DSI: A Density-Sensitive Infrastructure LiDAR Benchmark for Economic Vehicle-to-Everything Cooperative Perception",
+   "authors": [
+    "Xinyu Liu",
+    "Baolu Li",
+    "Runsheng Xu",
+    "Jiaqi Ma",
+    "Xiaopeng Li",
+    "Jinlong Li",
+    "Hongkai Yu"
+   ],
+   "year": 2024,
+   "venue": "2024 IEEE Intelligent Vehicles Symposium (IV)",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection",
+    "Dataset / Benchmark"
+   ],
+   "reason": "V2X vehicle-infrastructure cooperative perception benchmark on infrastructure LiDAR density, evaluates OPV2V/V2X-ViT/CoBEVT."
+  },
+  {
+   "title": "CooPercept: Cooperative Perception for 3D Object Detection of Autonomous Vehicles",
+   "authors": [
+    "Yuxuan Zhang",
+    "Bing Chen",
+    "Jie Qin",
+    "Feng Hu",
+    "J. Hao"
+   ],
+   "year": 2024,
+   "venue": "Drones",
+   "modality": "LiDAR-Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-vehicle cooperative 3D detection fusing LiDAR and camera features across vehicles, evaluated on KITTI and OPV2V."
+  },
+  {
+   "title": "BadMDA: Towards Backdoor Injection during Domain Adaptation to Collapse Multi-Agent Perception",
+   "authors": [
+    "Tong Chen",
+    "Bowen Du",
+    "Jiejie Zhao",
+    "Hanyang Xia",
+    "Haiquan Wang",
+    "Jiakai Wang"
+   ],
+   "year": 2025,
+   "venue": "ACM Multimedia",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Studies backdoor attacks on multi-agent collaborative perception via domain adaptation in 3D detection, with extensive experiments."
+  },
+  {
+   "title": "You Share Beliefs, I Adapt: Progressive Heterogeneous Collaborative Perception",
+   "authors": [
+    "Hao Si",
+    "Ehsan Javanmardi",
+    "Manabu Tsukada"
+   ],
+   "year": 2025,
+   "venue": "IEEE International Conference on Computer Vision",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Heterogeneous collaborative perception adapting features at inference via few-shot domain adaptation, evaluated on OPV2V."
+  },
+  {
+   "title": "V2X-DG: Domain Generalization for Vehicle-to-Everything Cooperative Perception",
+   "authors": [
+    "Baolu Li",
+    "Zongzhe Xu",
+    "Jinlong Li",
+    "Xinyu Liu",
+    "Jianwu Fang",
+    "Xiaopeng Li",
+    "Hongkai Yu"
+   ],
+   "year": 2025,
+   "venue": "IEEE International Conference on Robotics and Automation",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Domain generalization for V2X cooperative 3D detection across OPV2V, V2XSet, V2V4Real and DAIR-V2X."
+  },
+  {
+   "title": "CoMamba: Real-time Cooperative Perception Unlocked with State-Space Models",
+   "authors": [
+    "Jinlong Li",
+    "Xinyu Liu",
+    "Baolu Li",
+    "Runsheng Xu",
+    "Jiachen Li",
+    "Hongkai Yu",
+    "Zhengzhong Tu"
+   ],
+   "year": 2024,
+   "venue": "IEEE/RJS International Conference on Intelligent RObots and Systems",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "V2X cooperative 3D detection integrating multi-agent features via state-space models, evaluated on V2X/V2V datasets."
+  },
+  {
+   "title": "V2X-DGW: Domain Generalization for Multi-Agent Perception Under Adverse Weather Conditions",
+   "authors": [
+    "Baolu Li",
+    "Jinlong Li",
+    "Xinyu Liu",
+    "Runsheng Xu",
+    "Zhengzhong Tu",
+    "Jiacheng Guo",
+    "Xiaopeng Li",
+    "Hongkai Yu"
+   ],
+   "year": 2024,
+   "venue": "IEEE International Conference on Robotics and Automation",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection",
+    "Dataset / Benchmark"
+   ],
+   "reason": "V2X multi-agent 3D detection domain generalization to adverse weather, introduces OPV2V-w and V2XSet-w datasets."
+  },
+  {
+   "title": "Bridging Infrastructures and Vehicles: A Cooperative Framework for Fusing Heterogeneous Future Trajectory Prediction",
+   "authors": [
+    "Huilin Yin",
+    "Yang Xu",
+    "Hao Zhang",
+    "Gerhard Rigoll"
+   ],
+   "year": 2026,
+   "venue": "IEEE Internet of Things Journal",
+   "modality": "Agnostic",
+   "collaboration": "Late",
+   "tasks": [
+    "Motion Prediction"
+   ],
+   "reason": "Cooperative infrastructure-vehicle trajectory prediction fusing shared predicted trajectories, evaluated against offline/online baselines."
+  },
+  {
+   "title": "Asymmetric Frequency-Adaptive State-Space Model for Roadside Cooperative Perception",
+   "authors": [
+    "Jiaqian Wang",
+    "Yiling Wu",
+    "Mingkai Qiu",
+    "Xiying Li",
+    "Yaowei Wang"
+   ],
+   "year": 2026,
+   "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Roadside cross-infrastructure cooperative perception with Mamba-based feature fusion, evaluated on DAIR-V2X and RCooper."
+  },
+  {
+   "title": "FocalComm: Hard Instance-Aware Multi-Agent Perception",
+   "authors": [
+    "Dereje Shenkut",
+    "Vijayakumar Bhagavatula"
+   ],
+   "year": 2025,
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent collaborative perception exchanging hard-instance features via query-based intermediate fusion, evaluated on V2X-Real and DAIR-V2X."
+  },
+  {
+   "title": "HPLaw: Heterogeneous Parallel LiDARs for Adverse Weather in V2V",
+   "authors": [
+    "Yuhang Liu",
+    "Xinyue Ma",
+    "Xingxia Wang",
+    "Boyi Sun",
+    "Yutong Wang",
+    "Fenghua Zhu",
+    "Fei-Yue Wang"
+   ],
+   "year": 2025,
+   "venue": "IEEE/RJS International Conference on Intelligent RObots and Systems",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection",
+    "Dataset / Benchmark"
+   ],
+   "reason": "V2V cooperative perception with heterogeneous LiDAR feature fusion under adverse weather, introduces OPV2V-W and V2V4Real-W benchmarks."
+  },
+  {
+   "title": "CoDS: Enhancing Collaborative Perception in Heterogeneous Scenarios via Domain Separation",
+   "authors": [
+    "Yushan Han",
+    "Hui Zhang",
+    "Honglei Zhang",
+    "Chuntao Ding",
+    "Yuanzhouhan Cao",
+    "Yidong Li"
+   ],
+   "year": 2025,
+   "venue": "IEEE Transactions on Mobile Computing",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent collaborative perception aligning heterogeneous features via domain separation, evaluated on CP detection datasets."
+  },
+  {
+   "title": "Residual Vector Quantization For Communication-Efficient Multi-Agent Perception",
+   "authors": [
+    "Dereje Shenkut",
+    "B.V.K. Vijaya Kumar"
+   ],
+   "year": 2025,
+   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Multi-agent collaborative perception compressing intermediate features via residual vector quantization, evaluated on DAIR-V2X."
+  },
+  {
+   "title": "CoST: Efficient Collaborative Perception from Unified Spatiotemporal Perspective",
+   "authors": [
+    "Zongheng Tang",
+    "Yi Liu",
+    "Yifan Sun",
+    "Yulu Gao",
+    "Jinyu Chen",
+    "Runsheng Xu",
+    "Si Liu"
+   ],
+   "year": 2025,
+   "venue": "IEEE International Conference on Computer Vision",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Collaborative perception fusing multi-agent and multi-time observations in unified spatiotemporal space, compatible with existing CP methods."
+  },
+  {
+   "title": "RCP-Bench: Benchmarking Robustness for Collaborative Perception Under Diverse Corruptions",
+   "authors": [
+    "Shihang Du",
+    "Sanqing Qu",
+    "Tianhang Wang",
+    "Xudong Zhang",
+    "Yunwei Zhu",
+    "Jian Mao",
+    "Fan Lu",
+    "Qiao Lin",
+    "Guang Chen"
+   ],
+   "year": 2025,
+   "venue": "Computer Vision and Pattern Recognition",
+   "modality": "Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Dataset / Benchmark",
+    "Object Detection"
+   ],
+   "reason": "Robustness benchmark for collaborative detection under corruptions, introduces OPV2V-C, V2XSet-C, DAIR-V2X-C and evaluates 10 CP models."
+  },
+  {
+   "title": "S2S-Net: Addressing the Domain Gap of Heterogeneous Sensor Systems in LiDAR-Based Collective Perception",
+   "authors": [
+    "Sven Teufel",
+    "Jörg Gamerdinger",
+    "Oliver Bringmann"
+   ],
+   "year": 2025,
+   "venue": "International Conference on Vehicular Electronics and Safety",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "V2V collective perception addressing Sensor2Sensor domain gap across heterogeneous LiDARs, evaluated on SCOPE dataset."
+  },
+  {
+   "title": "LangCoop: Collaborative Driving with Language",
+   "authors": [
+    "Xiangbo Gao",
+    "Yuheng Wu",
+    "Rujia Wang",
+    "Chenxi Liu",
+    "Yang Zhou",
+    "Zhengzhong Tu"
+   ],
+   "year": 2025,
+   "venue": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+   "modality": "Camera",
+   "collaboration": "Late",
+   "tasks": [
+    "Multi-Task & Task-Agnostic"
+   ],
+   "reason": "Multi-agent collaborative driving with vision-language inter-agent communication, evaluated in closed-loop CARLA."
+  },
+  {
+   "title": "V2X-DGPE: Addressing Domain Gaps and Pose Errors for Robust Collaborative 3D Object Detection",
+   "authors": [
+    "Sichao Wang",
+    "Ming Yuan",
+    "Chuang Zhang",
+    "Qing Xu",
+    "Lei He",
+    "Jianqiang Wang"
+   ],
+   "year": 2025,
+   "venue": "2025 IEEE Intelligent Vehicles Symposium (IV)",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "V2X feature-level collaborative 3D detection addressing domain gaps and pose errors, evaluated on DAIR-V2X."
+  },
+  {
+   "title": "One is Plenty: A Polymorphic Feature Interpreter for Immutable Heterogeneous Collaborative Perception",
+   "authors": [
+    "Yuchen Xia",
+    "Quan Yuan",
+    "Guiyang Luo",
+    "Xiaoyuan Fu",
+    "Yang Li",
+    "Xuanhan Zhu",
+    "Tianyou Luo",
+    "Siheng Chen",
+    "Jinglin Li"
+   ],
+   "year": 2024,
+   "venue": "Computer Vision and Pattern Recognition",
+   "modality": "Agnostic",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Heterogeneous collaborative perception interpreting exchanged intermediate features across agents, evaluated on OPV2V."
+  },
+  {
+   "title": "Directed-CP: Directed Collaborative Perception for Connected and Autonomous Vehicles via Proactive Attention",
+   "authors": [
+    "Yihang Tao",
+    "Senkang Hu",
+    "Zhengru Fang",
+    "Yuguang Fang"
+   ],
+   "year": 2024,
+   "venue": "IEEE International Conference on Robotics and Automation",
+   "modality": "LiDAR",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection"
+   ],
+   "reason": "Direction-aware collaborative perception among CAVs with RSU-aided attention, evaluated on V2X-Sim 2.0 3D detection."
+  },
+  {
+   "title": "RCDN: Towards Robust Camera-Insensitivity Collaborative Perception via Dynamic Feature-based 3D Neural Modeling",
+   "authors": [
+    "Tianhang Wang",
+    "Fan Lu",
+    "Zehan Zheng",
+    "Guang Chen",
+    "Changjun Jiang"
+   ],
+   "year": 2024,
+   "venue": "Neural Information Processing Systems",
+   "modality": "Camera",
+   "collaboration": "Intermediate",
+   "tasks": [
+    "Object Detection",
+    "Dataset / Benchmark"
+   ],
+   "reason": "Multi-agent camera-based collaborative perception robust to camera failures, introduces OPV2V-N dataset."
+  }
+ ],
+ "n_input": 94,
+ "n_accepted": 60,
+ "n_rejected": 34
+}

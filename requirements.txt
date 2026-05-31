@@ -1,7 +1,10 @@
-# Runtime dependencies for the maintenance tooling in tools/
+# Runtime dependencies for the maintenance tooling in tools/.
+# Requires Python >= 3.9 (see .python-version).
 # Install with:  pip install -r requirements.txt   (or: uv pip install -r requirements.txt)
+#
+# Upper bounds pin tested major versions so figure rendering stays reproducible.
 
-requests>=2.31        # Semantic Scholar / OpenCitations / Crossref / DOI checks
-bibtexparser>=1.4,<2  # robust BibTeX parsing (nested braces, all fields)
-matplotlib>=3.7       # publication-statistics and per-table timeline figures
-numpy>=1.24           # figure layout helpers
+requests>=2.31,<3       # Semantic Scholar / OpenCitations / Crossref / DOI checks
+bibtexparser>=1.4,<2    # robust BibTeX parsing (nested braces, all fields)
+matplotlib>=3.7,<4      # publication-statistics and per-table timeline figures
+numpy>=1.24,<3          # figure layout helpers

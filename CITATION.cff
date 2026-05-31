@@ -1,0 +1,61 @@
+cff-version: 1.2.0
+message: "If you use this index or the underlying survey, please cite the survey article below."
+title: "Awesome Collaborative Perception"
+abstract: >-
+  A curated, continuously maintained index of vehicular collaborative perception
+  research, organized by the modality / collaboration / task taxonomy of the survey
+  "A Systematic Literature Review on Vehicular Collaborative Perception: A Computer
+  Vision Perspective" (IEEE T-ITS, 2026).
+type: dataset
+license: CC-BY-4.0
+repository-code: "https://github.com/leiwanrobotics/awesome-collaborative-perception"
+authors:
+  - family-names: Wan
+    given-names: Lei
+  - family-names: Zhao
+    given-names: Jianxin
+  - family-names: Wiedholz
+    given-names: Andreas
+  - family-names: Bied
+    given-names: Manuel
+  - family-names: Martinez de Lucena
+    given-names: Mateus
+  - family-names: Jagtap
+    given-names: Abhishek Dinkar
+  - family-names: Festag
+    given-names: Andreas
+  - family-names: Fröhlich
+    given-names: Antônio Augusto
+  - family-names: Keen
+    given-names: Hannan Ejaz
+  - family-names: Vinel
+    given-names: Alexey
+preferred-citation:
+  type: article
+  title: >-
+    A Systematic Literature Review on Vehicular Collaborative Perception:
+    A Computer Vision Perspective
+  authors:
+    - family-names: Wan
+      given-names: Lei
+    - family-names: Zhao
+      given-names: Jianxin
+    - family-names: Wiedholz
+      given-names: Andreas
+    - family-names: Bied
+      given-names: Manuel
+    - family-names: Martinez de Lucena
+      given-names: Mateus
+    - family-names: Jagtap
+      given-names: Abhishek Dinkar
+    - family-names: Festag
+      given-names: Andreas
+    - family-names: Fröhlich
+      given-names: Antônio Augusto
+    - family-names: Keen
+      given-names: Hannan Ejaz
+    - family-names: Vinel
+      given-names: Alexey
+  journal: "IEEE Transactions on Intelligent Transportation Systems"
+  year: 2026
+  doi: "10.1109/TITS.2025.3631141"
