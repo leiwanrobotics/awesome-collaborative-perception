@@ -5,13 +5,17 @@ For every category table in the README (modality, collaboration, task, datasets)
 draws a 2019 → May-2026 timeline with that category's representative works marked on it.
 To keep the timelines legible and high-signal, only works published at **top venues**
 (CVPR, ICCV, ECCV, TPAMI, IJCV, NeurIPS, ICLR, ICML, AAAI, IJCAI, ICRA, IROS, RA-L, CoRL,
-T-RO, T-ITS, T-IV, T-IP, ACM MM) are marked; each label is prefixed with its venue.
+T-RO, T-ITS, T-IV, T-IP, ACM MM) are marked.
+
+Each work is labelled "<VENUE><YEAR> <approach>" (e.g. "CVPR2026 V2VNet"). The approach
+name is the method's own name when the paper gives one (an acronym, a CamelCase token, a
+short pre-colon name, or a parenthesised acronym); when the paper names no method, the
+label falls back to "<First-author surname> et al." instead.
 
 Outputs: figure/timeline/<key>.png
 """
 import re
 import sys
-from collections import defaultdict
 from pathlib import Path
 
 import matplotlib
@@ -25,7 +29,7 @@ from readme_generator import ReadmeGenerator  # noqa: E402
 OUTDIR = ROOT / "figure" / "timeline"
 YEARS = list(range(2019, 2027))       # 2019 .. May 2026
 CAP = 12                              # max works listed per year before "+N more"
-MAXLAB = 30                           # label truncation length
+MAXLAB = 34                           # label truncation length (venue+year+approach)
 SURVEY_C, SNOW_C = "#1f5fa6", "#d2691e"
 
 # Top venues only (flagship CV / ML / robotics / ITS). Ordered: first match wins.
@@ -53,6 +57,23 @@ TOP_VENUES = [
 ]
 
 
+# Broader venue acronyms, used only on the fallback path (a category with < 3 top-venue
+# works) so that every marked label can still carry a venue prefix.
+EXTRA_VENUES = [
+    (r"intelligent transportation systems conference|\bITSC\b", "ITSC"),
+    (r"intelligent vehicles symposium|\bIV\b", "IV"),
+    (r"connected and automated vehicles|\bCAVS\b", "CAVS"),
+    (r"robotics and autonomous systems", "RAS"),
+    (r"internet of things journal", "IoTJ"),
+    (r"ieee access", "Access"),
+    (r"\bsensors\b", "Sensors"),
+    (r"\bremote sensing\b", "RemoteSens"),
+    (r"transactions on vehicular technology", "T-VT"),
+    (r"transactions on mobile computing", "TMC"),
+    (r"arxiv|corr", "arXiv"),
+]
+
+
 def venue_acronym(paper):
     """Return the flagship-venue acronym for a paper, or None if not a top venue."""
     v = paper["fields"].get("booktitle") or paper["fields"].get("journal") or ""
@@ -64,6 +85,26 @@ def venue_acronym(paper):
         if re.search(pat, v, re.I):
             return acro
     return None
+
+
+def venue_short(paper):
+    """A short venue acronym for *any* venue (top-venue acronym, then broader matches,
+    then a parenthesised acronym in the venue string, else a trimmed venue name)."""
+    acro = venue_acronym(paper)
+    if acro:
+        return acro
+    v = paper["fields"].get("booktitle") or paper["fields"].get("journal") or ""
+    v = re.sub(r"[{}]", " ", v)
+    v = re.sub(r"\s+", " ", v).strip()
+    for pat, a in EXTRA_VENUES:
+        if re.search(pat, v, re.I):
+            return a
+    m = re.search(r"\(([A-Za-z][A-Za-z0-9\-]{1,7})\)", v)
+    if m:
+        return m.group(1)
+    v = re.sub(r"^\d+\s*(st|nd|rd|th)?\s*", "", v)            # drop a leading edition number
+    v = re.sub(r"^(IEEE|ACM)\s+", "", v, flags=re.I).strip()
+    return (v[:10] or "misc")
 
 
 def year_of(p):
@@ -80,39 +121,87 @@ _GENERIC = {
     "deep", "real-time", "real", "from", "what", "when", "how", "vehicle-to-infrastructure",
     "vehicle-to-vehicle", "vehicle-road", "scalable", "generative", "practical", "advanced",
     "unified", "context-aware", "adaptive", "distance-aware", "uncertainty",
+    "3d", "2d", "4d",
 }
 
 
-def short_label(title: str) -> str:
-    """Pick a compact, distinctive method name from a paper title.
+def _atom_is_acronym(s: str) -> bool:
+    """Whether a single hyphen-free atom reads as a coined name rather than a plain word.
 
-    Prefers an explicit method name before a colon (e.g. "V2VNet: ..."); otherwise the
-    first distinctive token (acronym/CamelCase) skipping generic adjectives.
+    True for all-caps acronyms (DUSA, CORE), CamelCase / internal-caps tokens (CoBEVT,
+    ViT, HPLaw), and letter+digit codes (V2X). False for ordinary Capitalised words
+    (Multi, Latency, Keypoints) so descriptive phrases fall back to "<author> et al.".
+    """
+    if not s or not s.isalnum():
+        return False
+    n_alpha = sum(c.isalpha() for c in s)
+    if s.isupper() and n_alpha >= 2:                     # DUSA, CORE, DI
+        return True
+    if any(c.isupper() for c in s[1:]):                  # CoBEVT, ViT, HPLaw
+        return True
+    if any(c.isdigit() for c in s) and n_alpha >= 1 and len(s) >= 3:  # V2X, S2R
+        return True
+    return False
+
+
+def _looks_like_name(w: str) -> bool:
+    """Whether a (possibly hyphenated) title token is a coined method name."""
+    if len(w) > 16 or not w.replace("-", "").isalnum():
+        return False
+    parts = w.split("-")
+    if len(parts) > 1:                                   # V2X-ViT yes, Multi-Agent no
+        return any(_atom_is_acronym(p) for p in parts)
+    return _atom_is_acronym(w)
+
+
+def method_name(title: str):
+    """Return the method's own name if the title states one, else None.
+
+    A name is taken from (in order): a short pre-colon name (e.g. "V2VNet: ..."), a
+    parenthesised acronym (e.g. "... (V2I-MSF) ..."), or the first distinctive
+    acronym / CamelCase token, skipping generic adjectives. Returns None when the title
+    describes the approach only in plain words — the caller then falls back to "X et al.".
     """
     t = re.sub(r"\s+", " ", title.replace("{", "").replace("}", "")).strip()
     if ":" in t:
-        pre = t.split(":")[0].strip()
-        if 1 <= len(pre) <= 24:
+        pre = t.split(":")[0].strip(" .,")
+        if 1 <= len(pre) <= 24 and len(pre.split()) <= 3 and pre.lower() not in _GENERIC:
             return pre
+    # parenthesised acronym, e.g. "(V2I-MSF)", "(CoBEVT)"
+    m = re.search(r"\(([A-Za-z][A-Za-z0-9\-]*[A-Za-z0-9])\)", t)
+    if m and _looks_like_name(m.group(1)):
+        return m.group(1)
     toks = [w.strip(".,") for w in t.split()]
-    # prefer an acronym / CamelCase token (e.g. CoBEVT, V2X-ViT, BEV-V2X)
+    # prefer a coined acronym / CamelCase token (e.g. CoBEVT, V2X-ViT, BEV-V2X)
     for w in toks[:6]:
-        core = w.replace("-", "")
-        if len(w) <= 16 and core.isalnum() and (
-            sum(c.isupper() for c in w) >= 2 or any(ch.isdigit() for ch in w)
-        ) and w.lower() not in _GENERIC:
+        if w.lower() not in _GENERIC and _looks_like_name(w):
             return w
-    # else first non-generic token
-    for w in toks:
-        if w.lower() not in _GENERIC and len(w) >= 3:
-            return w if len(w) <= 16 else w[:15] + "…"
-    return " ".join(toks[:2])
+    return None
+
+
+def first_author_etal(paper) -> str:
+    """"<surname> et al." (or just "<surname>" for a sole author) from the author field.
+
+    Handles both "Last, First and …" and "First Last and …" BibTeX author formats.
+    """
+    raw = paper["fields"].get("author", "") or ""
+    authors = [a.strip() for a in re.split(r"\s+and\s+", raw) if a.strip()]
+    if not authors:
+        return "et al."
+    first = re.sub(r"[{}\\\"]", "", authors[0]).strip()
+    surname = first.split(",")[0].strip() if "," in first else first.split()[-1]
+    return f"{surname} et al." if len(authors) > 1 else surname
+
+
+def display_name(paper) -> str:
+    """The method name if the paper gives one, else "<first-author surname> et al."."""
+    return method_name(paper["fields"].get("title", "")) or first_author_etal(paper)
 
 
 def score(gen, p) -> int:
     s = 2 if not gen.is_snowball(p) else 0          # survey landmarks first
-    if ":" in (p["fields"].get("title", "")):
-        s += 1                                       # named-acronym method
+    if method_name(p["fields"].get("title", "")):
+        s += 1                                       # named method ranked above "X et al."
     return s
 
 
@@ -123,25 +212,24 @@ def truncate(s):
 def select(gen, papers):
     """Per-year lists of (label, is_survey) for TOP-VENUE works only.
 
-    Label = "<VENUE> <ShortName>"; survey landmarks are ranked first, then capped with
-    a "+N more" overflow marker per year.
+    Label = "<VENUE><YEAR> <approach>" (e.g. "CVPR2026 V2VNet"); survey landmarks are
+    ranked first, then capped with a "+N more" overflow marker per year. When a category
+    has fewer than three top-venue works, all works are shown with a broader venue acronym.
     """
-    top = [(p, venue_acronym(p)) for p in papers if venue_acronym(p)]
-    fallback = len(top) < 3   # too few flagship works: show all, no venue prefix
+    top = [p for p in papers if venue_acronym(p)]
+    fallback = len(top) < 3   # too few flagship works: show all, broad-venue prefix
     by_year = {y: [] for y in YEARS}
-    pool = papers if fallback else [p for p, _ in top]
+    pool = papers if fallback else top
     for p in pool:
         y = year_of(p)
         if y in by_year:
-            by_year[y].append((p, None if fallback else venue_acronym(p)))
+            by_year[y].append(p)
     cols = {}
     for y in YEARS:
-        ranked = sorted(by_year[y], key=lambda pa: (-score(gen, pa[0]),
-                                                    short_label(pa[0]["fields"].get("title", "")).lower()))
+        ranked = sorted(by_year[y], key=lambda p: (-score(gen, p), display_name(p).lower()))
         rows = []
-        for p, acro in ranked[:CAP]:
-            name = short_label(p["fields"]["title"])
-            label = truncate(f"{acro} {name}" if acro else name)
+        for p in ranked[:CAP]:
+            label = truncate(f"{venue_short(p)}{y} {display_name(p)}")
             rows.append((label, not gen.is_snowball(p)))
         extra = len(ranked) - CAP
         if extra > 0:

@@ -4,10 +4,10 @@
 
 <div align="center">
 
-[![Survey](https://img.shields.io/badge/Survey-PDF-b31b1b.svg)](A_Systematic_Literature_Review_on_Vehicular_Collaborative_PerceptionA_Computer_Vision_Perspective.pdf)
+[![Survey](https://img.shields.io/badge/Survey-IEEE%20T--ITS-b31b1b.svg)](https://doi.org/10.1109/TITS.2025.3631141)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 ![Papers](https://img.shields.io/badge/papers-402-1f6feb.svg)
-![Updated](https://img.shields.io/badge/updated-2026--05--30-2ea44f.svg)
+![Updated](https://img.shields.io/badge/updated-2026--05--31-2ea44f.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 [![Stars](https://img.shields.io/github/stars/leiwanrobotics/awesome-collaborative-perception?style=social)](https://github.com/leiwanrobotics/awesome-collaborative-perception/stargazers)
 
@@ -17,7 +17,7 @@
 <img src="figure/CP.png" width="55%" height="auto"/>
 </p>
 
-**Vehicular collaborative perception** — also called cooperative or collective perception — lets connected vehicles and roadside infrastructure exchange sensor information over V2V / V2I / V2X links to see through occlusions and beyond line of sight, overcoming the fundamental limits of single-vehicle perception. This repository is a continuously maintained index of **402 peer-reviewed papers (2019–2026)**, each classified along three axes — **modality**, **collaboration scheme**, and **perception task** — with direct links to the paper and to official code when available.
+**Vehicular collaborative perception** — also called cooperative or collective perception — lets connected vehicles and roadside infrastructure exchange sensor information over V2V / V2I / V2X links to see through occlusions and beyond line of sight, overcoming the fundamental limits of single-vehicle perception. This repository is a continuously maintained index of **402 curated papers (2019–2026)**, each classified along three axes — **modality**, **collaboration scheme**, and **perception task** — with direct links to the paper and to official code when available. The corpus is predominantly peer-reviewed, with recent arXiv preprints included from the snowballing extension.
 
 The collection is built in two reproducible stages:
 
@@ -35,6 +35,7 @@ Every row is tagged **`Survey`** or **`Snowball`** in the *Source* column. The [
   - [LiDAR](#lidar)
   - [Camera](#camera)
   - [LiDAR-Camera](#lidar-camera)
+  - [Modality-Agnostic / Other](#modality-agnostic--other)
 - [Collaboration Type](#collaboration-type)
   - [Early Collaboration](#early-collaboration)
   - [Intermediate Collaboration](#intermediate-collaboration)
@@ -99,7 +100,7 @@ Papers are organized along the three axes of the survey, so the repository works
 2. **Collaboration scheme** — *Early* (raw-data sharing), *Intermediate* (feature sharing), *Late* (result sharing), and *Hybrid*.
 3. **Perception task** — *Object Detection*, *Semantic Segmentation*, *Object Tracking*, *Motion Prediction*, *Lane Detection*, and *Multi-Task / Task-Agnostic*.
 
-The same study appears under each axis it belongs to, and a per-table **development timeline** precedes every table to trace how that category evolved. To keep the timelines legible, only works published at top venues (CVPR, ICCV, ECCV, TPAMI, NeurIPS, ICLR, AAAI, ICRA, IROS, T-ITS, …) are marked, each prefixed with its venue.
+The same study appears under each axis it belongs to, and a per-table **development timeline** precedes every table to trace how that category evolved. To keep the timelines legible, only works published at top venues (CVPR, ICCV, ECCV, TPAMI, NeurIPS, ICLR, AAAI, ICRA, IROS, T-ITS, …) are marked. Each mark is labelled `VENUE+YEAR approach` (e.g. `CVPR2024 RCooper`); the approach is the method's own name when the paper coins one, otherwise `First-author et al.`.
 
 **Table key.** &nbsp; **Year** — publication year. &nbsp; **Modality / Collaboration / Task** — taxonomy labels above (datasets show their V2X mode, *V2V* / *V2I*, in the Collaboration column). &nbsp; **Paper** / **Repo** — links to the publication and official code. &nbsp; **Source** — `Survey` (in the SLR, ≤ Mar 2024) or `Snowball` (forward-snowballing extension, 2024–2026).
 
@@ -1530,7 +1531,8 @@ Contributions are welcome — to add a missing paper, correct a classification, 
 
 1. Add a BibTeX entry to [`collaborative-perception.bib`](collaborative-perception.bib) with the
    taxonomy keywords described in [`tools/README.md`](tools/README.md) — e.g.
-   `keywords = {CP-LiDAR, CP-Intermediate, CP-Object Detection}`. Tag papers found beyond the
+   `keywords = {CP-LiDAR, CP-Intermediate, CP-Object Detection}`. Include a `doi` (or `eprint`
+   arXiv id) so the **Paper** link resolves to a stable target. Tag papers found beyond the
    survey's March-2024 cutoff with `CP-Snowball`, and add `code = {https://github.com/...}` when
    official code exists.
 2. Regenerate the tables and figures, then open a pull request:

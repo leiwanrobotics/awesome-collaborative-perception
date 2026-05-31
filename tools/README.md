@@ -27,7 +27,10 @@ tools/
 └── add_paper.py                   # interactive single-paper helper
 ```
 
-Install dependencies once: `pip install -r ../requirements.txt`.
+`data/categorized_papers.json` is a **generated** artifact (the parsed `.bib`, shared by the
+README and figure scripts); refresh it via `bash ../run_workflow.sh`, never edit it by hand.
+
+Install dependencies once: `pip install -r ../requirements.txt` (Python ≥ 3.9).
 
 ## Keyword convention
 
@@ -73,37 +76,83 @@ python data_extraction/readme_generator.py
 
 ## Extend via forward snowballing
 
-The collection beyond March 2024 is built by snowballing the citation graph of the surveyed papers
-and screening candidates against the survey's inclusion/exclusion criteria (IC1–IC4, EC1–EC6).
+The collection beyond March 2024 is grown by snowballing the citation graph of the surveyed
+papers and screening the citing works against the survey's inclusion/exclusion criteria
+(IC1–IC4, EC1–EC6). The current extension added **296 studies (2024–2026)**.
+
+> **Run every command from the repository root.** `forward_snowballing.py` (its `--output-dir`
+> default) and `crossref_enrich.py` resolve paths relative to the current directory, so running
+> from `tools/` would read/write the wrong locations.
+
+The pipeline is a chain of JSON files under `data/snowballing/`. Two steps are human-in-the-loop
+(marked ⚙︎): screening the candidates, and finalizing the keep set.
+
+```text
+data/categorized_papers.json                         seed = the surveyed papers
+  │  forward_snowballing.py        Semantic Scholar + OpenCitations + arXiv (rate-limited)
+  ▼
+forward_snowballing_<ts>.json  +  new_candidates.json     deduped citing papers
+  │  ⚙︎ screen against IC1–IC4 / EC1–EC6   (two-pass; working data in batches/, pass2/)
+  ▼
+data/snowballing/screened/accepted_*.json
+  │  consolidate.py                merge + dedup vs the .bib; flag borderline papers
+  ▼
+data/snowballing/accepted_consolidated.json
+  │  ⚙︎ finalize the keep set
+  ▼
+data/snowballing/kept_final.json
+  │  enrich_links.py               recover doi/arxiv/url via Semantic Scholar title search
+  ▼
+data/snowballing/kept_enriched.json
+  │  crossref_enrich.py            recover remaining DOIs via Crossref (updates in place)
+  ▼
+data/snowballing/kept_enriched.json
+  │  append_snowball.py            write CP-Snowball entries into the .bib
+  ▼
+collaborative-perception.bib  →  bash run_workflow.sh  →  README.md + figures
+```
 
 ```bash
-# 1. discover citing papers (Semantic Scholar + OpenCitations, public APIs, rate-limited)
-python snowballing/forward_snowballing.py            # -> data/snowballing/new_candidates.json
+# 1. discover citing papers (public APIs, rate-limited; writes a timestamped file and
+#    new_candidates.json under data/snowballing/)
+python tools/snowballing/forward_snowballing.py
 
-# 2. screen candidates against IC/EC (see repo history for the two-pass screening that
-#    produced the accepted set)
+# 2. ⚙︎ screen candidates against IC1–IC4 / EC1–EC6  ->  data/snowballing/screened/accepted_*.json
+#    (optional automated screener: tools/study_selection/llm_classifier.py; see note below)
 
-# 3. consolidate + recover identifiers
-python snowballing/consolidate.py
-python snowballing/enrich_links.py
-python snowballing/crossref_enrich.py                # Crossref is the reliable title->DOI source
+# 3. consolidate the screened set (dedups against the existing .bib, flags borderline papers)
+python tools/snowballing/consolidate.py              # -> accepted_consolidated.json
 
-# 4. append accepted papers to the .bib (tagged CP-Snowball) and regenerate
-python snowballing/append_snowball.py
-bash ../run_workflow.sh
+# 4. ⚙︎ finalize the kept papers as data/snowballing/kept_final.json
+
+# 5. recover links / identifiers for the kept papers
+python tools/snowballing/enrich_links.py             # kept_final.json -> kept_enriched.json
+CROSSREF_MAILTO="you@example.com" \
+python tools/snowballing/crossref_enrich.py          # Crossref is the reliable title->DOI source
+
+# 6. append the kept papers to the .bib (tagged CP-Snowball) and regenerate the repo
+python tools/snowballing/append_snowball.py
+bash run_workflow.sh
 ```
+
+The human-decision artifacts of this pipeline — `data/snowballing/screened/accepted_*.json`
+(screening verdicts) and `data/snowballing/kept_final.json` (finalized keep set) — are committed
+so the 2024–2026 extension is auditable; the bulky raw candidate dumps stay gitignored.
 
 ### Note on `study_selection/llm_classifier.py`
 
 This is an **optional, legacy** helper that applies IC/EC via the SiliconFlow API and requires
 `SILICONFLOW_API_KEY`. The screening used to build the current extension was performed against the
 same criteria without it, so this script is provided only as a convenience for fully automated runs
-and is not required to reproduce the repository.
+and is not required to reproduce the repository. The criteria themselves are recorded, in
+human-readable form, in [`config/inclusion_criteria.json`](../config/inclusion_criteria.json)
+(a reference document, not loaded by any script).
 
 ## API notes
 
 - **Semantic Scholar** graph API — no key required, but the keyless tier is heavily rate-limited;
   expect partial results on large runs (use the Crossref fallback for DOIs).
-- **OpenCitations** / **Crossref** — lenient; Crossref prefers a `mailto` in the User-Agent.
+- **OpenCitations** / **Crossref** — lenient; Crossref prefers a `mailto` in the User-Agent. Set
+  yours via the `CROSSREF_MAILTO` environment variable (a neutral default is used otherwise).
 - **Papers with Code** — its public API is discontinued (returns HTML), so repo links are taken only
   from author-stated GitHub URLs in abstracts.
