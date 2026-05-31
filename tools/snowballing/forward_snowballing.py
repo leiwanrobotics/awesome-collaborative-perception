@@ -71,7 +71,7 @@ class ForwardSnowballingTool:
             print(f"  Found {len(citing_papers)} citations via Semantic Scholar")
             return citing_papers
 
-        except Exception as e:
+        except (requests.RequestException, ValueError) as e:
             print(f"  Error with Semantic Scholar API: {e}")
             return []
 
@@ -100,7 +100,7 @@ class ForwardSnowballingTool:
             print(f"  Found {len(citing_dois)} citations via OpenCitations")
             return citing_dois
 
-        except Exception as e:
+        except (requests.RequestException, ValueError) as e:
             print(f"  Error with OpenCitations API: {e}")
             return []
 
@@ -145,7 +145,7 @@ class ForwardSnowballingTool:
 
             return citing_papers
 
-        except Exception as e:
+        except (requests.RequestException, ValueError) as e:
             print(f"  Error searching arXiv citations: {e}")
             return []
 
@@ -226,7 +226,7 @@ class ForwardSnowballingTool:
 
         return results
 
-    def _save_results(self, results: Dict[str, Any], suffix: str = ""):
+    def _save_results(self, results: Dict[str, Any], suffix: str = "") -> None:
         """Save snowballing results to JSON."""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"forward_snowballing_{timestamp}{suffix}.json"
@@ -237,7 +237,7 @@ class ForwardSnowballingTool:
 
         print(f"Results saved to: {output_path}")
 
-    def export_new_candidates(self, results: Dict[str, Any], output_path: str):
+    def export_new_candidates(self, results: Dict[str, Any], output_path: str) -> None:
         """
         Export unique new paper candidates for review.
 
@@ -303,7 +303,9 @@ def main():
     print(f"Total papers processed: {results['summary']['total_processed']}")
     print(f"Papers with citations: {results['summary']['papers_with_citations']}")
     print(f"Total citations found: {results['summary']['total_citations_found']}")
-    print(f"Unique new candidates: {len(set(p.get('title', '').lower() for p in results['citing_papers']))}")
+    unique_titles = {p.get('title', '').lower().strip() for p in results['citing_papers']}
+    unique_titles.discard('')
+    print(f"Unique new candidates: {len(unique_titles)}")
     print("=" * 60)
 
 

@@ -6,23 +6,27 @@ identifiers, so paper links are missing. This queries the Semantic Scholar paper
 search endpoint by title to recover externalIds.DOI / ArXiv / openAccessPdf / url.
 """
 import json
-import time
+import logging
 import re
-import sys
+import time
 from pathlib import Path
+from typing import Any, Dict, List
 
 import requests
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 API = "https://api.semanticscholar.org/graph/v1/paper/search"
 
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+logger = logging.getLogger(__name__)
+
 
 def norm(s: str) -> str:
     return re.sub(r"[^a-z0-9]", "", (s or "").lower())
 
 
-def enrich(papers, delay=1.1):
-    out = []
+def enrich(papers: List[Dict[str, Any]], delay: float = 1.1) -> List[Dict[str, Any]]:
+    out: List[Dict[str, Any]] = []
     for i, p in enumerate(papers, 1):
         title = p["title"]
         doi, arxiv, url = "", "", ""
@@ -39,24 +43,27 @@ def enrich(papers, delay=1.1):
                         oa = cand.get("openAccessPdf") or {}
                         url = oa.get("url", "") or cand.get("url", "") or ""
                         break
-        except Exception as e:
-            print(f"  [{i}] error: {e}", file=sys.stderr)
+        except requests.RequestException as e:
+            logger.warning("  [%d] Semantic Scholar error: %s", i, e)
         p2 = dict(p)
         p2["doi"], p2["arxiv"], p2["url"] = doi, arxiv, url
         out.append(p2)
-        print(f"[{i}/{len(papers)}] {'DOI' if doi else ('arXiv' if arxiv else ('url' if url else 'NONE'))}: {title[:55]}")
+        kind = "DOI" if doi else ("arXiv" if arxiv else ("url" if url else "NONE"))
+        logger.info("[%d/%d] %s: %s", i, len(papers), kind, title[:55])
         time.sleep(delay)
     return out
 
 
-def main():
-    papers = json.load(open(ROOT / "data/snowballing/kept_final.json"))
+def main() -> None:
+    with open(ROOT / "data/snowballing/kept_final.json", encoding="utf-8") as f:
+        papers = json.load(f)
     enriched = enrich(papers)
     out = ROOT / "data/snowballing/kept_enriched.json"
-    json.dump(enriched, open(out, "w"), indent=1, ensure_ascii=False)
+    with open(out, "w", encoding="utf-8") as f:
+        json.dump(enriched, f, indent=1, ensure_ascii=False)
     n = sum(1 for p in enriched if p["doi"] or p["arxiv"] or p["url"])
-    print(f"\nenriched {len(enriched)} papers; {n} got a link ({len(enriched)-n} none)")
-    print("wrote", out)
+    logger.info("enriched %d papers; %d got a link (%d none)", len(enriched), n, len(enriched) - n)
+    logger.info("wrote %s", out)
 
 
 if __name__ == "__main__":

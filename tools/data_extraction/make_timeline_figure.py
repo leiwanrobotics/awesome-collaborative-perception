@@ -7,7 +7,6 @@ total (survey vs snowball), modality, collaboration scheme, and perception task.
 
 Output: figure/development_timeline.png
 """
-import json
 import sys
 from collections import defaultdict
 from pathlib import Path

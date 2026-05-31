@@ -10,11 +10,14 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Any
 
+import bibtexparser
+from bibtexparser.bparser import BibTexParser
+
 
 class BibTeXParser:
     """Parser for collaborative perception BibTeX file."""
 
-    def __init__(self, bib_path: str):
+    def __init__(self, bib_path: str) -> None:
         self.bib_path = Path(bib_path)
         self.papers = []
         self.categories = {
@@ -52,9 +55,6 @@ class BibTeXParser:
         bibtexparser correctly handles nested braces (e.g. ``{2023 {IEEE}/{CVF} ICCV}``),
         which the previous brace-naive regex truncated, corrupting ~half of all venues.
         """
-        import bibtexparser
-        from bibtexparser.bparser import BibTexParser
-
         parser = BibTexParser(common_strings=True)
         parser.ignore_nonstandard_types = False
         with open(self.bib_path, 'r', encoding='utf-8') as f:
@@ -139,7 +139,7 @@ class BibTeXParser:
         }
         return stats
 
-    def export_categorized_papers(self, output_path: str):
+    def export_categorized_papers(self, output_path: str) -> None:
         """Export categorized papers to JSON."""
         output_data = {
             'papers': self.papers,
