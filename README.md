@@ -7,7 +7,7 @@
 [![Survey](https://img.shields.io/badge/Survey-IEEE%20T--ITS-b31b1b.svg)](https://doi.org/10.1109/TITS.2025.3631141)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 ![Papers](https://img.shields.io/badge/papers-402-1f6feb.svg)
-![Updated](https://img.shields.io/badge/updated-2026--05--31-2ea44f.svg)
+![Updated](https://img.shields.io/badge/updated-2026--06--15-2ea44f.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 [![Stars](https://img.shields.io/github/stars/leiwanrobotics/awesome-collaborative-perception?style=social)](https://github.com/leiwanrobotics/awesome-collaborative-perception/stargazers)
 
