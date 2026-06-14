@@ -58,6 +58,24 @@ VENUE_ACRONYMS: List[tuple] = [
     (r"arxiv|\bcorr\b", "arXiv"),
 ]
 
+# Display caps (chars) for the two free-text columns. GitHub strips inline CSS,
+# so a column's rendered width is bounded by bounding the text it contains.
+MAX_TITLE_LEN = 64
+MAX_VENUE_LEN = 22
+
+# Compact labels for the taxonomy columns, so the cells stay narrow. The full
+# terms are spelled out in the "Table key" legend above the tables.
+MODALITY_ABBR = {"LiDAR": "LiDAR", "Camera": "Cam", "LiDAR-Camera": "L+C", "Agnostic": "Agn."}
+COLLAB_ABBR = {
+    "Early": "Early", "Intermediate": "Inter", "Late": "Late", "Hybrid": "Hybrid",
+    "V2V": "V2V", "V2I": "V2I", "V2V & V2I": "V2V+V2I",
+}
+TASK_ABBR = {
+    "Object Detection": "Det", "Object Tracking": "Track", "Motion Prediction": "Pred",
+    "Semantic Segmentation": "Seg", "Lane Detection": "Lane",
+    "Multi-Task & Task-Agnostic": "Multi", "Dataset / Benchmark": "Data",
+}
+
 
 class ReadmeGenerator:
     def __init__(self, data_path: str):
@@ -79,6 +97,20 @@ class ReadmeGenerator:
 
     def source_label(self, paper: Dict[str, Any]) -> str:
         return "Snowball" if self.is_snowball(paper) else "Survey"
+
+    def display_title(self, paper: Dict[str, Any]) -> str:
+        """Title shortened for the table cell.
+
+        Full titles run up to ~150 chars; without a length bound the title
+        column's max-content width pushes the whole table past the viewport
+        (GitHub strips inline CSS, so a column width cannot be set directly).
+        Truncate at a word boundary near MAX_TITLE_LEN and append an ellipsis;
+        the full paper is one click away via the linked title.
+        """
+        title = self.paper_title(paper)
+        if len(title) <= MAX_TITLE_LEN:
+            return title
+        return title[:MAX_TITLE_LEN].rsplit(" ", 1)[0].rstrip(" ,;:-") + "…"
 
     def clean_text(self, value: str) -> str:
         if not value:
@@ -188,9 +220,9 @@ class ReadmeGenerator:
         venue = re.sub(r"^(the\s+)?(proceedings of\s+(the\s+)?)?", "", venue, flags=re.I)
         venue = re.sub(r"^\d{4}\s+", "", venue)
         venue = re.sub(r"^\d+\s*(st|nd|rd|th)\s+", "", venue, flags=re.I).strip()
-        if len(venue) <= 40:
+        if len(venue) <= MAX_VENUE_LEN:
             return venue
-        return venue[:40].rsplit(" ", 1)[0] + "…"
+        return venue[:MAX_VENUE_LEN].rsplit(" ", 1)[0].rstrip(" ,;:-") + "…"
 
     def paper_year(self, paper: Dict[str, Any]) -> str:
         return self.clean_text(str(paper["fields"].get("year", "N/A")))
@@ -259,15 +291,17 @@ class ReadmeGenerator:
         sep = "| " + " | ".join(["---"] * len(columns)) + " |\n"
         rows = []
         for paper in papers:
+            url = self.paper_link(paper)
+            title = self.display_title(paper)
+            tasks = ", ".join(TASK_ABBR.get(t, t) for t in self.infer_task(paper).split(", "))
             data = {
-                "Paper": self.paper_title(paper),
+                "Title": f"[{title}]({url})" if url else title,
                 "Venue": self.paper_venue(paper),
                 "Year": self.paper_year(paper),
-                "Modality": self.infer_modality(paper),
-                "Collaboration": self.infer_collaboration(paper),
-                "Task": self.infer_task(paper),
-                "Paper Link": self.format_link(self.paper_link(paper), "Paper"),
-                "Repo Link": self.format_link(self.repo_link(paper), "Repo"),
+                "Modality": MODALITY_ABBR.get(self.infer_modality(paper), self.infer_modality(paper)),
+                "Collab.": COLLAB_ABBR.get(self.infer_collaboration(paper), self.infer_collaboration(paper)),
+                "Task": tasks,
+                "Code": self.format_link(self.repo_link(paper), "Code"),
                 "Source": self.source_label(paper),
             }
             rows.append("| " + " | ".join(data[c] for c in columns) + " |")
@@ -421,14 +455,14 @@ Papers are organized along the three axes of the survey, so the repository works
 
 The same study appears under each axis it belongs to, and a per-table **development timeline** precedes every table to trace how that category evolved. To keep the timelines legible, only works published at top venues (CVPR, ICCV, ECCV, TPAMI, NeurIPS, ICLR, AAAI, ICRA, IROS, T-ITS, …) are marked. Each mark is labelled `VENUE+YEAR approach` (e.g. `CVPR2024 RCooper`); the approach is the method's own name when the paper coins one, otherwise `First-author et al.`.
 
-**Table key.** &nbsp; **Year** — publication year. &nbsp; **Modality / Collaboration / Task** — taxonomy labels above (datasets show their V2X mode, *V2V* / *V2I*, in the Collaboration column). &nbsp; **Paper** / **Repo** — links to the publication and official code. &nbsp; **Source** — `Survey` (in the SLR, ≤ Mar 2024) or `Snowball` (forward-snowballing extension, 2024–2026).
+**Table key.** &nbsp; **Title** links to the publication (truncated for width — click through for the full title); **Code** links to the official repository. &nbsp; Compact column labels: **Modality** — `LiDAR`, `Cam` (Camera), `L+C` (LiDAR-Camera), `Agn.` (Modality-Agnostic). &nbsp; **Collab.** — `Early`, `Inter` (Intermediate), `Late`, `Hybrid` (datasets show their V2X mode `V2V` / `V2I` here). &nbsp; **Task** — `Det` (Object Detection), `Track` (Object Tracking), `Pred` (Motion Prediction), `Seg` (Semantic Segmentation), `Lane` (Lane Detection), `Multi` (Multi-Task / Task-Agnostic), `Data` (Dataset / Benchmark). &nbsp; **Source** — `Survey` (in the SLR, ≤ Mar 2024) or `Snowball` (forward-snowballing extension, 2024–2026).
 
 ---
 
 """
 
     def generate_modality_sections(self) -> str:
-        columns = ["Paper", "Venue", "Year", "Collaboration", "Task", "Paper Link", "Repo Link", "Source"]
+        columns = ["Title", "Venue", "Year", "Collab.", "Task", "Code", "Source"]
         body = "## Modality Type\n\n"
         body += self.section("LiDAR", self.filter_by(modality="LiDAR"), columns, timeline_key="mod_lidar")
         body += self.section("Camera", self.filter_by(modality="Camera"), columns, timeline_key="mod_camera")
@@ -438,7 +472,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
         return body
 
     def generate_collaboration_sections(self) -> str:
-        columns = ["Paper", "Venue", "Year", "Modality", "Task", "Paper Link", "Repo Link", "Source"]
+        columns = ["Title", "Venue", "Year", "Modality", "Task", "Code", "Source"]
         body = "## Collaboration Type\n\n"
         body += self.section("Early Collaboration", self.filter_by(collaboration="Early"), columns, timeline_key="collab_early")
         body += self.section("Intermediate Collaboration", self.filter_by(collaboration="Intermediate"), columns, timeline_key="collab_intermediate")
@@ -448,7 +482,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
         return body
 
     def generate_task_sections(self) -> str:
-        columns = ["Paper", "Venue", "Year", "Modality", "Collaboration", "Paper Link", "Repo Link", "Source"]
+        columns = ["Title", "Venue", "Year", "Modality", "Collab.", "Code", "Source"]
         body = "## Perception Tasks\n\n"
         body += self.section("Collaborative Object Detection", self.filter_by(task="Object Detection"), columns, timeline_key="task_object-detection")
         body += self.section("Collaborative Semantic Segmentation", self.filter_by(task="Semantic Segmentation"), columns, timeline_key="task_semantic-segmentation")
@@ -460,7 +494,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
         return body
 
     def generate_dataset_section(self) -> str:
-        columns = ["Paper", "Venue", "Year", "Modality", "Collaboration", "Paper Link", "Repo Link", "Source"]
+        columns = ["Title", "Venue", "Year", "Modality", "Collab.", "Code", "Source"]
         body = "## Datasets\n\n"
         body += self.section("Dataset / Benchmark Papers", self.filter_by(dataset_only=True), columns, timeline_key="dataset")
         body += "---\n\n"
