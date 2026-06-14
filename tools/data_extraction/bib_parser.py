@@ -10,11 +10,14 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Any
 
+import bibtexparser
+from bibtexparser.bparser import BibTexParser
+
 
 class BibTeXParser:
     """Parser for collaborative perception BibTeX file."""
 
-    def __init__(self, bib_path: str):
+    def __init__(self, bib_path: str) -> None:
         self.bib_path = Path(bib_path)
         self.papers = []
         self.categories = {
@@ -27,7 +30,7 @@ class BibTeXParser:
         self.modality_keywords = {
             'LiDAR': ['CP-LiDAR'],
             'Camera': ['CP-Camera'],
-            'Fusion': ['CP-Fusion', 'CP-LiDAR-Camera']
+            'LiDAR-Camera': ['CP-Fusion', 'CP-LiDAR-Camera']
         }
 
         self.collaboration_keywords = {
@@ -40,91 +43,91 @@ class BibTeXParser:
         self.task_keywords = {
             'Object Detection': ['CP-Object Detection'],
             'Object Tracking': ['CP-Object Tracking'],
-            'Motion Prediction': ['CP-Motion Prediction'],
+            'Motion Prediction': ['CP-Motion Prediction', 'CP-Prediction'],
             'Semantic Segmentation': ['CP-Semantic Segmentation'],
             'Lane Detection': ['CP-Lane Detection'],
-            'Multi-task': ['CP-Multi-task', 'CP-Task-agnostic']
+            'Multi-Task & Task-Agnostic': ['CP-Multi-task', 'CP-Task-agnostic', 'CP-Task Agnostic']
         }
 
     def parse_bib_file(self) -> List[Dict[str, Any]]:
-        """Parse the entire BibTeX file."""
+        """Parse the entire BibTeX file using the bibtexparser library.
+
+        bibtexparser correctly handles nested braces (e.g. ``{2023 {IEEE}/{CVF} ICCV}``),
+        which the previous brace-naive regex truncated, corrupting ~half of all venues.
+        """
+        parser = BibTexParser(common_strings=True)
+        parser.ignore_nonstandard_types = False
         with open(self.bib_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+            db = bibtexparser.load(f, parser=parser)
 
-        # Split by entries (each entry starts with @)
-        entries = re.split(r'\n@', content)
-
-        for i, entry in enumerate(entries):
-            if not entry.strip():
-                continue
-
-            # Add @ back if it's not the first entry
-            if i > 0:
-                entry = '@' + entry
-
-            parsed_entry = self._parse_entry(entry)
-            if parsed_entry:
-                self.papers.append(parsed_entry)
-                self._categorize_paper(parsed_entry)
+        for entry in db.entries:
+            paper = self._convert_entry(entry)
+            self.papers.append(paper)
+            self._categorize_paper(paper)
 
         return self.papers
 
-    def _parse_entry(self, entry: str) -> Dict[str, Any]:
-        """Parse a single BibTeX entry."""
-        try:
-            # Extract entry type and citation key
-            match = re.match(r'@(\w+)\{([^,]+),', entry)
-            if not match:
-                return None
+    def _convert_entry(self, entry: Dict[str, str]) -> Dict[str, Any]:
+        """Convert a bibtexparser entry dict to the internal paper structure."""
+        citation_key = entry.get('ID', '')
+        entry_type = entry.get('ENTRYTYPE', '')
 
-            entry_type = match.group(1)
-            citation_key = match.group(2)
+        fields = {k.lower(): re.sub(r'\s+', ' ', v).strip()
+                  for k, v in entry.items()
+                  if k not in ('ID', 'ENTRYTYPE')}
 
-            paper = {
-                'type': entry_type,
-                'citation_key': citation_key,
-                'fields': {}
-            }
+        keywords_raw = fields.get('keywords', '')
+        keywords = [k.strip() for k in keywords_raw.split(',') if k.strip()]
 
-            # Extract fields
-            field_pattern = r'(\w+)\s*=\s*\{([^}]*)\}'
-            for match in re.finditer(field_pattern, entry):
-                field_name = match.group(1).lower()
-                field_value = match.group(2).strip()
-                paper['fields'][field_name] = field_value
-
-            # Extract keywords (special handling as they're crucial)
-            keywords_match = re.search(r'keywords\s*=\s*\{([^}]*)\}', entry)
-            if keywords_match:
-                keywords = [k.strip() for k in keywords_match.group(1).split(',')]
-                paper['keywords'] = keywords
-            else:
-                paper['keywords'] = []
-
-            return paper
-
-        except Exception as e:
-            print(f"Error parsing entry: {e}")
-            return None
+        return {
+            'type': entry_type,
+            'citation_key': citation_key,
+            'fields': fields,
+            'keywords': keywords,
+        }
 
     def _categorize_paper(self, paper: Dict[str, Any]):
         """Categorize a paper based on its keywords."""
-        keywords = paper.get('keywords', [])
+        keywords = set(paper.get('keywords', []))
 
-        # Categorize by modality
-        for modality, kw_list in self.modality_keywords.items():
-            if any(kw in keywords for kw in kw_list):
-                self.categories['modality'][modality].append(paper)
+        modality = self._infer_modality(keywords)
+        if modality:
+            self.categories['modality'][modality].append(paper)
 
-        # Categorize by collaboration type
+        collaboration = self._infer_collaboration(keywords)
+        if collaboration:
+            self.categories['collaboration'][collaboration].append(paper)
+
+        task = self._infer_task(keywords)
+        if task:
+            self.categories['task'][task].append(paper)
+
+    def _infer_modality(self, keywords: set) -> str:
+        """Infer the primary modality from keywords."""
+        has_lidar = 'CP-LiDAR' in keywords
+        has_camera = 'CP-Camera' in keywords
+
+        if 'CP-Fusion' in keywords or 'CP-LiDAR-Camera' in keywords or (has_lidar and has_camera):
+            return 'LiDAR-Camera'
+        if has_lidar:
+            return 'LiDAR'
+        if has_camera:
+            return 'Camera'
+        return ''
+
+    def _infer_collaboration(self, keywords: set) -> str:
+        """Infer collaboration type from keywords."""
         for collab_type, kw_list in self.collaboration_keywords.items():
             if any(kw in keywords for kw in kw_list):
-                self.categories['collaboration'][collab_type].append(paper)
+                return collab_type
+        return ''
 
-        # Categorize by task
+    def _infer_task(self, keywords: set) -> str:
+        """Infer the primary perception task from keywords."""
         for task, kw_list in self.task_keywords.items():
             if any(kw in keywords for kw in kw_list):
-                self.categories['task'][task].append(paper)
+                return task
+        return ''
 
     def get_statistics(self) -> Dict[str, Any]:
         """Get statistics about the parsed papers."""
@@ -136,7 +139,7 @@ class BibTeXParser:
         }
         return stats
 
-    def export_categorized_papers(self, output_path: str):
+    def export_categorized_papers(self, output_path: str) -> None:
         """Export categorized papers to JSON."""
         output_data = {
             'papers': self.papers,

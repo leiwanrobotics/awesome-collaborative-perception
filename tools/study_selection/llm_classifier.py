@@ -9,7 +9,7 @@ import os
 import time
 import requests
 from pathlib import Path
-from typing import Dict, List, Any, Optional
+from typing import Dict, Any, Optional
 from datetime import datetime
 
 
@@ -31,7 +31,7 @@ class SiliconFlowClassifier:
         self.api_endpoint = "https://api.siliconflow.cn/v1/chat/completions"
         self.model = model
 
-    def call_llm(self, prompt: str, temperature: float = 0.1, max_tokens: int = 1000) -> str:
+    def call_llm(self, prompt: str, temperature: float = 0.0, max_tokens: int = 1000) -> str:
         """
         Call SiliconFlow API.
 
@@ -67,7 +67,7 @@ class SiliconFlowClassifier:
             data = response.json()
             return data['choices'][0]['message']['content']
 
-        except Exception as e:
+        except (requests.RequestException, ValueError, KeyError, IndexError) as e:
             print(f"Error calling LLM API: {e}")
             return ""
 
@@ -132,7 +132,7 @@ Evaluate each criterion (IC1-IC4) and provide:
 Respond with ONLY the JSON object, no additional text.
 """
 
-        response = self.call_llm(prompt, temperature=0.1)
+        response = self.call_llm(prompt, temperature=0.0)
 
         try:
             # Extract JSON from response
@@ -215,7 +215,7 @@ Evaluate each criterion (EC1-EC6) and provide:
 Respond with ONLY the JSON object, no additional text.
 """
 
-        response = self.call_llm(prompt, temperature=0.1)
+        response = self.call_llm(prompt, temperature=0.0)
 
         try:
             result = json.loads(response.strip())
@@ -290,7 +290,7 @@ Classify the following paper according to the collaborative perception taxonomy:
 Respond with ONLY the JSON object, no additional text.
 """
 
-        response = self.call_llm(prompt, temperature=0.1)
+        response = self.call_llm(prompt, temperature=0.0)
 
         try:
             result = json.loads(response.strip())
@@ -406,7 +406,7 @@ class StudySelectionPipeline:
 - **Total Candidates Processed:** {results['total_processed']}
 - **Included:** {len(results['included'])}
 - **Excluded:** {len(results['excluded'])}
-- **Inclusion Rate:** {len(results['included'])/results['total_processed']*100:.1f}%
+- **Inclusion Rate:** {(len(results['included'])/results['total_processed']*100) if results['total_processed'] else 0:.1f}%
 
 ## Included Papers by Taxonomy
 
@@ -509,7 +509,8 @@ def main():
     print(f"Total processed: {results['total_processed']}")
     print(f"Included: {len(results['included'])}")
     print(f"Excluded: {len(results['excluded'])}")
-    print(f"Inclusion rate: {len(results['included'])/results['total_processed']*100:.1f}%")
+    rate = (len(results["included"])/results["total_processed"]*100) if results["total_processed"] else 0.0
+    print(f"Inclusion rate: {rate:.1f}%")
     print("=" * 60)
 
 
