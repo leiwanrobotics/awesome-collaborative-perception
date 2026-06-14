@@ -13,6 +13,51 @@ from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+# Venue name -> short acronym, applied to keep the web tables from overflowing.
+# Ordered: first regex match wins, so list specific journals/conferences before
+# generic fallbacks. Matched case-insensitively against the cleaned venue string.
+VENUE_ACRONYMS: List[tuple] = [
+    (r"pattern analysis and machine intelligence", "IEEE TPAMI"),
+    (r"international journal of computer vision", "IJCV"),
+    (r"computer vision and pattern recognition|\bCVPR\b", "CVPR"),
+    (r"international conference on computer vision|\bICCV\b", "ICCV"),
+    (r"european conference on computer vision|\bECCV\b", "ECCV"),
+    (r"winter conference on applications of computer vision|\bWACV\b", "WACV"),
+    (r"neural information processing|neurips|\bnips\b|adv\.? neural", "NeurIPS"),
+    (r"learning representations|\bICLR\b", "ICLR"),
+    (r"international conference on machine learning|\bICML\b", "ICML"),
+    (r"advancement of artificial intelligence|\bAAAI\b", "AAAI"),
+    (r"international joint conference on artificial intelligence|\bIJCAI\b", "IJCAI"),
+    (r"conference on robot learning|\bCoRL\b", "CoRL"),
+    (r"transactions on robotics\b", "IEEE T-RO"),
+    (r"robotics and automation letters|\bRA-?L\b", "IEEE RA-L"),
+    (r"international conference on robotics and automation|\bICRA\b", "ICRA"),
+    (r"intelligent robots and systems|\bIROS\b", "IROS"),
+    (r"transactions on intelligent transportation", "IEEE T-ITS"),
+    (r"transactions on intelligent vehicles", "IEEE T-IV"),
+    (r"transactions on image processing", "IEEE T-IP"),
+    (r"transactions on vehicular technology", "IEEE T-VT"),
+    (r"transactions on mobile computing", "IEEE TMC"),
+    (r"transactions on instrumentation and measurement", "IEEE TIM"),
+    (r"transactions on circuits and systems for video", "IEEE TCSVT"),
+    (r"transactions on cognitive communications", "IEEE TCCN"),
+    (r"transactions on multimedia", "IEEE TMM"),
+    (r"internet of things journal", "IEEE IoTJ"),
+    (r"journal on selected areas in communications", "IEEE JSAC"),
+    (r"vehicular technology conference|\bVTC\b", "IEEE VTC"),
+    (r"acoustics,? speech,? and signal processing|\bICASSP\b", "ICASSP"),
+    (r"international joint conference on neural network|\bIJCNN\b", "IJCNN"),
+    (r"transportation research part c", "TR-C"),
+    (r"intelligent transportation systems magazine", "IEEE ITS Mag."),
+    (r"international conference on intelligent transportation systems|\bITSC\b", "IEEE ITSC"),
+    (r"intelligent vehicles symposium", "IEEE IV"),
+    (r"multimedia|\bACM MM\b", "ACM MM"),
+    (r"\bIEEE Access\b", "IEEE Access"),
+    (r"remote sensing", "Remote Sens."),
+    (r"\bsensors\b", "Sensors"),
+    (r"arxiv|\bcorr\b", "arXiv"),
+]
+
 
 class ReadmeGenerator:
     def __init__(self, data_path: str):
@@ -120,9 +165,32 @@ class ReadmeGenerator:
         return self.clean_text(paper["fields"].get("title", "Untitled"))
 
     def paper_venue(self, paper: Dict[str, Any]) -> str:
+        """A short, recognisable venue label (acronym where possible).
+
+        Full venue names (e.g. "Annual IEEE Communications Society Conference on
+        Sensor, Mesh and Ad Hoc Communications and Networks") make the web tables
+        overflow horizontally, so we collapse them to standard acronyms: a known
+        venue acronym first, then a parenthesised acronym in the string, else a
+        cleaned-and-trimmed name.
+        """
         fields = paper["fields"]
-        venue = fields.get("booktitle") or fields.get("journal") or "N/A"
-        return self.clean_text(venue)
+        venue = self.clean_text(fields.get("booktitle") or fields.get("journal") or "")
+        venue = re.sub(r"\s+", " ", venue).strip()
+        if not venue:
+            return "N/A"
+        if "workshop" not in venue.lower():
+            for pattern, acronym in VENUE_ACRONYMS:
+                if re.search(pattern, venue, re.I):
+                    return acronym
+        paren = re.search(r"\(([A-Z][A-Za-z0-9\-]{1,9})\)", venue)
+        if paren:
+            return paren.group(1)
+        venue = re.sub(r"^(the\s+)?(proceedings of\s+(the\s+)?)?", "", venue, flags=re.I)
+        venue = re.sub(r"^\d{4}\s+", "", venue)
+        venue = re.sub(r"^\d+\s*(st|nd|rd|th)\s+", "", venue, flags=re.I).strip()
+        if len(venue) <= 40:
+            return venue
+        return venue[:40].rsplit(" ", 1)[0] + "…"
 
     def paper_year(self, paper: Dict[str, Any]) -> str:
         return self.clean_text(str(paper["fields"].get("year", "N/A")))
@@ -207,20 +275,25 @@ class ReadmeGenerator:
 
     def section(self, title: str, papers: List[Dict[str, Any]], columns: List[str],
                 intro: str = "", timeline_key: str = "") -> str:
-        body = f"### {title} ({len(papers)} papers)\n\n"
+        # Keep the ``###`` heading (so the table-of-contents anchors still resolve),
+        # then fold the timeline + table into a collapsible <details> block so each
+        # section can be expanded/collapsed independently and the page stays navigable.
+        heading = f"### {title} ({len(papers)} papers)\n\n"
+        inner = ""
         if timeline_key:
             img = self.data_path.parent.parent / "figure" / "timeline" / f"{timeline_key}.png"
             if img.exists():
-                body += (f'<p align="center">\n'
-                         f'<img src="figure/timeline/{timeline_key}.png" width="95%" height="auto" '
-                         f'alt="{title} development timeline"/>\n</p>\n\n')
+                inner += (f'<p align="center">\n'
+                          f'<img src="figure/timeline/{timeline_key}.png" width="95%" height="auto" '
+                          f'alt="{title} development timeline"/>\n</p>\n\n')
         if intro:
-            body += intro + "\n\n"
+            inner += intro + "\n\n"
         if papers:
-            body += self.make_table(papers, columns) + "\n"
+            inner += self.make_table(papers, columns) + "\n"
         else:
-            body += "_No papers classified under this section yet._\n\n"
-        return body
+            inner += "_No papers classified under this section yet._\n\n"
+        summary = f"<summary>📋 <b>Expand</b> timeline &amp; {len(papers)}-paper table</summary>"
+        return f"{heading}<details>\n{summary}\n\n{inner}</details>\n\n"
 
     def generate_header(self) -> str:
         total = len(self.papers)
