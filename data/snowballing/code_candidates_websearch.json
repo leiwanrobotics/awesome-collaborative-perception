@@ -1,0 +1,176 @@
+[
+ {
+  "key": "AdaptiveFeatureFusion-2023-qiaob",
+  "repo": "https://github.com/DonghaoQiao/Adaptive-Feature-Fusion-for-Cooperative-Perception",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "CollaborationHelpsCamera-2023-hub",
+  "repo": "https://github.com/MediaBrain-SJTU/CoCa3D",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "CollaborativeMultiObjectTracking-2024-sua",
+  "repo": "https://github.com/susanbao/mot_cup",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "DistributedDynamicMap-2021-zhanga",
+  "repo": "https://github.com/zijianzhang/CARLA_INVS",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "DOLPHINSDatasetCollaborative-2023-maob",
+  "repo": "https://github.com/explosion5/Dolphins",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "FcooperFeatureBased-2019-chend",
+  "repo": "https://github.com/Aug583/F-COOPER",
+  "status": "EXISTS",
+  "confidence": "high"
+ },
+ {
+  "key": "OPV2VOpenBenchmark-2022-xub",
+  "repo": "https://github.com/DerrickXuNu/OpenCOOD",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "MultiRobotSceneCompletion--lib",
+  "repo": "https://github.com/coperception/star",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "LearningVehicletoVehicleCooperative-2023-lia",
+  "repo": "https://github.com/jinlong17/V2VLC",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "ModelAgnosticMultiAgentPerception-2023-xub",
+  "repo": "https://github.com/DerrickXuNu/model_anostic",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "KeypointsBasedDeepFeature-2022-yuanc",
+  "repo": "https://github.com/YuanYunshuang/FPV_RCNN",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "GeneratingEvidentialBEV-2023-yuanb",
+  "repo": "https://github.com/YuanYunshuang/GevBEV",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "RobustCollaborativePerception-2024-lei",
+  "repo": "https://github.com/MediaBrain-SJTU/FreeAlign",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "TUMTrafV2XCooperative-2024-zimmerc",
+  "repo": "https://github.com/tum-traffic-dataset/coopdet3d",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "V2XSimMultiAgentCollaborative-2022-lie",
+  "repo": "https://github.com/ai4ce/V2X-Sim",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2024CmpCooperativeMotionPrediction",
+  "repo": "https://github.com/tasl-lab/CMP",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2025YouShareBeliefsI",
+  "repo": "https://github.com/sihaoo1/PHCP",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2024ScopeASyntheticMulti",
+  "repo": "https://github.com/ekut-es/scope-dataset",
+  "status": "EXISTS",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2025SparsecoopCooperativePerceptionWith",
+  "repo": "https://github.com/wang-jh18-SVM/SparseCoop",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2025RgAttnRadianGlue",
+  "repo": "https://github.com/LantaoLi/RG-Attn",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2024TowardCollaborativeAutonomousDriving",
+  "repo": "https://github.com/CollaborativePerception/V2Xverse",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2024EndToEndAutonomous",
+  "repo": "https://github.com/AIR-THU/UniV2X",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2025GriffinAerialGroundCooperative",
+  "repo": "https://github.com/wang-jh18-SVM/Griffin",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2024CooperativePerceptionUsingV2x",
+  "repo": "https://github.com/FaisalHawlader/LuxDrive-Dataset",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2024Learning3dPerceptionFrom",
+  "repo": "https://github.com/jinsuyoo/rnb-pop",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2024CoopscenesMultiSceneInfrastructure",
+  "repo": "https://github.com/CoopScenes/CoopScenes-DevKit",
+  "status": "VERIFIED",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2026GMindGalwayMultimodal",
+  "repo": "https://github.com/daramolloy/GMIND-sdk",
+  "status": "EXISTS",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2025CoverapCooperativeVehicularPerception",
+  "repo": "https://github.com/John1001Song/FMCW_Vehicle_Fusion",
+  "status": "EXISTS",
+  "confidence": "high"
+ },
+ {
+  "key": "Snowball2025CollaborativePerceptionAgainstData",
+  "repo": "https://github.com/zqzqz/AdvCollaborativePerception",
+  "status": "EXISTS",
+  "confidence": "medium"
+ }
+]

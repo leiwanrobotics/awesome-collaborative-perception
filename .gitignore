@@ -48,6 +48,7 @@ data/snowballing/*
 !data/snowballing/kept_final.json
 !data/snowballing/kept_enriched.json
 !data/snowballing/code_candidates.json
+!data/snowballing/code_candidates_websearch.json
 !data/snowballing/screened/
 data/snowballing/screened/*
 !data/snowballing/screened/accepted_*.json
