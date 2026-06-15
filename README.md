@@ -159,7 +159,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [HPLaw: Heterogeneous Parallel LiDARs for Adverse Weather in V2V](https://doi.org/10.1109/iros60139.2025.11247380) | IROS | 2025 | Inter | Det | — | Snowball |
 | [Improving Vulnerable Road-Users Detection Through Hybrid…](https://doi.org/10.1109/itsc60802.2025.11423004) | IEEE ITSC | 2025 | Hybrid | Det | — | Snowball |
 | [Incentivizing Point Cloud-Based Accurate Cooperative Perception…](https://doi.org/10.1109/tvt.2024.3519626) | IEEE T-VT | 2025 | Early | Det | — | Snowball |
-| [InfoCom: Kilobyte-Scale Communication-Efficient Collaborative…](https://www.semanticscholar.org/search?q=InfoCom%3A%20Kilobyte-Scale%20Communication-Efficient%20Collaborative%20Perception%20with%20Information%20Bottleneck&sort=relevance) | AAAI | 2025 | Inter | Det | — | Snowball |
+| [InfoCom: Kilobyte-Scale Communication-Efficient Collaborative…](https://www.semanticscholar.org/search?q=InfoCom%3A%20Kilobyte-Scale%20Communication-Efficient%20Collaborative%20Perception%20with%20Information%20Bottleneck&sort=relevance) | AAAI | 2025 | Inter | Det | [Code](https://github.com/fengxueguiren/InfoCom) | Snowball |
 | [INSTINCT: Instance-Level Interaction Architecture for…](https://doi.org/10.1109/iccv51701.2025.02362) | ICCV | 2025 | Inter | Det | [Code](https://github.com/CrazyShout/INSTINCT) | Snowball |
 | [Learning spatio-temporal representation for cooperative 3D…](https://doi.org/10.1016/j.neunet.2025.107626) | Neural Networks | 2025 | Inter | Det, Track | — | Snowball |
 | [Learning to Detect Objects from Multi-Agent LiDAR Scans without…](https://doi.org/10.1109/cvpr52734.2025.00140) | CVPR | 2025 | Early | Det | [Code](https://github.com/xmuqimingxia/DOtA) | Snowball |
@@ -184,13 +184,13 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [SCORPION: Robust Spatial-Temporal Collaborative Perception…](https://doi.org/10.1109/iros60139.2025.11247050) | IROS | 2025 | Inter | Det | — | Snowball |
 | [Select2Drive: Pragmatic Communications for Real-Time…](https://doi.org/10.1109/tits.2025.3611377) | IEEE T-ITS | 2025 | Inter | Det, Multi | — | Snowball |
 | [Selective Shift: Towards Personalized Domain Adaptation in…](https://doi.org/10.1145/3746027.3754723) | ACM MM | 2025 | Inter | Det | — | Snowball |
-| [SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient…](https://doi.org/10.1109/iccvw69036.2025.00190) | ICCVW | 2025 | Inter | Det | — | Snowball |
+| [SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient…](https://doi.org/10.1109/iccvw69036.2025.00190) | ICCVW | 2025 | Inter | Det | [Code](https://github.com/fzi-forschungszentrum-informatik/SlimComm) | Snowball |
 | [SMSCNet:Sparse Multi-Scale and Spatially Enhanced Cooperative…](https://doi.org/10.1109/cvci66304.2025.11348559) | CVCI | 2025 | Inter | Det | — | Snowball |
-| [SparseAlign: A Fully Sparse Framework for Cooperative Object…](https://doi.org/10.1109/cvpr52734.2025.02077) | CVPR | 2025 | Inter | Det | — | Snowball |
+| [SparseAlign: A Fully Sparse Framework for Cooperative Object…](https://doi.org/10.1109/cvpr52734.2025.02077) | CVPR | 2025 | Inter | Det | [Code](https://github.com/YuanYunshuang/SparseAlign) | Snowball |
 | [The Impact of Pose Alignment Errors on a Classical Late…](https://doi.org/10.1109/ojvt.2025.3591210) | IEEE Open Journal of… | 2025 | Late | Det | — | Snowball |
 | [TraF-Align: Trajectory-aware Feature Alignment for Asynchronous…](https://doi.org/10.1109/cvpr52734.2025.01125) | CVPR | 2025 | Inter | Det | [Code](https://github.com/zhyingS/TraF-Align) | Snowball |
 | [Transformer-Based Latency Compensation for Cooperative…](https://www.semanticscholar.org/search?q=Transformer-Based%20Latency%20Compensation%20for%20Cooperative%20Perception&sort=relevance) | IEEE Vehicular… | 2025 | Early | Det | — | Snowball |
-| [TurboTrain: Towards Efficient and Balanced Multi-Task Learning…](https://doi.org/10.1109/ICCV51701.2025.00418) | ICCV | 2025 | Inter | Det, Pred, Multi | — | Snowball |
+| [TurboTrain: Towards Efficient and Balanced Multi-Task Learning…](https://doi.org/10.1109/ICCV51701.2025.00418) | ICCV | 2025 | Inter | Det, Pred, Multi | [Code](https://github.com/ucla-mobility/TurboTrain) | Snowball |
 | [UniSense: Spatial-Uncertainty-Aware Collaborative Sensing for…](https://doi.org/10.1145/3711875.3729130) | ACM SIGMOBILE… | 2025 | Inter | Det | [Code](https://github.com/LetStarFly/UniSense) | Snowball |
 | [V2V-APG: Adversarial Progressive Generalization for…](https://doi.org/10.1109/jiot.2025.3621285) | IEEE IoTJ | 2025 | Inter | Det | — | Snowball |
 | [V2VLoc: Robust GNSS-Free Collaborative Perception via LiDAR…](https://doi.org/10.1609/aaai.v40i9.37633) | AAAI | 2025 | Inter | Det | — | Snowball |
@@ -202,16 +202,16 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Breaking Data Silos: Cross-Domain Learning for Multi-Agent…](https://doi.org/10.1109/ICRA57147.2024.10610591) | ICRA | 2024 | Inter | Det | [Code](https://github.com/jinlong17/BDS-V2V) | Survey |
 | [CenterCoop: Center-Based Feature Aggregation for…](https://doi.org/10.1109/LRA.2023.3339399) | IEEE RA-L | 2024 | Inter | Det | — | Survey |
 | [CMP: Cooperative Motion Prediction With Multi-Agent…](https://doi.org/10.1109/lra.2025.3546862) | IEEE RA-L | 2024 | Hybrid | Det, Track, Pred | — | Snowball |
-| [CoDTS: Enhancing Sparsely Supervised Collaborative Perception…](https://doi.org/10.1609/aaai.v39i3.32348) | AAAI | 2024 | Inter | Det | — | Snowball |
+| [CoDTS: Enhancing Sparsely Supervised Collaborative Perception…](https://doi.org/10.1609/aaai.v39i3.32348) | AAAI | 2024 | Inter | Det | [Code](https://github.com/CatOneTwo/CoDTS) | Snowball |
 | [CollabGAT: Collaborative Perception Using Graph Attention…](https://www.semanticscholar.org/search?q=CollabGAT%3A%20Collaborative%20Perception%20Using%20Graph%20Attention%20Network&sort=relevance) | IEEE Access | 2024 | Inter | Det | — | Snowball |
 | [Collaborative Joint Perception and Prediction for Autonomous…](https://doi.org/10.3390/s24196263) | Sensors | 2024 | Inter | Seg, Pred, Multi | — | Snowball |
 | [Collaborative Multi-Object Tracking With Conformal Uncertainty…](https://doi.org/10.1109/LRA.2024.3364450) | IEEE RA-L | 2024 | Late | Track | — | Survey |
 | [Cooperative 3D Multi-Object Tracking for Connected and…](https://doi.org/10.1109/IV55156.2024.10588576) | IEEE IV | 2024 | Late | Track | — | Snowball |
 | [CooPre: Cooperative Pretraining for V2X Cooperative Perception](https://doi.org/10.1109/iros60139.2025.11246787) | IROS | 2024 | Inter | Det | [Code](https://github.com/ucla-mobility/CooPre) | Snowball |
 | [CoSense3D: an Agent-based Efficient Learning Framework for…](https://doi.org/10.1109/iv55156.2024.10588865) | IEEE IV | 2024 | Inter | Det | [Code](https://github.com/YuanYunshuang/CoSense3D) | Snowball |
-| [Directed-CP: Directed Collaborative Perception for Connected…](https://doi.org/10.1109/icra55743.2025.11127818) | ICRA | 2024 | Inter | Det | — | Snowball |
+| [Directed-CP: Directed Collaborative Perception for Connected…](https://doi.org/10.1109/icra55743.2025.11127818) | ICRA | 2024 | Inter | Det | [Code](https://github.com/yihangtao/Directed-CP) | Snowball |
 | [Distance-Aware Attentive Framework for Multi-Agent…](https://doi.org/10.65109/xjqs5325) | Adaptive Agents and… | 2024 | Inter | Det | — | Snowball |
-| [DSRC: Learning Density-insensitive and Semantic-aware…](https://doi.org/10.1609/aaai.v39i9.33078) | AAAI | 2024 | Inter | Det | — | Snowball |
+| [DSRC: Learning Density-insensitive and Semantic-aware…](https://doi.org/10.1609/aaai.v39i9.33078) | AAAI | 2024 | Inter | Det | [Code](https://github.com/Terry9a/DSRC) | Snowball |
 | [EdgeCooper: Network-Aware Cooperative LiDAR Perception for…](https://doi.org/10.1109/JSAC.2023.3322764) | IEEE JSAC | 2024 | Early | Det | — | Survey |
 | [Efficient Vehicle-Infrastructure Collaborative Perception Based…](https://doi.org/10.1109/tits.2023.3346214) | IEEE T-ITS | 2024 | Late | Det, Track | — | Snowball |
 | [Efficient Vehicular Collaborative Perception Based on…](https://doi.org/10.1109/tvt.2024.3403263) | IEEE T-VT | 2024 | Inter | Det | — | Snowball |
@@ -226,9 +226,9 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [LSTV-V2V: A Large-Scale Traffic Virtual Dataset for…](https://doi.org/10.1109/itsc58415.2024.10920245) | IEEE ITSC | 2024 | Inter | Data | — | Snowball |
 | [MACP: Efficient Model Adaptation for Cooperative Perception](https://doi.org/10.1109/WACV57701.2024.00334) | WACV | 2024 | Inter | Det | [Code](https://github.com/PurdueDigitalTwin/MACP) | Survey |
 | [MKD-Cooper: Cooperative 3D Object Detection for Autonomous…](https://doi.org/10.1109/TIV.2023.3310580) | IEEE T-IV | 2024 | Inter | Det | — | Survey |
-| [MR3D-Net: Dynamic Multi-Resolution 3D Sparse Voxel Grid Fusion…](https://doi.org/10.1109/itsc58415.2024.10919592) | IEEE ITSC | 2024 | Early | Det | — | Snowball |
+| [MR3D-Net: Dynamic Multi-Resolution 3D Sparse Voxel Grid Fusion…](https://doi.org/10.1109/itsc58415.2024.10919592) | IEEE ITSC | 2024 | Early | Det | [Code](https://github.com/ekut-es/MR3D-Net) | Snowball |
 | [Multi-Agent Collaborative Perception via Motion-Aware Robust…](https://doi.org/10.1109/cvpr52733.2024.01449) | CVPR | 2024 | Inter | Det | [Code](https://github.com/IndigoChildren/collaborative-perception-MRCNet) | Snowball |
-| [PACP: Priority-Aware Collaborative Perception for Connected and…](https://doi.org/10.1109/TMC.2024.3449371) | IEEE TMC | 2024 | Inter | Det | — | Snowball |
+| [PACP: Priority-Aware Collaborative Perception for Connected and…](https://doi.org/10.1109/TMC.2024.3449371) | IEEE TMC | 2024 | Inter | Det | [Code](https://github.com/fangzr/PACP) | Snowball |
 | [PAFNet: Pillar Attention Fusion Network for…](https://doi.org/10.3390/sym16040401) | Symmetry | 2024 | Inter | Det | — | Survey |
 | [Perception for Connected Autonomous Vehicles under Adverse…](https://www.semanticscholar.org/search?q=Perception%20for%20Connected%20Autonomous%20Vehicles%20under%20Adverse%20Weather%20Conditions&sort=relevance) | IROS | 2024 | Inter | Det | — | Snowball |
 | [Pillar Attention Encoder for Adaptive Cooperative Perception](https://doi.org/10.1109/JIOT.2024.3390552) | IEEE IoTJ | 2024 | Inter | Det | — | Survey |
@@ -239,7 +239,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Rethinking the Role of Infrastructure in Collaborative…](https://doi.org/10.1007/978-3-031-91813-1_14) | ECCV Workshops | 2024 | Inter | Det | — | Snowball |
 | [Robust Collaborative Perception against Temporal Information…](https://doi.org/10.1109/icra57147.2024.10611481) | ICRA | 2024 | Inter | Det | [Code](https://github.com/hexunjie/Ro-temd) | Snowball |
 | [Robust Collaborative Perception without External Localization…](https://doi.org/10.1109/ICRA57147.2024.10610635) | ICRA | 2024 | Inter | Det | — | Survey |
-| S2R-ViT for Multi-Agent Cooperative Perception: Bridging the… | ICRA | 2024 | Inter | Det | — | Survey |
+| S2R-ViT for Multi-Agent Cooperative Perception: Bridging the… | ICRA | 2024 | Inter | Det | [Code](https://github.com/jinlong17/S2R-ViT) | Survey |
 | [Select2Col: Leveraging Spatial-Temporal Importance of Semantic…](https://doi.org/10.1109/TVT.2024.3390414) | IEEE Trans. Veh.… | 2024 | Inter | Det | [Code](https://github.com/huangqzj/Select2Col/) | Survey |
 | [Self-Supervised Adaptive Weighting for Cooperative Perception…](https://doi.org/10.1109/TIV.2023.3345035) | IEEE T-IV | 2024 | Inter | Det | — | Survey |
 | [Semantic Communication for Cooperative Perception Based on…](https://doi.org/10.1016/j.jfranklin.2024.106739) | Journal of the… | 2024 | Inter | Det | — | Survey |
@@ -256,7 +256,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [V2X-DSI: A Density-Sensitive Infrastructure LiDAR Benchmark for…](https://doi.org/10.1109/iv55156.2024.10588684) | IEEE IV | 2024 | Inter | Det | — | Snowball |
 | [V2X-R: Cooperative LiDAR-4D Radar Fusion with Denoising…](https://doi.org/10.1109/cvpr52734.2025.02551) | CVPR | 2024 | Inter | Det | [Code](https://github.com/ylwhxht/V2X-R) | Snowball |
 | [V2X-ViTv2: Improved Vision Transformers for…](https://doi.org/10.1109/tpami.2024.3479222) | IEEE TPAMI | 2024 | Inter | Det | — | Snowball |
-| [V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for…](https://doi.org/10.1109/iccv51701.2025.02356) | ICCV | 2024 | Inter | Det, Pred | — | Snowball |
+| [V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for…](https://doi.org/10.1109/iccv51701.2025.02356) | ICCV | 2024 | Inter | Det, Pred | [Code](https://github.com/Zewei-Zhou/V2XPnP) | Snowball |
 | [VRF: Vehicle Road-side Point Cloud Fusion](https://doi.org/10.1145/3643832.3661874) | ACM SIGMOBILE… | 2024 | Early | Det | — | Snowball |
 | [Weather-Aware Collaborative Perception With Uncertainty…](https://doi.org/10.1109/tits.2024.3479720) | IEEE T-ITS | 2024 | Inter | Det | — | Snowball |
 | [What Makes Good Collaborative Views? Contrastive Mutual…](https://doi.org/10.1609/aaai.v38i16.29705) | AAAI | 2024 | Inter | Det | [Code](https://github.com/77SWF/CMiMC) | Snowball |
@@ -264,15 +264,15 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [A Cooperative Perception System Robust to Localization Errors](https://doi.org/10.1109/IV55152.2023.10186727) | IEEE IV | 2023 | Late | Det | — | Survey |
 | [A LiDAR Semantic Segmentation Framework for the Cooperative…](https://doi.org/10.1109/VTC2023-Fall60731.2023.10333790) | IEEE VTC | 2023 | Inter | Seg | — | Survey |
 | [Adaptive Feature Fusion for Cooperative Perception Using LiDAR…](https://doi.org/10.1109/WACV56688.2023.00124) | WACV | 2023 | Inter | Det | — | Survey |
-| [Among Us: Adversarially Robust Collaborative Perception by…](https://doi.org/10.1109/ICCV51070.2023.00024) | ICCV | 2023 | Late | Det | — | Survey |
+| [Among Us: Adversarially Robust Collaborative Perception by…](https://doi.org/10.1109/ICCV51070.2023.00024) | ICCV | 2023 | Late | Det | [Code](https://github.com/coperception/ROBOSAC) | Survey |
 | Asynchrony-Robust Collaborative Perception via Bird's Eye View… | NeurIPS | 2023 | Inter | Det | [Code](https://github.com/MediaBrain-SJTU/CoBEVFlow) | Survey |
-| [Bridging the Domain Gap for Multi-Agent Perception](https://doi.org/10.1109/ICRA48891.2023.10160871) | ICRA | 2023 | Inter | Det | — | Survey |
+| [Bridging the Domain Gap for Multi-Agent Perception](https://doi.org/10.1109/ICRA48891.2023.10160871) | ICRA | 2023 | Inter | Det | [Code](https://github.com/DerrickXuNu/MPDA) | Survey |
 | [Collaborative 3D Object Detection for Autonomous Vehicles via…](https://doi.org/10.1109/TITS.2023.3272027) | IEEE T-ITS | 2023 | Inter | Det | — | Survey |
 | [Collective PV-RCNN: A Novel Fusion Technique Using Collective…](https://doi.org/10.1109/ITSC57777.2023.10422079) | IEEE ITSC | 2023 | Late | Det | [Code](https://github.com/ekut-es) | Survey |
 | [Cooperative Perception With Learning-Based V2V Communications](https://doi.org/10.1109/LWC.2023.3295612) | IEEE Wireless… | 2023 | Hybrid | Det | — | Survey |
-| [Core: Cooperative Reconstruction for Multi-Agent Perception](https://doi.org/10.1109/ICCV51070.2023.00800) | ICCV | 2023 | Inter | Det, Multi | — | Survey |
+| [Core: Cooperative Reconstruction for Multi-Agent Perception](https://doi.org/10.1109/ICCV51070.2023.00800) | ICCV | 2023 | Inter | Det, Multi | [Code](https://github.com/zllxot/CORE) | Survey |
 | [DI-V2X: Learning Domain-Invariant Representation for…](https://doi.org/10.1609/aaai.v38i4.28105) | AAAI | 2023 | Inter | Det | [Code](https://github.com/Serenos/DI-V2X) | Survey |
-| [DUSA: Decoupled Unsupervised Sim2Real Adaptation for…](https://doi.org/10.1145/3581783.3611948) | ACM MM | 2023 | Inter | Det | — | Survey |
+| [DUSA: Decoupled Unsupervised Sim2Real Adaptation for…](https://doi.org/10.1145/3581783.3611948) | ACM MM | 2023 | Inter | Det | [Code](https://github.com/refkxh/DUSA) | Survey |
 | [Dynamic Feature Sharing for Cooperative Perception from Point…](https://doi.org/10.1109/ITSC57777.2023.10422242) | IEEE ITSC | 2023 | Inter | Det | — | Survey |
 | [FeaCo: Reaching Robust Feature-Level Consensus in Noisy Pose…](https://doi.org/10.1145/3581783.3611880) | ACM MM | 2023 | Inter | Det | [Code](https://github.com/jmgu0212/FeaCo.git) | Survey |
 | Flow-Based Feature Fusion for Vehicle-Infrastructure… | NeurIPS | 2023 | Inter | Det | [Code](https://github.com/haibao-yu/FFNet-VIC3D) | Survey |
@@ -285,16 +285,16 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Model-Agnostic Multi-Agent Perception Framework](https://doi.org/10.1109/ICRA48891.2023.10161460) | ICRA | 2023 | Late | Det | — | Survey |
 | [Robust Collaborative 3D Object Detection in Presence of Pose…](https://doi.org/10.1109/ICRA48891.2023.10160546) | ICRA | 2023 | Inter | Det | [Code](https://github.com/yifanlu0227/CoAlign) | Survey |
 | [Robust Real-time Multi-vehicle Collaboration on Asynchronous…](https://doi.org/10.1145/3570361.3613271) | Annual International… | 2023 | Early | Det | — | Survey |
-| [Spatio-Temporal Domain Awareness for Multi-Agent Collaborative…](https://doi.org/10.1109/ICCV51070.2023.02137) | ICCV | 2023 | Inter | Det | — | Survey |
-| [UMC: A Unified Bandwidth-efficient and Multi-resolution Based…](https://doi.org/10.1109/ICCV51070.2023.00752) | ICCV | 2023 | Inter | Det | — | Survey |
-| [Uncertainty Quantification of Collaborative Detection for…](https://doi.org/10.1109/ICRA48891.2023.10160367) | ICRA | 2023 | Inter | Det | — | Survey |
+| [Spatio-Temporal Domain Awareness for Multi-Agent Collaborative…](https://doi.org/10.1109/ICCV51070.2023.02137) | ICCV | 2023 | Inter | Det | [Code](https://github.com/ydk122024/SCOPE) | Survey |
+| [UMC: A Unified Bandwidth-efficient and Multi-resolution Based…](https://doi.org/10.1109/ICCV51070.2023.00752) | ICCV | 2023 | Inter | Det | [Code](https://github.com/ispc-lab/UMC) | Survey |
+| [Uncertainty Quantification of Collaborative Detection for…](https://doi.org/10.1109/ICRA48891.2023.10160367) | ICRA | 2023 | Inter | Det | [Code](https://github.com/coperception/double-m-quantification) | Survey |
 | [VINet: Lightweight, Scalable, and Heterogeneous Cooperative…](https://doi.org/10.1016/j.ymssp.2023.110723) | Mechanical Systems… | 2023 | Inter | Det | — | Survey |
 | [What2comm: Towards Communication-efficient Collaborative…](https://doi.org/10.1145/3581783.3611699) | ACM MM | 2023 | Inter | Det | — | Survey |
 | [A Joint Perception Scheme For Connected Vehicles](https://doi.org/10.1109/SENSORS52175.2022.9967271) | Sensors | 2022 | Early | Det | — | Survey |
 | [Complementarity-Enhanced and Redundancy-Minimized Collaboration…](https://doi.org/10.1145/3503161.3548197) | ACM MM | 2022 | Inter | Det | — | Survey |
 | [F-Transformer: Point Cloud Fusion Transformer for Cooperative…](https://doi.org/10.1007/978-3-031-15919-0_15) | Artificial Neural… | 2022 | Inter | Det | — | Survey |
 | [Keypoints-Based Deep Feature Fusion for Cooperative Vehicle…](https://doi.org/10.1109/LRA.2022.3143299) | IEEE RA-L | 2022 | Inter | Det | — | Survey |
-| [Latency-Aware Collaborative Perception](https://doi.org/10.1007/978-3-031-19824-3_19) | ECCV | 2022 | Inter | Det | — | Survey |
+| [Latency-Aware Collaborative Perception](https://doi.org/10.1007/978-3-031-19824-3_19) | ECCV | 2022 | Inter | Det | [Code](https://github.com/MediaBrain-SJTU/SyncNet) | Survey |
 | [Multi-Modal Virtual-Real Fusion Based Transformer for…](https://doi.org/10.1109/PAAP56126.2022.10010640) | PAAP | 2022 | Inter | Det | — | Survey |
 | [Multi-Robot Scene Completion: Towards Task-Agnostic…](https://coperception.github.io/star/) | CoRL | 2022 | Early | Det, Seg, Multi | — | Survey |
 | [Pillar-Based Cooperative Perception from Point Clouds for…](https://doi.org/10.1155/2022/3646272) | Wireless… | 2022 | Early | Det | — | Survey |
@@ -336,24 +336,24 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Enhancing Roadside 3D Detection with Height-Depth Fusion in…](https://doi.org/10.1109/memat68155.2025.11433945) | MEMAT | 2025 | Inter | Det | — | Snowball |
 | [Extended Visibility of Autonomous Vehicles via Optimized…](https://doi.org/10.2139/ssrn.5171366) | TR-C | 2025 | Early | Det | — | Snowball |
 | [Feature-Level Vehicle-Infrastructure Cooperative Perception…](https://doi.org/10.3390/smartcities8050171) | Smart Cities | 2025 | Inter | Det | — | Snowball |
-| [Generative Map Priors for Collaborative BEV Semantic…](https://doi.org/10.1109/CVPR52734.2025.01113) | CVPR | 2025 | Inter | Seg | — | Snowball |
+| [Generative Map Priors for Collaborative BEV Semantic…](https://doi.org/10.1109/CVPR52734.2025.01113) | CVPR | 2025 | Inter | Seg | [Code](https://github.com/buaa-colalab/CoGMP) | Snowball |
 | [Intelligent Cooperative Perception Technology for Vehicles and…](https://doi.org/10.3390/electronics14244969) | Electronics | 2025 | Inter | Seg | — | Snowball |
 | [Omni-V2X: A Vision-Language Model for Actionable Insights in…](https://doi.org/10.2139/ssrn.5038210) | IJCNN | 2025 | Inter | Multi | — | Snowball |
 | [RCP-Bench: Benchmarking Robustness for Collaborative Perception…](https://doi.org/10.1109/cvpr52734.2025.01112) | CVPR | 2025 | Inter | Det | [Code](https://github.com/LuckyDush/RCP-Bench) | Snowball |
 | [Roadside Fisheye Vision for Cooperative Perception in…](https://doi.org/10.1109/ojits.2025.3603968) | IEEE Open Journal of… | 2025 | Late | Det, Track | — | Snowball |
 | [RoCo-Sim: Enhancing Roadside Collaborative Perception through…](https://doi.org/10.1109/ICCV51701.2025.02504) | ICCV | 2025 | Inter | Det | [Code](https://github.com/duyuwen-duen/RoCo-Sim) | Snowball |
 | [Semantic Communication-Enhanced Cooperative Object Detection…](https://doi.org/10.1109/wcsp68525.2025.1010233) | International… | 2025 | Inter | Det | — | Snowball |
-| [Toward Full-Scene Domain Generalization in Multi-Agent…](https://doi.org/10.1109/tits.2024.3506284) | IEEE T-ITS | 2025 | Inter | Seg | — | Snowball |
+| [Toward Full-Scene Domain Generalization in Multi-Agent…](https://doi.org/10.1109/tits.2024.3506284) | IEEE T-ITS | 2025 | Inter | Seg | [Code](https://github.com/DG-CAVs/DG-CoPerception) | Snowball |
 | [V2V Cooperative Perception With Adaptive Communication Loss for…](https://www.semanticscholar.org/search?q=V2V%20Cooperative%20Perception%20With%20Adaptive%20Communication%20Loss%20for%20Autonomous%20Driving&sort=relevance) | IEEE T-ITS | 2025 | Inter | Det | — | Snowball |
 | [VI-BEV: Vehicle-Infrastructure Collaborative Perception for 3-D…](https://doi.org/10.1109/ojits.2025.3543831) | IEEE Open Journal of… | 2025 | Inter | Det | — | Snowball |
-| [Vision-Only Gaussian Splatting for Collaborative Semantic…](https://doi.org/10.1609/aaai.v40i4.37269) | AAAI | 2025 | Inter | Multi | — | Snowball |
+| [Vision-Only Gaussian Splatting for Collaborative Semantic…](https://doi.org/10.1609/aaai.v40i4.37269) | AAAI | 2025 | Inter | Multi | [Code](https://github.com/ChengChen2020/VOGS-CP) | Snowball |
 | [VIU-YOLO: Vehicle-Infrastructure-UAV Cooperative Perception…](https://doi.org/10.1109/icus66297.2025.11295715) | ICUS | 2025 | Inter | Det | — | Snowball |
-| [ActFormer: Scalable Collaborative Perception via Active Queries](https://doi.org/10.1109/ICRA57147.2024.10610907) | ICRA | 2024 | Inter | Det | — | Survey |
+| [ActFormer: Scalable Collaborative Perception via Active Queries](https://doi.org/10.1109/ICRA57147.2024.10610907) | ICRA | 2024 | Inter | Det | [Code](https://github.com/coperception/ActFormer) | Survey |
 | [CoDRMA: Collaborative Depth Refinement via Dual-Mask and…](https://doi.org/10.1109/CASE59546.2024.10711318) | CASE | 2024 | Inter | Det | — | Snowball |
 | [Collaborative and Reidentifying Techniques for Improved…](https://doi.org/10.1109/jiot.2024.3402071) | IEEE IoTJ | 2024 | Late | Det | — | Snowball |
-| [Collaborative Semantic Occupancy Prediction with Hybrid Feature…](https://doi.org/10.1109/CVPR52733.2024.01704) | CVPR | 2024 | Inter | Seg, Multi | — | Survey |
+| [Collaborative Semantic Occupancy Prediction with Hybrid Feature…](https://doi.org/10.1109/CVPR52733.2024.01704) | CVPR | 2024 | Inter | Seg, Multi | [Code](https://github.com/rruisong/CoHFF) | Survey |
 | [Cooperative Perception Using V2X Communications: An…](https://www.semanticscholar.org/search?q=Cooperative%20Perception%20Using%20V2X%20Communications%3A%20An%20Experimental%20Study&sort=relevance) | IEEE VTC | 2024 | Late | Det | — | Snowball |
-| [EMIFF: Enhanced Multi-scale Image Feature Fusion for…](https://doi.org/10.1109/ICRA57147.2024.10610545) | ICRA | 2024 | Inter | Det | — | Survey |
+| [EMIFF: Enhanced Multi-scale Image Feature Fusion for…](https://doi.org/10.1109/ICRA57147.2024.10610545) | ICRA | 2024 | Inter | Det | [Code](https://github.com/Bosszhe/EMIFF) | Survey |
 | [Enhanced Cooperative Perception for Autonomous Vehicles Using…](https://doi.org/10.1109/dcoss-iot61029.2024.00108) | DCOSS-IoT | 2024 | Early | Det | — | Snowball |
 | [Enhancing Lane Detection with a Lightweight Collaborative Late…](https://doi.org/10.1016/j.robot.2024.104680) | Robotics and… | 2024 | Late | Lane | — | Survey |
 | [Experimental Study of Multi-Camera Infrastructure Perception…](https://doi.org/10.1109/tits.2024.3424673) | IEEE T-ITS | 2024 | Late | Det, Track | — | Snowball |
@@ -367,11 +367,11 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [CoLD Fusion: A Real-time Capable Spline-based Fusion Algorithm…](https://doi.org/10.1109/IV55152.2023.10186632) | IEEE IV | 2023 | Late | Lane | — | Survey |
 | [Collaboration Helps Camera Overtake LiDAR in 3D Detection](https://doi.org/10.1109/CVPR52729.2023.00892) | CVPR | 2023 | Inter | Det | — | Survey |
 | [MoRFF: Multi-View Object Detection for Connected Autonomous…](https://doi.org/10.1109/VTC2023-Fall60731.2023.10333428) | IEEE VTC | 2023 | Inter | Det | — | Survey |
-| [QUEST: Query Stream for Practical Cooperative Perception](https://doi.org/10.1109/ICRA57147.2024.10610412) | ICRA | 2023 | Inter | Det | — | Survey |
+| [QUEST: Query Stream for Practical Cooperative Perception](https://doi.org/10.1109/ICRA57147.2024.10610412) | ICRA | 2023 | Inter | Det | [Code](https://github.com/leofansq/QUEST) | Survey |
 | [Bandwidth Constrained Cooperative Object Detection in Images](https://doi.org/10.1117/12.2636279) | Artificial… | 2022 | Inter | Det | — | Survey |
 | [Overcoming Obstructions via Bandwidth-Limited Multi-Agent…](https://doi.org/10.1109/IROS51168.2021.9636761) | IROS | 2021 | Inter | Seg | — | Survey |
 | [A Novel Multi-View Pedestrian Detection Database for…](https://doi.org/10.1016/j.future.2020.07.025) | Future Generation… | 2020 | V2I | Data | — | Survey |
-| [When2com: Multi-Agent Perception via Communication Graph…](https://doi.org/10.1109/CVPR42600.2020.00416) | CVPR | 2020 | Inter | Seg | — | Survey |
+| [When2com: Multi-Agent Perception via Communication Graph…](https://doi.org/10.1109/CVPR42600.2020.00416) | CVPR | 2020 | Inter | Seg | [Code](https://github.com/GT-RIPL/MultiAgentPerception) | Survey |
 | [Who2com: Collaborative Perception via Learnable Handshake…](https://doi.org/10.1109/ICRA40945.2020.9197364) | ICRA | 2020 | Inter | Seg | — | Survey |
 
 </details>
@@ -393,7 +393,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Advanced Multi-Modal Sensor Fusion Architectures for Robust…](https://doi.org/10.1109/icetci64844.2025.11084124) | ICETCI | 2025 | Inter | Det | — | Snowball |
 | [CoCMT: Communication-Efficient Cross-Modal Transformer for…](https://doi.org/10.1109/iros60139.2025.11247637) | IROS | 2025 | Inter | Det | [Code](https://github.com/taco-group/COCMT) | Snowball |
 | [Cross-Modality Cooperative Perception for Multiple Vehicles…](https://doi.org/10.1109/SmartIoT66867.2025.00043) | International… | 2025 | Inter | Det | — | Snowball |
-| [End-to-End 3D Spatiotemporal Perception with Multimodal Fusion…](https://doi.org/10.1109/jiot.2026.3694808) | IEEE IoTJ | 2025 | Inter | Det, Track | — | Snowball |
+| [End-to-End 3D Spatiotemporal Perception with Multimodal Fusion…](https://doi.org/10.1109/jiot.2026.3694808) | IEEE IoTJ | 2025 | Inter | Det, Track | [Code](https://github.com/yangzvv/XET-V2X) | Snowball |
 | [Energy-Aware Multi-Modal Vision Transformer (ViT) based C-V2X…](https://doi.org/10.1109/mass66014.2025.00065) | IEEE International… | 2025 | Inter | Det | — | Snowball |
 | [From Chaos to Clarity: Strengthening 3D Collaborative…](https://doi.org/10.1109/urtc68753.2025.11532973) | URTC | 2025 | Inter | Det | — | Snowball |
 | [HeCoFuse: Cross-Modal Complementary V2X Cooperative Perception…](https://doi.org/10.1109/itsc60802.2025.11423237) | IEEE ITSC | 2025 | Inter | Det | [Code](https://github.com/ChuhengWei/HeCoFuse) | Snowball |
@@ -409,12 +409,12 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [V2X Fusion Communication Framework Based on VANETS…](https://doi.org/10.1002/ett.70263) | Transactions on… | 2025 | Inter | Det | — | Snowball |
 | [Vehicle-to-Infrastructure Multi-Sensor Fusion (V2I-MSF) With…](https://doi.org/10.1109/access.2025.3551367) | IEEE Access | 2025 | Inter | Det, Lane | — | Snowball |
 | [VRDeepSafety: A Scalable VR Simulation Platform with V2X…](https://doi.org/10.3390/wevj16020082) | World Electric… | 2025 | Inter | Det, Pred | — | Snowball |
-| [Adver-City: Open-Source Multi-Modal Dataset for Collaborative…](https://doi.org/10.1109/itsc60802.2025.11423805) | IEEE ITSC | 2024 | Inter | Data | — | Snowball |
+| [Adver-City: Open-Source Multi-Modal Dataset for Collaborative…](https://doi.org/10.1109/itsc60802.2025.11423805) | IEEE ITSC | 2024 | Inter | Data | [Code](https://github.com/QUARRG/Adver-City) | Snowball |
 | [CoBEVFusion Cooperative Perception with LiDAR-Camera Bird's Eye…](https://doi.org/10.1109/dicta63115.2024.00064) | International… | 2024 | Inter | Det, Seg | — | Snowball |
 | [Collaborative Multimodal Fusion Network for Multiagent…](https://doi.org/10.1109/tcyb.2024.3491756) | IEEE Transactions on… | 2024 | Inter | Det | — | Snowball |
 | [CooPercept: Cooperative Perception for 3D Object Detection of…](https://doi.org/10.3390/drones8060228) | Drones | 2024 | Inter | Det | — | Snowball |
 | [CoopScenes: Multi-Scene Infrastructure and Vehicle Data for…](https://www.semanticscholar.org/search?q=CoopScenes%3A%20Multi-Scene%20Infrastructure%20and%20Vehicle%20Data%20for%20Advancing%20Collective%20Perception%20in%20Autonomous%20Driving&sort=relevance) | IEEE IV | 2024 | Inter | Det | — | Snowball |
-| [DeepAccident: A Motion and Accident Prediction Benchmark for…](https://doi.org/10.1609/aaai.v38i6.28370) | AAAI | 2024 | V2V+V2I | Data | — | Survey |
+| [DeepAccident: A Motion and Accident Prediction Benchmark for…](https://doi.org/10.1609/aaai.v38i6.28370) | AAAI | 2024 | V2V+V2I | Data | [Code](https://github.com/tianqi-wang1996/DeepAccident) | Survey |
 | [Empowering Autonomous Shuttles with Next-Generation…](https://doi.org/10.1007/978-3-031-91813-1_15) | ECCV Workshops | 2024 | Late | Det | — | Snowball |
 | [Enhancing Autonomous Driving Through Collaborative Perception…](https://doi.org/10.1109/itsc58415.2024.10919502) | IEEE ITSC | 2024 | Late | Det, Track | — | Snowball |
 | [Fusion of Multiple Sensors and V2V Information for 3D Object…](https://doi.org/10.1109/iccsn63464.2024.10793347) | ICCSN | 2024 | Inter | Det | — | Snowball |
@@ -422,8 +422,8 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [HoloVIC: Large-scale Dataset and Benchmark for Multi-Sensor…](https://doi.org/10.1109/CVPR52733.2024.02089) | CVPR | 2024 | V2I | Data | — | Survey |
 | [Infrastructure-Assisted Collaborative Perception in Automated…](https://doi.org/10.1109/vtc2024-spring62846.2024.10683664) | IEEE VTC | 2024 | Inter | Det | — | Snowball |
 | [Multi-Modality Fusion Perception Strategy Based on Adaptive…](https://doi.org/10.1109/itsc58415.2024.10919674) | IEEE ITSC | 2024 | Inter | Det | — | Snowball |
-| [Multiagent Multitraversal Multimodal Self-Driving: Open MARS…](https://doi.org/10.1109/cvpr52733.2024.02081) | CVPR | 2024 | Inter | Data | — | Snowball |
-| [OTVIC: A Dataset with Online Transmission for…](https://doi.org/10.1109/iros58592.2024.10802656) | IROS | 2024 | Late | Det | — | Snowball |
+| [Multiagent Multitraversal Multimodal Self-Driving: Open MARS…](https://doi.org/10.1109/cvpr52733.2024.02081) | CVPR | 2024 | Inter | Data | [Code](https://github.com/ai4ce/MARS) | Snowball |
+| [OTVIC: A Dataset with Online Transmission for…](https://doi.org/10.1109/iros58592.2024.10802656) | IROS | 2024 | Late | Det | [Code](https://github.com/cn-hezhu/OTVIC) | Snowball |
 | [RCooper: A Real-world Large-scale Dataset for Roadside…](https://doi.org/10.1109/cvpr52733.2024.02109) | CVPR | 2024 | Inter | Det, Track | [Code](https://github.com/AIR-THU/DAIR-RCooper) | Snowball |
 | [SCOPE: A Synthetic Multi-Modal Dataset for Collective…](https://doi.org/10.1109/itsc58415.2024.10920280) | IEEE ITSC | 2024 | Inter | Data | — | Snowball |
 | [TUMTraf V2X Cooperative Perception Dataset](https://doi.org/10.1109/CVPR52733.2024.02139) | CVPR | 2024 | V2I | Data | — | Survey |
@@ -432,7 +432,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [ViT-FuseNet: Multimodal Fusion of Vision Transformer for…](https://doi.org/10.1109/ACCESS.2024.3368404) | IEEE Access | 2024 | Inter | Det | — | Survey |
 | [MCoT: Multi-Modal Vehicle-to-Vehicle Cooperative Perception…](https://doi.org/10.1109/ICPADS60453.2023.00226) | ICPADS | 2023 | Inter | Det | — | Survey |
 | [Multimodal Cooperative 3D Object Detection Over Connected…](https://doi.org/10.1109/MNET.010.2300029) | IEEE Network | 2023 | Inter | Det | — | Survey |
-| [V2V4Real: A Real-World Large-Scale Dataset for…](https://doi.org/10.1109/CVPR52729.2023.01318) | CVPR | 2023 | V2V | Data | — | Survey |
+| [V2V4Real: A Real-World Large-Scale Dataset for…](https://doi.org/10.1109/CVPR52729.2023.01318) | CVPR | 2023 | V2V | Data | [Code](https://github.com/ucla-mobility/V2V4Real) | Survey |
 | [V2VFusion: Multimodal Fusion for Enhanced Vehicle-to-Vehicle…](https://doi.org/10.1109/CAC59555.2023.10450676) | CAC | 2023 | Inter | Det | — | Survey |
 | [V2X-Seq: A Large-Scale Sequential Dataset for…](https://doi.org/10.1109/CVPR52729.2023.00531) | CVPR | 2023 | V2I | Data | [Code](https://github.com/AIR-THU/DAIR-V2X-Seq) | Survey |
 | [DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure…](https://doi.org/10.1109/CVPR52688.2022.02067) | CVPR | 2022 | V2I | Data | [Code](https://github.com/AIR-THU/DAIR-V2X) | Survey |
@@ -477,7 +477,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Bandwidth-Adaptive Spatiotemporal Correspondence Identification…](https://doi.org/10.1109/icra55743.2025.11127581) | ICRA | 2025 | Inter | Det | — | Snowball |
 | [Bandwidth-Efficient Communication Modelling for Autonomous…](https://doi.org/10.1109/wacv61041.2025.00599) | IEEE Workshop/Winter… | 2025 | Inter | Det | — | Snowball |
 | [CAMNet: Leveraging Cooperative Awareness Messages for Vehicle…](https://doi.org/10.1109/ccnc65079.2026.11366398) | Consumer… | 2025 | Late | Pred | — | Snowball |
-| [Co-MTP: A Cooperative Trajectory Prediction Framework with…](https://doi.org/10.1109/icra55743.2025.11127303) | ICRA | 2025 | Inter | Pred | — | Snowball |
+| [Co-MTP: A Cooperative Trajectory Prediction Framework with…](https://doi.org/10.1109/icra55743.2025.11127303) | ICRA | 2025 | Inter | Pred | [Code](https://github.com/xiaomiaozhang/Co-MTP) | Snowball |
 | [CoDifFu: Diffusion-Based Collaborative Perception with…](https://doi.org/10.1109/iros60139.2025.11247103) | IROS | 2025 | Inter | Det | — | Snowball |
 | [CoDS: Enhancing Collaborative Perception in Heterogeneous…](https://doi.org/10.1109/TMC.2025.3622937) | IEEE TMC | 2025 | Inter | Det | — | Snowball |
 | [Collaborate for Real-Time Gain: Semantic-Based Robotic…](https://www.semanticscholar.org/search?q=Collaborate%20for%20Real-Time%20Gain%3A%20Semantic-Based%20Robotic%20Communication%20in%203D%20Object%20Tracking&sort=relevance) | IEEE TMC | 2025 | Inter | Det, Track | — | Snowball |
@@ -487,7 +487,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [CooperRisk: A Driving Risk Quantification Pipeline with…](https://doi.org/10.1109/iros60139.2025.11246231) | IROS | 2025 | Inter | Pred | — | Snowball |
 | [Cooptrack: Exploring End-to-End Learning for Efficient…](https://doi.org/10.1109/iccv51701.2025.02502) | ICCV | 2025 | Inter | Det, Track | [Code](https://github.com/zhongjiaru/CoopTrack) | Snowball |
 | [CoPAD: Multi-source Trajectory Fusion and Cooperative…](https://doi.org/10.1109/iros60139.2025.11247038) | IROS | 2025 | Early | Pred | — | Snowball |
-| [CoPEFT: Fast Adaptation Framework for Multi-Agent Collaborative…](https://doi.org/10.1609/aaai.v39i22.34502) | AAAI | 2025 | Inter | Det | — | Snowball |
+| [CoPEFT: Fast Adaptation Framework for Multi-Agent Collaborative…](https://doi.org/10.1609/aaai.v39i22.34502) | AAAI | 2025 | Inter | Det | [Code](https://github.com/fengxueguiren/CoPEFT) | Snowball |
 | [CoRA: A Collaborative Robust Architecture with Hybrid Fusion…](https://doi.org/10.1609/aaai.v40i4.37274) | AAAI | 2025 | Hybrid | Det | — | Snowball |
 | [CoSDH: Communication-Efficient Collaborative Perception via…](https://doi.org/10.1109/cvpr52734.2025.00641) | CVPR | 2025 | Hybrid | Det | [Code](https://github.com/Xu2729/CoSDH) | Snowball |
 | [CoST: Efficient Collaborative Perception from Unified…](https://doi.org/10.1109/iccv51701.2025.00112) | ICCV | 2025 | Inter | Det | [Code](https://github.com/tzhhhh123/CoST) | Snowball |
@@ -501,7 +501,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Efficomm: Bandwidth Efficient Multi Agent Communication](https://doi.org/10.1109/itsc60802.2025.11423066) | IEEE ITSC | 2025 | Inter | Det | — | Snowball |
 | [Enhancing Autonomous Vehicles' Situational Awareness With…](https://doi.org/10.1109/tiv.2024.3462744) | IEEE T-IV | 2025 | Late | Pred | — | Snowball |
 | [Evaluation of an Uncertainty-Aware Late Fusion Algorithm for…](https://doi.org/10.1109/irce66030.2025.11203125) | IRCE | 2025 | Late | Det | — | Snowball |
-| [Extensible Heterogeneous Collaborative Perception in Autonomous…](https://doi.org/10.3390/robotics14120186) | Robotics | 2025 | Inter | Det | — | Snowball |
+| [Extensible Heterogeneous Collaborative Perception in Autonomous…](https://doi.org/10.3390/robotics14120186) | Robotics | 2025 | Inter | Det | [Code](https://github.com/Babak-Ebrahimi/PolyCode) | Snowball |
 | [FENSe: Feedback-Enabled Neighbor Selection for Spatial Aware…](https://doi.org/10.1109/ICPADS67057.2025.11323225) | International… | 2025 | Inter | Det | — | Snowball |
 | [FocalComm: Hard Instance-Aware Multi-Agent Perception](https://doi.org/10.1109/wacv61042.2026.00607) | IEEE Workshop/Winter… | 2025 | Inter | Det | [Code](https://github.com/scdrand23/FocalComm) | Snowball |
 | [Griffin: Aerial-Ground Cooperative Detection and Tracking…](https://doi.org/10.1609/aaai.v40i12.37951) | AAAI | 2025 | Inter | Det, Track | — | Snowball |
@@ -534,11 +534,11 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [ViTraj: Learning Dual-Side Representations for…](https://www.semanticscholar.org/search?q=ViTraj%3A%20Learning%20Dual-Side%20Representations%20for%20Vehicle-Infrastructure%20Cooperative%20Trajectory%20Prediction&sort=relevance) | ACM MM | 2025 | Late | Pred | — | Snowball |
 | [Weighted Least-Squares Multi-Detection Fusion and Kalman…](https://doi.org/10.1109/icnsc66229.2025.00035) | International… | 2025 | Late | Det, Track | — | Snowball |
 | [You Share Beliefs, I Adapt: Progressive Heterogeneous…](https://doi.org/10.1109/iccv51701.2025.02555) | ICCV | 2025 | Inter | Det | — | Snowball |
-| An Extensible Framework for Open Heterogeneous Collaborative… | ICLR | 2024 | Inter | Det | — | Survey |
+| An Extensible Framework for Open Heterogeneous Collaborative… | ICLR | 2024 | Inter | Det | [Code](https://github.com/yifanlu0227/HEAL) | Survey |
 | [Boosting Collaborative Vehicular Perception on the Edge with…](https://doi.org/10.1145/3666025.3699328) | ACM International… | 2024 | Hybrid | Det, Seg | — | Snowball |
 | [Co-HTTP: Cooperative Trajectory Prediction with Heterogeneous…](https://doi.org/10.1109/itsc58415.2024.10919922) | IEEE ITSC | 2024 | Late | Pred | — | Snowball |
 | [CoFormerNet: A Transformer-Based Fusion Approach for Enhanced…](https://doi.org/10.3390/s24134101) | Sensors | 2024 | Inter | Det | — | Snowball |
-| [CoMamba: Real-time Cooperative Perception Unlocked with…](https://doi.org/10.1109/iros60139.2025.11245863) | IROS | 2024 | Inter | Det | — | Snowball |
+| [CoMamba: Real-time Cooperative Perception Unlocked with…](https://doi.org/10.1109/iros60139.2025.11245863) | IROS | 2024 | Inter | Det | [Code](https://github.com/taco-group/CoMamba) | Snowball |
 | [Communication-Efficient Collaborative Perception via…](https://doi.org/10.1109/cvpr52733.2024.01466) | CVPR | 2024 | Inter | Det | [Code](https://github.com/PhyllisH/CodeFilling) | Snowball |
 | [Consensus-based Attack Detection and Cooperative Perception of…](https://doi.org/10.1109/vtc2024-fall63153.2024.10757806) | IEEE VTC | 2024 | Late | Det | — | Snowball |
 | [Cooperative Perception with Deep Reinforcement Learning in…](https://doi.org/10.1109/msn63567.2024.00117) | International… | 2024 | Late | Det | — | Snowball |
@@ -553,7 +553,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [MSMA: Multi-agent Trajectory Prediction in Connected and…](https://doi.org/10.1061/9780784485484.026) | CICTP 2024 | 2024 | Late | Pred | [Code](https://github.com/xichennn/MSMA) | Snowball |
 | [Multi-Task Collaborative Perception Algorithm Based on…](https://doi.org/10.1109/icus61736.2024.10839829) | ICUS | 2024 | Inter | Multi | — | Snowball |
 | [One is Plenty: A Polymorphic Feature Interpreter for Immutable…](https://www.semanticscholar.org/search?q=One%20is%20Plenty%3A%20A%20Polymorphic%20Feature%20Interpreter%20for%20Immutable%20Heterogeneous%20Collaborative%20Perception&sort=relevance) | CVPR | 2024 | Inter | Det | [Code](https://github.com/yuchen-xia/PolyInter) | Snowball |
-| [Probabilistic 3D Multi-Object Cooperative Tracking for…](https://doi.org/10.1109/ICRA57147.2024.10610367) | ICRA | 2024 | Late | Track | — | Survey |
+| [Probabilistic 3D Multi-Object Cooperative Tracking for…](https://doi.org/10.1109/ICRA57147.2024.10610367) | ICRA | 2024 | Late | Track | [Code](https://github.com/eddyhkchiu/DMSTrack) | Survey |
 | [RoCo: Robust Cooperative Perception By Iterative Object…](https://doi.org/10.1145/3664647.3680559) | ACM MM | 2024 | Inter | Det | [Code](https://github.com/HuangZhe885/RoCo) | Snowball |
 | [SwissCheese: Fine-Grained Channel-Spatial Feature Filtering for…](https://doi.org/10.1109/tits.2024.3480359) | IEEE T-ITS | 2024 | Inter | Det | — | Snowball |
 | [TimeSync: GAN-Driven Temporal Feature Synchronization for…](https://www.semanticscholar.org/search?q=TimeSync%3A%20GAN-Driven%20Temporal%20Feature%20Synchronization%20for%20Robust%20Collaborative%20Perception%20in%20Autonomous%20Driving&sort=relevance) | International… | 2024 | Inter | Det | — | Snowball |
@@ -599,7 +599,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Enhanced Cooperative Perception for Autonomous Vehicles Using…](https://doi.org/10.1109/dcoss-iot61029.2024.00108) | DCOSS-IoT | 2024 | Cam | Det | — | Snowball |
 | [Fast Clustering for Cooperative Perception Based on LiDAR…](https://doi.org/10.1007/s12559-023-10211-x) | Cognitive Computation | 2024 | LiDAR | Det | — | Survey |
 | [KeyCoop: Communication-Efficient Raw-Level Cooperative…](https://www.semanticscholar.org/search?q=KeyCoop%3A%20Communication-Efficient%20Raw-Level%20Cooperative%20Perception%20for%20Connected%20Autonomous%20Vehicles%20via%20Keypoints%20Extraction&sort=relevance) | Annual IEEE… | 2024 | LiDAR | Det | — | Snowball |
-| [MR3D-Net: Dynamic Multi-Resolution 3D Sparse Voxel Grid Fusion…](https://doi.org/10.1109/itsc58415.2024.10919592) | IEEE ITSC | 2024 | LiDAR | Det | — | Snowball |
+| [MR3D-Net: Dynamic Multi-Resolution 3D Sparse Voxel Grid Fusion…](https://doi.org/10.1109/itsc58415.2024.10919592) | IEEE ITSC | 2024 | LiDAR | Det | [Code](https://github.com/ekut-es/MR3D-Net) | Snowball |
 | [VRF: Vehicle Road-side Point Cloud Fusion](https://doi.org/10.1145/3643832.3661874) | ACM SIGMOBILE… | 2024 | LiDAR | Det | — | Snowball |
 | [Generating Evidential BEV Maps in Continuous Driving Space](https://doi.org/10.1016/j.isprsjprs.2023.08.013) | Remote Sens. | 2023 | LiDAR | Det, Multi | — | Survey |
 | [Robust Real-time Multi-vehicle Collaboration on Asynchronous…](https://doi.org/10.1145/3570361.3613271) | Annual International… | 2023 | LiDAR | Det | — | Survey |
@@ -654,7 +654,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [AVCPNet: An AAV-Vehicle Collaborative Perception Network for…](https://doi.org/10.1109/TGRS.2025.3546669) | Remote Sens. | 2025 | Cam | Det | [Code](https://github.com/wyccoo/uvcp) | Snowball |
 | [Bandwidth-Adaptive Spatiotemporal Correspondence Identification…](https://doi.org/10.1109/icra55743.2025.11127581) | ICRA | 2025 | Agn. | Det | — | Snowball |
 | [Bandwidth-Efficient Communication Modelling for Autonomous…](https://doi.org/10.1109/wacv61041.2025.00599) | IEEE Workshop/Winter… | 2025 | Agn. | Det | — | Snowball |
-| [Co-MTP: A Cooperative Trajectory Prediction Framework with…](https://doi.org/10.1109/icra55743.2025.11127303) | ICRA | 2025 | Agn. | Pred | — | Snowball |
+| [Co-MTP: A Cooperative Trajectory Prediction Framework with…](https://doi.org/10.1109/icra55743.2025.11127303) | ICRA | 2025 | Agn. | Pred | [Code](https://github.com/xiaomiaozhang/Co-MTP) | Snowball |
 | [CoCMT: Communication-Efficient Cross-Modal Transformer for…](https://doi.org/10.1109/iros60139.2025.11247637) | IROS | 2025 | L+C | Det | [Code](https://github.com/taco-group/COCMT) | Snowball |
 | [CoDifFu: Diffusion-Based Collaborative Perception with…](https://doi.org/10.1109/iros60139.2025.11247103) | IROS | 2025 | Agn. | Det | — | Snowball |
 | [CoDS: Enhancing Collaborative Perception in Heterogeneous…](https://doi.org/10.1109/TMC.2025.3622937) | IEEE TMC | 2025 | Agn. | Det | — | Snowball |
@@ -668,7 +668,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [CooperRisk: A Driving Risk Quantification Pipeline with…](https://doi.org/10.1109/iros60139.2025.11246231) | IROS | 2025 | Agn. | Pred | — | Snowball |
 | [Cooptrack: Exploring End-to-End Learning for Efficient…](https://doi.org/10.1109/iccv51701.2025.02502) | ICCV | 2025 | Agn. | Det, Track | [Code](https://github.com/zhongjiaru/CoopTrack) | Snowball |
 | [CoPe: Taming Collaborative 3D Perception via Lite Network…](https://doi.org/10.1109/icdcs63083.2025.00027) | IEEE International… | 2025 | LiDAR | Det | — | Snowball |
-| [CoPEFT: Fast Adaptation Framework for Multi-Agent Collaborative…](https://doi.org/10.1609/aaai.v39i22.34502) | AAAI | 2025 | Agn. | Det | — | Snowball |
+| [CoPEFT: Fast Adaptation Framework for Multi-Agent Collaborative…](https://doi.org/10.1609/aaai.v39i22.34502) | AAAI | 2025 | Agn. | Det | [Code](https://github.com/fengxueguiren/CoPEFT) | Snowball |
 | [CoRange: Collaborative Range-Aware Adaptive Fusion for…](https://doi.org/10.1109/tiv.2024.3478756) | IEEE T-IV | 2025 | LiDAR | Det | — | Snowball |
 | [CoSGMN: Cooperative 3D Object Detection with Spatial Grouping…](https://doi.org/10.1109/igarss55030.2025.11243101) | Remote Sens. | 2025 | LiDAR | Det | — | Snowball |
 | [CoST: Efficient Collaborative Perception from Unified…](https://doi.org/10.1109/iccv51701.2025.00112) | ICCV | 2025 | Agn. | Det | [Code](https://github.com/tzhhhh123/CoST) | Snowball |
@@ -688,18 +688,18 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Efficient Collaborative Perception With Integrated Uncertainty…](https://doi.org/10.1109/tits.2025.3587766) | IEEE T-ITS | 2025 | Agn. | Det | [Code](https://github.com/HIT-K/ER-CoPe) | Snowball |
 | [Efficient Multi-Agent Collaborative Perception via Context…](https://doi.org/10.1109/iccc68654.2025.11438167) | ICCC | 2025 | Agn. | Det | — | Snowball |
 | [Efficomm: Bandwidth Efficient Multi Agent Communication](https://doi.org/10.1109/itsc60802.2025.11423066) | IEEE ITSC | 2025 | Agn. | Det | — | Snowball |
-| [End-to-End 3D Spatiotemporal Perception with Multimodal Fusion…](https://doi.org/10.1109/jiot.2026.3694808) | IEEE IoTJ | 2025 | L+C | Det, Track | — | Snowball |
+| [End-to-End 3D Spatiotemporal Perception with Multimodal Fusion…](https://doi.org/10.1109/jiot.2026.3694808) | IEEE IoTJ | 2025 | L+C | Det, Track | [Code](https://github.com/yangzvv/XET-V2X) | Snowball |
 | [Energy-Aware Multi-Modal Vision Transformer (ViT) based C-V2X…](https://doi.org/10.1109/mass66014.2025.00065) | IEEE International… | 2025 | L+C | Det | — | Snowball |
 | [Enhancing collaborative perception through multi-scale…](https://doi.org/10.1016/j.aap.2025.108367) | Accident Analysis and… | 2025 | LiDAR | Det | — | Snowball |
 | [Enhancing Cooperative LiDAR-Based Perception Accuracy in…](https://doi.org/10.1109/tits.2025.3541265) | IEEE T-ITS | 2025 | LiDAR | Det | — | Snowball |
 | [Enhancing Roadside 3D Detection with Height-Depth Fusion in…](https://doi.org/10.1109/memat68155.2025.11433945) | MEMAT | 2025 | Cam | Det | — | Snowball |
-| [Extensible Heterogeneous Collaborative Perception in Autonomous…](https://doi.org/10.3390/robotics14120186) | Robotics | 2025 | Agn. | Det | — | Snowball |
+| [Extensible Heterogeneous Collaborative Perception in Autonomous…](https://doi.org/10.3390/robotics14120186) | Robotics | 2025 | Agn. | Det | [Code](https://github.com/Babak-Ebrahimi/PolyCode) | Snowball |
 | [Feature-Level Vehicle-Infrastructure Cooperative Perception…](https://doi.org/10.3390/smartcities8050171) | Smart Cities | 2025 | Cam | Det | — | Snowball |
 | [FENSe: Feedback-Enabled Neighbor Selection for Spatial Aware…](https://doi.org/10.1109/ICPADS67057.2025.11323225) | International… | 2025 | Agn. | Det | — | Snowball |
 | [FocalComm: Hard Instance-Aware Multi-Agent Perception](https://doi.org/10.1109/wacv61042.2026.00607) | IEEE Workshop/Winter… | 2025 | Agn. | Det | [Code](https://github.com/scdrand23/FocalComm) | Snowball |
 | [From Chaos to Clarity: Strengthening 3D Collaborative…](https://doi.org/10.1109/urtc68753.2025.11532973) | URTC | 2025 | L+C | Det | — | Snowball |
 | [GCP: Guarded Collaborative Perception with Spatial-Temporal…](https://doi.org/10.1109/tdsc.2026.3693684) | IEEE Transactions on… | 2025 | LiDAR | Det | [Code](https://github.com/yihangtao/GCP.git) | Snowball |
-| [Generative Map Priors for Collaborative BEV Semantic…](https://doi.org/10.1109/CVPR52734.2025.01113) | CVPR | 2025 | Cam | Seg | — | Snowball |
+| [Generative Map Priors for Collaborative BEV Semantic…](https://doi.org/10.1109/CVPR52734.2025.01113) | CVPR | 2025 | Cam | Seg | [Code](https://github.com/buaa-colalab/CoGMP) | Snowball |
 | [GIFF: Graph Iterative Attention Based Feature Fusion for…](https://doi.org/10.5220/0013297900003912) | VISIGRAPP : VISAPP | 2025 | LiDAR | Det | — | Snowball |
 | [Griffin: Aerial-Ground Cooperative Detection and Tracking…](https://doi.org/10.1609/aaai.v40i12.37951) | AAAI | 2025 | Agn. | Det, Track | — | Snowball |
 | [HeCoFuse: Cross-Modal Complementary V2X Cooperative Perception…](https://doi.org/10.1109/itsc60802.2025.11423237) | IEEE ITSC | 2025 | L+C | Det | [Code](https://github.com/ChuhengWei/HeCoFuse) | Snowball |
@@ -707,7 +707,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [HGSTA: Leveraging Hypergraph Computing for Effective…](https://doi.org/10.1109/vtc2025-fall65116.2025.11309988) | IEEE VTC | 2025 | LiDAR | Det | — | Snowball |
 | [HPLaw: Heterogeneous Parallel LiDARs for Adverse Weather in V2V](https://doi.org/10.1109/iros60139.2025.11247380) | IROS | 2025 | LiDAR | Det | — | Snowball |
 | [Improving Efficiency of V2X Based Collaborative Perception by…](https://doi.org/10.1109/meet67398.2025.11335987) | MEET | 2025 | Agn. | Det | — | Snowball |
-| [InfoCom: Kilobyte-Scale Communication-Efficient Collaborative…](https://www.semanticscholar.org/search?q=InfoCom%3A%20Kilobyte-Scale%20Communication-Efficient%20Collaborative%20Perception%20with%20Information%20Bottleneck&sort=relevance) | AAAI | 2025 | LiDAR | Det | — | Snowball |
+| [InfoCom: Kilobyte-Scale Communication-Efficient Collaborative…](https://www.semanticscholar.org/search?q=InfoCom%3A%20Kilobyte-Scale%20Communication-Efficient%20Collaborative%20Perception%20with%20Information%20Bottleneck&sort=relevance) | AAAI | 2025 | LiDAR | Det | [Code](https://github.com/fengxueguiren/InfoCom) | Snowball |
 | [INSTINCT: Instance-Level Interaction Architecture for…](https://doi.org/10.1109/iccv51701.2025.02362) | ICCV | 2025 | LiDAR | Det | [Code](https://github.com/CrazyShout/INSTINCT) | Snowball |
 | [Intelligent Cooperative Perception Technology for Vehicles and…](https://doi.org/10.3390/electronics14244969) | Electronics | 2025 | Cam | Seg | — | Snowball |
 | [Is Discretization Fusion All You Need for Collaborative…](https://doi.org/10.1109/icra55743.2025.11128776) | ICRA | 2025 | Agn. | Det | [Code](https://github.com/sidiangongyuan/ACCO) | Snowball |
@@ -743,19 +743,19 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Select2Drive: Pragmatic Communications for Real-Time…](https://doi.org/10.1109/tits.2025.3611377) | IEEE T-ITS | 2025 | LiDAR | Det, Multi | — | Snowball |
 | [Selective Shift: Towards Personalized Domain Adaptation in…](https://doi.org/10.1145/3746027.3754723) | ACM MM | 2025 | LiDAR | Det | — | Snowball |
 | [Semantic Communication-Enhanced Cooperative Object Detection…](https://doi.org/10.1109/wcsp68525.2025.1010233) | International… | 2025 | Cam | Det | — | Snowball |
-| [SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient…](https://doi.org/10.1109/iccvw69036.2025.00190) | ICCVW | 2025 | LiDAR | Det | — | Snowball |
+| [SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient…](https://doi.org/10.1109/iccvw69036.2025.00190) | ICCVW | 2025 | LiDAR | Det | [Code](https://github.com/fzi-forschungszentrum-informatik/SlimComm) | Snowball |
 | [SMSCNet:Sparse Multi-Scale and Spatially Enhanced Cooperative…](https://doi.org/10.1109/cvci66304.2025.11348559) | CVCI | 2025 | LiDAR | Det | — | Snowball |
-| [SparseAlign: A Fully Sparse Framework for Cooperative Object…](https://doi.org/10.1109/cvpr52734.2025.02077) | CVPR | 2025 | LiDAR | Det | — | Snowball |
+| [SparseAlign: A Fully Sparse Framework for Cooperative Object…](https://doi.org/10.1109/cvpr52734.2025.02077) | CVPR | 2025 | LiDAR | Det | [Code](https://github.com/YuanYunshuang/SparseAlign) | Snowball |
 | [SparseCoop: Cooperative Perception with Kinematic-Grounded…](https://doi.org/10.1609/aaai.v40i12.37952) | AAAI | 2025 | Agn. | Det, Track | — | Snowball |
 | [STAMP: Scalable Task And Model-agnostic Collaborative Perception](https://www.semanticscholar.org/search?q=STAMP%3A%20Scalable%20Task%20And%20Model-agnostic%20Collaborative%20Perception&sort=relevance) | ICLR | 2025 | Agn. | Det, Multi | [Code](https://github.com/taco-group/STAMP) | Snowball |
 | [Supply-Demand-Driven Information Selection Algorithm for…](https://doi.org/10.1109/aiotc66747.2025.11198777) | AIoTC | 2025 | Agn. | Det | — | Snowball |
-| [Toward Full-Scene Domain Generalization in Multi-Agent…](https://doi.org/10.1109/tits.2024.3506284) | IEEE T-ITS | 2025 | Cam | Seg | — | Snowball |
+| [Toward Full-Scene Domain Generalization in Multi-Agent…](https://doi.org/10.1109/tits.2024.3506284) | IEEE T-ITS | 2025 | Cam | Seg | [Code](https://github.com/DG-CAVs/DG-CoPerception) | Snowball |
 | [Towards Communication-Efficient Cooperative Perception via…](https://doi.org/10.1109/tmc.2024.3496856) | IEEE TMC | 2025 | Agn. | Pred | — | Snowball |
 | [Towards Communication-Efficient Heterogeneous Collaborative…](https://doi.org/10.1109/icpads67057.2025.11322931) | International… | 2025 | Agn. | Multi | — | Snowball |
 | [Towards Model-Agnostic Cooperative Perception](https://doi.org/10.1109/ijcnn64981.2025.11229412) | IJCNN | 2025 | Agn. | Det | [Code](https://github.com/JesseWong333/IMCP) | Snowball |
 | [TraF-Align: Trajectory-aware Feature Alignment for Asynchronous…](https://doi.org/10.1109/cvpr52734.2025.01125) | CVPR | 2025 | LiDAR | Det | [Code](https://github.com/zhyingS/TraF-Align) | Snowball |
 | [TruckV2X: A Truck-Centered Perception Dataset](https://doi.org/10.1109/LRA.2025.3592884) | IEEE RA-L | 2025 | L+C | Det | — | Snowball |
-| [TurboTrain: Towards Efficient and Balanced Multi-Task Learning…](https://doi.org/10.1109/ICCV51701.2025.00418) | ICCV | 2025 | LiDAR | Det, Pred, Multi | — | Snowball |
+| [TurboTrain: Towards Efficient and Balanced Multi-Task Learning…](https://doi.org/10.1109/ICCV51701.2025.00418) | ICCV | 2025 | LiDAR | Det, Pred, Multi | [Code](https://github.com/ucla-mobility/TurboTrain) | Snowball |
 | [UniSense: Spatial-Uncertainty-Aware Collaborative Sensing for…](https://doi.org/10.1145/3711875.3729130) | ACM SIGMOBILE… | 2025 | LiDAR | Det | [Code](https://github.com/LetStarFly/UniSense) | Snowball |
 | [V2I-Coop: Accurate Object Detection for Connected Automated…](https://doi.org/10.1109/tmc.2024.3486758) | IEEE TMC | 2025 | L+C | Det | — | Snowball |
 | [V2V Cooperative Perception With Adaptive Communication Loss for…](https://www.semanticscholar.org/search?q=V2V%20Cooperative%20Perception%20With%20Adaptive%20Communication%20Loss%20for%20Autonomous%20Driving&sort=relevance) | IEEE T-ITS | 2025 | Cam | Det | — | Snowball |
@@ -768,38 +768,38 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Vehicle-Road-Cloud Collaborative Perception: Resource and…](https://doi.org/10.3390/app152312613) | Applied Sciences | 2025 | Agn. | Det | — | Snowball |
 | [Vehicle-to-Infrastructure Multi-Sensor Fusion (V2I-MSF) With…](https://doi.org/10.1109/access.2025.3551367) | IEEE Access | 2025 | L+C | Det, Lane | — | Snowball |
 | [VI-BEV: Vehicle-Infrastructure Collaborative Perception for 3-D…](https://doi.org/10.1109/ojits.2025.3543831) | IEEE Open Journal of… | 2025 | Cam | Det | — | Snowball |
-| [Vision-Only Gaussian Splatting for Collaborative Semantic…](https://doi.org/10.1609/aaai.v40i4.37269) | AAAI | 2025 | Cam | Multi | — | Snowball |
+| [Vision-Only Gaussian Splatting for Collaborative Semantic…](https://doi.org/10.1609/aaai.v40i4.37269) | AAAI | 2025 | Cam | Multi | [Code](https://github.com/ChengChen2020/VOGS-CP) | Snowball |
 | [VIU-YOLO: Vehicle-Infrastructure-UAV Cooperative Perception…](https://doi.org/10.1109/icus66297.2025.11295715) | ICUS | 2025 | Cam | Det | — | Snowball |
 | [VRDeepSafety: A Scalable VR Simulation Platform with V2X…](https://doi.org/10.3390/wevj16020082) | World Electric… | 2025 | L+C | Det, Pred | — | Snowball |
 | [You Share Beliefs, I Adapt: Progressive Heterogeneous…](https://doi.org/10.1109/iccv51701.2025.02555) | ICCV | 2025 | Agn. | Det | — | Snowball |
 | [A Collaborative Perception Network based on Dynamic Multi-scale…](https://doi.org/10.23919/ccc63176.2024.10661468) | Cybersecurity and… | 2024 | LiDAR | Det | — | Snowball |
-| [ActFormer: Scalable Collaborative Perception via Active Queries](https://doi.org/10.1109/ICRA57147.2024.10610907) | ICRA | 2024 | Cam | Det | — | Survey |
-| [Adver-City: Open-Source Multi-Modal Dataset for Collaborative…](https://doi.org/10.1109/itsc60802.2025.11423805) | IEEE ITSC | 2024 | L+C | Data | — | Snowball |
-| An Extensible Framework for Open Heterogeneous Collaborative… | ICLR | 2024 | Agn. | Det | — | Survey |
+| [ActFormer: Scalable Collaborative Perception via Active Queries](https://doi.org/10.1109/ICRA57147.2024.10610907) | ICRA | 2024 | Cam | Det | [Code](https://github.com/coperception/ActFormer) | Survey |
+| [Adver-City: Open-Source Multi-Modal Dataset for Collaborative…](https://doi.org/10.1109/itsc60802.2025.11423805) | IEEE ITSC | 2024 | L+C | Data | [Code](https://github.com/QUARRG/Adver-City) | Snowball |
+| An Extensible Framework for Open Heterogeneous Collaborative… | ICLR | 2024 | Agn. | Det | [Code](https://github.com/yifanlu0227/HEAL) | Survey |
 | [BB-Align: A Lightweight Pose Recovery Framework for…](https://doi.org/10.1109/icdcs60910.2024.00098) | IEEE International… | 2024 | LiDAR | Det | — | Snowball |
 | [Breaking Data Silos: Cross-Domain Learning for Multi-Agent…](https://doi.org/10.1109/ICRA57147.2024.10610591) | ICRA | 2024 | LiDAR | Det | [Code](https://github.com/jinlong17/BDS-V2V) | Survey |
 | [CenterCoop: Center-Based Feature Aggregation for…](https://doi.org/10.1109/LRA.2023.3339399) | IEEE RA-L | 2024 | LiDAR | Det | — | Survey |
 | [CoBEVFusion Cooperative Perception with LiDAR-Camera Bird's Eye…](https://doi.org/10.1109/dicta63115.2024.00064) | International… | 2024 | L+C | Det, Seg | — | Snowball |
 | [CoDRMA: Collaborative Depth Refinement via Dual-Mask and…](https://doi.org/10.1109/CASE59546.2024.10711318) | CASE | 2024 | Cam | Det | — | Snowball |
-| [CoDTS: Enhancing Sparsely Supervised Collaborative Perception…](https://doi.org/10.1609/aaai.v39i3.32348) | AAAI | 2024 | LiDAR | Det | — | Snowball |
+| [CoDTS: Enhancing Sparsely Supervised Collaborative Perception…](https://doi.org/10.1609/aaai.v39i3.32348) | AAAI | 2024 | LiDAR | Det | [Code](https://github.com/CatOneTwo/CoDTS) | Snowball |
 | [CoFormerNet: A Transformer-Based Fusion Approach for Enhanced…](https://doi.org/10.3390/s24134101) | Sensors | 2024 | Agn. | Det | — | Snowball |
 | [CollabGAT: Collaborative Perception Using Graph Attention…](https://www.semanticscholar.org/search?q=CollabGAT%3A%20Collaborative%20Perception%20Using%20Graph%20Attention%20Network&sort=relevance) | IEEE Access | 2024 | LiDAR | Det | — | Snowball |
 | [Collaborative Joint Perception and Prediction for Autonomous…](https://doi.org/10.3390/s24196263) | Sensors | 2024 | LiDAR | Seg, Pred, Multi | — | Snowball |
 | [Collaborative Multimodal Fusion Network for Multiagent…](https://doi.org/10.1109/tcyb.2024.3491756) | IEEE Transactions on… | 2024 | L+C | Det | — | Snowball |
-| [Collaborative Semantic Occupancy Prediction with Hybrid Feature…](https://doi.org/10.1109/CVPR52733.2024.01704) | CVPR | 2024 | Cam | Seg, Multi | — | Survey |
-| [CoMamba: Real-time Cooperative Perception Unlocked with…](https://doi.org/10.1109/iros60139.2025.11245863) | IROS | 2024 | Agn. | Det | — | Snowball |
+| [Collaborative Semantic Occupancy Prediction with Hybrid Feature…](https://doi.org/10.1109/CVPR52733.2024.01704) | CVPR | 2024 | Cam | Seg, Multi | [Code](https://github.com/rruisong/CoHFF) | Survey |
+| [CoMamba: Real-time Cooperative Perception Unlocked with…](https://doi.org/10.1109/iros60139.2025.11245863) | IROS | 2024 | Agn. | Det | [Code](https://github.com/taco-group/CoMamba) | Snowball |
 | [Communication-Efficient Collaborative Perception via…](https://doi.org/10.1109/cvpr52733.2024.01466) | CVPR | 2024 | Agn. | Det | [Code](https://github.com/PhyllisH/CodeFilling) | Snowball |
 | [CooPercept: Cooperative Perception for 3D Object Detection of…](https://doi.org/10.3390/drones8060228) | Drones | 2024 | L+C | Det | — | Snowball |
 | [CooPre: Cooperative Pretraining for V2X Cooperative Perception](https://doi.org/10.1109/iros60139.2025.11246787) | IROS | 2024 | LiDAR | Det | [Code](https://github.com/ucla-mobility/CooPre) | Snowball |
 | [CoopScenes: Multi-Scene Infrastructure and Vehicle Data for…](https://www.semanticscholar.org/search?q=CoopScenes%3A%20Multi-Scene%20Infrastructure%20and%20Vehicle%20Data%20for%20Advancing%20Collective%20Perception%20in%20Autonomous%20Driving&sort=relevance) | IEEE IV | 2024 | L+C | Det | — | Snowball |
 | [CoSense3D: an Agent-based Efficient Learning Framework for…](https://doi.org/10.1109/iv55156.2024.10588865) | IEEE IV | 2024 | LiDAR | Det | [Code](https://github.com/YuanYunshuang/CoSense3D) | Snowball |
 | [DiffCP: Ultra-Low Bit Collaborative Perception via Diffusion…](https://doi.org/10.1109/icra55743.2025.11128518) | ICRA | 2024 | Agn. | Det | — | Snowball |
-| [Directed-CP: Directed Collaborative Perception for Connected…](https://doi.org/10.1109/icra55743.2025.11127818) | ICRA | 2024 | LiDAR | Det | — | Snowball |
+| [Directed-CP: Directed Collaborative Perception for Connected…](https://doi.org/10.1109/icra55743.2025.11127818) | ICRA | 2024 | LiDAR | Det | [Code](https://github.com/yihangtao/Directed-CP) | Snowball |
 | [Distance-Aware Attentive Framework for Multi-Agent…](https://doi.org/10.65109/xjqs5325) | Adaptive Agents and… | 2024 | LiDAR | Det | — | Snowball |
-| [DSRC: Learning Density-insensitive and Semantic-aware…](https://doi.org/10.1609/aaai.v39i9.33078) | AAAI | 2024 | LiDAR | Det | — | Snowball |
+| [DSRC: Learning Density-insensitive and Semantic-aware…](https://doi.org/10.1609/aaai.v39i9.33078) | AAAI | 2024 | LiDAR | Det | [Code](https://github.com/Terry9a/DSRC) | Snowball |
 | [Efficient Collaborative Perception with Adaptive Communication…](https://doi.org/10.1109/ricai64321.2024.10910966) | International… | 2024 | Agn. | Det | — | Snowball |
 | [Efficient Vehicular Collaborative Perception Based on…](https://doi.org/10.1109/tvt.2024.3403263) | IEEE T-VT | 2024 | LiDAR | Det | — | Snowball |
-| [EMIFF: Enhanced Multi-scale Image Feature Fusion for…](https://doi.org/10.1109/ICRA57147.2024.10610545) | ICRA | 2024 | Cam | Det | — | Survey |
+| [EMIFF: Enhanced Multi-scale Image Feature Fusion for…](https://doi.org/10.1109/ICRA57147.2024.10610545) | ICRA | 2024 | Cam | Det | [Code](https://github.com/Bosszhe/EMIFF) | Survey |
 | [FeaKM: Robust Collaborative Perception under Noisy Pose…](https://doi.org/10.1145/3696474.3696686) | International Joint… | 2024 | Agn. | Det | [Code](https://github.com/uestchjw/FeaKM) | Snowball |
 | [Fusion of Multiple Sensors and V2V Information for 3D Object…](https://doi.org/10.1109/iccsn63464.2024.10793347) | ICCSN | 2024 | L+C | Det | — | Snowball |
 | [Graph Attention Based Feature Fusion For Collaborative…](https://doi.org/10.5220/0013297900003912) | IEEE IV | 2024 | LiDAR | Det | — | Snowball |
@@ -817,9 +817,9 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Multi-Agent Collaborative Perception via Motion-Aware Robust…](https://doi.org/10.1109/cvpr52733.2024.01449) | CVPR | 2024 | LiDAR | Det | [Code](https://github.com/IndigoChildren/collaborative-perception-MRCNet) | Snowball |
 | [Multi-Modality Fusion Perception Strategy Based on Adaptive…](https://doi.org/10.1109/itsc58415.2024.10919674) | IEEE ITSC | 2024 | L+C | Det | — | Snowball |
 | [Multi-Task Collaborative Perception Algorithm Based on…](https://doi.org/10.1109/icus61736.2024.10839829) | ICUS | 2024 | Agn. | Multi | — | Snowball |
-| [Multiagent Multitraversal Multimodal Self-Driving: Open MARS…](https://doi.org/10.1109/cvpr52733.2024.02081) | CVPR | 2024 | L+C | Data | — | Snowball |
+| [Multiagent Multitraversal Multimodal Self-Driving: Open MARS…](https://doi.org/10.1109/cvpr52733.2024.02081) | CVPR | 2024 | L+C | Data | [Code](https://github.com/ai4ce/MARS) | Snowball |
 | [One is Plenty: A Polymorphic Feature Interpreter for Immutable…](https://www.semanticscholar.org/search?q=One%20is%20Plenty%3A%20A%20Polymorphic%20Feature%20Interpreter%20for%20Immutable%20Heterogeneous%20Collaborative%20Perception&sort=relevance) | CVPR | 2024 | Agn. | Det | [Code](https://github.com/yuchen-xia/PolyInter) | Snowball |
-| [PACP: Priority-Aware Collaborative Perception for Connected and…](https://doi.org/10.1109/TMC.2024.3449371) | IEEE TMC | 2024 | LiDAR | Det | — | Snowball |
+| [PACP: Priority-Aware Collaborative Perception for Connected and…](https://doi.org/10.1109/TMC.2024.3449371) | IEEE TMC | 2024 | LiDAR | Det | [Code](https://github.com/fangzr/PACP) | Snowball |
 | [PAFNet: Pillar Attention Fusion Network for…](https://doi.org/10.3390/sym16040401) | Symmetry | 2024 | LiDAR | Det | — | Survey |
 | [Perception for Connected Autonomous Vehicles under Adverse…](https://www.semanticscholar.org/search?q=Perception%20for%20Connected%20Autonomous%20Vehicles%20under%20Adverse%20Weather%20Conditions&sort=relevance) | IROS | 2024 | LiDAR | Det | — | Snowball |
 | [Pillar Attention Encoder for Adaptive Cooperative Perception](https://doi.org/10.1109/JIOT.2024.3390552) | IEEE IoTJ | 2024 | LiDAR | Det | — | Survey |
@@ -831,7 +831,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Robust Collaborative Perception against Temporal Information…](https://doi.org/10.1109/icra57147.2024.10611481) | ICRA | 2024 | LiDAR | Det | [Code](https://github.com/hexunjie/Ro-temd) | Snowball |
 | [Robust Collaborative Perception without External Localization…](https://doi.org/10.1109/ICRA57147.2024.10610635) | ICRA | 2024 | LiDAR | Det | — | Survey |
 | [RoCo: Robust Cooperative Perception By Iterative Object…](https://doi.org/10.1145/3664647.3680559) | ACM MM | 2024 | Agn. | Det | [Code](https://github.com/HuangZhe885/RoCo) | Snowball |
-| S2R-ViT for Multi-Agent Cooperative Perception: Bridging the… | ICRA | 2024 | LiDAR | Det | — | Survey |
+| S2R-ViT for Multi-Agent Cooperative Perception: Bridging the… | ICRA | 2024 | LiDAR | Det | [Code](https://github.com/jinlong17/S2R-ViT) | Survey |
 | [SCOPE: A Synthetic Multi-Modal Dataset for Collective…](https://doi.org/10.1109/itsc58415.2024.10920280) | IEEE ITSC | 2024 | L+C | Data | — | Snowball |
 | [Select2Col: Leveraging Spatial-Temporal Importance of Semantic…](https://doi.org/10.1109/TVT.2024.3390414) | IEEE Trans. Veh.… | 2024 | LiDAR | Det | [Code](https://github.com/huangqzj/Select2Col/) | Survey |
 | [Self-Supervised Adaptive Weighting for Cooperative Perception…](https://doi.org/10.1109/TIV.2023.3345035) | IEEE T-IV | 2024 | LiDAR | Det | — | Survey |
@@ -855,7 +855,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [V2X-R: Cooperative LiDAR-4D Radar Fusion with Denoising…](https://doi.org/10.1109/cvpr52734.2025.02551) | CVPR | 2024 | LiDAR | Det | [Code](https://github.com/ylwhxht/V2X-R) | Snowball |
 | [V2X-ViTv2: Improved Vision Transformers for…](https://doi.org/10.1109/tpami.2024.3479222) | IEEE TPAMI | 2024 | LiDAR | Det | — | Snowball |
 | [V2X-VLM: End-to-End V2X Cooperative Autonomous Driving Through…](https://doi.org/10.1016/j.trc.2025.105457) | TR-C | 2024 | Cam | Multi | — | Snowball |
-| [V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for…](https://doi.org/10.1109/iccv51701.2025.02356) | ICCV | 2024 | LiDAR | Det, Pred | — | Snowball |
+| [V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for…](https://doi.org/10.1109/iccv51701.2025.02356) | ICCV | 2024 | LiDAR | Det, Pred | [Code](https://github.com/Zewei-Zhou/V2XPnP) | Snowball |
 | [ViT-FuseNet: Multimodal Fusion of Vision Transformer for…](https://doi.org/10.1109/ACCESS.2024.3368404) | IEEE Access | 2024 | L+C | Det | — | Survey |
 | [Weather-Aware Collaborative Perception With Uncertainty…](https://doi.org/10.1109/tits.2024.3479720) | IEEE T-ITS | 2024 | LiDAR | Det | — | Snowball |
 | [WHALES: A Multi-Agent Scheduling Dataset for Enhanced…](https://doi.org/10.1109/iros60139.2025.11247472) | IROS | 2024 | Agn. | Det | [Code](https://github.com/chensiweiTHU/WHALES) | Snowball |
@@ -864,13 +864,13 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Adaptive Feature Fusion for Cooperative Perception Using LiDAR…](https://doi.org/10.1109/WACV56688.2023.00124) | WACV | 2023 | LiDAR | Det | — | Survey |
 | Asynchrony-Robust Collaborative Perception via Bird's Eye View… | NeurIPS | 2023 | LiDAR | Det | [Code](https://github.com/MediaBrain-SJTU/CoBEVFlow) | Survey |
 | [BEV-V2X: Cooperative Birds-Eye-View Fusion and Grid Occupancy…](https://doi.org/10.1109/TIV.2023.3293954) | IEEE T-IV | 2023 | Agn. | Pred, Multi | — | Survey |
-| [Bridging the Domain Gap for Multi-Agent Perception](https://doi.org/10.1109/ICRA48891.2023.10160871) | ICRA | 2023 | LiDAR | Det | — | Survey |
+| [Bridging the Domain Gap for Multi-Agent Perception](https://doi.org/10.1109/ICRA48891.2023.10160871) | ICRA | 2023 | LiDAR | Det | [Code](https://github.com/DerrickXuNu/MPDA) | Survey |
 | CoBEVT: Cooperative Bird's Eye View Semantic Segmentation with… | CoRL | 2023 | Cam | Seg | [Code](https://github.com/DerrickXuNu/CoBEVT) | Survey |
 | [Collaboration Helps Camera Overtake LiDAR in 3D Detection](https://doi.org/10.1109/CVPR52729.2023.00892) | CVPR | 2023 | Cam | Det | — | Survey |
 | [Collaborative 3D Object Detection for Autonomous Vehicles via…](https://doi.org/10.1109/TITS.2023.3272027) | IEEE T-ITS | 2023 | LiDAR | Det | — | Survey |
-| [Core: Cooperative Reconstruction for Multi-Agent Perception](https://doi.org/10.1109/ICCV51070.2023.00800) | ICCV | 2023 | LiDAR | Det, Multi | — | Survey |
+| [Core: Cooperative Reconstruction for Multi-Agent Perception](https://doi.org/10.1109/ICCV51070.2023.00800) | ICCV | 2023 | LiDAR | Det, Multi | [Code](https://github.com/zllxot/CORE) | Survey |
 | [DI-V2X: Learning Domain-Invariant Representation for…](https://doi.org/10.1609/aaai.v38i4.28105) | AAAI | 2023 | LiDAR | Det | [Code](https://github.com/Serenos/DI-V2X) | Survey |
-| [DUSA: Decoupled Unsupervised Sim2Real Adaptation for…](https://doi.org/10.1145/3581783.3611948) | ACM MM | 2023 | LiDAR | Det | — | Survey |
+| [DUSA: Decoupled Unsupervised Sim2Real Adaptation for…](https://doi.org/10.1145/3581783.3611948) | ACM MM | 2023 | LiDAR | Det | [Code](https://github.com/refkxh/DUSA) | Survey |
 | [Dynamic Feature Sharing for Cooperative Perception from Point…](https://doi.org/10.1109/ITSC57777.2023.10422242) | IEEE ITSC | 2023 | LiDAR | Det | — | Survey |
 | [FeaCo: Reaching Robust Feature-Level Consensus in Noisy Pose…](https://doi.org/10.1145/3581783.3611880) | ACM MM | 2023 | LiDAR | Det | [Code](https://github.com/jmgu0212/FeaCo.git) | Survey |
 | Flow-Based Feature Fusion for Vehicle-Infrastructure… | NeurIPS | 2023 | LiDAR | Det | [Code](https://github.com/haibao-yu/FFNet-VIC3D) | Survey |
@@ -882,11 +882,11 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [MCoT: Multi-Modal Vehicle-to-Vehicle Cooperative Perception…](https://doi.org/10.1109/ICPADS60453.2023.00226) | ICPADS | 2023 | L+C | Det | — | Survey |
 | [MoRFF: Multi-View Object Detection for Connected Autonomous…](https://doi.org/10.1109/VTC2023-Fall60731.2023.10333428) | IEEE VTC | 2023 | Cam | Det | — | Survey |
 | [Multimodal Cooperative 3D Object Detection Over Connected…](https://doi.org/10.1109/MNET.010.2300029) | IEEE Network | 2023 | L+C | Det | — | Survey |
-| [QUEST: Query Stream for Practical Cooperative Perception](https://doi.org/10.1109/ICRA57147.2024.10610412) | ICRA | 2023 | Cam | Det | — | Survey |
+| [QUEST: Query Stream for Practical Cooperative Perception](https://doi.org/10.1109/ICRA57147.2024.10610412) | ICRA | 2023 | Cam | Det | [Code](https://github.com/leofansq/QUEST) | Survey |
 | [Robust Collaborative 3D Object Detection in Presence of Pose…](https://doi.org/10.1109/ICRA48891.2023.10160546) | ICRA | 2023 | LiDAR | Det | [Code](https://github.com/yifanlu0227/CoAlign) | Survey |
-| [Spatio-Temporal Domain Awareness for Multi-Agent Collaborative…](https://doi.org/10.1109/ICCV51070.2023.02137) | ICCV | 2023 | LiDAR | Det | — | Survey |
-| [UMC: A Unified Bandwidth-efficient and Multi-resolution Based…](https://doi.org/10.1109/ICCV51070.2023.00752) | ICCV | 2023 | LiDAR | Det | — | Survey |
-| [Uncertainty Quantification of Collaborative Detection for…](https://doi.org/10.1109/ICRA48891.2023.10160367) | ICRA | 2023 | LiDAR | Det | — | Survey |
+| [Spatio-Temporal Domain Awareness for Multi-Agent Collaborative…](https://doi.org/10.1109/ICCV51070.2023.02137) | ICCV | 2023 | LiDAR | Det | [Code](https://github.com/ydk122024/SCOPE) | Survey |
+| [UMC: A Unified Bandwidth-efficient and Multi-resolution Based…](https://doi.org/10.1109/ICCV51070.2023.00752) | ICCV | 2023 | LiDAR | Det | [Code](https://github.com/ispc-lab/UMC) | Survey |
+| [Uncertainty Quantification of Collaborative Detection for…](https://doi.org/10.1109/ICRA48891.2023.10160367) | ICRA | 2023 | LiDAR | Det | [Code](https://github.com/coperception/double-m-quantification) | Survey |
 | [V2VFusion: Multimodal Fusion for Enhanced Vehicle-to-Vehicle…](https://doi.org/10.1109/CAC59555.2023.10450676) | CAC | 2023 | L+C | Det | — | Survey |
 | [VINet: Lightweight, Scalable, and Heterogeneous Cooperative…](https://doi.org/10.1016/j.ymssp.2023.110723) | Mechanical Systems… | 2023 | LiDAR | Det | — | Survey |
 | [What2comm: Towards Communication-efficient Collaborative…](https://doi.org/10.1145/3581783.3611699) | ACM MM | 2023 | LiDAR | Det | — | Survey |
@@ -894,7 +894,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Complementarity-Enhanced and Redundancy-Minimized Collaboration…](https://doi.org/10.1145/3503161.3548197) | ACM MM | 2022 | LiDAR | Det | — | Survey |
 | [F-Transformer: Point Cloud Fusion Transformer for Cooperative…](https://doi.org/10.1007/978-3-031-15919-0_15) | Artificial Neural… | 2022 | LiDAR | Det | — | Survey |
 | [Keypoints-Based Deep Feature Fusion for Cooperative Vehicle…](https://doi.org/10.1109/LRA.2022.3143299) | IEEE RA-L | 2022 | LiDAR | Det | — | Survey |
-| [Latency-Aware Collaborative Perception](https://doi.org/10.1007/978-3-031-19824-3_19) | ECCV | 2022 | LiDAR | Det | — | Survey |
+| [Latency-Aware Collaborative Perception](https://doi.org/10.1007/978-3-031-19824-3_19) | ECCV | 2022 | LiDAR | Det | [Code](https://github.com/MediaBrain-SJTU/SyncNet) | Survey |
 | [Multi-Modal Virtual-Real Fusion Based Transformer for…](https://doi.org/10.1109/PAAP56126.2022.10010640) | PAAP | 2022 | LiDAR | Det | — | Survey |
 | [Multistage Fusion Approach of Lidar and Camera for…](https://doi.org/10.1109/WCMEIM56910.2022.10021459) | WCMEIM | 2022 | L+C | Det | — | Survey |
 | [PillarGrid: Deep Learning-Based Cooperative Perception for 3D…](https://doi.org/10.1109/ITSC55140.2022.9921947) | IEEE ITSC | 2022 | LiDAR | Det | — | Survey |
@@ -908,7 +908,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Bandwidth-Adaptive Feature Sharing for Cooperative LIDAR Object…](https://doi.org/10.1109/CAVS51000.2020.9334618) | CAVS | 2020 | LiDAR | Det | — | Survey |
 | [Cooperative LIDAR Object Detection via Feature Sharing in Deep…](https://doi.org/10.1109/VTC2020-Fall49728.2020.9348723) | IEEE VTC | 2020 | LiDAR | Det | — | Survey |
 | [V2VNet: Vehicle-to-Vehicle Communication for Joint Perception…](https://doi.org/10.1007/978-3-030-58536-5_36) | ECCV | 2020 | LiDAR | Det | — | Survey |
-| [When2com: Multi-Agent Perception via Communication Graph…](https://doi.org/10.1109/CVPR42600.2020.00416) | CVPR | 2020 | Cam | Seg | — | Survey |
+| [When2com: Multi-Agent Perception via Communication Graph…](https://doi.org/10.1109/CVPR42600.2020.00416) | CVPR | 2020 | Cam | Seg | [Code](https://github.com/GT-RIPL/MultiAgentPerception) | Survey |
 | [Who2com: Collaborative Perception via Learnable Handshake…](https://doi.org/10.1109/ICRA40945.2020.9197364) | ICRA | 2020 | Cam | Seg | — | Survey |
 | [F-Cooper: Feature Based Cooperative Perception for Autonomous…](https://doi.org/10.1145/3318216.3363300) | ACM/IEEE Symposium on… | 2019 | LiDAR | Det | — | Survey |
 
@@ -968,14 +968,14 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [HEAD: A Bandwidth-Efficient Cooperative Perception Approach for…](https://doi.org/10.1007/978-3-031-91813-1_13) | ECCV Workshops | 2024 | L+C | Det | — | Snowball |
 | [Learning 3D Perception from Others' Predictions](https://www.semanticscholar.org/search?q=Learning%203D%20Perception%20from%20Others%27%20Predictions&sort=relevance) | ICLR | 2024 | LiDAR | Det | — | Snowball |
 | [MSMA: Multi-agent Trajectory Prediction in Connected and…](https://doi.org/10.1061/9780784485484.026) | CICTP 2024 | 2024 | Agn. | Pred | [Code](https://github.com/xichennn/MSMA) | Snowball |
-| [OTVIC: A Dataset with Online Transmission for…](https://doi.org/10.1109/iros58592.2024.10802656) | IROS | 2024 | L+C | Det | — | Snowball |
+| [OTVIC: A Dataset with Online Transmission for…](https://doi.org/10.1109/iros58592.2024.10802656) | IROS | 2024 | L+C | Det | [Code](https://github.com/cn-hezhu/OTVIC) | Snowball |
 | [Practical Collaborative Perception: A Framework for…](https://doi.org/10.1109/TITS.2024.3371177) | IEEE T-ITS | 2024 | LiDAR | Det | [Code](https://github.com/quan-dao/practical-collab-perception) | Survey |
-| [Probabilistic 3D Multi-Object Cooperative Tracking for…](https://doi.org/10.1109/ICRA57147.2024.10610367) | ICRA | 2024 | Agn. | Track | — | Survey |
+| [Probabilistic 3D Multi-Object Cooperative Tracking for…](https://doi.org/10.1109/ICRA57147.2024.10610367) | ICRA | 2024 | Agn. | Track | [Code](https://github.com/eddyhkchiu/DMSTrack) | Survey |
 | [V2IViewer: Towards Efficient Collaborative Perception via Point…](https://doi.org/10.1109/tnse.2024.3479770) | IEEE Transactions on… | 2024 | LiDAR | Det, Track | — | Snowball |
 | [V2X-BGN: Camera-based V2X-Collaborative 3D Object Detection…](https://doi.org/10.1109/iv55156.2024.10588592) | IEEE IV | 2024 | Cam | Det | — | Snowball |
 | [3D Multi-Object Tracking Based on Two-Stage Data Association…](https://doi.org/10.1109/IV55152.2023.10186777) | IEEE IV | 2023 | LiDAR | Track | — | Survey |
 | [A Cooperative Perception System Robust to Localization Errors](https://doi.org/10.1109/IV55152.2023.10186727) | IEEE IV | 2023 | LiDAR | Det | — | Survey |
-| [Among Us: Adversarially Robust Collaborative Perception by…](https://doi.org/10.1109/ICCV51070.2023.00024) | ICCV | 2023 | LiDAR | Det | — | Survey |
+| [Among Us: Adversarially Robust Collaborative Perception by…](https://doi.org/10.1109/ICCV51070.2023.00024) | ICCV | 2023 | LiDAR | Det | [Code](https://github.com/coperception/ROBOSAC) | Survey |
 | [CoLD Fusion: A Real-time Capable Spline-based Fusion Algorithm…](https://doi.org/10.1109/IV55152.2023.10186632) | IEEE IV | 2023 | Cam | Lane | — | Survey |
 | [Collective PV-RCNN: A Novel Fusion Technique Using Collective…](https://doi.org/10.1109/ITSC57777.2023.10422079) | IEEE ITSC | 2023 | LiDAR | Det | [Code](https://github.com/ekut-es) | Survey |
 | [Model-Agnostic Multi-Agent Perception Framework](https://doi.org/10.1109/ICRA48891.2023.10161460) | ICRA | 2023 | LiDAR | Det | — | Survey |
@@ -1087,7 +1087,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [CoopDETR: A Unified Cooperative Perception Framework for 3D…](https://doi.org/10.1109/icra55743.2025.11128057) | ICRA | 2025 | Agn. | Inter | — | Snowball |
 | [Cooptrack: Exploring End-to-End Learning for Efficient…](https://doi.org/10.1109/iccv51701.2025.02502) | ICCV | 2025 | Agn. | Inter | [Code](https://github.com/zhongjiaru/CoopTrack) | Snowball |
 | [CoPe: Taming Collaborative 3D Perception via Lite Network…](https://doi.org/10.1109/icdcs63083.2025.00027) | IEEE International… | 2025 | LiDAR | Inter | — | Snowball |
-| [CoPEFT: Fast Adaptation Framework for Multi-Agent Collaborative…](https://doi.org/10.1609/aaai.v39i22.34502) | AAAI | 2025 | Agn. | Inter | — | Snowball |
+| [CoPEFT: Fast Adaptation Framework for Multi-Agent Collaborative…](https://doi.org/10.1609/aaai.v39i22.34502) | AAAI | 2025 | Agn. | Inter | [Code](https://github.com/fengxueguiren/CoPEFT) | Snowball |
 | [CoRA: A Collaborative Robust Architecture with Hybrid Fusion…](https://doi.org/10.1609/aaai.v40i4.37274) | AAAI | 2025 | Agn. | Hybrid | — | Snowball |
 | [CoRange: Collaborative Range-Aware Adaptive Fusion for…](https://doi.org/10.1109/tiv.2024.3478756) | IEEE T-IV | 2025 | LiDAR | Inter | — | Snowball |
 | [CoSDH: Communication-Efficient Collaborative Perception via…](https://doi.org/10.1109/cvpr52734.2025.00641) | CVPR | 2025 | Agn. | Hybrid | [Code](https://github.com/Xu2729/CoSDH) | Snowball |
@@ -1112,14 +1112,14 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Efficient Collaborative Perception With Integrated Uncertainty…](https://doi.org/10.1109/tits.2025.3587766) | IEEE T-ITS | 2025 | Agn. | Inter | [Code](https://github.com/HIT-K/ER-CoPe) | Snowball |
 | [Efficient Multi-Agent Collaborative Perception via Context…](https://doi.org/10.1109/iccc68654.2025.11438167) | ICCC | 2025 | Agn. | Inter | — | Snowball |
 | [Efficomm: Bandwidth Efficient Multi Agent Communication](https://doi.org/10.1109/itsc60802.2025.11423066) | IEEE ITSC | 2025 | Agn. | Inter | — | Snowball |
-| [End-to-End 3D Spatiotemporal Perception with Multimodal Fusion…](https://doi.org/10.1109/jiot.2026.3694808) | IEEE IoTJ | 2025 | L+C | Inter | — | Snowball |
+| [End-to-End 3D Spatiotemporal Perception with Multimodal Fusion…](https://doi.org/10.1109/jiot.2026.3694808) | IEEE IoTJ | 2025 | L+C | Inter | [Code](https://github.com/yangzvv/XET-V2X) | Snowball |
 | [Energy-Aware Multi-Modal Vision Transformer (ViT) based C-V2X…](https://doi.org/10.1109/mass66014.2025.00065) | IEEE International… | 2025 | L+C | Inter | — | Snowball |
 | [Enhancing collaborative perception through multi-scale…](https://doi.org/10.1016/j.aap.2025.108367) | Accident Analysis and… | 2025 | LiDAR | Inter | — | Snowball |
 | [Enhancing Cooperative LiDAR-Based Perception Accuracy in…](https://doi.org/10.1109/tits.2025.3541265) | IEEE T-ITS | 2025 | LiDAR | Inter | — | Snowball |
 | [Enhancing Roadside 3D Detection with Height-Depth Fusion in…](https://doi.org/10.1109/memat68155.2025.11433945) | MEMAT | 2025 | Cam | Inter | — | Snowball |
 | [Evaluation of an Uncertainty-Aware Late Fusion Algorithm for…](https://doi.org/10.1109/irce66030.2025.11203125) | IRCE | 2025 | Agn. | Late | — | Snowball |
 | [Extended Visibility of Autonomous Vehicles via Optimized…](https://doi.org/10.2139/ssrn.5171366) | TR-C | 2025 | Cam | Early | — | Snowball |
-| [Extensible Heterogeneous Collaborative Perception in Autonomous…](https://doi.org/10.3390/robotics14120186) | Robotics | 2025 | Agn. | Inter | — | Snowball |
+| [Extensible Heterogeneous Collaborative Perception in Autonomous…](https://doi.org/10.3390/robotics14120186) | Robotics | 2025 | Agn. | Inter | [Code](https://github.com/Babak-Ebrahimi/PolyCode) | Snowball |
 | [Feature-Level Vehicle-Infrastructure Cooperative Perception…](https://doi.org/10.3390/smartcities8050171) | Smart Cities | 2025 | Cam | Inter | — | Snowball |
 | [FENSe: Feedback-Enabled Neighbor Selection for Spatial Aware…](https://doi.org/10.1109/ICPADS67057.2025.11323225) | International… | 2025 | Agn. | Inter | — | Snowball |
 | [FocalComm: Hard Instance-Aware Multi-Agent Perception](https://doi.org/10.1109/wacv61042.2026.00607) | IEEE Workshop/Winter… | 2025 | Agn. | Inter | [Code](https://github.com/scdrand23/FocalComm) | Snowball |
@@ -1134,7 +1134,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Improving Efficiency of V2X Based Collaborative Perception by…](https://doi.org/10.1109/meet67398.2025.11335987) | MEET | 2025 | Agn. | Inter | — | Snowball |
 | [Improving Vulnerable Road-Users Detection Through Hybrid…](https://doi.org/10.1109/itsc60802.2025.11423004) | IEEE ITSC | 2025 | LiDAR | Hybrid | — | Snowball |
 | [Incentivizing Point Cloud-Based Accurate Cooperative Perception…](https://doi.org/10.1109/tvt.2024.3519626) | IEEE T-VT | 2025 | LiDAR | Early | — | Snowball |
-| [InfoCom: Kilobyte-Scale Communication-Efficient Collaborative…](https://www.semanticscholar.org/search?q=InfoCom%3A%20Kilobyte-Scale%20Communication-Efficient%20Collaborative%20Perception%20with%20Information%20Bottleneck&sort=relevance) | AAAI | 2025 | LiDAR | Inter | — | Snowball |
+| [InfoCom: Kilobyte-Scale Communication-Efficient Collaborative…](https://www.semanticscholar.org/search?q=InfoCom%3A%20Kilobyte-Scale%20Communication-Efficient%20Collaborative%20Perception%20with%20Information%20Bottleneck&sort=relevance) | AAAI | 2025 | LiDAR | Inter | [Code](https://github.com/fengxueguiren/InfoCom) | Snowball |
 | [INSTINCT: Instance-Level Interaction Architecture for…](https://doi.org/10.1109/iccv51701.2025.02362) | ICCV | 2025 | LiDAR | Inter | [Code](https://github.com/CrazyShout/INSTINCT) | Snowball |
 | [Is Discretization Fusion All You Need for Collaborative…](https://doi.org/10.1109/icra55743.2025.11128776) | ICRA | 2025 | Agn. | Inter | [Code](https://github.com/sidiangongyuan/ACCO) | Snowball |
 | [Latency Robust Cooperative Perception Using Asynchronous…](https://doi.org/10.1109/wacv61041.2025.00476) | IEEE Workshop/Winter… | 2025 | Agn. | Inter | [Code](https://github.com/JesseWong333/LRCP) | Snowball |
@@ -1179,9 +1179,9 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Select2Drive: Pragmatic Communications for Real-Time…](https://doi.org/10.1109/tits.2025.3611377) | IEEE T-ITS | 2025 | LiDAR | Inter | — | Snowball |
 | [Selective Shift: Towards Personalized Domain Adaptation in…](https://doi.org/10.1145/3746027.3754723) | ACM MM | 2025 | LiDAR | Inter | — | Snowball |
 | [Semantic Communication-Enhanced Cooperative Object Detection…](https://doi.org/10.1109/wcsp68525.2025.1010233) | International… | 2025 | Cam | Inter | — | Snowball |
-| [SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient…](https://doi.org/10.1109/iccvw69036.2025.00190) | ICCVW | 2025 | LiDAR | Inter | — | Snowball |
+| [SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient…](https://doi.org/10.1109/iccvw69036.2025.00190) | ICCVW | 2025 | LiDAR | Inter | [Code](https://github.com/fzi-forschungszentrum-informatik/SlimComm) | Snowball |
 | [SMSCNet:Sparse Multi-Scale and Spatially Enhanced Cooperative…](https://doi.org/10.1109/cvci66304.2025.11348559) | CVCI | 2025 | LiDAR | Inter | — | Snowball |
-| [SparseAlign: A Fully Sparse Framework for Cooperative Object…](https://doi.org/10.1109/cvpr52734.2025.02077) | CVPR | 2025 | LiDAR | Inter | — | Snowball |
+| [SparseAlign: A Fully Sparse Framework for Cooperative Object…](https://doi.org/10.1109/cvpr52734.2025.02077) | CVPR | 2025 | LiDAR | Inter | [Code](https://github.com/YuanYunshuang/SparseAlign) | Snowball |
 | [SparseCoop: Cooperative Perception with Kinematic-Grounded…](https://doi.org/10.1609/aaai.v40i12.37952) | AAAI | 2025 | Agn. | Inter | — | Snowball |
 | [STAMP: Scalable Task And Model-agnostic Collaborative Perception](https://www.semanticscholar.org/search?q=STAMP%3A%20Scalable%20Task%20And%20Model-agnostic%20Collaborative%20Perception&sort=relevance) | ICLR | 2025 | Agn. | Inter | [Code](https://github.com/taco-group/STAMP) | Snowball |
 | [Supply-Demand-Driven Information Selection Algorithm for…](https://doi.org/10.1109/aiotc66747.2025.11198777) | AIoTC | 2025 | Agn. | Inter | — | Snowball |
@@ -1190,7 +1190,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [TraF-Align: Trajectory-aware Feature Alignment for Asynchronous…](https://doi.org/10.1109/cvpr52734.2025.01125) | CVPR | 2025 | LiDAR | Inter | [Code](https://github.com/zhyingS/TraF-Align) | Snowball |
 | [Transformer-Based Latency Compensation for Cooperative…](https://www.semanticscholar.org/search?q=Transformer-Based%20Latency%20Compensation%20for%20Cooperative%20Perception&sort=relevance) | IEEE Vehicular… | 2025 | LiDAR | Early | — | Snowball |
 | [TruckV2X: A Truck-Centered Perception Dataset](https://doi.org/10.1109/LRA.2025.3592884) | IEEE RA-L | 2025 | L+C | Inter | — | Snowball |
-| [TurboTrain: Towards Efficient and Balanced Multi-Task Learning…](https://doi.org/10.1109/ICCV51701.2025.00418) | ICCV | 2025 | LiDAR | Inter | — | Snowball |
+| [TurboTrain: Towards Efficient and Balanced Multi-Task Learning…](https://doi.org/10.1109/ICCV51701.2025.00418) | ICCV | 2025 | LiDAR | Inter | [Code](https://github.com/ucla-mobility/TurboTrain) | Snowball |
 | [UniSense: Spatial-Uncertainty-Aware Collaborative Sensing for…](https://doi.org/10.1145/3711875.3729130) | ACM SIGMOBILE… | 2025 | LiDAR | Inter | [Code](https://github.com/LetStarFly/UniSense) | Snowball |
 | [V2I-Coop: Accurate Object Detection for Connected Automated…](https://doi.org/10.1109/tmc.2024.3486758) | IEEE TMC | 2025 | L+C | Inter | — | Snowball |
 | [V2V Cooperative Perception With Adaptive Communication Loss for…](https://www.semanticscholar.org/search?q=V2V%20Cooperative%20Perception%20With%20Adaptive%20Communication%20Loss%20for%20Autonomous%20Driving&sort=relevance) | IEEE T-ITS | 2025 | Cam | Inter | — | Snowball |
@@ -1209,8 +1209,8 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [You Share Beliefs, I Adapt: Progressive Heterogeneous…](https://doi.org/10.1109/iccv51701.2025.02555) | ICCV | 2025 | Agn. | Inter | — | Snowball |
 | [A Collaborative Perception Network based on Dynamic Multi-scale…](https://doi.org/10.23919/ccc63176.2024.10661468) | Cybersecurity and… | 2024 | LiDAR | Inter | — | Snowball |
 | [A Two-Stage Clustering Method for Point Clouds Based on…](https://doi.org/10.1109/icmre60776.2024.10532146) | International… | 2024 | LiDAR | Early | — | Snowball |
-| [ActFormer: Scalable Collaborative Perception via Active Queries](https://doi.org/10.1109/ICRA57147.2024.10610907) | ICRA | 2024 | Cam | Inter | — | Survey |
-| An Extensible Framework for Open Heterogeneous Collaborative… | ICLR | 2024 | Agn. | Inter | — | Survey |
+| [ActFormer: Scalable Collaborative Perception via Active Queries](https://doi.org/10.1109/ICRA57147.2024.10610907) | ICRA | 2024 | Cam | Inter | [Code](https://github.com/coperception/ActFormer) | Survey |
+| An Extensible Framework for Open Heterogeneous Collaborative… | ICLR | 2024 | Agn. | Inter | [Code](https://github.com/yifanlu0227/HEAL) | Survey |
 | [BB-Align: A Lightweight Pose Recovery Framework for…](https://doi.org/10.1109/icdcs60910.2024.00098) | IEEE International… | 2024 | LiDAR | Inter | — | Snowball |
 | [Boosting Collaborative Vehicular Perception on the Edge with…](https://doi.org/10.1145/3666025.3699328) | ACM International… | 2024 | Agn. | Hybrid | — | Snowball |
 | [Breaking Data Silos: Cross-Domain Learning for Multi-Agent…](https://doi.org/10.1109/ICRA57147.2024.10610591) | ICRA | 2024 | LiDAR | Inter | [Code](https://github.com/jinlong17/BDS-V2V) | Survey |
@@ -1218,12 +1218,12 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [CMP: Cooperative Motion Prediction With Multi-Agent…](https://doi.org/10.1109/lra.2025.3546862) | IEEE RA-L | 2024 | LiDAR | Hybrid | — | Snowball |
 | [CoBEVFusion Cooperative Perception with LiDAR-Camera Bird's Eye…](https://doi.org/10.1109/dicta63115.2024.00064) | International… | 2024 | L+C | Inter | — | Snowball |
 | [CoDRMA: Collaborative Depth Refinement via Dual-Mask and…](https://doi.org/10.1109/CASE59546.2024.10711318) | CASE | 2024 | Cam | Inter | — | Snowball |
-| [CoDTS: Enhancing Sparsely Supervised Collaborative Perception…](https://doi.org/10.1609/aaai.v39i3.32348) | AAAI | 2024 | LiDAR | Inter | — | Snowball |
+| [CoDTS: Enhancing Sparsely Supervised Collaborative Perception…](https://doi.org/10.1609/aaai.v39i3.32348) | AAAI | 2024 | LiDAR | Inter | [Code](https://github.com/CatOneTwo/CoDTS) | Snowball |
 | [CoFormerNet: A Transformer-Based Fusion Approach for Enhanced…](https://doi.org/10.3390/s24134101) | Sensors | 2024 | Agn. | Inter | — | Snowball |
 | [CollabGAT: Collaborative Perception Using Graph Attention…](https://www.semanticscholar.org/search?q=CollabGAT%3A%20Collaborative%20Perception%20Using%20Graph%20Attention%20Network&sort=relevance) | IEEE Access | 2024 | LiDAR | Inter | — | Snowball |
 | [Collaborative and Reidentifying Techniques for Improved…](https://doi.org/10.1109/jiot.2024.3402071) | IEEE IoTJ | 2024 | Cam | Late | — | Snowball |
 | [Collaborative Multimodal Fusion Network for Multiagent…](https://doi.org/10.1109/tcyb.2024.3491756) | IEEE Transactions on… | 2024 | L+C | Inter | — | Snowball |
-| [CoMamba: Real-time Cooperative Perception Unlocked with…](https://doi.org/10.1109/iros60139.2025.11245863) | IROS | 2024 | Agn. | Inter | — | Snowball |
+| [CoMamba: Real-time Cooperative Perception Unlocked with…](https://doi.org/10.1109/iros60139.2025.11245863) | IROS | 2024 | Agn. | Inter | [Code](https://github.com/taco-group/CoMamba) | Snowball |
 | [Communication-Efficient Collaborative Perception via…](https://doi.org/10.1109/cvpr52733.2024.01466) | CVPR | 2024 | Agn. | Inter | [Code](https://github.com/PhyllisH/CodeFilling) | Snowball |
 | [Consensus-based Attack Detection and Cooperative Perception of…](https://doi.org/10.1109/vtc2024-fall63153.2024.10757806) | IEEE VTC | 2024 | Agn. | Late | — | Snowball |
 | [Cooperative Perception Using V2X Communications: An…](https://www.semanticscholar.org/search?q=Cooperative%20Perception%20Using%20V2X%20Communications%3A%20An%20Experimental%20Study&sort=relevance) | IEEE VTC | 2024 | Cam | Late | — | Snowball |
@@ -1234,14 +1234,14 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [CoopScenes: Multi-Scene Infrastructure and Vehicle Data for…](https://www.semanticscholar.org/search?q=CoopScenes%3A%20Multi-Scene%20Infrastructure%20and%20Vehicle%20Data%20for%20Advancing%20Collective%20Perception%20in%20Autonomous%20Driving&sort=relevance) | IEEE IV | 2024 | L+C | Inter | — | Snowball |
 | [CoSense3D: an Agent-based Efficient Learning Framework for…](https://doi.org/10.1109/iv55156.2024.10588865) | IEEE IV | 2024 | LiDAR | Inter | [Code](https://github.com/YuanYunshuang/CoSense3D) | Snowball |
 | [DiffCP: Ultra-Low Bit Collaborative Perception via Diffusion…](https://doi.org/10.1109/icra55743.2025.11128518) | ICRA | 2024 | Agn. | Inter | — | Snowball |
-| [Directed-CP: Directed Collaborative Perception for Connected…](https://doi.org/10.1109/icra55743.2025.11127818) | ICRA | 2024 | LiDAR | Inter | — | Snowball |
+| [Directed-CP: Directed Collaborative Perception for Connected…](https://doi.org/10.1109/icra55743.2025.11127818) | ICRA | 2024 | LiDAR | Inter | [Code](https://github.com/yihangtao/Directed-CP) | Snowball |
 | [Distance-Aware Attentive Framework for Multi-Agent…](https://doi.org/10.65109/xjqs5325) | Adaptive Agents and… | 2024 | LiDAR | Inter | — | Snowball |
-| [DSRC: Learning Density-insensitive and Semantic-aware…](https://doi.org/10.1609/aaai.v39i9.33078) | AAAI | 2024 | LiDAR | Inter | — | Snowball |
+| [DSRC: Learning Density-insensitive and Semantic-aware…](https://doi.org/10.1609/aaai.v39i9.33078) | AAAI | 2024 | LiDAR | Inter | [Code](https://github.com/Terry9a/DSRC) | Snowball |
 | [EdgeCooper: Network-Aware Cooperative LiDAR Perception for…](https://doi.org/10.1109/JSAC.2023.3322764) | IEEE JSAC | 2024 | LiDAR | Early | — | Survey |
 | [Efficient Collaborative Perception with Adaptive Communication…](https://doi.org/10.1109/ricai64321.2024.10910966) | International… | 2024 | Agn. | Inter | — | Snowball |
 | [Efficient Vehicle-Infrastructure Collaborative Perception Based…](https://doi.org/10.1109/tits.2023.3346214) | IEEE T-ITS | 2024 | LiDAR | Late | — | Snowball |
 | [Efficient Vehicular Collaborative Perception Based on…](https://doi.org/10.1109/tvt.2024.3403263) | IEEE T-VT | 2024 | LiDAR | Inter | — | Snowball |
-| [EMIFF: Enhanced Multi-scale Image Feature Fusion for…](https://doi.org/10.1109/ICRA57147.2024.10610545) | ICRA | 2024 | Cam | Inter | — | Survey |
+| [EMIFF: Enhanced Multi-scale Image Feature Fusion for…](https://doi.org/10.1109/ICRA57147.2024.10610545) | ICRA | 2024 | Cam | Inter | [Code](https://github.com/Bosszhe/EMIFF) | Survey |
 | [Empowering Autonomous Shuttles with Next-Generation…](https://doi.org/10.1007/978-3-031-91813-1_15) | ECCV Workshops | 2024 | L+C | Late | — | Snowball |
 | [Enhanced Cooperative Perception for Autonomous Vehicles Using…](https://doi.org/10.1109/dcoss-iot61029.2024.00108) | DCOSS-IoT | 2024 | Cam | Early | — | Snowball |
 | [Enhancing Autonomous Driving Through Collaborative Perception…](https://doi.org/10.1109/itsc58415.2024.10919502) | IEEE ITSC | 2024 | L+C | Late | — | Snowball |
@@ -1264,12 +1264,12 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [LiDAR-Based End-to-End Temporal Perception for…](https://doi.org/10.1109/jiot.2025.3552526) | IEEE IoTJ | 2024 | LiDAR | Inter | — | Snowball |
 | [MACP: Efficient Model Adaptation for Cooperative Perception](https://doi.org/10.1109/WACV57701.2024.00334) | WACV | 2024 | LiDAR | Inter | [Code](https://github.com/PurdueDigitalTwin/MACP) | Survey |
 | [MKD-Cooper: Cooperative 3D Object Detection for Autonomous…](https://doi.org/10.1109/TIV.2023.3310580) | IEEE T-IV | 2024 | LiDAR | Inter | — | Survey |
-| [MR3D-Net: Dynamic Multi-Resolution 3D Sparse Voxel Grid Fusion…](https://doi.org/10.1109/itsc58415.2024.10919592) | IEEE ITSC | 2024 | LiDAR | Early | — | Snowball |
+| [MR3D-Net: Dynamic Multi-Resolution 3D Sparse Voxel Grid Fusion…](https://doi.org/10.1109/itsc58415.2024.10919592) | IEEE ITSC | 2024 | LiDAR | Early | [Code](https://github.com/ekut-es/MR3D-Net) | Snowball |
 | [Multi-Agent Collaborative Perception via Motion-Aware Robust…](https://doi.org/10.1109/cvpr52733.2024.01449) | CVPR | 2024 | LiDAR | Inter | [Code](https://github.com/IndigoChildren/collaborative-perception-MRCNet) | Snowball |
 | [Multi-Modality Fusion Perception Strategy Based on Adaptive…](https://doi.org/10.1109/itsc58415.2024.10919674) | IEEE ITSC | 2024 | L+C | Inter | — | Snowball |
 | [One is Plenty: A Polymorphic Feature Interpreter for Immutable…](https://www.semanticscholar.org/search?q=One%20is%20Plenty%3A%20A%20Polymorphic%20Feature%20Interpreter%20for%20Immutable%20Heterogeneous%20Collaborative%20Perception&sort=relevance) | CVPR | 2024 | Agn. | Inter | [Code](https://github.com/yuchen-xia/PolyInter) | Snowball |
-| [OTVIC: A Dataset with Online Transmission for…](https://doi.org/10.1109/iros58592.2024.10802656) | IROS | 2024 | L+C | Late | — | Snowball |
-| [PACP: Priority-Aware Collaborative Perception for Connected and…](https://doi.org/10.1109/TMC.2024.3449371) | IEEE TMC | 2024 | LiDAR | Inter | — | Snowball |
+| [OTVIC: A Dataset with Online Transmission for…](https://doi.org/10.1109/iros58592.2024.10802656) | IROS | 2024 | L+C | Late | [Code](https://github.com/cn-hezhu/OTVIC) | Snowball |
+| [PACP: Priority-Aware Collaborative Perception for Connected and…](https://doi.org/10.1109/TMC.2024.3449371) | IEEE TMC | 2024 | LiDAR | Inter | [Code](https://github.com/fangzr/PACP) | Snowball |
 | [PAFNet: Pillar Attention Fusion Network for…](https://doi.org/10.3390/sym16040401) | Symmetry | 2024 | LiDAR | Inter | — | Survey |
 | [Perception for Connected Autonomous Vehicles under Adverse…](https://www.semanticscholar.org/search?q=Perception%20for%20Connected%20Autonomous%20Vehicles%20under%20Adverse%20Weather%20Conditions&sort=relevance) | IROS | 2024 | LiDAR | Inter | — | Snowball |
 | [Pillar Attention Encoder for Adaptive Cooperative Perception](https://doi.org/10.1109/JIOT.2024.3390552) | IEEE IoTJ | 2024 | LiDAR | Inter | — | Survey |
@@ -1283,7 +1283,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Robust Collaborative Perception against Temporal Information…](https://doi.org/10.1109/icra57147.2024.10611481) | ICRA | 2024 | LiDAR | Inter | [Code](https://github.com/hexunjie/Ro-temd) | Snowball |
 | [Robust Collaborative Perception without External Localization…](https://doi.org/10.1109/ICRA57147.2024.10610635) | ICRA | 2024 | LiDAR | Inter | — | Survey |
 | [RoCo: Robust Cooperative Perception By Iterative Object…](https://doi.org/10.1145/3664647.3680559) | ACM MM | 2024 | Agn. | Inter | [Code](https://github.com/HuangZhe885/RoCo) | Snowball |
-| S2R-ViT for Multi-Agent Cooperative Perception: Bridging the… | ICRA | 2024 | LiDAR | Inter | — | Survey |
+| S2R-ViT for Multi-Agent Cooperative Perception: Bridging the… | ICRA | 2024 | LiDAR | Inter | [Code](https://github.com/jinlong17/S2R-ViT) | Survey |
 | [Select2Col: Leveraging Spatial-Temporal Importance of Semantic…](https://doi.org/10.1109/TVT.2024.3390414) | IEEE Trans. Veh.… | 2024 | LiDAR | Inter | [Code](https://github.com/huangqzj/Select2Col/) | Survey |
 | [Self-Supervised Adaptive Weighting for Cooperative Perception…](https://doi.org/10.1109/TIV.2023.3345035) | IEEE T-IV | 2024 | LiDAR | Inter | — | Survey |
 | [Semantic Communication for Cooperative Perception Based on…](https://doi.org/10.1016/j.jfranklin.2024.106739) | Journal of the… | 2024 | LiDAR | Inter | — | Survey |
@@ -1304,7 +1304,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [V2X-DSI: A Density-Sensitive Infrastructure LiDAR Benchmark for…](https://doi.org/10.1109/iv55156.2024.10588684) | IEEE IV | 2024 | LiDAR | Inter | — | Snowball |
 | [V2X-R: Cooperative LiDAR-4D Radar Fusion with Denoising…](https://doi.org/10.1109/cvpr52734.2025.02551) | CVPR | 2024 | LiDAR | Inter | [Code](https://github.com/ylwhxht/V2X-R) | Snowball |
 | [V2X-ViTv2: Improved Vision Transformers for…](https://doi.org/10.1109/tpami.2024.3479222) | IEEE TPAMI | 2024 | LiDAR | Inter | — | Snowball |
-| [V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for…](https://doi.org/10.1109/iccv51701.2025.02356) | ICCV | 2024 | LiDAR | Inter | — | Snowball |
+| [V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for…](https://doi.org/10.1109/iccv51701.2025.02356) | ICCV | 2024 | LiDAR | Inter | [Code](https://github.com/Zewei-Zhou/V2XPnP) | Snowball |
 | [ViT-FuseNet: Multimodal Fusion of Vision Transformer for…](https://doi.org/10.1109/ACCESS.2024.3368404) | IEEE Access | 2024 | L+C | Inter | — | Survey |
 | [VRF: Vehicle Road-side Point Cloud Fusion](https://doi.org/10.1145/3643832.3661874) | ACM SIGMOBILE… | 2024 | LiDAR | Early | — | Snowball |
 | [Weather-Aware Collaborative Perception With Uncertainty…](https://doi.org/10.1109/tits.2024.3479720) | IEEE T-ITS | 2024 | LiDAR | Inter | — | Snowball |
@@ -1312,16 +1312,16 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [What Makes Good Collaborative Views? Contrastive Mutual…](https://doi.org/10.1609/aaai.v38i16.29705) | AAAI | 2024 | LiDAR | Inter | [Code](https://github.com/77SWF/CMiMC) | Snowball |
 | [A Cooperative Perception System Robust to Localization Errors](https://doi.org/10.1109/IV55152.2023.10186727) | IEEE IV | 2023 | LiDAR | Late | — | Survey |
 | [Adaptive Feature Fusion for Cooperative Perception Using LiDAR…](https://doi.org/10.1109/WACV56688.2023.00124) | WACV | 2023 | LiDAR | Inter | — | Survey |
-| [Among Us: Adversarially Robust Collaborative Perception by…](https://doi.org/10.1109/ICCV51070.2023.00024) | ICCV | 2023 | LiDAR | Late | — | Survey |
+| [Among Us: Adversarially Robust Collaborative Perception by…](https://doi.org/10.1109/ICCV51070.2023.00024) | ICCV | 2023 | LiDAR | Late | [Code](https://github.com/coperception/ROBOSAC) | Survey |
 | Asynchrony-Robust Collaborative Perception via Bird's Eye View… | NeurIPS | 2023 | LiDAR | Inter | [Code](https://github.com/MediaBrain-SJTU/CoBEVFlow) | Survey |
-| [Bridging the Domain Gap for Multi-Agent Perception](https://doi.org/10.1109/ICRA48891.2023.10160871) | ICRA | 2023 | LiDAR | Inter | — | Survey |
+| [Bridging the Domain Gap for Multi-Agent Perception](https://doi.org/10.1109/ICRA48891.2023.10160871) | ICRA | 2023 | LiDAR | Inter | [Code](https://github.com/DerrickXuNu/MPDA) | Survey |
 | [Collaboration Helps Camera Overtake LiDAR in 3D Detection](https://doi.org/10.1109/CVPR52729.2023.00892) | CVPR | 2023 | Cam | Inter | — | Survey |
 | [Collaborative 3D Object Detection for Autonomous Vehicles via…](https://doi.org/10.1109/TITS.2023.3272027) | IEEE T-ITS | 2023 | LiDAR | Inter | — | Survey |
 | [Collective PV-RCNN: A Novel Fusion Technique Using Collective…](https://doi.org/10.1109/ITSC57777.2023.10422079) | IEEE ITSC | 2023 | LiDAR | Late | [Code](https://github.com/ekut-es) | Survey |
 | [Cooperative Perception With Learning-Based V2V Communications](https://doi.org/10.1109/LWC.2023.3295612) | IEEE Wireless… | 2023 | LiDAR | Hybrid | — | Survey |
-| [Core: Cooperative Reconstruction for Multi-Agent Perception](https://doi.org/10.1109/ICCV51070.2023.00800) | ICCV | 2023 | LiDAR | Inter | — | Survey |
+| [Core: Cooperative Reconstruction for Multi-Agent Perception](https://doi.org/10.1109/ICCV51070.2023.00800) | ICCV | 2023 | LiDAR | Inter | [Code](https://github.com/zllxot/CORE) | Survey |
 | [DI-V2X: Learning Domain-Invariant Representation for…](https://doi.org/10.1609/aaai.v38i4.28105) | AAAI | 2023 | LiDAR | Inter | [Code](https://github.com/Serenos/DI-V2X) | Survey |
-| [DUSA: Decoupled Unsupervised Sim2Real Adaptation for…](https://doi.org/10.1145/3581783.3611948) | ACM MM | 2023 | LiDAR | Inter | — | Survey |
+| [DUSA: Decoupled Unsupervised Sim2Real Adaptation for…](https://doi.org/10.1145/3581783.3611948) | ACM MM | 2023 | LiDAR | Inter | [Code](https://github.com/refkxh/DUSA) | Survey |
 | [Dynamic Feature Sharing for Cooperative Perception from Point…](https://doi.org/10.1109/ITSC57777.2023.10422242) | IEEE ITSC | 2023 | LiDAR | Inter | — | Survey |
 | [FeaCo: Reaching Robust Feature-Level Consensus in Noisy Pose…](https://doi.org/10.1145/3581783.3611880) | ACM MM | 2023 | LiDAR | Inter | [Code](https://github.com/jmgu0212/FeaCo.git) | Survey |
 | Flow-Based Feature Fusion for Vehicle-Infrastructure… | NeurIPS | 2023 | LiDAR | Inter | [Code](https://github.com/haibao-yu/FFNet-VIC3D) | Survey |
@@ -1335,12 +1335,12 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Model-Agnostic Multi-Agent Perception Framework](https://doi.org/10.1109/ICRA48891.2023.10161460) | ICRA | 2023 | LiDAR | Late | — | Survey |
 | [MoRFF: Multi-View Object Detection for Connected Autonomous…](https://doi.org/10.1109/VTC2023-Fall60731.2023.10333428) | IEEE VTC | 2023 | Cam | Inter | — | Survey |
 | [Multimodal Cooperative 3D Object Detection Over Connected…](https://doi.org/10.1109/MNET.010.2300029) | IEEE Network | 2023 | L+C | Inter | — | Survey |
-| [QUEST: Query Stream for Practical Cooperative Perception](https://doi.org/10.1109/ICRA57147.2024.10610412) | ICRA | 2023 | Cam | Inter | — | Survey |
+| [QUEST: Query Stream for Practical Cooperative Perception](https://doi.org/10.1109/ICRA57147.2024.10610412) | ICRA | 2023 | Cam | Inter | [Code](https://github.com/leofansq/QUEST) | Survey |
 | [Robust Collaborative 3D Object Detection in Presence of Pose…](https://doi.org/10.1109/ICRA48891.2023.10160546) | ICRA | 2023 | LiDAR | Inter | [Code](https://github.com/yifanlu0227/CoAlign) | Survey |
 | [Robust Real-time Multi-vehicle Collaboration on Asynchronous…](https://doi.org/10.1145/3570361.3613271) | Annual International… | 2023 | LiDAR | Early | — | Survey |
-| [Spatio-Temporal Domain Awareness for Multi-Agent Collaborative…](https://doi.org/10.1109/ICCV51070.2023.02137) | ICCV | 2023 | LiDAR | Inter | — | Survey |
-| [UMC: A Unified Bandwidth-efficient and Multi-resolution Based…](https://doi.org/10.1109/ICCV51070.2023.00752) | ICCV | 2023 | LiDAR | Inter | — | Survey |
-| [Uncertainty Quantification of Collaborative Detection for…](https://doi.org/10.1109/ICRA48891.2023.10160367) | ICRA | 2023 | LiDAR | Inter | — | Survey |
+| [Spatio-Temporal Domain Awareness for Multi-Agent Collaborative…](https://doi.org/10.1109/ICCV51070.2023.02137) | ICCV | 2023 | LiDAR | Inter | [Code](https://github.com/ydk122024/SCOPE) | Survey |
+| [UMC: A Unified Bandwidth-efficient and Multi-resolution Based…](https://doi.org/10.1109/ICCV51070.2023.00752) | ICCV | 2023 | LiDAR | Inter | [Code](https://github.com/ispc-lab/UMC) | Survey |
+| [Uncertainty Quantification of Collaborative Detection for…](https://doi.org/10.1109/ICRA48891.2023.10160367) | ICRA | 2023 | LiDAR | Inter | [Code](https://github.com/coperception/double-m-quantification) | Survey |
 | [V2VFusion: Multimodal Fusion for Enhanced Vehicle-to-Vehicle…](https://doi.org/10.1109/CAC59555.2023.10450676) | CAC | 2023 | L+C | Inter | — | Survey |
 | [VINet: Lightweight, Scalable, and Heterogeneous Cooperative…](https://doi.org/10.1016/j.ymssp.2023.110723) | Mechanical Systems… | 2023 | LiDAR | Inter | — | Survey |
 | [What2comm: Towards Communication-efficient Collaborative…](https://doi.org/10.1145/3581783.3611699) | ACM MM | 2023 | LiDAR | Inter | — | Survey |
@@ -1350,7 +1350,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Environment-Aware Optimization of Track-to-Track Fusion for…](https://doi.org/10.1109/ITSC55140.2022.9922388) | IEEE ITSC | 2022 | Agn. | Late | — | Survey |
 | [F-Transformer: Point Cloud Fusion Transformer for Cooperative…](https://doi.org/10.1007/978-3-031-15919-0_15) | Artificial Neural… | 2022 | LiDAR | Inter | — | Survey |
 | [Keypoints-Based Deep Feature Fusion for Cooperative Vehicle…](https://doi.org/10.1109/LRA.2022.3143299) | IEEE RA-L | 2022 | LiDAR | Inter | — | Survey |
-| [Latency-Aware Collaborative Perception](https://doi.org/10.1007/978-3-031-19824-3_19) | ECCV | 2022 | LiDAR | Inter | — | Survey |
+| [Latency-Aware Collaborative Perception](https://doi.org/10.1007/978-3-031-19824-3_19) | ECCV | 2022 | LiDAR | Inter | [Code](https://github.com/MediaBrain-SJTU/SyncNet) | Survey |
 | [Multi-Modal Virtual-Real Fusion Based Transformer for…](https://doi.org/10.1109/PAAP56126.2022.10010640) | PAAP | 2022 | LiDAR | Inter | — | Survey |
 | [Multi-Robot Scene Completion: Towards Task-Agnostic…](https://coperception.github.io/star/) | CoRL | 2022 | LiDAR | Early | — | Survey |
 | [Multistage Fusion Approach of Lidar and Camera for…](https://doi.org/10.1109/WCMEIM56910.2022.10021459) | WCMEIM | 2022 | L+C | Inter | — | Survey |
@@ -1383,21 +1383,21 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | Title | Venue | Year | Modality | Collab. | Code | Source |
 | --- | --- | --- | --- | --- | --- | --- |
 | [Privacy-Concealing Cooperative Perception for BEV Scene…](https://doi.org/10.1109/icassp55912.2026.11464941) | ICASSP | 2026 | Cam | Inter | — | Snowball |
-| [Generative Map Priors for Collaborative BEV Semantic…](https://doi.org/10.1109/CVPR52734.2025.01113) | CVPR | 2025 | Cam | Inter | — | Snowball |
+| [Generative Map Priors for Collaborative BEV Semantic…](https://doi.org/10.1109/CVPR52734.2025.01113) | CVPR | 2025 | Cam | Inter | [Code](https://github.com/buaa-colalab/CoGMP) | Snowball |
 | [Intelligent Cooperative Perception Technology for Vehicles and…](https://doi.org/10.3390/electronics14244969) | Electronics | 2025 | Cam | Inter | — | Snowball |
 | [Multitask Collaborative Perception for Vehicle-to-Everything…](https://doi.org/10.1109/tim.2025.3548801) | IEEE TIM | 2025 | Agn. | Inter | — | Snowball |
-| [Toward Full-Scene Domain Generalization in Multi-Agent…](https://doi.org/10.1109/tits.2024.3506284) | IEEE T-ITS | 2025 | Cam | Inter | — | Snowball |
+| [Toward Full-Scene Domain Generalization in Multi-Agent…](https://doi.org/10.1109/tits.2024.3506284) | IEEE T-ITS | 2025 | Cam | Inter | [Code](https://github.com/DG-CAVs/DG-CoPerception) | Snowball |
 | [Boosting Collaborative Vehicular Perception on the Edge with…](https://doi.org/10.1145/3666025.3699328) | ACM International… | 2024 | Agn. | Hybrid | — | Snowball |
 | [CoBEVFusion Cooperative Perception with LiDAR-Camera Bird's Eye…](https://doi.org/10.1109/dicta63115.2024.00064) | International… | 2024 | L+C | Inter | — | Snowball |
 | [Collaborative Joint Perception and Prediction for Autonomous…](https://doi.org/10.3390/s24196263) | Sensors | 2024 | LiDAR | Inter | — | Snowball |
-| [Collaborative Semantic Occupancy Prediction with Hybrid Feature…](https://doi.org/10.1109/CVPR52733.2024.01704) | CVPR | 2024 | Cam | Inter | — | Survey |
+| [Collaborative Semantic Occupancy Prediction with Hybrid Feature…](https://doi.org/10.1109/CVPR52733.2024.01704) | CVPR | 2024 | Cam | Inter | [Code](https://github.com/rruisong/CoHFF) | Survey |
 | [Semantic Scene Completion in Autonomous Driving: A Two-Stream…](https://doi.org/10.3390/s24237702) | Sensors | 2024 | LiDAR | Inter | — | Snowball |
 | [Unlocking Past Information: Temporal Embeddings in Cooperative…](https://doi.org/10.1109/iv55156.2024.10588608) | IEEE IV | 2024 | Cam | Inter | [Code](https://github.com/cvims/TempCoBEV) | Snowball |
 | [A LiDAR Semantic Segmentation Framework for the Cooperative…](https://doi.org/10.1109/VTC2023-Fall60731.2023.10333790) | IEEE VTC | 2023 | LiDAR | Inter | — | Survey |
 | CoBEVT: Cooperative Bird's Eye View Semantic Segmentation with… | CoRL | 2023 | Cam | Inter | [Code](https://github.com/DerrickXuNu/CoBEVT) | Survey |
 | [Multi-Robot Scene Completion: Towards Task-Agnostic…](https://coperception.github.io/star/) | CoRL | 2022 | LiDAR | Early | — | Survey |
 | [Overcoming Obstructions via Bandwidth-Limited Multi-Agent…](https://doi.org/10.1109/IROS51168.2021.9636761) | IROS | 2021 | Cam | Inter | — | Survey |
-| [When2com: Multi-Agent Perception via Communication Graph…](https://doi.org/10.1109/CVPR42600.2020.00416) | CVPR | 2020 | Cam | Inter | — | Survey |
+| [When2com: Multi-Agent Perception via Communication Graph…](https://doi.org/10.1109/CVPR42600.2020.00416) | CVPR | 2020 | Cam | Inter | [Code](https://github.com/GT-RIPL/MultiAgentPerception) | Survey |
 | [Who2com: Collaborative Perception via Learnable Handshake…](https://doi.org/10.1109/ICRA40945.2020.9197364) | ICRA | 2020 | Cam | Inter | — | Survey |
 
 </details>
@@ -1417,7 +1417,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Cooperative 3D Multi-Object Tracking With Cross-Agent Data…](https://doi.org/10.1109/tvt.2025.3577676) | IEEE T-VT | 2025 | Agn. | Late | — | Snowball |
 | [Cooptrack: Exploring End-to-End Learning for Efficient…](https://doi.org/10.1109/iccv51701.2025.02502) | ICCV | 2025 | Agn. | Inter | [Code](https://github.com/zhongjiaru/CoopTrack) | Snowball |
 | [CRUISE: Cooperative Reconstruction and Editing in V2X Scenarios…](https://doi.org/10.1109/iros60139.2025.11246201) | IROS | 2025 | Cam | Inter | [Code](https://github.com/SainingZhang/CRUISE) | Snowball |
-| [End-to-End 3D Spatiotemporal Perception with Multimodal Fusion…](https://doi.org/10.1109/jiot.2026.3694808) | IEEE IoTJ | 2025 | L+C | Inter | — | Snowball |
+| [End-to-End 3D Spatiotemporal Perception with Multimodal Fusion…](https://doi.org/10.1109/jiot.2026.3694808) | IEEE IoTJ | 2025 | L+C | Inter | [Code](https://github.com/yangzvv/XET-V2X) | Snowball |
 | [Griffin: Aerial-Ground Cooperative Detection and Tracking…](https://doi.org/10.1609/aaai.v40i12.37951) | AAAI | 2025 | Agn. | Inter | — | Snowball |
 | [Learning spatio-temporal representation for cooperative 3D…](https://doi.org/10.1016/j.neunet.2025.107626) | Neural Networks | 2025 | LiDAR | Inter | — | Snowball |
 | [Optimizing Cooperative Multi-Object Tracking using Graph Signal…](https://doi.org/10.1109/icmew68306.2025.11152179) | ICMEW | 2025 | LiDAR | Late | — | Snowball |
@@ -1435,7 +1435,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Enhancing Autonomous Driving Through Collaborative Perception…](https://doi.org/10.1109/itsc58415.2024.10919502) | IEEE ITSC | 2024 | L+C | Late | — | Snowball |
 | [Experimental Study of Multi-Camera Infrastructure Perception…](https://doi.org/10.1109/tits.2024.3424673) | IEEE T-ITS | 2024 | Cam | Late | — | Snowball |
 | [LiDAR-Based End-to-End Temporal Perception for…](https://doi.org/10.1109/jiot.2025.3552526) | IEEE IoTJ | 2024 | LiDAR | Inter | — | Snowball |
-| [Probabilistic 3D Multi-Object Cooperative Tracking for…](https://doi.org/10.1109/ICRA57147.2024.10610367) | ICRA | 2024 | Agn. | Late | — | Survey |
+| [Probabilistic 3D Multi-Object Cooperative Tracking for…](https://doi.org/10.1109/ICRA57147.2024.10610367) | ICRA | 2024 | Agn. | Late | [Code](https://github.com/eddyhkchiu/DMSTrack) | Survey |
 | [RCooper: A Real-world Large-scale Dataset for Roadside…](https://doi.org/10.1109/cvpr52733.2024.02109) | CVPR | 2024 | L+C | Inter | [Code](https://github.com/AIR-THU/DAIR-RCooper) | Snowball |
 | [V2IViewer: Towards Efficient Collaborative Perception via Point…](https://doi.org/10.1109/tnse.2024.3479770) | IEEE Transactions on… | 2024 | LiDAR | Late | — | Snowball |
 | [3D Multi-Object Tracking Based on Two-Stage Data Association…](https://doi.org/10.1109/IV55152.2023.10186777) | IEEE IV | 2023 | LiDAR | Late | — | Survey |
@@ -1456,7 +1456,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Bridging Infrastructures and Vehicles: A Cooperative Framework…](https://doi.org/10.1109/jiot.2026.3671814) | IEEE IoTJ | 2026 | Agn. | Late | — | Snowball |
 | [IoT-Enabled Cooperative Autonomous Driving: A Hierarchical…](https://doi.org/10.1109/JIOT.2026.3654101) | IEEE IoTJ | 2026 | Agn. | Late | — | Snowball |
 | [CAMNet: Leveraging Cooperative Awareness Messages for Vehicle…](https://doi.org/10.1109/ccnc65079.2026.11366398) | Consumer… | 2025 | Agn. | Late | — | Snowball |
-| [Co-MTP: A Cooperative Trajectory Prediction Framework with…](https://doi.org/10.1109/icra55743.2025.11127303) | ICRA | 2025 | Agn. | Inter | — | Snowball |
+| [Co-MTP: A Cooperative Trajectory Prediction Framework with…](https://doi.org/10.1109/icra55743.2025.11127303) | ICRA | 2025 | Agn. | Inter | [Code](https://github.com/xiaomiaozhang/Co-MTP) | Snowball |
 | [CooperRisk: A Driving Risk Quantification Pipeline with…](https://doi.org/10.1109/iros60139.2025.11246231) | IROS | 2025 | Agn. | Inter | — | Snowball |
 | [CoPAD: Multi-source Trajectory Fusion and Cooperative…](https://doi.org/10.1109/iros60139.2025.11247038) | IROS | 2025 | Agn. | Early | — | Snowball |
 | [E2E-V2X-CP: An Efficient Cooperative Perception Method for…](https://doi.org/10.1109/smartiot66867.2025.00044) | International… | 2025 | Agn. | Inter | — | Snowball |
@@ -1469,7 +1469,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Risk Map as Middleware: Toward Interpretable Cooperative…](https://doi.org/10.1109/lra.2025.3636031) | IEEE RA-L | 2025 | Agn. | Inter | — | Snowball |
 | [Towards Communication-Efficient Cooperative Perception via…](https://doi.org/10.1109/tmc.2024.3496856) | IEEE TMC | 2025 | Agn. | Inter | — | Snowball |
 | [TrajAgents: A Multi-Agent Framework for Interpretable and…](https://doi.org/10.1109/mesa68091.2025.11278858) | IEEE/ASME… | 2025 | Agn. | Late | — | Snowball |
-| [TurboTrain: Towards Efficient and Balanced Multi-Task Learning…](https://doi.org/10.1109/ICCV51701.2025.00418) | ICCV | 2025 | LiDAR | Inter | — | Snowball |
+| [TurboTrain: Towards Efficient and Balanced Multi-Task Learning…](https://doi.org/10.1109/ICCV51701.2025.00418) | ICCV | 2025 | LiDAR | Inter | [Code](https://github.com/ucla-mobility/TurboTrain) | Snowball |
 | [ViTraj: Learning Dual-Side Representations for…](https://www.semanticscholar.org/search?q=ViTraj%3A%20Learning%20Dual-Side%20Representations%20for%20Vehicle-Infrastructure%20Cooperative%20Trajectory%20Prediction&sort=relevance) | ACM MM | 2025 | Agn. | Late | — | Snowball |
 | [VRDeepSafety: A Scalable VR Simulation Platform with V2X…](https://doi.org/10.3390/wevj16020082) | World Electric… | 2025 | L+C | Inter | — | Snowball |
 | [CMP: Cooperative Motion Prediction With Multi-Agent…](https://doi.org/10.1109/lra.2025.3546862) | IEEE RA-L | 2024 | LiDAR | Hybrid | — | Snowball |
@@ -1477,7 +1477,7 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Collaborative Joint Perception and Prediction for Autonomous…](https://doi.org/10.3390/s24196263) | Sensors | 2024 | LiDAR | Inter | — | Snowball |
 | [Enhancing Motion Prediction by a Cooperative Framework](https://doi.org/10.1109/iv55156.2024.10588440) | IEEE IV | 2024 | Agn. | Late | — | Snowball |
 | [MSMA: Multi-agent Trajectory Prediction in Connected and…](https://doi.org/10.1061/9780784485484.026) | CICTP 2024 | 2024 | Agn. | Late | [Code](https://github.com/xichennn/MSMA) | Snowball |
-| [V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for…](https://doi.org/10.1109/iccv51701.2025.02356) | ICCV | 2024 | LiDAR | Inter | — | Snowball |
+| [V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for…](https://doi.org/10.1109/iccv51701.2025.02356) | ICCV | 2024 | LiDAR | Inter | [Code](https://github.com/Zewei-Zhou/V2XPnP) | Snowball |
 | [BEV-V2X: Cooperative Birds-Eye-View Fusion and Grid Occupancy…](https://doi.org/10.1109/TIV.2023.3293954) | IEEE T-IV | 2023 | Agn. | Inter | — | Survey |
 
 </details>
@@ -1517,17 +1517,17 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Select2Drive: Pragmatic Communications for Real-Time…](https://doi.org/10.1109/tits.2025.3611377) | IEEE T-ITS | 2025 | LiDAR | Inter | — | Snowball |
 | [STAMP: Scalable Task And Model-agnostic Collaborative Perception](https://www.semanticscholar.org/search?q=STAMP%3A%20Scalable%20Task%20And%20Model-agnostic%20Collaborative%20Perception&sort=relevance) | ICLR | 2025 | Agn. | Inter | [Code](https://github.com/taco-group/STAMP) | Snowball |
 | [Towards Communication-Efficient Heterogeneous Collaborative…](https://doi.org/10.1109/icpads67057.2025.11322931) | International… | 2025 | Agn. | Inter | — | Snowball |
-| [TurboTrain: Towards Efficient and Balanced Multi-Task Learning…](https://doi.org/10.1109/ICCV51701.2025.00418) | ICCV | 2025 | LiDAR | Inter | — | Snowball |
-| [Vision-Only Gaussian Splatting for Collaborative Semantic…](https://doi.org/10.1609/aaai.v40i4.37269) | AAAI | 2025 | Cam | Inter | — | Snowball |
+| [TurboTrain: Towards Efficient and Balanced Multi-Task Learning…](https://doi.org/10.1109/ICCV51701.2025.00418) | ICCV | 2025 | LiDAR | Inter | [Code](https://github.com/ucla-mobility/TurboTrain) | Snowball |
+| [Vision-Only Gaussian Splatting for Collaborative Semantic…](https://doi.org/10.1609/aaai.v40i4.37269) | AAAI | 2025 | Cam | Inter | [Code](https://github.com/ChengChen2020/VOGS-CP) | Snowball |
 | [Collaborative Joint Perception and Prediction for Autonomous…](https://doi.org/10.3390/s24196263) | Sensors | 2024 | LiDAR | Inter | — | Snowball |
-| [Collaborative Semantic Occupancy Prediction with Hybrid Feature…](https://doi.org/10.1109/CVPR52733.2024.01704) | CVPR | 2024 | Cam | Inter | — | Survey |
+| [Collaborative Semantic Occupancy Prediction with Hybrid Feature…](https://doi.org/10.1109/CVPR52733.2024.01704) | CVPR | 2024 | Cam | Inter | [Code](https://github.com/rruisong/CoHFF) | Survey |
 | [End-to-End Autonomous Driving through V2X Cooperation](https://www.semanticscholar.org/search?q=End-to-End%20Autonomous%20Driving%20through%20V2X%20Cooperation&sort=relevance) | AAAI | 2024 | Agn. | Hybrid | — | Snowball |
 | [Multi-Task Collaborative Perception Algorithm Based on…](https://doi.org/10.1109/icus61736.2024.10839829) | ICUS | 2024 | Agn. | Inter | — | Snowball |
 | [Semantic Scene Completion in Autonomous Driving: A Two-Stream…](https://doi.org/10.3390/s24237702) | Sensors | 2024 | LiDAR | Inter | — | Snowball |
 | [Toward Collaborative Autonomous Driving: Simulation Platform…](https://doi.org/10.1109/tpami.2025.3560327) | IEEE TPAMI | 2024 | Agn. | Inter | — | Snowball |
 | [V2X-VLM: End-to-End V2X Cooperative Autonomous Driving Through…](https://doi.org/10.1016/j.trc.2025.105457) | TR-C | 2024 | Cam | Inter | — | Snowball |
 | [BEV-V2X: Cooperative Birds-Eye-View Fusion and Grid Occupancy…](https://doi.org/10.1109/TIV.2023.3293954) | IEEE T-IV | 2023 | Agn. | Inter | — | Survey |
-| [Core: Cooperative Reconstruction for Multi-Agent Perception](https://doi.org/10.1109/ICCV51070.2023.00800) | ICCV | 2023 | LiDAR | Inter | — | Survey |
+| [Core: Cooperative Reconstruction for Multi-Agent Perception](https://doi.org/10.1109/ICCV51070.2023.00800) | ICCV | 2023 | LiDAR | Inter | [Code](https://github.com/zllxot/CORE) | Survey |
 | [Generating Evidential BEV Maps in Continuous Driving Space](https://doi.org/10.1016/j.isprsjprs.2023.08.013) | Remote Sens. | 2023 | LiDAR | Early | — | Survey |
 | [Multi-Robot Scene Completion: Towards Task-Agnostic…](https://coperception.github.io/star/) | CoRL | 2022 | LiDAR | Early | — | Survey |
 
@@ -1559,19 +1559,19 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [Mixed Signals: A Diverse Point Cloud Dataset for Heterogeneous…](https://doi.org/10.1109/iccv51701.2025.02671) | ICCV | 2025 | LiDAR | Inter | — | Snowball |
 | [RCP-Bench: Benchmarking Robustness for Collaborative Perception…](https://doi.org/10.1109/cvpr52734.2025.01112) | CVPR | 2025 | Cam | Inter | [Code](https://github.com/LuckyDush/RCP-Bench) | Snowball |
 | [RoCo-Sim: Enhancing Roadside Collaborative Perception through…](https://doi.org/10.1109/ICCV51701.2025.02504) | ICCV | 2025 | Cam | Inter | [Code](https://github.com/duyuwen-duen/RoCo-Sim) | Snowball |
-| [SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient…](https://doi.org/10.1109/iccvw69036.2025.00190) | ICCVW | 2025 | LiDAR | Inter | — | Snowball |
+| [SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient…](https://doi.org/10.1109/iccvw69036.2025.00190) | ICCVW | 2025 | LiDAR | Inter | [Code](https://github.com/fzi-forschungszentrum-informatik/SlimComm) | Snowball |
 | [TruckV2X: A Truck-Centered Perception Dataset](https://doi.org/10.1109/LRA.2025.3592884) | IEEE RA-L | 2025 | L+C | Inter | — | Snowball |
 | [V2VLoc: Robust GNSS-Free Collaborative Perception via LiDAR…](https://doi.org/10.1609/aaai.v40i9.37633) | AAAI | 2025 | LiDAR | Inter | — | Snowball |
 | [VRDeepSafety: A Scalable VR Simulation Platform with V2X…](https://doi.org/10.3390/wevj16020082) | World Electric… | 2025 | L+C | Inter | — | Snowball |
-| [Adver-City: Open-Source Multi-Modal Dataset for Collaborative…](https://doi.org/10.1109/itsc60802.2025.11423805) | IEEE ITSC | 2024 | L+C | Inter | — | Snowball |
+| [Adver-City: Open-Source Multi-Modal Dataset for Collaborative…](https://doi.org/10.1109/itsc60802.2025.11423805) | IEEE ITSC | 2024 | L+C | Inter | [Code](https://github.com/QUARRG/Adver-City) | Snowball |
 | [CoopScenes: Multi-Scene Infrastructure and Vehicle Data for…](https://www.semanticscholar.org/search?q=CoopScenes%3A%20Multi-Scene%20Infrastructure%20and%20Vehicle%20Data%20for%20Advancing%20Collective%20Perception%20in%20Autonomous%20Driving&sort=relevance) | IEEE IV | 2024 | L+C | Inter | — | Snowball |
-| [DeepAccident: A Motion and Accident Prediction Benchmark for…](https://doi.org/10.1609/aaai.v38i6.28370) | AAAI | 2024 | L+C | V2V+V2I | — | Survey |
-| [DSRC: Learning Density-insensitive and Semantic-aware…](https://doi.org/10.1609/aaai.v39i9.33078) | AAAI | 2024 | LiDAR | Inter | — | Snowball |
+| [DeepAccident: A Motion and Accident Prediction Benchmark for…](https://doi.org/10.1609/aaai.v38i6.28370) | AAAI | 2024 | L+C | V2V+V2I | [Code](https://github.com/tianqi-wang1996/DeepAccident) | Survey |
+| [DSRC: Learning Density-insensitive and Semantic-aware…](https://doi.org/10.1609/aaai.v39i9.33078) | AAAI | 2024 | LiDAR | Inter | [Code](https://github.com/Terry9a/DSRC) | Snowball |
 | [Empowering Autonomous Shuttles with Next-Generation…](https://doi.org/10.1007/978-3-031-91813-1_15) | ECCV Workshops | 2024 | L+C | Late | — | Snowball |
 | [HoloVIC: Large-scale Dataset and Benchmark for Multi-Sensor…](https://doi.org/10.1109/CVPR52733.2024.02089) | CVPR | 2024 | L+C | V2I | — | Survey |
 | [LSTV-V2V: A Large-Scale Traffic Virtual Dataset for…](https://doi.org/10.1109/itsc58415.2024.10920245) | IEEE ITSC | 2024 | LiDAR | Inter | — | Snowball |
-| [Multiagent Multitraversal Multimodal Self-Driving: Open MARS…](https://doi.org/10.1109/cvpr52733.2024.02081) | CVPR | 2024 | L+C | Inter | — | Snowball |
-| [OTVIC: A Dataset with Online Transmission for…](https://doi.org/10.1109/iros58592.2024.10802656) | IROS | 2024 | L+C | Late | — | Snowball |
+| [Multiagent Multitraversal Multimodal Self-Driving: Open MARS…](https://doi.org/10.1109/cvpr52733.2024.02081) | CVPR | 2024 | L+C | Inter | [Code](https://github.com/ai4ce/MARS) | Snowball |
+| [OTVIC: A Dataset with Online Transmission for…](https://doi.org/10.1109/iros58592.2024.10802656) | IROS | 2024 | L+C | Late | [Code](https://github.com/cn-hezhu/OTVIC) | Snowball |
 | [RCDN: Towards Robust Camera-Insensitivity Collaborative…](https://doi.org/10.48550/arXiv.2405.16868) | NeurIPS | 2024 | Cam | Inter | — | Snowball |
 | [RCooper: A Real-world Large-scale Dataset for Roadside…](https://doi.org/10.1109/cvpr52733.2024.02109) | CVPR | 2024 | L+C | Inter | [Code](https://github.com/AIR-THU/DAIR-RCooper) | Snowball |
 | [SCOPE: A Synthetic Multi-Modal Dataset for Collective…](https://doi.org/10.1109/itsc58415.2024.10920280) | IEEE ITSC | 2024 | L+C | Inter | — | Snowball |
@@ -1580,11 +1580,11 @@ The same study appears under each axis it belongs to, and a per-table **developm
 | [V2X-DGW: Domain Generalization for Multi-Agent Perception Under…](https://doi.org/10.1109/icra55743.2025.11127945) | ICRA | 2024 | LiDAR | Inter | [Code](https://github.com/Baolu1998/V2X-DGW) | Snowball |
 | [V2X-DSI: A Density-Sensitive Infrastructure LiDAR Benchmark for…](https://doi.org/10.1109/iv55156.2024.10588684) | IEEE IV | 2024 | LiDAR | Inter | — | Snowball |
 | [V2X-R: Cooperative LiDAR-4D Radar Fusion with Denoising…](https://doi.org/10.1109/cvpr52734.2025.02551) | CVPR | 2024 | LiDAR | Inter | [Code](https://github.com/ylwhxht/V2X-R) | Snowball |
-| [V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for…](https://doi.org/10.1109/iccv51701.2025.02356) | ICCV | 2024 | LiDAR | Inter | — | Snowball |
+| [V2XPnP: Vehicle-to-Everything Spatio-Temporal Fusion for…](https://doi.org/10.1109/iccv51701.2025.02356) | ICCV | 2024 | LiDAR | Inter | [Code](https://github.com/Zewei-Zhou/V2XPnP) | Snowball |
 | [WHALES: A Multi-Agent Scheduling Dataset for Enhanced…](https://doi.org/10.1109/iros60139.2025.11247472) | IROS | 2024 | Agn. | Inter | [Code](https://github.com/chensiweiTHU/WHALES) | Snowball |
 | Asynchrony-Robust Collaborative Perception via Bird's Eye View… | NeurIPS | 2023 | LiDAR | Inter | [Code](https://github.com/MediaBrain-SJTU/CoBEVFlow) | Survey |
 | [LUCOOP: Leibniz University Cooperative Perception and Urban…](https://doi.org/10.1109/IV55152.2023.10186693) | IEEE IV | 2023 | LiDAR | V2V | — | Survey |
-| [V2V4Real: A Real-World Large-Scale Dataset for…](https://doi.org/10.1109/CVPR52729.2023.01318) | CVPR | 2023 | L+C | V2V | — | Survey |
+| [V2V4Real: A Real-World Large-Scale Dataset for…](https://doi.org/10.1109/CVPR52729.2023.01318) | CVPR | 2023 | L+C | V2V | [Code](https://github.com/ucla-mobility/V2V4Real) | Survey |
 | [V2X-Seq: A Large-Scale Sequential Dataset for…](https://doi.org/10.1109/CVPR52729.2023.00531) | CVPR | 2023 | L+C | V2I | [Code](https://github.com/AIR-THU/DAIR-V2X-Seq) | Survey |
 | [DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure…](https://doi.org/10.1109/CVPR52688.2022.02067) | CVPR | 2022 | L+C | V2I | [Code](https://github.com/AIR-THU/DAIR-V2X) | Survey |
 | [DOLPHINS: Dataset for Collaborative Perception Enabled…](https://doi.org/10.1007/978-3-031-26348-4_29) | Computer Vision… | 2022 | L+C | V2V+V2I | — | Survey |
