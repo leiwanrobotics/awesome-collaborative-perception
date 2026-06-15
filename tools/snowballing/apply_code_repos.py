@@ -24,8 +24,15 @@ logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger(__name__)
 
 
-def load_targets(also_keys: List[str]) -> Dict[str, str]:
-    """citation_key -> code url, from VERIFIED candidates plus any --also-keys."""
+def load_targets(also_keys: List[str], from_list: str) -> Dict[str, str]:
+    """citation_key -> code url, from VERIFIED candidates plus any --also-keys.
+
+    With --from-list, instead read a plain ``[{"key","repo"}]`` JSON file (used for
+    the web-search-sourced, independently re-verified matches).
+    """
+    if from_list:
+        items = json.loads(Path(from_list).read_text(encoding="utf-8"))
+        return {it["key"]: it["repo"] for it in items if it.get("repo")}
     data = json.loads(CAND.read_text(encoding="utf-8"))
     extra = {k.strip() for k in also_keys if k.strip()}
     targets: Dict[str, str] = {}
@@ -90,8 +97,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--also-keys", default="", help="comma-separated citation keys to also apply")
+    parser.add_argument("--from-list", default="", help="JSON file of [{key,repo}] to apply instead")
     args = parser.parse_args()
-    targets = load_targets(args.also_keys.split(","))
+    targets = load_targets(args.also_keys.split(","), args.from_list)
     apply(targets, args.dry_run)
 
 
