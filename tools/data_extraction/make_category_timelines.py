@@ -293,6 +293,13 @@ def main():
         ("Collaborative lane detection", {"task": "Lane Detection"}, "task_lane-detection"),
         ("Multi-task & task-agnostic", {"task": "Multi-Task & Task-Agnostic"}, "task_multi-task"),
         ("Datasets & benchmarks", {"dataset_only": True}, "dataset"),
+        ("Localization / pose errors", {"issue": "Pose Error"}, "issue_pose"),
+        ("Time latency", {"issue": "Latency"}, "issue_latency"),
+        ("Communication efficiency", {"issue": "Comm. Efficiency"}, "issue_comm"),
+        ("Communication robustness", {"issue": "Comm. Robustness"}, "issue_commrobust"),
+        ("Domain shift", {"issue": "Domain Shift"}, "issue_domain"),
+        ("Heterogeneity", {"issue": "Heterogeneity"}, "issue_hetero"),
+        ("Adversarial robustness", {"issue": "Adversarial"}, "issue_adversarial"),
     ]
     for title, flt, key in specs:
         papers = g.filter_by(**flt)
