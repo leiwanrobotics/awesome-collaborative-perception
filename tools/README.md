@@ -23,7 +23,9 @@ tools/
 │   ├── crossref_enrich.py         # recover remaining DOIs via Crossref
 │   ├── append_snowball.py         # write accepted papers into the .bib (tagged CP-Snowball)
 │   ├── find_code_repos.py         # discover missing code repos via GitHub search (README-verified)
-│   └── apply_code_repos.py        # write VERIFIED code repos into the .bib
+│   ├── apply_code_repos.py        # write VERIFIED code repos into the .bib
+│   ├── extract_zotero_abstracts.py# pull abstracts/PDF text from local Zotero (realistic-issue tagging)
+│   └── apply_issue_keywords.py    # write realistic-issue keywords into the .bib (survey §VII)
 ├── study_selection/
 │   └── llm_classifier.py          # optional LLM screening (legacy, SiliconFlow); see note below
 └── add_paper.py                   # interactive single-paper helper
@@ -45,10 +47,14 @@ right tables.
 | Collaboration | `CP-Early`, `CP-Intermediate`, `CP-Late`, `CP-Hybrid` |
 | Task | `CP-Object Detection`, `CP-Semantic Segmentation`, `CP-Object Tracking`, `CP-Motion Prediction`, `CP-Lane Detection`, `CP-Task-agnostic` |
 | Dataset | `CP-Dataset` (+ `CP-V2V` / `CP-V2I` for its V2X mode) |
+| Realistic issue (survey §VII) | `CP-Pose-Error`, `CP-Latency`, `CP-Comm-Efficiency`, `CP-Comm-Robust`, `CP-Domain-Gap`, `CP-Heterogeneous`, `CP-Adversarial` |
 | Source | `CP-Snowball` for papers beyond the survey's March-2024 cutoff |
 
-A paper may carry several task keywords (e.g. `CP-Object Detection, CP-Motion Prediction`); it then
-appears in each corresponding table. The optional `code = {https://github.com/...}` field renders the
+A paper may carry several task and realistic-issue keywords (e.g. `CP-Object Detection,
+CP-Comm-Efficiency, CP-Latency`); it then appears in each corresponding table. Realistic-issue
+keywords are optional and added only when relaxing that deployment assumption (pose error, latency,
+communication cost / robustness, domain shift, heterogeneity, adversarial attacks) is an explicit
+contribution of the paper. The optional `code = {https://github.com/...}` field renders the
 **Repo** link.
 
 Example:

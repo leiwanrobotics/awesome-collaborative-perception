@@ -76,6 +76,20 @@ TASK_ABBR = {
     "Multi-Task & Task-Agnostic": "Multi", "Dataset / Benchmark": "Data",
 }
 
+# Survey Section VII "Approaches to Address Realistic Issues" (A–G). Each issue is
+# a separate taxonomy axis driven by a keyword; a paper may address several issues.
+# (label, keyword, README sub-heading, timeline_key) — order is the survey's.
+ISSUE_AXES: List[tuple] = [
+    ("Pose Error", "CP-Pose-Error", "Localization / Pose Errors", "issue_pose"),
+    ("Latency", "CP-Latency", "Time Latency", "issue_latency"),
+    ("Comm. Efficiency", "CP-Comm-Efficiency", "Communication Efficiency", "issue_comm"),
+    ("Comm. Robustness", "CP-Comm-Robust", "Communication Robustness", "issue_commrobust"),
+    ("Domain Shift", "CP-Domain-Gap", "Domain Shift", "issue_domain"),
+    ("Heterogeneity", "CP-Heterogeneous", "Heterogeneity", "issue_hetero"),
+    ("Adversarial", "CP-Adversarial", "Adversarial Robustness", "issue_adversarial"),
+]
+ISSUE_KEYWORD = {label: kw for label, kw, _, _ in ISSUE_AXES}
+
 
 class ReadmeGenerator:
     def __init__(self, data_path: str):
@@ -193,6 +207,11 @@ class ReadmeGenerator:
             return "Dataset / Benchmark"
         return "Other"
 
+    def infer_issues(self, paper: Dict[str, Any]) -> List[str]:
+        """Return the realistic-issue axes (survey Section VII) a paper addresses."""
+        keywords = set(paper.get("keywords", []))
+        return [label for label, kw in ISSUE_KEYWORD.items() if kw in keywords]
+
     def paper_title(self, paper: Dict[str, Any]) -> str:
         return self.clean_text(paper["fields"].get("title", "Untitled"))
 
@@ -268,7 +287,7 @@ class ReadmeGenerator:
 
         return sorted(papers, key=key)
 
-    def filter_by(self, *, modality: Optional[str] = None, collaboration: Optional[str] = None, task: Optional[str] = None, dataset_only: bool = False) -> List[Dict[str, Any]]:
+    def filter_by(self, *, modality: Optional[str] = None, collaboration: Optional[str] = None, task: Optional[str] = None, issue: Optional[str] = None, dataset_only: bool = False) -> List[Dict[str, Any]]:
         results = []
         for paper in self.papers:
             keywords = set(paper.get("keywords", []))
@@ -279,6 +298,8 @@ class ReadmeGenerator:
             if collaboration and self.infer_collaboration(paper) != collaboration:
                 continue
             if task and task not in self.infer_tasks(paper):
+                continue
+            if issue and ISSUE_KEYWORD.get(issue) not in keywords:
                 continue
             results.append(paper)
         return self.sort_papers(results)
@@ -387,6 +408,14 @@ Every row is tagged **`Survey`** or **`Snowball`** in the *Source* column. The [
   - [Collaborative Motion Prediction](#collaborative-motion-prediction)
   - [Collaborative Lane Detection](#collaborative-lane-detection)
   - [Multi-Task and Task-Agnostic](#multi-task-and-task-agnostic)
+- [Approaches to Address Realistic Issues](#approaches-to-address-realistic-issues)
+  - [Localization / Pose Errors](#localization--pose-errors)
+  - [Time Latency](#time-latency)
+  - [Communication Efficiency](#communication-efficiency)
+  - [Communication Robustness](#communication-robustness)
+  - [Domain Shift](#domain-shift)
+  - [Heterogeneity](#heterogeneity)
+  - [Adversarial Robustness](#adversarial-robustness)
 - [Datasets](#datasets)
 - [Contributing](#contributing)
 - [Citation](#citation)
@@ -453,6 +482,8 @@ Papers are organized along the three axes of the survey, so the repository works
 2. **Collaboration scheme** — *Early* (raw-data sharing), *Intermediate* (feature sharing), *Late* (result sharing), and *Hybrid*.
 3. **Perception task** — *Object Detection*, *Semantic Segmentation*, *Object Tracking*, *Motion Prediction*, *Lane Detection*, and *Multi-Task / Task-Agnostic*.
 
+A fourth, cross-cutting view — [**Approaches to Address Realistic Issues**](#approaches-to-address-realistic-issues) (survey Section VII) — groups methods by the real-world deployment problem they relax (pose error, latency, communication cost / robustness, domain shift, heterogeneity, adversarial attacks).
+
 The same study appears under each axis it belongs to, and a per-table **development timeline** precedes every table to trace how that category evolved. To keep the timelines legible, only works published at top venues (CVPR, ICCV, ECCV, TPAMI, NeurIPS, ICLR, AAAI, ICRA, IROS, T-ITS, …) are marked. Each mark is labelled `VENUE+YEAR approach` (e.g. `CVPR2024 RCooper`); the approach is the method's own name when the paper coins one, otherwise `First-author et al.`.
 
 **Table key.** &nbsp; **Title** links to the publication (truncated for width — click through for the full title); **Code** links to the official repository. &nbsp; Compact column labels: **Modality** — `LiDAR`, `Cam` (Camera), `L+C` (LiDAR-Camera), `Agn.` (Modality-Agnostic). &nbsp; **Collab.** — `Early`, `Inter` (Intermediate), `Late`, `Hybrid` (datasets show their V2X mode `V2V` / `V2I` here). &nbsp; **Task** — `Det` (Object Detection), `Track` (Object Tracking), `Pred` (Motion Prediction), `Seg` (Semantic Segmentation), `Lane` (Lane Detection), `Multi` (Multi-Task / Task-Agnostic), `Data` (Dataset / Benchmark). &nbsp; **Source** — `Survey` (in the SLR, ≤ Mar 2024) or `Snowball` (forward-snowballing extension, 2024–2026).
@@ -490,6 +521,25 @@ The same study appears under each axis it belongs to, and a per-table **developm
         body += self.section("Collaborative Motion Prediction", self.filter_by(task="Motion Prediction"), columns, timeline_key="task_motion-prediction")
         body += self.section("Collaborative Lane Detection", self.filter_by(task="Lane Detection"), columns, timeline_key="task_lane-detection")
         body += self.section("Multi-Task and Task-Agnostic", self.filter_by(task="Multi-Task & Task-Agnostic"), columns, timeline_key="task_multi-task")
+        body += "---\n\n"
+        return body
+
+    def generate_issue_sections(self) -> str:
+        """Survey Section VII — papers grouped by the realistic deployment issue
+        they tackle (pose error, latency, communication, domain, heterogeneity,
+        adversarial robustness). A paper appears under every issue it addresses."""
+        columns = ["Title", "Venue", "Year", "Modality", "Collab.", "Task", "Code", "Source"]
+        body = "## Approaches to Address Realistic Issues\n\n"
+        body += (
+            "Beyond the modality / collaboration / task taxonomy, the survey's "
+            "**Section VII** organizes methods by the *real-world deployment issue* they "
+            "address. Early collaborative-perception work assumed ideal conditions "
+            "(perfect localization, lossless low-latency links, homogeneous agents); these "
+            "tables collect the methods that relax those assumptions. A paper appears under "
+            "**every** issue it tackles, so the same study may recur across tables.\n\n"
+        )
+        for label, _kw, heading, tkey in ISSUE_AXES:
+            body += self.section(heading, self.filter_by(issue=label), columns, timeline_key=tkey)
         body += "---\n\n"
         return body
 
@@ -556,6 +606,7 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
         readme += self.generate_modality_sections()
         readme += self.generate_collaboration_sections()
         readme += self.generate_task_sections()
+        readme += self.generate_issue_sections()
         readme += self.generate_dataset_section()
         readme += self.generate_footer()
 
