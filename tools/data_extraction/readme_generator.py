@@ -366,7 +366,7 @@ class ReadmeGenerator:
 
 [![Survey](https://img.shields.io/badge/Survey-IEEE%20T--ITS-b31b1b.svg)]({survey_doi})
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-![Papers](https://img.shields.io/badge/papers-{total}-1f6feb.svg)
+[![Papers](https://img.shields.io/badge/papers-{total}-1f6feb.svg)](#structured-taxonomy)
 ![Updated](https://img.shields.io/badge/updated-{updated_badge}-2ea44f.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 [![Stars](https://img.shields.io/github/stars/{repo}?style=social)](https://github.com/{repo}/stargazers)
@@ -476,13 +476,12 @@ Relative to these, our survey adds a transparent PRISMA-style selection protocol
     def generate_taxonomy(self) -> str:
         return """## Structured Taxonomy
 
-Papers are organized along the three axes of the survey, so the repository works as a practical lookup index rather than a flat list:
+Papers are organized along three taxonomy axes of the survey plus a fourth, cross-cutting view, so the repository works as a practical lookup index rather than a flat list:
 
 1. **Modality** — *LiDAR*, *Camera*, *LiDAR-Camera*, and *Modality-Agnostic* (e.g. object-level late fusion).
 2. **Collaboration scheme** — *Early* (raw-data sharing), *Intermediate* (feature sharing), *Late* (result sharing), and *Hybrid*.
 3. **Perception task** — *Object Detection*, *Semantic Segmentation*, *Object Tracking*, *Motion Prediction*, *Lane Detection*, and *Multi-Task / Task-Agnostic*.
-
-A fourth, cross-cutting view — [**Approaches to Address Realistic Issues**](#approaches-to-address-realistic-issues) (survey Section VII) — groups methods by the real-world deployment problem they relax (pose error, latency, communication cost / robustness, domain shift, heterogeneity, adversarial attacks).
+4. **Realistic-issue approaches** (cross-cutting, survey Section VII) — *Localization / Pose Errors*, *Time Latency*, *Communication Efficiency*, *Communication Robustness*, *Domain Shift*, *Heterogeneity*, and *Adversarial Robustness*; grouped by the real-world deployment problem each method relaxes (see [Approaches to Address Realistic Issues](#approaches-to-address-realistic-issues)).
 
 The same study appears under each axis it belongs to, and a per-table **development timeline** precedes every table to trace how that category evolved. To keep the timelines legible, only works published at top venues (CVPR, ICCV, ECCV, TPAMI, NeurIPS, ICLR, AAAI, ICRA, IROS, T-ITS, …) are marked. Each mark is labelled `VENUE+YEAR approach` (e.g. `CVPR2024 RCooper`); the approach is the method's own name when the paper coins one, otherwise `First-author et al.`.
 
